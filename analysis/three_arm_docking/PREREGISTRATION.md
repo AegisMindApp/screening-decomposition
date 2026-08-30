@@ -75,3 +75,36 @@ a logistic regression on molecular weight.
 - Failures recorded with reasons, never silently dropped.
 - The receptor and the compound set are asserted identical to the exh=32 run by md5 before any
   arm is analysed.
+
+---
+
+## AMENDMENT, 31 August 2026 — before any arm was executed
+
+The exhaustiveness run saved **all 753 docked poses**, which were not known to be retrievable when
+the arms above were written. That allows a strictly better scoring contrast than the one
+pre-registered, so the design is changed **before execution** and the change is recorded here
+rather than discovered in the write-up.
+
+**Pose baseline moves from exhaustiveness 32 to exhaustiveness 4.** Arm 1 becomes Vina exh=4
+poses + Vina score, **AUROC 0.408** (already measured). The reason is that these are the poses we
+physically hold, so arm 3 can rescore *the identical coordinates* — the same atom positions, only
+the scoring function changed. With exh=32 there is no saved pose set, so arm 3 would have required
+re-docking and would have confounded scoring with a fresh stochastic search.
+
+Revised cells:
+
+| arm | poses | scored by | status |
+|---|---|---|---|
+| 1 | Vina exh=4 | Vina | **done: 0.408** |
+| 3 | **the same exh=4 poses** | **gnina CNN** | perfect paired scoring contrast |
+| 2 | **DiffDock-L** | Vina | sampling contrast |
+| 4 | DiffDock-L | gnina | combination |
+
+**The thresholds are unchanged and now read against 0.408**: hypothesis supported if ΔAUROC(2−1)
+contains 0 while ΔAUROC(3−1) is entirely above +0.10; refuted if ΔAUROC(2−1) is entirely above
++0.05. The 0.763 descriptor bar is unchanged, and remains the bar.
+
+**Execution is staged.** Arm 3 needs only a gnina binary and runs first. Arms 2 and 4 need
+DiffDock's dependency stack (torch-geometric, ESM), which is the fragile part; staging them second
+means a failed DiffDock install cannot cost us the scoring result, which is the hypothesis's
+primary claim.
