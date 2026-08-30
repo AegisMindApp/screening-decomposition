@@ -1,0 +1,13 @@
+{
+ "n": 743,
+ "arm1_vina": 0.39916494531712865,
+ "arm3_gnina": 0.5389145089750365,
+ "delta": 0.1397495636579078,
+ "ci95": [
+  0.09129188606025468,
+  0.1867250268868223
+ ],
+ "verdict": "DIRECTIONALLY SUPPORTED, NOT AT THE PRE-REGISTERED STRICTNESS \u2014 the effect is clearly positive and the point estimate exceeds +0.10, but the 95% CI lower bound does not clear +0.10",
+ "control_r": 0.9699707906073023,
+ "clears_descriptor_bar": false
+}
