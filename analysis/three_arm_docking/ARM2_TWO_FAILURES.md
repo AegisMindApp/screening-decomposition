@@ -37,6 +37,12 @@ This is the useful outcome of the arm, and it took both runs to see:
    physics-based function that penalises exactly those violations. **Not fixed**, and not
    fixable by placement.
 
+   > **Corrected 31 Aug by PoseBusters (`POSEBUSTERS_RESULT.md`).** Only *contacts* is right.
+   > Bond lengths, bond angles, ring flatness and internal energy all pass at **100%** — the
+   > internal chemistry is essentially perfect. The sole failure is **minimum distance to
+   > protein, 47% pass**: the ligand is placed too close. This sentence overstated the case
+   > against generative pose geometry.
+
 The second is a known property of generative docking rather than a defect we introduced, and it
 is why published pipelines that use DiffDock poses productively **rescore after a local
 minimisation** rather than scoring the raw output.
