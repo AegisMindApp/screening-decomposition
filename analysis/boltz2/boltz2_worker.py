@@ -186,16 +186,58 @@ gotA, errA = harvest(oA)
 if not gotA:
     sys.exit(f"probe batch A produced no affinity output in {dtA:.0f}s\n"
              f"STDERR:\n{(rA.stderr or '')[-4000:]}\nSTDOUT:\n{(rA.stdout or '')[-2000:]}")
-a3m = sorted(glob.glob(str(OUT / "**" / "*.a3m"), recursive=True))
-msa = a3m[0] if a3m else None
+def pick_msa():
+    """Find the MSA boltz actually produced, and prove it is usable before reusing it.
+
+    v6 globbed for *.a3m and took the first hit, which was a ColabFold scratch file
+    (msa/<name>_unpaired_tmp_env/bfd.mgnify30.metaeuk30.smag30.a3m) -- a raw database
+    intermediate containing NUL bytes, not the processed alignment. Every ligand in batch B
+    then died on KeyError: '\\x00' inside boltz's a3m parser. Boltz writes the real MSA as
+    msa/<name>_0.csv, so prefer that, and never accept anything under a tmp_env directory.
+    """
+    cands = [p for p in sorted(glob.glob(str(OUT / "**" / "msa" / "*.csv"), recursive=True))
+             if "tmp_env" not in p]
+    if not cands:
+        cands = [p for p in sorted(glob.glob(str(OUT / "**" / "*.a3m"), recursive=True))
+                 if "tmp_env" not in p]
+    for p in cands:
+        with open(p, "rb") as fh:
+            head = fh.read(65536)
+        if b"\x00" in head:
+            print(f"  rejecting {p}: contains NUL bytes", flush=True)
+            continue
+        if not head.strip():
+            print(f"  rejecting {p}: empty", flush=True)
+            continue
+        stable = OUT / ("msa_shared" + os.path.splitext(p)[1])
+        shutil.copy(p, stable)
+        print(f"  MSA reuse -> {stable} (from {p}, {os.path.getsize(p)} bytes)", flush=True)
+        return str(stable)
+    print(f"  no reusable MSA among {len(cands)} candidates; falling back to the server per batch",
+          flush=True)
+    return None
+
+msa = pick_msa()
 print(f"  batch A {len(gotA)}/{PROBE_A} in {dtA:.0f}s   msa reuse: {msa or 'NONE (server)'}",
       flush=True)
 
 dtB, oB, rB = run_batch("b", names[PROBE_A:PROBE_A + PROBE_B], msa, msa is None)
 gotB, errB = harvest(oB)
+if not gotB and msa:
+    # The reused MSA was rejected by boltz (wrong format, or an artefact we should not have
+    # picked). Fall back to the server so the probe still measures a WORKING path -- that path
+    # pays MSA generation per ligand, so the projection will almost certainly exceed the ceiling
+    # and abort, which is the honest answer rather than a silent stall.
+    print(f"  reused MSA produced nothing; retrying batch B via the server\n"
+          f"  stderr: {(rB.stderr or '')[-800:]}", flush=True)
+    msa = None
+    dtB, oB, rB = run_batch("b2", names[PROBE_A:PROBE_A + PROBE_B], None, True)
+    gotB, errB = harvest(oB)
 if not gotB:
     sys.exit(f"probe batch B produced no affinity output in {dtB:.0f}s\n"
              f"STDERR:\n{(rB.stderr or '')[-4000:]}")
+print(f"  MSA path in use for stage 2: {'reused file' if msa else 'SERVER per ligand (costly)'}",
+      flush=True)
 marginal = dtB / len(gotB)
 projected = marginal * len(names) / 3600.0
 print(f"  batch B {len(gotB)}/{PROBE_B} in {dtB:.0f}s", flush=True)
