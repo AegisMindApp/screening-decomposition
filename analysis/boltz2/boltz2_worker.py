@@ -26,10 +26,24 @@ if r.returncode:
     sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
 print("  boltz installed", flush=True)
 
-seq = (BUNDLE / "mpro_sequence.txt").read_text().strip()
-smiles = json.load(open(BUNDLE / "mpro_smiles.json"))
+def find(pattern: str) -> str:
+    """Resolve a bundle file recursively.
+
+    The launcher locates the bundle with a RECURSIVE glob for manifest.json but hands the worker
+    the top-level mount, and Kaggle nests dataset files a directory below it. Joining the
+    filename directly onto BUNDLE therefore missed every file and the first run died on
+    FileNotFoundError for mpro_sequence.txt.
+    """
+    hits = sorted(glob.glob(str(BUNDLE / "**" / pattern), recursive=True))
+    if not hits:
+        listing = [str(p) for p in sorted(BUNDLE.rglob("*"))[:30]]
+        sys.exit(f"{pattern!r} not found under {BUNDLE}. Contents: {listing}")
+    return hits[0]
+
+seq = open(find("mpro_sequence.txt")).read().strip()
+smiles = json.load(open(find("mpro_smiles.json")))
 labels = {}
-for m in glob.glob(str(BUNDLE / "manifest*.json")):
+for m in sorted(glob.glob(str(BUNDLE / "**" / "manifest*.json"), recursive=True)):
     for c in json.load(open(m))["compounds"]:
         labels[c["name"]] = c["label"]
 names = sorted(n for n in smiles if n in labels)
