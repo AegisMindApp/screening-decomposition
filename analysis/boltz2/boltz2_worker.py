@@ -39,18 +39,39 @@ print(_smi.strip() or "(nvidia-smi produced nothing)", flush=True)
 # The repo already solved this for the scaling-law work: install a cu121 torch that still
 # carries sm_60 kernels, BEFORE boltz. boltz 2.2.1 requires only torch>=2.2, so 2.4.1 satisfies
 # it and pip will not upgrade back to a build that cannot run this card.
-if any(g in _smi for g in ("P100", "P40", "K80")):
-    print("  Pascal-or-older; installing torch 2.4.1+cu121 (still ships sm_60)", flush=True)
-    _r = sh([sys.executable, "-m", "pip", "install", "-q", "torch==2.4.1",
-             "--index-url", "https://download.pytorch.org/whl/cu121"], timeout=3600)
+PASCAL = any(g in _smi for g in ("P100", "P40", "K80"))
+# torchvision must be downgraded WITH torch. v5 installed torch 2.4.1 alone and boltz then died
+# on "operator torchvision::nms does not exist" -- the preinstalled torchvision was compiled
+# against torch 2.10 and its C++ ops do not register on 2.4.1. torchmetrics imports torchvision
+# at module level (functional.image.arniqa), so pytorch-lightning cannot even load without it.
+# 2.4.1 pairs with torchvision 0.19.1.
+PIN = ["torch==2.4.1", "torchvision==0.19.1"]
+IDX = ["--index-url", "https://download.pytorch.org/whl/cu121"]
+if PASCAL:
+    print(f"  Pascal-or-older; installing {' '.join(PIN)} (cu121, ships sm_60)", flush=True)
+    _r = sh([sys.executable, "-m", "pip", "install", "-q", *PIN, *IDX], timeout=3600)
     if _r.returncode:
         sys.exit(f"pascal torch bootstrap failed rc={_r.returncode}:\n{(_r.stderr or '')[-2000:]}")
-    print("  torch 2.4.1+cu121 installed", flush=True)
+    print("  torch/torchvision pinned", flush=True)
 
 print("== install", flush=True)
 r = sh(f"{sys.executable} -m pip install -q boltz")
 if r.returncode:
     sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
+
+# boltz's resolver may have pulled either package forward again. Re-pin unconditionally on
+# Pascal: wheels are cached so this is cheap, and it guarantees the pairing survives whatever
+# dependency resolution did.
+if PASCAL:
+    _r = sh([sys.executable, "-m", "pip", "install", "-q", *PIN, *IDX], timeout=3600)
+    if _r.returncode:
+        sys.exit(f"re-pin after boltz failed rc={_r.returncode}:\n{(_r.stderr or '')[-2000:]}")
+    _tv = sh([sys.executable, "-c",
+              "import torch,torchvision;print(torch.__version__,torchvision.__version__);"
+              "import torchvision.ops as o;print('nms ok')"])
+    if _tv.returncode:
+        sys.exit(f"torch/torchvision still mismatched after re-pin:\n{(_tv.stderr or '')[-2500:]}")
+    print(f"  re-pinned: {_tv.stdout.strip().replace(chr(10), '  ')}", flush=True)
 
 # Verify AFTER installing boltz: if its dependency resolution pulled torch forward again, the
 # card is unusable and we must find out now, not 14 minutes deep. get_arch_list() is the
