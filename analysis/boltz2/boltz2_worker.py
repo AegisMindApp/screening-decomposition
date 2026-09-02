@@ -20,6 +20,31 @@ PROBE_A, PROBE_B = 4, 8
 def sh(cmd, **kw):
     return subprocess.run(cmd, shell=isinstance(cmd, str), capture_output=True, text=True, **kw)
 
+# Check the card FIRST. v3 spent 14 minutes installing boltz, downloading CCD data and both
+# weight files, and generating four MSAs, only to die on:
+#     CUDA error: no kernel image is available for execution on the device
+# That is a compute-capability mismatch -- modern torch wheels ship no kernels for sm_60
+# (P100). Kaggle's push API cannot select the accelerator, so the card is whatever the session
+# was given, and the only fixes are a torch downgrade or changing the accelerator in the UI.
+# Detecting it here costs seconds instead of a quarter-hour of a sub-8-hour weekly quota.
+print("== accelerator", flush=True)
+print(sh("nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader").stdout
+      .strip() or "(nvidia-smi produced nothing)", flush=True)
+try:
+    import torch as _t
+    if not _t.cuda.is_available():
+        sys.exit("no CUDA device visible - the kernel was not given a GPU")
+    _cap = _t.cuda.get_device_capability(0)
+    print(f"  {_t.cuda.get_device_name(0)}  sm_{_cap[0]}{_cap[1]}  torch {_t.__version__}",
+          flush=True)
+    if _cap < (7, 0):
+        sys.exit(f"card is sm_{_cap[0]}{_cap[1]} (P100-class). Boltz-2 pulls a torch build with "
+                 f"no kernels below sm_70, which is exactly how v3 died after 14 minutes. "
+                 f"Set the notebook accelerator to T4 (sm_75) and re-push; the API cannot "
+                 f"choose the card. Aborting now rather than spending the quota to fail again.")
+except ImportError:
+    print("  torch not preinstalled; capability unchecked", flush=True)
+
 print("== install", flush=True)
 r = sh(f"{sys.executable} -m pip install -q boltz")
 if r.returncode:
