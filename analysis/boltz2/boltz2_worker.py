@@ -28,27 +28,48 @@ def sh(cmd, **kw):
 # was given, and the only fixes are a torch downgrade or changing the accelerator in the UI.
 # Detecting it here costs seconds instead of a quarter-hour of a sub-8-hour weekly quota.
 print("== accelerator", flush=True)
-print(sh("nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader").stdout
-      .strip() or "(nvidia-smi produced nothing)", flush=True)
-try:
-    import torch as _t
-    if not _t.cuda.is_available():
-        sys.exit("no CUDA device visible - the kernel was not given a GPU")
-    _cap = _t.cuda.get_device_capability(0)
-    print(f"  {_t.cuda.get_device_name(0)}  sm_{_cap[0]}{_cap[1]}  torch {_t.__version__}",
-          flush=True)
-    if _cap < (7, 0):
-        sys.exit(f"card is sm_{_cap[0]}{_cap[1]} (P100-class). Boltz-2 pulls a torch build with "
-                 f"no kernels below sm_70, which is exactly how v3 died after 14 minutes. "
-                 f"Set the notebook accelerator to T4 (sm_75) and re-push; the API cannot "
-                 f"choose the card. Aborting now rather than spending the quota to fail again.")
-except ImportError:
-    print("  torch not preinstalled; capability unchecked", flush=True)
+_smi = sh("nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader").stdout
+print(_smi.strip() or "(nvidia-smi produced nothing)", flush=True)
+
+# Kaggle hands out P100 (sm_60) and the push API cannot change that: acceleratorType and
+# machineShape are both accepted and silently ignored, and manual UI selection has never
+# produced a T4 either. Modern torch (2.10+cu128) ships no kernels below sm_70, which is how v3
+# died after 14 minutes of install, weight download and MSA generation.
+#
+# The repo already solved this for the scaling-law work: install a cu121 torch that still
+# carries sm_60 kernels, BEFORE boltz. boltz 2.2.1 requires only torch>=2.2, so 2.4.1 satisfies
+# it and pip will not upgrade back to a build that cannot run this card.
+if any(g in _smi for g in ("P100", "P40", "K80")):
+    print("  Pascal-or-older; installing torch 2.4.1+cu121 (still ships sm_60)", flush=True)
+    _r = sh([sys.executable, "-m", "pip", "install", "-q", "torch==2.4.1",
+             "--index-url", "https://download.pytorch.org/whl/cu121"], timeout=3600)
+    if _r.returncode:
+        sys.exit(f"pascal torch bootstrap failed rc={_r.returncode}:\n{(_r.stderr or '')[-2000:]}")
+    print("  torch 2.4.1+cu121 installed", flush=True)
 
 print("== install", flush=True)
 r = sh(f"{sys.executable} -m pip install -q boltz")
 if r.returncode:
     sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
+
+# Verify AFTER installing boltz: if its dependency resolution pulled torch forward again, the
+# card is unusable and we must find out now, not 14 minutes deep. get_arch_list() is the
+# definitive check -- it reports what this build actually compiled kernels for.
+_v = sh([sys.executable, "-c",
+         "import torch;print(torch.__version__);print(torch.cuda.is_available());"
+         "print(','.join(torch.cuda.get_arch_list()));"
+         "print('%d%d'%torch.cuda.get_device_capability(0))"])
+if _v.returncode:
+    sys.exit(f"torch import failed after install:\n{(_v.stderr or '')[-2000:]}")
+_ver, _avail, _arch, _cap = (_v.stdout.strip().split("\n") + ["", "", "", ""])[:4]
+print(f"  torch {_ver}  cuda_available={_avail}  card sm_{_cap}", flush=True)
+print(f"  kernels: {_arch}", flush=True)
+if _avail != "True":
+    sys.exit("no CUDA device visible after install")
+if f"sm_{_cap}" not in _arch.split(","):
+    sys.exit(f"torch {_ver} has no sm_{_cap} kernels (has {_arch}). The card cannot run this "
+             f"build and the run would fail once prediction starts. Aborting before spending "
+             f"the quota.")
 
 # boltz ships a console script, NOT a runnable package: `python -m boltz` fails with
 # "'boltz' is a package and cannot be directly executed". Resolve the entry point and prove it

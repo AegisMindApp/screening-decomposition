@@ -23,18 +23,21 @@ Boltz-2 installs a cu128 torch build with no kernels for Pascal. The P100 cannot
 ignored**; v4 still received a P100. A rejected push costs no GPU time, so this was free to
 test, and it converts a standing assumption into a measured fact.
 
-## Two ways forward
+## Resolution — no manual action needed
 
-1. **Change the notebook accelerator to T4 (sm_75) in the Kaggle UI.** A few seconds of manual
-   action, no quota cost, and the timing probe then measures on the card the run will use.
-2. **Downgrade torch to a cu121 build (~2.5.x), which still carries sm_60 kernels.** Doable in
-   principle but it is a ~2.5 GB download inside the run, risks dependency conflicts with
-   boltz's requirements and Kaggle's preinstalled stack, and any timing measured on a P100
-   would not represent the hardware a real run would use. It spends scarce quota on the less
-   likely path.
+The first instinct was to ask for the accelerator to be switched to T4 in the Kaggle UI. Our own
+records rule that out: **Kaggle has never supplied a T4, including on manual selection.** The
+push API is equally powerless — `machineShape` was already known to be ignored, and this run
+adds `acceleratorType` to that list.
 
-Option 1 is recommended. Nothing further should be pushed until the accelerator is changed:
-v4's abort is now the correct behaviour and every re-push will reproduce it in under a minute.
+The repo had already solved this for the scaling-law work: install a **cu121 torch that still
+ships sm_60 kernels** before the package that would otherwise pull a cu128 build. `boltz 2.2.1`
+declares only `torch>=2.2`, so **torch 2.4.1 satisfies it** and pip will not upgrade back to a
+build the card cannot run.
+
+v5 therefore: detects Pascal → installs `torch==2.4.1+cu121` → installs boltz → **re-verifies
+with `torch.cuda.get_arch_list()`** that the installed build actually carries kernels for this
+card, aborting in seconds if boltz's resolver dragged torch forward again.
 
 ## Not yet measured
 
