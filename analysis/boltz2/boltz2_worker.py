@@ -24,7 +24,36 @@ print("== install", flush=True)
 r = sh(f"{sys.executable} -m pip install -q boltz")
 if r.returncode:
     sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
-print("  boltz installed", flush=True)
+
+# boltz ships a console script, NOT a runnable package: `python -m boltz` fails with
+# "'boltz' is a package and cannot be directly executed". Resolve the entry point and prove it
+# runs BEFORE building any input, so this class of error costs seconds rather than an install.
+BOLTZ = shutil.which("boltz")
+if not BOLTZ:
+    cand = [p for p in glob.glob(sys.prefix + "/bin/boltz") + glob.glob("/usr/local/bin/boltz")]
+    BOLTZ = cand[0] if cand else None
+if not BOLTZ:
+    sys.exit("boltz installed but no 'boltz' executable on PATH")
+chk = sh([BOLTZ, "--help"])
+if chk.returncode:
+    sys.exit(f"{BOLTZ} --help failed rc={chk.returncode}:\n{(chk.stderr or '')[-2000:]}")
+print(f"  boltz installed -> {BOLTZ}", flush=True)
+
+# Validate every optional flag against `predict --help` before spending an install on a typo.
+# Unsupported options are dropped with a note rather than failing the run; --use_msa_server is
+# load-bearing (no MSA, no prediction) so its absence is fatal and must be caught here.
+_ph = sh([BOLTZ, "predict", "--help"])
+PHELP = (_ph.stdout or "") + (_ph.stderr or "")
+OPTS = []
+for _flag, _val in (("--diffusion_samples", "1"), ("--output_format", "pdb")):
+    if _flag in PHELP:
+        OPTS += [_flag, _val]
+    else:
+        print(f"  note: {_flag} not supported by this boltz build - omitting", flush=True)
+if "--use_msa_server" not in PHELP:
+    sys.exit("boltz predict has no --use_msa_server; cannot build an MSA. predict --help:\n"
+             + PHELP[:3000])
+print(f"  predict opts: {OPTS or '(none)'}", flush=True)
 
 def find(pattern: str) -> str:
     """Resolve a bundle file recursively.
@@ -64,8 +93,7 @@ def run_batch(tag, batch, msa, use_server):
     d = OUT / f"in_{tag}"; o = OUT / f"out_{tag}"
     shutil.rmtree(d, ignore_errors=True); shutil.rmtree(o, ignore_errors=True)
     for n in batch: write_yaml(d, n, msa)
-    cmd = [sys.executable, "-m", "boltz", "predict", str(d), "--out_dir", str(o),
-           "--diffusion_samples", "1", "--output_format", "pdb"]
+    cmd = [BOLTZ, "predict", str(d), "--out_dir", str(o), *OPTS]
     if use_server: cmd.append("--use_msa_server")
     t0 = time.time(); r = sh(cmd); dt = time.time() - t0
     return dt, o, r
