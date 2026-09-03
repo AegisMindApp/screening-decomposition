@@ -90,10 +90,21 @@ print(f"  torch {_ver}  cuda_available={_avail}  card sm_{_cap}", flush=True)
 print(f"  kernels: {_arch}", flush=True)
 if _avail != "True":
     sys.exit("no CUDA device visible after install")
-if f"sm_{_cap}" not in _arch.split(","):
-    sys.exit(f"torch {_ver} has no sm_{_cap} kernels (has {_arch}). The card cannot run this "
-             f"build and the run would fail once prediction starts. Aborting before spending "
-             f"the quota.")
+# Do NOT gate on string membership of sm_<cap> in get_arch_list(). That check is a proxy and
+# it FALSELY REJECTED an L4: torch 2.9.1+cu129 lists sm_86 but not sm_89, yet CUDA guarantees
+# binary compatibility forward across minor revisions within a major generation, so sm_86
+# cubins run on sm_89. It killed a healthy GCE instance in 10 minutes.
+#
+# The definitive test is to actually execute a kernel. This still catches the P100 case, where
+# the matmul raises "no kernel image is available for execution on the device".
+_fn = sh([sys.executable, "-c",
+          "import torch;x=torch.randn(256,256,device='cuda');"
+          "y=(x@x).sum().item();torch.cuda.synchronize();print('CUDA_OK',y is not None)"])
+if _fn.returncode or "CUDA_OK" not in (_fn.stdout or ""):
+    sys.exit(f"card sm_{_cap} cannot execute a CUDA kernel under torch {_ver} "
+             f"(arch list: {_arch}). Prediction would fail. Aborting.\n"
+             f"{(_fn.stderr or '')[-2000:]}")
+print(f"  CUDA functional check passed on sm_{_cap}", flush=True)
 
 # boltz ships a console script, NOT a runnable package: `python -m boltz` fails with
 # "'boltz' is a package and cannot be directly executed". Resolve the entry point and prove it
