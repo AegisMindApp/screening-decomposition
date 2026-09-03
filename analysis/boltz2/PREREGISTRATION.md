@@ -133,3 +133,26 @@ request under human review. `NVIDIA_L4_GPUS = 1`, so **L4 is the largest card ac
 available** and is used instead: an estimated ~50 s/ligand against the A100's ~20, at comparable
 total cost. The estimate is unverified — the same two-batch probe measures it before the full
 panel is allowed to start.
+
+---
+
+## Amendment 3 — overage authorised by the budget owner, 3 Sep 2026
+
+The L4 probe measured 101.0 s/ligand, projecting **21.07 GPU-hours** against the 20.0 ceiling
+set in Amendment 2 — a 5% overshoot, about AUD 2.
+
+**This line was not moved by me.** I reported the measurement and the three options (authorise
+the overage, run a random stratified 700 inside the ceiling, or stop) and the budget owner chose
+to authorise the full 751-compound panel. That distinction matters: a resource ceiling relaxed
+by the person who owns the resource, after being shown the number, is a decision; the same
+ceiling relaxed by me after seeing the number would be moving a goalpost.
+
+Ceiling raised to **25.0 GPU-hours** — enough headroom for the measured 21.07 plus variance,
+not an open budget. ~AUD 27 at L4 on-demand, inside the AUD 100 project budget.
+
+**Unchanged, again:** every scientific reading rule. Primary endpoint
+`affinity_probability_binary`; bar = descriptor baseline **0.7653**; required margin **> +0.04
+AUROC with a CI excluding zero**; dropout, positive-control and permutation checks all intact.
+The full 751-compound panel is retained precisely so Boltz-2 is scored on the identical
+compounds and labels as Vina (0.4530) and the descriptors — option 2 would have broken that
+comparability for AUD 2.
