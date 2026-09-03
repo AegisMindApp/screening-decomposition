@@ -102,3 +102,34 @@ runtime and is not part of what we are measuring.
 been reset after a website push. It was moved here intact and removed from that repo in
 `2bf4bae3`. Both commits predate any Boltz-2 execution, so the pre-registration guarantee is
 unaffected and independently checkable in either history.
+
+---
+
+## Amendment 2 — resource envelope changed to paid GCP, 3 Sep 2026
+
+**Written before any GCP run. This changes a resource constraint, not a scientific rule.**
+
+The 6.0 GPU-hour ceiling in the original pre-registration was explicitly a **Kaggle quota**
+limit — "we do not spend the week's quota discovering that it did not fit". It fired correctly:
+229.4 s/ligand projected 47.9 GPU-hours and the run abandoned itself.
+
+The user has authorised paid GCP compute, so the binding constraint is now **money, not quota**.
+Re-using a 6.0-hour ceiling in that setting would be arbitrary — it encodes a limit that no
+longer exists.
+
+**New ceiling: 20 GPU-hours**, fixed now, before the L4 probe runs. Justification: at L4
+on-demand (~USD 0.71/hr ≈ AUD 1.10/hr) that is ≈ AUD 22, inside both the pre-existing AUD 30
+monthly budget alert and the AUD 100 project budget created today. On spot it is ≈ AUD 9.
+
+**What is explicitly NOT changed:** every scientific reading rule. The primary endpoint remains
+`affinity_probability_binary`, the bar remains the descriptor baseline of 0.7653, the required
+margin remains **> +0.04 AUROC with a CI excluding zero**, and the dropout, positive and
+permutation controls are untouched. No threshold that bears on the *answer* has moved.
+
+**Hardware substitution.** The user asked for A100 spot. This project has
+`NVIDIA_A100_GPUS = 0`, `PREEMPTIBLE_NVIDIA_A100_GPUS = 0` and `A2_CPUS = 0` in us-central1,
+us-east1 and europe-west4 — the A100 family cannot be created at all without a quota-increase
+request under human review. `NVIDIA_L4_GPUS = 1`, so **L4 is the largest card actually
+available** and is used instead: an estimated ~50 s/ligand against the A100's ~20, at comparable
+total cost. The estimate is unverified — the same two-batch probe measures it before the full
+panel is allowed to start.

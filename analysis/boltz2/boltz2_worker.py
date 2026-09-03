@@ -13,8 +13,11 @@ import json, os, glob, time, subprocess, sys, shutil
 from pathlib import Path
 
 BUNDLE = Path(sys.argv[sys.argv.index("--bundle") + 1]) if "--bundle" in sys.argv else Path(".")
-OUT = Path("/kaggle/working")
-CEILING_HOURS = 6.0          # pre-registered abort threshold
+OUT = Path(os.environ.get("BOLTZ_OUT", "/kaggle/working"))
+# Pre-registered abort threshold. 6.0 on Kaggle (weekly quota); raised to 20.0 on paid GCP
+# where the binding constraint is money -- see PREREGISTRATION.md Amendment 2, committed
+# before any GCP run. No scientific reading rule changed.
+CEILING_HOURS = float(os.environ.get("BOLTZ_CEILING_HOURS", "6.0"))
 PROBE_A, PROBE_B = 4, 8
 
 def sh(cmd, **kw):
