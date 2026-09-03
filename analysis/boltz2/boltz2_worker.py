@@ -58,18 +58,65 @@ if PASCAL:
     print("  torch/torchvision pinned", flush=True)
 
 print("== install", flush=True)
+# Pin the torch/torchvision pair that is ALREADY WORKING before installing boltz.
+#
+# boltz[cuda] upgraded the deep-learning image's torch 2.9.1+cu129 to 2.14.0+cu130, which
+# orphaned the preinstalled torchvision (built against 2.9.1) and killed the run with
+# "RuntimeError: operator torchvision::nms does not exist" -- torchmetrics imports torchvision
+# at module level, so pytorch-lightning cannot load and boltz never starts. Same symptom we hit
+# on Kaggle for the opposite reason (there we downgraded torch and left torchvision behind).
+#
+# boltz only requires torch>=2.2, so constraining it to whatever is installed satisfies the
+# dependency and stops pip moving a stack that already works. On Pascal this runs after the
+# 2.4.1/0.19.1 pin above, so the constraint simply locks that pair in instead.
+_pv = sh([sys.executable, "-c",
+          "import torch;print(torch.__version__.split('+')[0]);"
+          "import torchvision;print(torchvision.__version__.split('+')[0])"])
+_cons = None
+if _pv.returncode == 0 and len(_pv.stdout.strip().splitlines()) == 2:
+    _t, _tv = _pv.stdout.strip().splitlines()
+    _cons = OUT.parent / "boltz_constraints.txt"
+    _cons.parent.mkdir(parents=True, exist_ok=True)
+    _cons.write_text(f"torch=={_t}\ntorchvision=={_tv}\n")
+    print(f"  constraining torch=={_t} torchvision=={_tv}", flush=True)
+
 # boltz dispatches to cuequivariance kernels on sm_70+ cards and imports cuequivariance_torch
 # at PREDICTION time, well after MSA generation. Those packages live in the [cuda] extra.
 # Omitting them cost a 518 s L4 run that died on ModuleNotFoundError after four MSA server
 # calls. Pascal never takes that path, which is why the Kaggle P100 run reached prediction
 # without them -- the first card that actually works is the one that needs the extra.
-r = sh(f'{sys.executable} -m pip install -q "boltz[cuda]"')
+_base = [sys.executable, "-m", "pip", "install", "-q"]
+_cflag = ["-c", str(_cons)] if _cons else []
+r = sh([*_base, *_cflag, "boltz[cuda]"])
 if r.returncode:
-    print(f"  boltz[cuda] failed; falling back to plain boltz\n{(r.stderr or '')[-600:]}",
+    print(f"  boltz[cuda] constrained failed; retrying unconstrained\n{(r.stderr or '')[-600:]}",
           flush=True)
-    r = sh(f"{sys.executable} -m pip install -q boltz")
+    r = sh([*_base, "boltz[cuda]"])
     if r.returncode:
-        sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
+        r = sh([*_base, "boltz"])
+        if r.returncode:
+            sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
+
+# Whatever route we took, torchvision must import and register its native ops, or
+# pytorch-lightning dies on load. Repair by pairing rule (torchvision minor = torch minor + 15
+# for torch 2.x) rather than failing outright.
+_chk = sh([sys.executable, "-c", "import torchvision.ops, torchvision; print('tv ok')"])
+if _chk.returncode:
+    _tv2 = sh([sys.executable, "-c", "import torch;print(torch.__version__.split('+')[0])"])
+    _tt = (_tv2.stdout or "").strip()
+    try:
+        _maj, _min = _tt.split(".")[:2]
+        _want = f"0.{int(_min) + 15}.0" if _maj == "2" else None
+    except Exception:
+        _want = None
+    if _want:
+        print(f"  torchvision broken against torch {_tt}; installing torchvision=={_want}",
+              flush=True)
+        sh([*_base, f"torchvision=={_want}"])
+        _chk = sh([sys.executable, "-c", "import torchvision.ops; print('tv ok')"])
+    if _chk.returncode:
+        sys.exit(f"torchvision unusable against torch {_tt}:\n{(_chk.stderr or '')[-2000:]}")
+print("  torch/torchvision pair OK", flush=True)
 
 # boltz's resolver may have pulled either package forward again. Re-pin unconditionally on
 # Pascal: wheels are cached so this is cheap, and it guarantees the pairing survives whatever
