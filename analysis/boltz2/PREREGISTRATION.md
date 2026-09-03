@@ -156,3 +156,32 @@ AUROC with a CI excluding zero**; dropout, positive-control and permutation chec
 The full 751-compound panel is retained precisely so Boltz-2 is scored on the identical
 compounds and labels as Vina (0.4530) and the descriptors — option 2 would have broken that
 comparability for AUD 2.
+
+---
+
+## Limitation recorded 4 Sep 2026, mid-run, before any result is read
+
+The panel is ~68% complete and no Boltz-2 number has been computed. Recording two
+configuration limitations now so they are on the record ahead of the outcome.
+
+**1. The run is BLIND; the Vina baseline was not.** Boltz-2 is given protein sequence +
+ligand SMILES with **no pocket conditioning**. Vina docked into a defined 22 Å box centred on
+the known site. Boltz-2 is therefore performing the harder, blind version of the task while
+the comparator was pocket-constrained. This asymmetry **disadvantages Boltz-2**, and pocket
+conditioning would have cost no additional compute. It is an omission on my part, not a
+considered trade-off.
+
+**2. `diffusion_samples = 1`.** Diffusion is stochastic and 3–5 samples ranked by confidence
+is the documented recommendation. This was a deliberate cost decision — 3–5 samples projects
+to 63–105 GPU-hours against the authorised 25.0 ceiling — but it is a limitation, not merely
+a speed setting. Also not set: `potentials` (inference-time physical steering) and
+`affinity_mw_correction`. The last is notable given this project's central finding that
+docking scores are dominated by compound-intrinsic size: if Boltz-2 ships a ligand-size
+correction and it is left off, the affinity head may carry the same bias.
+
+**Consequence for the reading.** A result at or below the 0.7653 descriptor baseline supports
+only the narrow claim *"not in this configuration"* — default, blind, single-sample — and not
+"Boltz-2 does not work". The natural follow-up arm is pocket-conditioned with
+`affinity_mw_correction` enabled, which is cheap because the MSA is already computed and
+cached. **The reading rules themselves are unchanged**; this constrains the scope of the
+conclusion, not the threshold.
