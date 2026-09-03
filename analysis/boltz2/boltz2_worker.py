@@ -58,9 +58,18 @@ if PASCAL:
     print("  torch/torchvision pinned", flush=True)
 
 print("== install", flush=True)
-r = sh(f"{sys.executable} -m pip install -q boltz")
+# boltz dispatches to cuequivariance kernels on sm_70+ cards and imports cuequivariance_torch
+# at PREDICTION time, well after MSA generation. Those packages live in the [cuda] extra.
+# Omitting them cost a 518 s L4 run that died on ModuleNotFoundError after four MSA server
+# calls. Pascal never takes that path, which is why the Kaggle P100 run reached prediction
+# without them -- the first card that actually works is the one that needs the extra.
+r = sh(f'{sys.executable} -m pip install -q "boltz[cuda]"')
 if r.returncode:
-    sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
+    print(f"  boltz[cuda] failed; falling back to plain boltz\n{(r.stderr or '')[-600:]}",
+          flush=True)
+    r = sh(f"{sys.executable} -m pip install -q boltz")
+    if r.returncode:
+        sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
 
 # boltz's resolver may have pulled either package forward again. Re-pin unconditionally on
 # Pascal: wheels are cached so this is cheap, and it guarantees the pairing survives whatever
@@ -135,6 +144,17 @@ if "--use_msa_server" not in PHELP:
     sys.exit("boltz predict has no --use_msa_server; cannot build an MSA. predict --help:\n"
              + PHELP[:3000])
 print(f"  predict opts: {OPTS or '(none)'}", flush=True)
+
+# Prove the cuequivariance import works BEFORE paying for MSA generation. This is the exact
+# failure that wasted 518 s: the module is imported only once prediction starts, so an absent
+# package looks like a healthy run right up until the GPU work begins.
+if not PASCAL:
+    _ce = sh([sys.executable, "-c", "import cuequivariance_torch as c; print('cueq', c.__name__)"])
+    if _ce.returncode:
+        sys.exit("cuequivariance_torch missing on an sm_70+ card; boltz will dispatch to it at "
+                 "prediction time and fail after MSA. Install boltz[cuda].\n"
+                 + (_ce.stderr or "")[-1500:])
+    print(f"  {_ce.stdout.strip()}", flush=True)
 
 def find(pattern: str) -> str:
     """Resolve a bundle file recursively.
