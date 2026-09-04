@@ -88,13 +88,18 @@ if _pv.returncode == 0 and len(_pv.stdout.strip().splitlines()) == 2:
 # without them -- the first card that actually works is the one that needs the extra.
 _base = [sys.executable, "-m", "pip", "install", "-q"]
 _cflag = ["-c", str(_cons)] if _cons else []
-r = sh([*_base, *_cflag, "boltz[cuda]"])
+# Pin the MAJOR version explicitly. Constraining torch to 2.4.1 for Pascal made pip backtrack
+# boltz[cuda] to 1.x -- which has no affinity head at all, so the probe found no affinity
+# output and aborted after downloading boltz1_conf.ckpt. The [cuda] extra is also pointless on
+# sm_60, which never takes the cuequivariance path, and it is what dragged the resolver back.
+_spec = "boltz>=2.2" if PASCAL else "boltz[cuda]>=2.2"
+r = sh([*_base, *_cflag, _spec])
 if r.returncode:
     print(f"  boltz[cuda] constrained failed; retrying unconstrained\n{(r.stderr or '')[-600:]}",
           flush=True)
-    r = sh([*_base, "boltz[cuda]"])
+    r = sh([*_base, _spec])
     if r.returncode:
-        r = sh([*_base, "boltz"])
+        r = sh([*_base, "boltz>=2.2"])
         if r.returncode:
             sys.exit("pip install boltz failed:\n" + (r.stderr or "")[-3000:])
 
@@ -118,6 +123,15 @@ if _chk.returncode:
     if _chk.returncode:
         sys.exit(f"torchvision unusable against torch {_tt}:\n{(_chk.stderr or '')[-2000:]}")
 print("  torch/torchvision pair OK", flush=True)
+
+_bv = sh([sys.executable, "-c",
+          "import importlib.metadata as m; print(m.version('boltz'))"])
+_ver_s = (_bv.stdout or "").strip()
+print(f"  boltz version {_ver_s or '(unknown)'}", flush=True)
+if not _ver_s.startswith("2"):
+    sys.exit(f"boltz {_ver_s!r} installed, need 2.x. Version 1.x has NO affinity head, so the "
+             f"run would download boltz1_conf.ckpt and produce no affinity output. This is what "
+             f"happens when a torch constraint makes pip backtrack the boltz major version.")
 
 # boltz's resolver may have pulled either package forward again. Re-pin unconditionally on
 # Pascal: wheels are cached so this is cheap, and it guarantees the pairing survives whatever
