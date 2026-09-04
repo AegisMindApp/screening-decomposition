@@ -19,6 +19,7 @@ OUT = Path(os.environ.get("BOLTZ_OUT", "/kaggle/working"))
 # before any GCP run. No scientific reading rule changed.
 CEILING_HOURS = float(os.environ.get("BOLTZ_CEILING_HOURS", "6.0"))
 PROBE_A, PROBE_B = 4, 8
+_TAG = ("_s" + os.environ["BOLTZ_SHARD"]) if os.environ.get("BOLTZ_NSHARDS","1") != "1" else ""
 
 def sh(cmd, **kw):
     return subprocess.run(cmd, shell=isinstance(cmd, str), capture_output=True, text=True, **kw)
@@ -217,13 +218,26 @@ def find(pattern: str) -> str:
         sys.exit(f"{pattern!r} not found under {BUNDLE}. Contents: {listing}")
     return hits[0]
 
-seq = open(find("mpro_sequence.txt")).read().strip()
-smiles = json.load(open(find("mpro_smiles.json")))
+seq = open(find("*sequence*.txt")).read().strip()
+smiles = json.load(open(find("*smiles*.json")))
 labels = {}
 for m in sorted(glob.glob(str(BUNDLE / "**" / "manifest*.json"), recursive=True)):
     for c in json.load(open(m))["compounds"]:
         labels[c["name"]] = c["label"]
 names = sorted(n for n in smiles if n in labels)
+# Kaggle caps a session at ~12 h, so a long panel must be split across sessions and the
+# shards recombined. Deterministic slice by sorted name: shard k of N takes every Nth entry,
+# which keeps each shard's label mix close to the panel's rather than clustering actives the
+# way a contiguous block does (compound IDs are not randomly ordered by label).
+_NS = int(os.environ.get("BOLTZ_NSHARDS", "1"))
+_SH = int(os.environ.get("BOLTZ_SHARD", "0"))
+if _NS > 1:
+    _all = names
+    names = _all[_SH::_NS]
+    _act = sum(labels[n] for n in names) / max(len(names), 1)
+    _tot = sum(labels[n] for n in _all) / max(len(_all), 1)
+    print(f"  SHARD {_SH}/{_NS}: {len(names)} of {len(_all)} compounds, "
+          f"active fraction {_act:.1%} vs panel {_tot:.1%}", flush=True)
 print(f"  protein {len(seq)} aa (dimer A+B)   ligands {len(names)}   labelled {len(labels)}",
       flush=True)
 
@@ -231,20 +245,32 @@ print(f"  protein {len(seq)} aa (dimer A+B)   ligands {len(names)}   labelled {l
 # on chain A -- derived from the receptor, not guessed. Verified to contain Mpro's catalytic
 # dyad Cys145 (4.41 A) and His41 (5.02 A); chain B equivalents are 41-49 A away. Set
 # BOLTZ_POCKET=0 to reproduce arm 1's blind configuration.
-POCKET = [164, 145, 41, 189, 165, 143, 142, 49, 144, 166, 141, 26]
+# Pocket comes from the bundle (pocket.json, written by the bundle builder from the receptor
+# at the Vina box centre), not hardcoded -- the worker now serves Mpro, Factor Xa and PD-L1.
+# Falls back to the Mpro set only if no pocket.json is present, for backward compatibility.
 USE_POCKET = os.environ.get("BOLTZ_POCKET", "1") != "0"
+_pk = sorted(glob.glob(str(BUNDLE / "**" / "pocket.json"), recursive=True))
+if _pk:
+    _pj = json.load(open(_pk[0]))
+    POCKET = [tuple(c) for c in _pj["pocket"]]
+    print(f"  pocket from bundle: {len(POCKET)} residues {POCKET[:4]}...", flush=True)
+else:
+    POCKET = [("A", r) for r in (164,145,41,189,165,143,142,49,144,166,141,26)]
+    print("  pocket: no pocket.json in bundle, using Mpro default", flush=True)
+
+CHAIN_IDS = ", ".join(_pj["chains"]) if _pk else "A, B"
 
 def write_yaml(d: Path, name: str, msa: str | None):
     d.mkdir(parents=True, exist_ok=True)
     msa_line = f"      msa: {msa}\n" if msa else ""
     pocket = ""
     if USE_POCKET:
-        contacts = "".join(f"        - [A, {r}]\n" for r in POCKET)
+        contacts = "".join(f"        - [{ch}, {r}]\n" for ch, r in POCKET)
         pocket = ("constraints:\n  - pocket:\n      binder: L\n      contacts:\n"
                   f"{contacts}      max_distance: 5.0\n")
     (d / f"{name}.yaml").write_text(
         "version: 1\nsequences:\n"
-        "  - protein:\n      id: [A, B]\n"
+        f"  - protein:\n      id: [{CHAIN_IDS}]\n"
         f"      sequence: {seq}\n{msa_line}"
         f"  - ligand:\n      id: L\n      smiles: '{smiles[name]}'\n"
         f"{pocket}"
@@ -344,12 +370,12 @@ report = {"marginal_s_per_ligand": round(marginal, 2), "projected_gpu_hours": ro
           "paper_estimate_s_per_ligand": 20}
 if projected > CEILING_HOURS:
     report["decision"] = "ABANDONED - projected cost exceeds pre-registered ceiling"
-    json.dump(report, open(OUT / "boltz2_probe.json", "w"), indent=2)
+    json.dump(report, open(OUT / f"boltz2_probe{_TAG}.json", "w"), indent=2)
     print("\n  ABORT per pre-registration. Not spending the quota.", flush=True)
     sys.exit(0)
 
 report["decision"] = "PROCEED"
-json.dump(report, open(OUT / "boltz2_probe.json", "w"), indent=2)
+json.dump(report, open(OUT / f"boltz2_probe{_TAG}.json", "w"), indent=2)
 
 print(f"\n== STAGE 2 full panel ({len(names)} ligands)", flush=True)
 scores = dict(gotA); scores.update(gotB)
@@ -369,11 +395,11 @@ for i in range(0, len(rest), CH):
     done = PROBE_A + PROBE_B + i + len(chunk)
     print(f"  {done}/{len(names)} ok={len(scores)} fail={len(fails)} "
           f"{(time.time()-t0)/60:.1f} min", flush=True)
-    json.dump(scores, open(OUT / "boltz2_scores.json", "w"))
-    json.dump(fails, open(OUT / "boltz2_failures.json", "w"))
+    json.dump(scores, open(OUT / f"boltz2_scores{_TAG}.json", "w"))
+    json.dump(fails, open(OUT / f"boltz2_failures{_TAG}.json", "w"))
 
-json.dump(scores, open(OUT / "boltz2_scores.json", "w"), indent=1)
-json.dump(fails, open(OUT / "boltz2_failures.json", "w"), indent=1)
+json.dump(scores, open(OUT / f"boltz2_scores{_TAG}.json", "w"), indent=1)
+json.dump(fails, open(OUT / f"boltz2_failures{_TAG}.json", "w"), indent=1)
 print(f"\nDONE scored {len(scores)}  failed {len(fails)}", flush=True)
 if fails:
     fa = [labels[n] for n in fails if n in labels]
