@@ -227,14 +227,27 @@ names = sorted(n for n in smiles if n in labels)
 print(f"  protein {len(seq)} aa (dimer A+B)   ligands {len(names)}   labelled {len(labels)}",
       flush=True)
 
+# Arm 2: pocket conditioning. Residues within 8.0 A of the Vina box centre [9.05, 8.9, -1.51]
+# on chain A -- derived from the receptor, not guessed. Verified to contain Mpro's catalytic
+# dyad Cys145 (4.41 A) and His41 (5.02 A); chain B equivalents are 41-49 A away. Set
+# BOLTZ_POCKET=0 to reproduce arm 1's blind configuration.
+POCKET = [164, 145, 41, 189, 165, 143, 142, 49, 144, 166, 141, 26]
+USE_POCKET = os.environ.get("BOLTZ_POCKET", "1") != "0"
+
 def write_yaml(d: Path, name: str, msa: str | None):
     d.mkdir(parents=True, exist_ok=True)
     msa_line = f"      msa: {msa}\n" if msa else ""
+    pocket = ""
+    if USE_POCKET:
+        contacts = "".join(f"        - [A, {r}]\n" for r in POCKET)
+        pocket = ("constraints:\n  - pocket:\n      binder: L\n      contacts:\n"
+                  f"{contacts}      max_distance: 5.0\n")
     (d / f"{name}.yaml").write_text(
         "version: 1\nsequences:\n"
         "  - protein:\n      id: [A, B]\n"
         f"      sequence: {seq}\n{msa_line}"
         f"  - ligand:\n      id: L\n      smiles: '{smiles[name]}'\n"
+        f"{pocket}"
         "properties:\n  - affinity:\n      binder: L\n")
 
 def run_batch(tag, batch, msa, use_server):
