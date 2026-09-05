@@ -460,3 +460,46 @@ evidence supports once the supervision asymmetry is stated. Suggested:
 > pre-registered decomposition of six interventions*
 
 with the descriptor result kept as a §3.3 result rather than a title claim.
+
+---
+---
+
+# Blocker 5 (found on review) — the six interventions do not share a baseline
+
+§3.2 presents six rows in one table under the word "decomposition", and §3.2's reading
+("the two interventions that clear the floor concern *what is computed*") treats them as
+variations on one pipeline. They are not. Receptor state and search effort differ per arm:
+
+| intervention | baseline AUROC | receptor | exhaustiveness | source |
+|---|---|---|---|---|
+| Scoring function (gnina CNN) | 0.3992 (743 cmpd) | **unprotonated** | 4 | `three_arm_docking/ARM3_RESULT.md:22-26`, prereg `:88-98` |
+| Receptor repair | 0.4079 | **unprotonated → protonated** — *this arm is the fix* | 4 | `receptor_prep/RESULT.md:20-24` |
+| Pose ensemble | — | **unprotonated**, stated: "original (donor-defective) receptor" | 4 | `pose_ensemble/RESULT.md:5`, prereg `:16` |
+| Pose generator (DiffDock-L) | — | **unprotonated**: "unprotonated receptor arm 1 used" | 4 | `three_arm_docking/MINIMISE_RESULT.md:5` |
+| Search effort | 0.408 (exh 4) vs 0.427 (exh 32) | **unprotonated** both | 4 → 32 | `three_arm_docking/PREREGISTRATION.md:19` |
+| Pocket conditioning (Boltz-2) | 0.7913 | **no receptor** — co-folding from sequence | n/a | `boltz2/ARM2_RESULT.md` |
+
+**Five of the six arms are measured on the donor-defective receptor** — the same receptor §3.2
+describes as unable "to form a protein-donor hydrogen bond at all". The sixth is the arm that
+repairs it. A seventh row uses no receptor at all.
+
+This does not invalidate any individual number: each arm is a clean single-factor comparison
+against its own stated baseline, and each was pre-registered. What it invalidates is the framing.
+The table is **six single-factor comparisons**, four of them conditional on a receptor the paper
+itself shows was broken — not a decomposition of one pipeline into additive parts. The obvious
+referee question, which the paper does not answer, is whether the pose-ensemble and DiffDock nulls
+would survive on a working receptor.
+
+The resolution floor in §3.1 inherits the same condition: it was measured on the unprotonated
+receptor's cached poses.
+
+**Fix — either is acceptable, the omission is not:**
+
+1. Add a `baseline receptor / exhaustiveness` column to the §3.2 table and one sentence: "Four
+   arms were run on the donor-defective receptor before it was repaired; their deltas are
+   conditional on it, and the receptor-repair row measures what that condition costs." Replace
+   "decomposition" with "six single-factor comparisons" in the title and §1.
+2. Or re-run the pose-ensemble and DiffDock arms on the repaired receptor. Both are cheap (poses
+   are cached for the ensemble arm) and would let the decomposition framing stand as written.
+
+Option 1 is honest and costs a paragraph. Option 2 is the stronger paper.
