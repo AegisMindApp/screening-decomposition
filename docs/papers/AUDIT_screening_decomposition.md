@@ -503,3 +503,68 @@ receptor's cached poses.
    are cached for the ensemble arm) and would let the decomposition framing stand as written.
 
 Option 1 is honest and costs a paragraph. Option 2 is the stronger paper.
+
+---
+---
+
+# Resolution — what was applied, 6 September 2026
+
+Manuscript rewritten at `8a2c5fa11`. Supplementary material created. One blocker remains open and
+depends on an action outside the manuscript.
+
+| # | Blocker | Status |
+|---|---|---|
+| 1 | "public git repository" is false | **OPEN — partially mitigated.** §5 now states plainly that the repository is private, that a reader cannot confirm commit ordering, that the hashes are our assertion, and that it will be made public with history intact. The word "public" is removed from §2. Closes fully when the repo is published |
+| 2 | supplementary material cited, missing | **CLOSED** — `docs/papers/screening_decomposition_supplementary.md`, tables S1–S5 |
+| 3 | residual band 0.507–0.555 contradicted | **CLOSED** — corrected to 0.507–0.559, stated as indicative because two residualisation procedures are mixed, and the single-target scope of the Boltz-2 residual is now declared |
+| 4 | "docking loses on both targets" | **CLOSED** — abstract now gives the paired marginal values with intervals; the 854/886 panel distinction is stated in §2 and labelled where quoted |
+| 5 | six arms do not share a baseline | **CLOSED** — §3.2 carries a `poses fixed?` column, says the six are single-factor comparisons and not a partition, and Table S2 gives per-arm receptor, exhaustiveness and baseline. "Decomposition" retained only in the title, where it now reads "a pre-registered decomposition of six interventions" rather than describing one pipeline |
+
+## Found during the fix, and larger than any of the five
+
+**The resolution floor was measuring two things at once.** Bootstrapping it for an interval, the
+positive control failed. The published 0.039 compares the **exhaustiveness-32** Vina cache against
+gnina's `--score_only` on the **exhaustiveness-4** poses — two independent stochastic searches, not
+the "identical poses" the text claimed. With placement genuinely held fixed the gap is **0.020**.
+
+Both are real and each gates a different comparison, so the paper now reports both:
+
+| | value | 95% CI | bounds |
+|---|---|---|---|
+| Scoring floor | 0.0201 | [+0.0112, +0.0286] | two scoring functions on fixed poses |
+| Protocol floor | 0.0393 | [+0.0235, +0.0557] | two protocols, search included |
+
+Every qualitative reading in §3.2 survives, and the search-effort row becomes the strongest line in
+the paper: the exhaustiveness-4/32 pair **is** the protocol floor, so eight times the compute is by
+construction indistinguishable from running the same protocol twice.
+
+Corrected at the point of claim in `analysis/docking_value/MARGINAL_VALUE.md` §3, with
+`FLOOR_CORRECTION.md` and `floor_interval.py` / `FLOOR_INTERVAL.json` as the record. The floor had
+been quoted forward since it was first written and never re-derived from the score files.
+
+## Also applied
+
+- Vina baseline 0.61 → **0.581**; gaps 0.116/0.073 → **0.145/0.102**; both published figures
+  attributed to the single source [5] they come from.
+- Supervision-asymmetry paragraph added to §3.3, with the Sunseri & Koes counter-result stated and
+  reconciled.
+- Comparability paragraph added: 25,000-inactive cap, and [5]'s max-over-templates on 13 of 15.
+- 0.075 AVE drop attributed to the AVE variant as a whole — selection *and* estimator — not to
+  debiasing alone.
+- References [5] completed, [6] year corrected to 2025, [4] recast as AutoDock-GPU and re-cited,
+  [8] now cited in §1.
+- 34.2%, 45.7%, per-arm resamples (10,000 / 4,000), per-arm exhaustiveness, search-effort CI
+  printed.
+- Prose flags B×2 hedged; flag A parallelism broken in §1.
+- Title changed — "seven descriptors that beat docking on LIT-PCBA" removed, since the corrected
+  evidence does not support it once the supervision asymmetry is stated.
+- `analysis/boltz2/RESULT.md` now carries a superseded-note so a repository reader does not meet
+  the withdrawn lower-bound caveat as live.
+
+## Still outstanding, not blocking
+
+- Publish the repository with history intact (blocker 1), after the patent-disclosure check.
+- Optional: recompute all five docking residuals under one procedure, which would turn the
+  indicative 0.507–0.559 band into a like-for-like interval. Zero compute; the scores exist.
+- Optional: re-run the pose-ensemble and DiffDock arms on the repaired receptor, which would let
+  the decomposition framing stand without the conditional.
