@@ -417,3 +417,46 @@ for AutoDock is 0.456.
 - **[8] is uncited.** Either cite it — it belongs in §1 beside "LIT-PCBA was constructed to
   control it", since it audits LIT-PCBA and finds leakage and redundancy, which bears directly on
   §3.3 — or remove it. Citing it strengthens §3.3's honesty about the substrate.
+
+---
+---
+
+# Where to submit
+
+**Preprint: ChemRxiv** (Cambridge Open Engage). No endorsement requirement — the reason arXiv is
+unavailable — right readership, mints a DOI. Deposit as a **draft with a reserved DOI** first and
+cite the concept DOI, never a version DOI. bioRxiv is second choice; this is cheminformatics, not
+biology, and ChemRxiv is where the LIT-PCBA audience reads.
+
+**Do not post the preprint until blockers 1 and 2 are cleared.** The pre-registration claim is the
+paper's contribution and it is currently unverifiable by any reader.
+
+**Journal — the choice is a framing decision, and the framing decides the venue:**
+
+| | *Journal of Cheminformatics* (BMC, OA) | *J. Chem. Inf. Model.* (ACS) |
+|---|---|---|
+| fits if the lead claim is | the **resolution floor** and the decomposition | **descriptors beat docking** |
+| receptivity to a measurement-limits / largely negative result | high — it publishes benchmarking and negative methodology | lower; wants a method |
+| referee pool | benchmarking and reproducibility | the people who wrote LIT-PCBA [3] and the bias-control paper [2] |
+| risk | less citation reach | referees will press hardest on exactly the two things this audit flags: the 25,000-inactive cap and the supervised-vs-unsupervised asymmetry |
+
+**Recommendation: *Journal of Cheminformatics* first.** The paper's actual spine, and the way §3
+is ordered, is the floor and the decomposition — the descriptor result is corroboration, not the
+thesis. J Cheminform is the natural home for "here is what this class of benchmark can and cannot
+resolve", it is open access, and it does not require the paper to claim a method it does not have.
+
+JCIM becomes the right target only if the paper is restructured so the LIT-PCBA descriptor result
+leads. Do not attempt that without first adding the supervision-asymmetry paragraph and the
+25,000-inactive comparability sentence; without them the paper walks into a desk rejection from
+the referees best placed to spot both.
+
+**Either way, fix the comparability and supervision statements before submission, not in response
+to review.** Both are one paragraph each and both are certain to be raised.
+
+**Title.** "seven descriptors that beat docking on LIT-PCBA" claims more than the corrected
+evidence supports once the supervision asymmetry is stated. Suggested:
+
+> *What actually moves virtual screening performance: a measured resolution limit and a
+> pre-registered decomposition of six interventions*
+
+with the descriptor result kept as a §3.3 result rather than a title claim.
