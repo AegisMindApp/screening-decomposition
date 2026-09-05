@@ -290,3 +290,130 @@ READY TO SUBMIT: No
 8. Insert the three objection answers.
 9. Either compute a Factor Xa Boltz-2 residual or state that the residual analysis is
    single-target.
+
+---
+---
+
+# `/verify-refs` — reference and claim-provenance audit
+
+**6 September 2026.** All eight references resolve. **No reference is fabricated.** But the two
+external numbers the title rests on were traced to their primary source, and one of them is wrong.
+
+## Reference metadata
+
+| # | First author | Year | Status | Issue |
+|---|---|---|---|---|
+| 1 | Chen | 2019 | **VERIFIED** | DOI `10.1371/journal.pone.0220113`, PLOS ONE 14:e0220113, "Hidden bias in the DUD-E dataset leads to misleading performance of deep learning in structure-based virtual screening" |
+| 2 | Sieg | 2019 | **VERIFIED** | DOI `10.1021/acs.jcim.8b00712`, JCIM 59:947–961, "In Need of Bias Control…" |
+| 3 | Tran-Nguyen | 2020 | **VERIFIED** | DOI `10.1021/acs.jcim.0c00155`, JCIM 60:4263–4273 |
+| 4 | Abo-Dahab | 2026 | **VERIFIED as existing** | arXiv:2605.01681, 3 May 2026 — but **miscited for the claim**, see below |
+| 5 | Sunseri | 2021 | **WRONG** | journal, volume and DOI missing — *Molecules* **26**(23):7369, DOI `10.3390/molecules26237369` |
+| 6 | Furui | **2025** | **WRONG** | arXiv:2508.17555 published **24 Aug 2025**; §4 calls it one of "two 2026 papers" |
+| 7 | Wan | 2026 | **VERIFIED** | arXiv:2603.05532, 2 Mar 2026, Wan, Zhang, Xue & Coveney |
+| 8 | Huang | 2025 | **VERIFIED but UNCITED** | arXiv:2507.21404, 29 Jul 2025 — appears only in the reference list; `grep "\[8\]"` returns the reference line and nothing else |
+
+## Claim provenance
+
+| Ref | Claim in manuscript | Line | Verdict | Evidence from source |
+|---|---|---|---|---|
+| 4 | "published AutoDock **Vina** at 0.61" | 28, 132 | **CONTRADICTED** | Primary source (Sunseri & Koes 2021, Table 2) gives Vina on LIT-PCBA median AUC = **0.581** |
+| 4 | attributing 0.61 to [4] | 132 | **UNSUPPORTED** | [4] does not measure it. Its line reads "LIT-PCBA Performance (**by Proxy**)… AutoDock Vina achieves a median EF1% of 1.3 and a median AUROC of 0.61.**[1]**" — its ref [1] is Sunseri & Koes 2021 |
+| 4 | implicitly, that [4] benchmarked Vina | 203 | **CONTRADICTED** | [4] used **AutoDock-GPU** (AutoDock 4.2 scoring), stating "For simplicity, AutoDock-GPU is referred to as AutoDock throughout this manuscript." Vina and AutoDock 4.2 are different scoring functions |
+| 5 | "GNINA at 0.61–0.62" | 28, 133 | **SUPPORTED** | Table 2: Default (Affinity) 0.611, Dense (Affinity) 0.616; text: "median AUCs of 0.79 and 0.61 for Default versus 0.80 and 0.62 for Dense on DUD-E and LIT-PCBA respectively" |
+| 4,5 | presented as two independent published baselines | 28 | **UNSUPPORTED** | Both trace to the **same** paper — Sunseri & Koes 2021 |
+| 5 | — | — | **ADVERSE, UNADDRESSED** | Sunseri & Koes ran their own simple-descriptor baseline and conclude their models "**significantly outperform models fit to the same training data using simple chemical descriptors**" |
+| 6,7 | "Two **2026** papers disagree" | 183 | **CONTRADICTED on the year** | [6] is 24 Aug **2025** |
+| 6,7 | "…disagree about its virtual screening performance" | 183 | **SUPPORTED** | [6]: Boltz-2-derived scoring gives "significantly higher screening performance compared to AutoDock Vina and GNINA". [7]: Boltz-2 "lacks the energetic resolution required for lead identification" |
+| 1 | "Analogue and decoy bias… well documented" | 50 | **SUPPORTED** | Chen et al. is exactly this |
+| 2 | "…well documented [2]" | 50 | **SUPPORTED** | Sieg et al. established the descriptor-baseline bias control |
+| 3 | "LIT-PCBA was constructed to control it" | 50 | **SUPPORTED** | title: "An Unbiased Data Set for Machine Learning and Virtual Screening" |
+
+## The Vina number is wrong, and correcting it strengthens the paper
+
+Sunseri & Koes 2021, Table 2, LIT-PCBA median AUC:
+
+| method | median AUC |
+|---|---|
+| **Vina** | **0.581** |
+| Vinardo | 0.577 |
+| RFScore-4 | 0.600 |
+| RFScore-VS | 0.542 |
+| GNINA Default (Affinity) | 0.611 |
+| GNINA Dense (Affinity) | 0.616 |
+
+The 0.61 in the manuscript came via [4], which appears to have misread this table — it reports
+Vina EF1% 1.3 / AUROC 0.61, whereas the table gives Vina EF1% 1.1 / AUC 0.581 and RFScore-4
+EF1% 1.28 / AUC 0.600. [4] labelled the statement "by Proxy"; the manuscript dropped that hedge.
+
+Consequences, all favourable:
+
+| claim | as written | corrected |
+|---|---|---|
+| descriptors (full) beat Vina by | 0.116 | **0.145** |
+| descriptors (≥50 actives) beat Vina by | 0.073 | **0.102** |
+
+## The objection a JCIM referee will raise first
+
+**Sunseri & Koes ran the same control and reached the opposite conclusion.** They fit Lasso, kNN,
+decision tree, random forest, gradient-boosted tree and SVM models to the DUD-E/MUV simple
+descriptors and report that Gnina's CNNs significantly outperform them.
+
+The reconciliation is real but is **nowhere in the manuscript**:
+
+- **Their** descriptor models were fit to the CNNs' *training* sets (PDBbind 2016, CrossDocked2020)
+  on binding affinity, then transferred to LIT-PCBA. An off-benchmark ligand-based affinity regressor.
+- **Ours** is fit out-of-fold on LIT-PCBA's own actives and inactives. A supervised classifier with
+  access to the target's labels.
+
+These are different experiments and ours is the stronger baseline — but a referee who knows this
+paper will read the title as refuted by a source the manuscript itself cites. One paragraph fixes it.
+
+**And the same distinction is the sharpest scientific objection to §3.3 and to the Mpro/Factor Xa
+result.** The descriptor baseline is *supervised on the benchmark's own labels*; docking is
+unsupervised and needs no actives. Framed as Sieg-style **bias control** — "a trivial ligand-only
+model fit to these labels reaches 0.726, so this benchmark substantially measures property
+matching" — the comparison is valid and standard. Framed as **"seven descriptors beat docking"**,
+which is what the title says, it compares a supervised model against an unsupervised one and is
+not like for like. The manuscript never draws the distinction.
+
+*Suggested insertion, §3.3:* "These descriptor baselines are supervised on each target's own
+actives and inactives, whereas docking scores require no labels. The comparison is therefore a
+bias control in the sense of Sieg et al. [2] — it bounds how much of a benchmark's apparent
+enrichment is reachable from ligand properties alone — not a claim that descriptors are a
+deployable substitute for docking on a novel target. Sunseri & Koes [5] reach the opposite
+conclusion with descriptor models fit off-benchmark to PDBbind and CrossDocked affinity data and
+transferred to LIT-PCBA; the difference in conclusion is a difference in what the baseline is
+allowed to see."
+
+## Corrected citations, ready to paste
+
+```
+[4] Abo-Dahab Y, Xiang X, Chun J, Zhao L (2026) Benchmarking Single-Pose Docking, Consensus
+    Rescoring, and Supervised ML on the LIT-PCBA Library: A Critical Evaluation of DiffDock,
+    AutoDock-GPU, GNINA, and DiffDock-NMDN. arXiv:2605.01681.
+[5] Sunseri J, Koes DR (2021) Virtual Screening with Gnina 1.0. Molecules 26(23):7369.
+    doi:10.3390/molecules26237369.
+[6] Furui K, Ohue M (2025) Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided
+    Binding Prediction with Boltz-2. arXiv:2508.17555.
+[7] Wan S, Zhang X, Xue X, Coveney PV (2026) On the Reliability of AI Methods in Drug Discovery:
+    Evaluation of Boltz-2 for Structure and Binding Affinity Prediction. arXiv:2603.05532.
+```
+
+§3.3 table and abstract, corrected:
+
+```
+| AutoDock Vina, published [5]  | 0.581     | 15 |
+| GNINA, published [5]          | 0.611–0.616 | 15 |
+```
+
+Both figures come from one source. If a second, independent number is wanted, [4]'s **own**
+measurements are usable — but they are AutoDock-GPU, not Vina, and its reported average ROC-AUC
+for AutoDock is 0.456.
+
+§4, corrected: "A 2025 and a 2026 paper disagree about its virtual screening performance [6,7]."
+
+## Additional edits
+
+- **[8] is uncited.** Either cite it — it belongs in §1 beside "LIT-PCBA was constructed to
+  control it", since it audits LIT-PCBA and finds leakage and redundancy, which bears directly on
+  §3.3 — or remove it. Citing it strengthens §3.3's honesty about the substrate.
