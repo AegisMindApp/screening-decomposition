@@ -16,6 +16,13 @@ than editing the original text, with the reason recorded in place.
 | Boltz-2, Mpro, arm 2 (pocket-conditioned) | `analysis/boltz2/PREREGISTRATION_ARM2.md` | `e96d4fea1` | 2026-09-04 11:28 |
 | Boltz-2, Factor Xa | `analysis/boltz2/PREREGISTRATION_TARGETS.md` | `68bd9b94a` | 2026-09-04 11:40 |
 
+Commit dates above are git metadata carried through from the project's own history; they are not
+a third-party timestamp, and a reader should treat them as the authors' record rather than as
+independent verification of ordering.
+
+Bars citing a "≈0.04 measurement floor" — the pose-ensemble arm and both Boltz-2 arms — were fixed
+before the floor correction described in §3.1 and S3. They are read as written; see §3.2.
+
 The search-effort comparison (exhaustiveness 4 vs 32) and the LIT-PCBA descriptor baseline were
 not separately pre-registered; both are reported here as such. The search-effort arm reuses two
 runs that pre-dated the pre-registration programme, and the LIT-PCBA baseline applies a method

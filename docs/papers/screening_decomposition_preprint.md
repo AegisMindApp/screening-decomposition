@@ -21,12 +21,15 @@ scoring functions on fixed poses; the second bounds a comparison of protocols, w
 published improvements are. Both fall inside the range in which docking improvements are typically
 reported.
 
-Measured against the appropriate limit on SARS-CoV-2 Mpro: changing the scoring function on
-identical poses moved AUROC +0.140, repairing a receptor preparation defect +0.045, scoring the
-pose ensemble rather than the top pose +0.019, substituting DiffDock-L pose generation +0.017,
-supplying the correct binding site to a co-folding model −0.013, and eight-fold search effort
-−0.019. Four of six fall inside the relevant floor. The search-effort result is the sharpest: its
-measured effect is smaller than the run-to-run reproducibility of the protocol it was measured in.
+On SARS-CoV-2 Mpro: changing the scoring function on identical poses moved AUROC +0.140,
+repairing a receptor preparation defect +0.045, scoring the pose ensemble rather than the top pose
++0.019, substituting DiffDock-L pose generation +0.017, supplying the correct binding site to a
+co-folding model −0.013, and eight-fold search effort −0.019. Read against each arm's own
+pre-registered bar, one is supported at full strictness, one directionally, and the rest are not.
+Read against the resolution limits measured here — which were fixed after four of the six bars,
+and so are reported alongside those readings rather than in place of them — one clears, one is
+marginal, and four fall inside. The search-effort result is the sharpest either way: its measured
+effect is smaller than the run-to-run reproducibility of the protocol it was measured in.
 
 Docking adds nothing demonstrable over seven free physicochemical descriptors on either panel we
 assembled: on Mpro it significantly subtracts (−0.002 [−0.004, −0.000]) and on Factor Xa its
@@ -123,26 +126,46 @@ an amount comparable to published improvements. We report a difference as unreso
 falls below the floor that matches the comparison being made: the scoring floor where poses are
 held fixed, the protocol floor where placement or search is allowed to vary.
 
-### 3.2 Four of six interventions fall inside the relevant floor
+### 3.2 One intervention clears its floor; four fall inside it
 
-| intervention | ΔAUROC | 95% CI | poses fixed? | floor | resolvable |
-|---|---|---|---|---|---|
-| Scoring function, identical poses (gnina CNN) | **+0.140** | [+0.091, +0.187] | yes | 0.020 | yes |
-| Receptor preparation repair | **+0.045** | [+0.024, +0.067] | receptor only | 0.039 | marginal |
-| Pose ensemble rather than top pose | +0.019 | [−0.017, +0.055] | yes | 0.020 | no |
-| Pose generator substituted (DiffDock-L) | +0.017 | [−0.027, +0.064] | no | 0.039 | no |
-| Binding site supplied to Boltz-2 | −0.013 | [−0.026, +0.000] | n/a | 0.039 | no |
-| Eight-fold search effort | −0.019 | [−0.032, −0.006] | no | 0.039 | no |
+| intervention | ΔAUROC | 95% CI | pre-registered bar | pre-registered verdict |
+|---|---|---|---|---|
+| Scoring function, identical poses (gnina CNN) | **+0.140** | [+0.091, +0.187] | CI entirely above +0.10 | directionally supported, **not at full strictness** (lower bound 0.091) |
+| Receptor preparation repair | **+0.045** | [+0.024, +0.067] | CI entirely above 0 | **supported** |
+| Pose ensemble rather than top pose | +0.019 | [−0.017, +0.055] | > +0.04, CI excluding 0 | **refuted** |
+| Pose generator substituted (DiffDock-L) | +0.017 | [−0.027, +0.064] | CI above +0.05 would refute "scoring is the problem" | scoring hypothesis **retained** |
+| Binding site supplied to Boltz-2 | −0.013 | [−0.026, +0.000] | > +0.04, CI excluding 0 | **not demonstrated** |
+| Eight-fold search effort | −0.019 | [−0.032, −0.006] | *not pre-registered* | — |
+
+**On re-gating, and why we do not do it silently.** Four of these bars were fixed before the
+resolution limits in §3.1 were separated, and three of them cite a single "≈0.04 measurement
+floor" that we now know conflates the scoring and protocol cases. A pre-registration cannot be
+moved after the fact, so the verdicts above are read against the bars as written. The corrected
+floors are reported alongside as a secondary observation, and they change the picture in one place
+only:
+
+| intervention | poses fixed? | applicable floor | reading against it |
+|---|---|---|---|
+| Scoring function (gnina CNN) | yes | scoring, 0.020 | clears |
+| Receptor preparation repair | receptor only; ligands re-docked | protocol, 0.039 | **marginal** — the point estimate exceeds the floor but the two intervals overlap across nearly their whole width |
+| Pose ensemble | yes | scoring, 0.020 | inside |
+| Pose generator (DiffDock-L) | no | protocol, 0.039 | inside |
+| Binding site to Boltz-2 | n/a — different model | protocol, 0.039 | inside |
+| Eight-fold search effort | no | protocol, 0.039 | inside |
+
+The receptor-repair row is the one place the two readings diverge: it passes its pre-registered
+bar cleanly and is only marginal against a floor fixed afterwards. We report both and claim
+neither over the other.
 
 These are six single-factor comparisons, not a partition of one pipeline. Four were run on the
 donor-defective receptor described below, before it was repaired; the receptor-repair row measures
 what that condition costs, and Supplementary Table S2 gives each arm's baseline in full. Their
 nulls are therefore conditional on a receptor now known to be broken.
 
-The one intervention that clears its floor decisively concerns *what is computed*, not *where or
-how thoroughly the ligand is placed*. The search-effort row makes the point most economically: its
-CI excludes zero, so the effect is real and negative, but it is smaller than the protocol floor —
-and the exhaustiveness-4/32 pair *is* the protocol floor, so eight times the compute is by
+The one intervention that clears its floor outright concerns *what is computed*, not *where or how
+thoroughly the ligand is placed*. The search-effort row makes the point most economically: its CI
+excludes zero, so the effect is real and negative, but it is smaller than the protocol floor — and
+the exhaustiveness-4/32 pair *is* the protocol floor, so eight times the compute is by
 construction indistinguishable from running the same protocol twice. The pose-source result is
 next sharpest: Vina and DiffDock poses correlate at r = 0.139, nearly uncorrelated coordinates,
 and produce rankings differing by less than the floor.
@@ -238,6 +261,11 @@ but not the comparisons, which remain a single-benchmark measurement.
 
 **Four of the six arms sit on the donor-defective receptor**, as set out in §3.2 and Supplementary
 Table S2. Whether the pose-ensemble and DiffDock nulls survive on a repaired receptor is untested.
+
+**Four of the six pre-registered bars predate the floor correction.** Three of them cite a single
+"≈0.04 measurement floor" that §3.1 shows was conflating two quantities. The bars stand as written
+and the verdicts in §3.2 are read against them; the corrected floors are reported beside those
+verdicts, never substituted for them.
 
 **The resolution floors are measured on one benchmark of one size**, on the unprotonated receptor.
 They should be re-measured rather than assumed elsewhere; the method costs one extra scoring pass.
