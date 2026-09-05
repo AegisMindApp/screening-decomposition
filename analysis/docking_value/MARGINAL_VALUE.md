@@ -40,12 +40,19 @@ own control.
 The gnina rescore worker embedded a control nobody had run: gnina's `--score_only` Vina term
 should reproduce the cached docking score if the poses and receptor are what we think.
 
-    Vina docking cache vs gnina --score_only:  r = 0.9369
-    mean difference −0.043 kcal/mol; disagreements >2 kcal/mol: 0/745
-    AUROC from cache 0.4182   AUROC from gnina 0.3793
+    Vina docking cache (exh 32) vs gnina --score_only on the exh 4 poses:
+      r = 0.9369; mean difference −0.043 kcal/mol; disagreements >2 kcal/mol: 0/745
+      AUROC from cache 0.4182   AUROC from gnina 0.3793     gap 0.039  [0.024, 0.056]
 
-The control **passes** on pose identity — and yet two scores agreeing at r = 0.937, never
-differing by 2 kcal/mol, produce **AUROCs 0.039 apart**.
+**Correction, 6 Sep 2026.** This paragraph originally described the two sides as "the identical
+Vina poses". They are not: the cached side is the exhaustiveness-32 run and gnina rescored the
+exhaustiveness-4 poses. See `FLOOR_CORRECTION.md`. The 0.039 stands but it is the **protocol**
+floor — run-to-run reproducibility including search. With poses genuinely held fixed the gap is
+**0.020 [0.011, 0.029]**, the **scoring** floor. Both are used below, each against the comparison
+it fits.
+
+Two scores agreeing at r = 0.937 and never differing by 2 kcal/mol still produce **AUROCs 0.039
+apart**.
 
 That is the finding with real teeth. A benchmark of this size cannot resolve a scoring
 improvement smaller than about 0.04 AUROC, because sub-kcal numerical noise already moves the
