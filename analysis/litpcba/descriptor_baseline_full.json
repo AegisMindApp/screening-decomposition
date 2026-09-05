@@ -1,0 +1,92 @@
+{
+ "ADRB2": {
+  "actives": 17,
+  "inactives": 25000,
+  "auroc": 0.7008,
+  "ef1pct": 11.77
+ },
+ "ALDH1": {
+  "actives": 7168,
+  "inactives": 25000,
+  "auroc": 0.6169,
+  "ef1pct": 1.17
+ },
+ "ESR1_ago": {
+  "actives": 13,
+  "inactives": 5583,
+  "auroc": 0.726,
+  "ef1pct": 0.0
+ },
+ "ESR1_ant": {
+  "actives": 102,
+  "inactives": 4948,
+  "auroc": 0.7525,
+  "ef1pct": 1.98
+ },
+ "FEN1": {
+  "actives": 369,
+  "inactives": 25000,
+  "auroc": 0.7596,
+  "ef1pct": 16.3
+ },
+ "GBA": {
+  "actives": 166,
+  "inactives": 25000,
+  "auroc": 0.7456,
+  "ef1pct": 3.02
+ },
+ "IDH1": {
+  "actives": 39,
+  "inactives": 25000,
+  "auroc": 0.7921,
+  "ef1pct": 12.84
+ },
+ "KAT2A": {
+  "actives": 194,
+  "inactives": 25000,
+  "auroc": 0.6656,
+  "ef1pct": 9.83
+ },
+ "MAPK1": {
+  "actives": 308,
+  "inactives": 25000,
+  "auroc": 0.7285,
+  "ef1pct": 0.97
+ },
+ "MTORC1": {
+  "actives": 97,
+  "inactives": 25000,
+  "auroc": 0.5945,
+  "ef1pct": 6.21
+ },
+ "OPRK1": {
+  "actives": 24,
+  "inactives": 25000,
+  "auroc": 0.864,
+  "ef1pct": 0.0
+ },
+ "PKM2": {
+  "actives": 546,
+  "inactives": 25000,
+  "auroc": 0.6743,
+  "ef1pct": 1.65
+ },
+ "PPARG": {
+  "actives": 27,
+  "inactives": 5211,
+  "auroc": 0.8459,
+  "ef1pct": 3.73
+ },
+ "TP53": {
+  "actives": 79,
+  "inactives": 4168,
+  "auroc": 0.5769,
+  "ef1pct": 0.0
+ },
+ "VDR": {
+  "actives": 884,
+  "inactives": 25000,
+  "auroc": 0.6918,
+  "ef1pct": 4.65
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "protocol_floor": {
+  "n": 745,
+  "r": 0.9372041350502176,
+  "mean_diff_kcal": -0.04402684563758391,
+  "n_gt_2kcal": 0,
+  "auroc_cached": 0.4186307967085539,
+  "auroc_gnina_vina_term": 0.37929371053135164,
+  "gap": 0.039337086177202274,
+  "ci95": [
+   0.023505311568856047,
+   0.05568133411167031
+  ]
+ },
+ "scoring_floor": {
+  "n": 743,
+  "r": 0.9699707906073023,
+  "mean_diff_kcal": -0.1078593270524899,
+  "n_gt_2kcal": 0,
+  "auroc_cached": 0.39916494531712865,
+  "auroc_gnina_vina_term": 0.3790611839682311,
+  "gap": 0.020103761348897575,
+  "ci95": [
+   0.01117238072404697,
+   0.028648015392731874
+  ]
+ },
+ "receptor": "unprotonated (donor-defective)",
+ "interpretation": "The published 0.039 floor compares the exhaustiveness-32 Vina cache against gnina's --score_only re-evaluation of the exhaustiveness-4 poses. Those are two independent stochastic searches, so 0.039 is the run-to-run reproducibility of the whole docking PROTOCOL, not of a scoring function on fixed poses. With placement genuinely held fixed the gap is about half that. Both are real floors and each gates a different comparison; the paper's qualitative readings are unchanged under either, but receptor repair (+0.045) moves from marginal to clearly resolvable under the scoring floor."
+}

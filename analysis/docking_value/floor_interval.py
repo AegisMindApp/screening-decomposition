@@ -21,9 +21,9 @@ is read.
 import json, glob, random, statistics as st
 
 K = "analysis/retrospective_benchmark/kaggle"
-lab = {}
-for m in glob.glob(f"{K}/bundle_CHEMBL4523582_7VU6*/shard*/manifest.json"):
-    for c in json.load(open(m))["compounds"]: lab[c["name"]] = c["label"]
+# Labels ship with this repository: the original per-shard manifests were build artifacts
+# and were never tracked, so they are consolidated here.
+lab = json.load(open("analysis/docking_value/mpro_labels.json"))
 sp = lambda k: k[6:] if k.startswith("bench_") else k
 gn = {sp(k): v for k, v in json.load(open(f"{K}/gnina_rescore.json")).items()}
 exh4 = {sp(k): v for k, v in json.load(open(f"{K}/exh4_scores_merged.json")).items()}

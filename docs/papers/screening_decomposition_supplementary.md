@@ -5,16 +5,21 @@ condition — was committed before the corresponding data existed. Each row give
 commit that introduced it, and that commit's date. Amendments are appended to the file rather
 than editing the original text, with the reason recorded in place.
 
-| arm | pre-registration file | commit | committed |
-|---|---|---|---|
-| Scoring function (gnina rescore of Vina poses) | `analysis/three_arm_docking/PREREGISTRATION.md` | `cd8f55639` | 2026-08-31 08:46 |
-| Receptor preparation repair | `analysis/receptor_prep/PREREGISTRATION.md` | `1f68b20c4` | 2026-08-31 14:26 |
-| Pose ensemble vs top pose | `analysis/pose_ensemble/PREREGISTRATION.md` | `448d954e5` | 2026-09-02 22:52 |
-| Pose generator (DiffDock-L) | `analysis/three_arm_docking/PREREGISTRATION.md` | `cd8f55639` | 2026-08-31 08:46 |
-| Boltz-2, Mpro, arm 1 (blind) | `analysis/boltz2/PREREGISTRATION.md` | `9e3083d02` | 2026-09-03 08:27 |
-| Boltz-2 analysis script, written before the data | `analysis/boltz2/analyse_boltz2.py` | `5afb5bec8` | 2026-09-03 13:51 |
-| Boltz-2, Mpro, arm 2 (pocket-conditioned) | `analysis/boltz2/PREREGISTRATION_ARM2.md` | `e96d4fea1` | 2026-09-04 11:28 |
-| Boltz-2, Factor Xa | `analysis/boltz2/PREREGISTRATION_TARGETS.md` | `68bd9b94a` | 2026-09-04 11:40 |
+| arm | pre-registration file | commit (public repo) | commit (origin) | committed |
+|---|---|---|---|---|
+| Scoring function (gnina rescore of Vina poses) | `analysis/three_arm_docking/PREREGISTRATION.md` | `f5e42306a` | `cd8f55639` | 2026-08-31 08:46 |
+| Receptor preparation repair | `analysis/receptor_prep/PREREGISTRATION.md` | `05d9f78ec` | `1f68b20c4` | 2026-08-31 14:26 |
+| Pose ensemble vs top pose | `analysis/pose_ensemble/PREREGISTRATION.md` | `d5d08c1ac` | `448d954e5` | 2026-09-02 22:52 |
+| Pose generator (DiffDock-L) | `analysis/three_arm_docking/PREREGISTRATION.md` | `f5e42306a` | `cd8f55639` | 2026-08-31 08:46 |
+| Boltz-2, Mpro, arm 1 (blind) | `analysis/boltz2/PREREGISTRATION.md` | `8df29ba21` | `9e3083d02` | 2026-09-03 08:27 |
+| Boltz-2 analysis script, written before the data | `analysis/boltz2/analyse_boltz2.py` | `42f94969b` | `5afb5bec8` | 2026-09-03 13:51 |
+| Boltz-2, Mpro, arm 2 (pocket-conditioned) | `analysis/boltz2/PREREGISTRATION_ARM2.md` | `064969caf` | `e96d4fea1` | 2026-09-04 11:28 |
+| Boltz-2, Factor Xa | `analysis/boltz2/PREREGISTRATION_TARGETS.md` | `00baa6db9` | `68bd9b94a` | 2026-09-04 11:40 |
+
+The public repository was produced from the origin repository with `git filter-repo`, which
+rewrites commit hashes but preserves author and committer dates. Both hashes are given so a
+reader can check either. Verify a date with
+`git log -1 --format=%ad --date=iso <commit>`.
 
 Commit dates above are git metadata carried through from the project's own history; they are not
 a third-party timestamp, and a reader should treat them as the authors' record rather than as
