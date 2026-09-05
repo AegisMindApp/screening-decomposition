@@ -95,8 +95,8 @@ applied, supplied as 1-based sequence indices derived from residues within 8 Å 
 centre.
 
 **Pre-registration.** Every reading rule — endpoint, threshold, control, abort condition — was
-committed to a git repository before the corresponding data existed. Supplementary Table S1 lists
-each arm's pre-registration file, commit hash and commit date. Amendments are appended rather than
+committed to a public git repository before the corresponding data existed. Supplementary Table S1
+lists each arm's pre-registration file, commit hash and commit date. Amendments are appended rather than
 edited, with the reason recorded. Two comparisons were not pre-registered and are identified as
 such in S1.
 
@@ -289,12 +289,21 @@ turns out to be wrong is part of the record.
 
 ## 5. Data and code availability
 
-All pre-registration files, amendments, analysis code and raw outputs are in the project
-repository, with the commit hash and date for each pre-registration given in Supplementary Table
-S1. At the time of writing that repository is private, so a reader cannot independently confirm
-that a given commit predates the corresponding data; the hashes and dates in S1 are our assertion,
-and the repository will be made public with its history intact. Readers should weight the
-pre-registration claim accordingly until then.
+All pre-registration files, amendments, analysis code and raw outputs are public at
+**https://github.com/AegisMindApp/screening-decomposition**, with the commit hash and date for
+each pre-registration given in Supplementary Table S1. The history is intact rather than a
+snapshot, so any cited commit can be resolved and dated directly
+(`git log -1 --format=%ad --date=iso <commit>`).
+
+The dates are git metadata carried through from the repository this was exported from; they are
+not a third-party timestamp, and a reader can confirm ordering and internal consistency but
+cannot from this alone exclude authored metadata. The resolution-floor analysis is reproducible
+from that repository with no dependencies beyond the Python standard library, and asserts a
+positive control against previously published values before reporting; that control failed once,
+on 6 September 2026, and the defect it caught is recorded in the repository alongside the result.
+
+Two comparisons — the search-effort arm and the LIT-PCBA descriptor baseline — were not
+pre-registered and are identified as such in S1.
 
 ## References
 

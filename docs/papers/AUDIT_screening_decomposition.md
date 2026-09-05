@@ -568,3 +568,13 @@ been quoted forward since it was first written and never re-derived from the sco
   indicative 0.507–0.559 band into a like-for-like interval. Zero compute; the scores exist.
 - Optional: re-run the pose-ensemble and DiffDock arms on the repaired receptor, which would let
   the decomposition framing stand without the conditional.
+
+---
+
+**Blocker 1 CLOSED, 6 September 2026.** History exported with `git filter-repo` (author and
+committer dates preserved, hashes rewritten) and published at
+`https://github.com/AegisMindApp/screening-decomposition`. Verified: the cited pre-registration
+commits resolve and date correctly through the unauthenticated GitHub API; a clean clone runs
+`floor_interval.py` and its positive control passes; a scan of all 339 objects in the filtered
+history found no credential patterns. S1 gives both the public and origin hashes. §2 and §5 of
+the manuscript updated. **All five blockers are now closed.**
