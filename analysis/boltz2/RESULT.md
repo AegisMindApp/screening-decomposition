@@ -63,6 +63,11 @@ precisely to prevent that swap.
 
 ## What this does not show
 
+> **Superseded 5 Sep 2026 — read this section with `ARM2_RESULT.md` beside it.** The
+> lower-bound framing below was pre-registered and is **withdrawn**. Arm 2 supplied the pocket
+> and scored 0.7783 against this blind run's 0.7913 (r = 0.952): running blind cost Boltz-2
+> nothing, so +0.0934 needs no allowance and is not a lower bound.
+
 The run was **blind** — no pocket conditioning — while the Vina comparator docked into a
 defined 22 Å box on the known site. It also used `diffusion_samples = 1`, no `potentials`, and
 no `affinity_mw_correction`. All recorded in the pre-registration on 4 Sep, before this number
