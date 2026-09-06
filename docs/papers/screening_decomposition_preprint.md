@@ -45,8 +45,10 @@ sequence and SMILES alone, does not beat the descriptor baseline on its own (Mpr
 Xa +0.019, both intervals spanning zero) but adds +0.093 [+0.062, +0.125] and +0.075 [+0.051,
 +0.099] respectively when combined with those descriptors. Its advantage is not that it is less
 property-driven — descriptors explain 63% of its score and 63% of Vina's — but that on Mpro its
-residual, the part orthogonal to those descriptors, ranks actives at 0.642 where five docking
-scores we measured sat between 0.507 and 0.559.
+residual, the part orthogonal to those descriptors, ranks actives at 0.657 where six docking
+scores residualised the same way sat between 0.494 and 0.573. Across twelve cross-validation fold
+seeds the two do not overlap: the highest docking residual observed is 0.581, the lowest Boltz-2
+residual 0.644.
 
 ---
 
@@ -245,13 +247,26 @@ assembled panels: the standalone comparison fails on both, the combination clear
 overlapping intervals.
 
 Boltz-2 is not less property-driven than docking — descriptors explain 63.1% of its score and
-62.8% of Vina's. The difference is the residual. After regressing out the seven descriptors
-out-of-fold, Boltz-2's remainder ranks actives at **0.6418** on Mpro; Vina's at 0.5382. Across
-five docking scores we residualised — Vina raw and repaired, two gnina heads, and Vina on Factor
-Xa — the remainder fell between 0.507 and 0.559. Two residualisation procedures were used across
-those five (out-of-fold logistic and out-of-fold gradient-boosted), so the band is indicative
-rather than a like-for-like interval; Boltz-2's 0.6418 sits outside it under either. The residual
-analysis is single-target: we did not compute a Factor Xa Boltz-2 residual.
+62.8% of Vina's. The difference is the residual. Regressing the seven descriptors out of each
+score out-of-fold and ranking actives on the remainder:
+
+| score | raw AUROC | residual AUROC | 12-seed range |
+|---|---|---|---|
+| Vina, repaired receptor (Mpro) | 0.4530 | 0.5187 | [0.5131, 0.5259] |
+| Vina, raw receptor (Mpro) | 0.4079 | 0.5092 | [0.4980, 0.5222] |
+| gnina Vina term (Mpro) | 0.3791 | 0.4941 | [0.4887, 0.5017] |
+| gnina CNNaffinity (Mpro) | 0.5389 | 0.4994 | [0.4908, 0.5091] |
+| gnina CNNscore (Mpro) | 0.5041 | 0.5426 | [0.5320, 0.5592] |
+| Vina, repaired receptor (Factor Xa) | 0.6775 | 0.5733 | [0.5634, 0.5810] |
+| **Boltz-2 `prob_binary` (Mpro)** | 0.7913 | **0.6567** | **[0.6439, 0.6648]** |
+
+Six docking scores fall between 0.494 and 0.573; Boltz-2 sits at 0.657. The residual estimate
+moves with the cross-validation fold assignment, so each value is a mean over twelve fold seeds
+with its full range given, and the separation holds at the worst case — the highest docking
+residual observed across all seeds is 0.581, the lowest Boltz-2 residual 0.644. It also survives
+the choice of estimator: under linear rather than gradient-boosted residualisation the docking
+band is 0.418–0.614 and Boltz-2 is 0.748. The residual analysis is single-target — we did not
+compute a Factor Xa Boltz-2 residual.
 
 Residualising against ligand descriptors is a weaker test than receptor ablation. Binding free
 energy genuinely covaries with size and lipophilicity, so a physically correct scorer would also

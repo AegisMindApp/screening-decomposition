@@ -23,6 +23,13 @@ scores **0.6418**. For context, every docking score measured this week — Vina 
 repaired, gnina CNNaffinity, gnina CNNscore, across Mpro and Factor Xa — produced a residual
 in the band **0.507–0.555**. Boltz-2 sits clearly outside it.
 
+> **Corrected 6 Sep 2026 — see `../docking_value/RESIDUAL_BAND.md`.** The band above mixed two
+> residualisation procedures (linear in `MARGINAL_VALUE.md`, gradient-boosted here) and is not a
+> like-for-like interval. Recomputed one way over 12 fold seeds, the docking band is
+> **0.494–0.573** and Boltz-2 is **0.657**. The two point values quoted in this paragraph are
+> also not reproducible to within seed noise — this run did not record its fold seed — so the
+> recomputed values supersede them. The conclusion is unchanged and the gap is wider.
+
 That is the mechanism behind arm 1's +0.0934 in combination with descriptors. Boltz-2 does not
 add value by being a better molecular-property calculator; it adds value because the part of
 its prediction that is *not* explainable by cheap descriptors actually ranks actives.
