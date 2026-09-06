@@ -17,8 +17,10 @@ SC, PR = F["scoring_floor"], F["protocol_floor"]
 # (label, delta, lo, hi, which floor applies)
 ARMS = [
     ("Scoring function\n(gnina CNN, identical poses)",  0.140,  0.091,  0.187, "scoring"),
+    # Re-run on the repaired receptor across 40 fold seeds; see
+    # analysis/pose_ensemble/RECONSTRUCTION.md. Supersedes the published +0.019.
+    ("Pose ensemble vs top pose",                       0.055,  0.043,  0.068, "scoring"),
     ("Receptor preparation repair",                     0.045,  0.024,  0.067, "protocol"),
-    ("Pose ensemble vs top pose",                       0.019, -0.017,  0.055, "scoring"),
     ("Pose generator (DiffDock-L)",                     0.017, -0.027,  0.064, "protocol"),
     ("Binding site supplied to Boltz-2",               -0.013, -0.026,  0.000, "protocol"),
     ("Eight-fold search effort",                       -0.019, -0.032, -0.006, "protocol"),

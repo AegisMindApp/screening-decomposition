@@ -1,0 +1,114 @@
+{
+ "control_pass": true,
+ "controls": {
+  "Mpro raw 0.4530": true,
+  "Mpro desc 0.7654": true,
+  "FXa raw 0.6775": true,
+  "FXa desc 0.7129": true
+ },
+ "results": [
+  {
+   "target": "Mpro (CHEMBL4523582)",
+   "score": "Vina, repaired",
+   "n": 751,
+   "active_frac": 0.3422103861517976,
+   "auroc_desc": 0.7673088738007845,
+   "auroc_raw": 0.45297657493029186,
+   "auroc_comb": 0.7655760172655525,
+   "marginal": -0.0017205129702248278,
+   "marginal_ci": [
+    -0.003763323567911314,
+    0.00025536261491321266
+   ],
+   "residual": 0.5171631563194128,
+   "residual_range": [
+    0.5115077427180642,
+    0.5220860442035948
+   ],
+   "verdict": "PROPERTY-CONFOUNDED; NO MARGINAL VALUE",
+   "flags": [
+    "PROPERTY-CONFOUNDED",
+    "NO MARGINAL VALUE"
+   ]
+  },
+  {
+   "target": "Factor Xa (CHEMBL244)",
+   "score": "Vina, repaired",
+   "n": 854,
+   "active_frac": 0.45433255269320844,
+   "auroc_desc": 0.7106820494668378,
+   "auroc_raw": 0.6775059731870271,
+   "auroc_comb": 0.7279434538294765,
+   "marginal": 0.017229229460215285,
+   "marginal_ci": [
+    -0.0031576625024130056,
+    0.037836349114544365
+   ],
+   "residual": 0.574957966461661,
+   "residual_range": [
+    0.5666397504535198,
+    0.5829554002035309
+   ],
+   "verdict": "PROPERTY-CONFOUNDED; NO MARGINAL VALUE",
+   "flags": [
+    "PROPERTY-CONFOUNDED",
+    "NO MARGINAL VALUE"
+   ]
+  },
+  {
+   "target": "PD-L1 (CHEMBL3580522)",
+   "score": "Vina, repaired",
+   "n": 320,
+   "active_frac": 0.78125,
+   "auroc_desc": 0.9145142857142856,
+   "auroc_raw": 0.5356285714285713,
+   "auroc_comb": 0.9441142857142856,
+   "marginal": 0.02962245189390933,
+   "marginal_ci": [
+    0.0020751953125,
+    0.06380087703044901
+   ],
+   "residual": 0.5556380952380952,
+   "residual_range": [
+    0.5347999999999999,
+    0.572342857142857
+   ],
+   "verdict": "PROPERTY-CONFOUNDED; NO MARGINAL VALUE",
+   "flags": [
+    "PROPERTY-CONFOUNDED",
+    "NO MARGINAL VALUE",
+    "IMBALANCED"
+   ]
+  },
+  {
+   "target": "CHEMBL612545",
+   "score": "Vina",
+   "n": 414,
+   "active_frac": 0.178743961352657,
+   "auroc_desc": 0.6921303656597774,
+   "auroc_raw": 0.57802066772655,
+   "auroc_comb": 0.6817567567567567,
+   "marginal": -0.010300420511037854,
+   "marginal_ci": [
+    -0.02285788923719967,
+    0.0012371700879765246
+   ],
+   "residual": 0.4865427927927927,
+   "residual_range": [
+    0.4570747217806041,
+    0.5025834658187599
+   ],
+   "verdict": "NO MARGINAL VALUE; NO TARGET-SPECIFIC SIGNAL",
+   "flags": [
+    "NO MARGINAL VALUE",
+    "NO TARGET-SPECIFIC SIGNAL",
+    "IMBALANCED"
+   ]
+  }
+ ],
+ "seed": 20260906,
+ "floors": {
+  "scoring": 0.0201,
+  "protocol": 0.0393
+ }
+}

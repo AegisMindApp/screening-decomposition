@@ -22,13 +22,12 @@ published improvements are. Both fall inside the range in which docking improvem
 reported.
 
 On SARS-CoV-2 Mpro: changing the scoring function on identical poses moved AUROC +0.140,
-repairing a receptor preparation defect +0.045, scoring the pose ensemble rather than the top pose
-+0.019, substituting DiffDock-L pose generation +0.017, supplying the correct binding site to a
-co-folding model −0.013, and eight-fold search effort −0.019. Read against each arm's own
-pre-registered bar, one is supported at full strictness, one directionally, and the rest are not.
-Read against the resolution limits measured here — which were fixed after four of the six bars,
-and so are reported alongside those readings rather than in place of them — one clears, one is
-marginal, and four fall inside. The search-effort result is the sharpest either way: its measured
+repairing a receptor preparation defect +0.045, scoring the pose ensemble rather than the top
+pose +0.055, substituting DiffDock-L pose generation +0.017, supplying the correct binding site
+to a co-folding model −0.013, and eight-fold search effort −0.019. Two clear the relevant floor,
+one is marginal, three fall inside. These are distributions over cross-validation fold
+assignment, not point estimates: we previously published the pose-ensemble arm as +0.019 and
+refuted, and it proved to be the 2nd percentile of a distribution centred at +0.031. The search-effort result is the sharpest either way: its measured
 effect is smaller than the run-to-run reproducibility of the protocol it was measured in.
 
 Docking adds nothing demonstrable over seven free physicochemical descriptors on either panel we
@@ -142,7 +141,7 @@ effect cannot exceed it by construction.](figures/figure1_floors.png)
 |---|---|---|---|---|
 | Scoring function, identical poses (gnina CNN) | **+0.140** | [+0.091, +0.187] | CI entirely above +0.10 | directionally supported, **not at full strictness** (lower bound 0.091) |
 | Receptor preparation repair | **+0.045** | [+0.024, +0.067] | CI entirely above 0 | **supported** |
-| Pose ensemble rather than top pose | +0.019 | [−0.017, +0.055] | > +0.04, CI excluding 0 | **refuted** |
+| Pose ensemble rather than top pose | **+0.055** | [+0.043, +0.068] | > +0.04, CI excluding 0 | **supported** — corrects a previously published refutation, see below |
 | Pose generator substituted (DiffDock-L) | +0.017 | [−0.027, +0.064] | CI above +0.05 would refute "scoring is the problem" | scoring hypothesis **retained** |
 | Binding site supplied to Boltz-2 | −0.013 | [−0.026, +0.000] | > +0.04, CI excluding 0 | **not demonstrated** |
 | Eight-fold search effort | −0.019 | [−0.032, −0.006] | *not pre-registered* | — |
@@ -158,7 +157,7 @@ only:
 |---|---|---|---|
 | Scoring function (gnina CNN) | yes | scoring, 0.020 | clears |
 | Receptor preparation repair | receptor only; ligands re-docked | protocol, 0.039 | **marginal** — the point estimate exceeds the floor but the two intervals overlap across nearly their whole width |
-| Pose ensemble | yes | scoring, 0.020 | inside |
+| Pose ensemble | yes | scoring, 0.020 | **clears** — all 40 fold seeds above it, lowest +0.040 |
 | Pose generator (DiffDock-L) | no | protocol, 0.039 | inside |
 | Binding site to Boltz-2 | n/a — different model | protocol, 0.039 | inside |
 | Eight-fold search effort | no | protocol, 0.039 | inside |
@@ -172,13 +171,29 @@ donor-defective receptor described below, before it was repaired; the receptor-r
 what that condition costs, and Supplementary Table S2 gives each arm's baseline in full. Their
 nulls are therefore conditional on a receptor now known to be broken.
 
-The one intervention that clears its floor outright concerns *what is computed*, not *where or how
-thoroughly the ligand is placed*. The search-effort row makes the point most economically: its CI
+Two interventions clear their floor, and they do not divide as cleanly as *what is computed*
+versus *where the ligand is placed*. Changing the scoring function clears by a wide margin; so
+does scoring the pose ensemble rather than the top pose — a placement-side intervention, in that
+it reads the distribution the search already produced. What does **not** matter is generating the
+poses differently, or generating more of them. The narrower statement the data supports is that
+search *effort* and pose *source* are inert, while how the pose distribution is *read* is not.
+
+The search-effort row makes the point most economically: its CI
 excludes zero, so the effect is real and negative, but it is smaller than the protocol floor — and
 the exhaustiveness-4/32 pair *is* the protocol floor, so eight times the compute is by
 construction indistinguishable from running the same protocol twice. The pose-source result is
 next sharpest: Vina and DiffDock poses correlate at r = 0.139, nearly uncorrelated coordinates,
 and produce rankings differing by less than the floor.
+
+**The pose-ensemble arm carries a correction.** We previously published this arm at +0.019 with a
+pre-registered verdict of *refuted*, measured on the donor-defective receptor. Re-run on the
+repaired receptor across 40 cross-validation fold seeds it gives **+0.055 [+0.043, +0.068]**,
+every seed above the floor. The earlier figure is not a contradictory result: on the defective
+receptor the same pipeline gives +0.031 with a full seed range of [+0.017, +0.043], and the
+published +0.019 sits at its 2nd percentile. That refutation was a single draw from a
+distribution straddling the floor, and the honest verdict on that data was always *unresolved*.
+Paired per seed, repairing the receptor contributes +0.024 [+0.011, +0.039] to this arm and helps
+in 39 of 40 seeds.
 
 **The receptor defect is worth reporting for its own sake.** Every receptor we had prepared
 carried zero hydrogen-bond donors: the converter typed all 754 Mpro nitrogens as acceptors and
@@ -282,13 +297,27 @@ this.
 our docking protocol scores below chance. LIT-PCBA broadens the descriptor result to 15 targets
 but not the comparisons, which remain a single-benchmark measurement.
 
-**Four of the six arms sit on the donor-defective receptor**, as set out in §3.2 and Supplementary
-Table S2. Whether the pose-ensemble and DiffDock nulls survive on a repaired receptor is untested.
+**Three of the six arms sit on the donor-defective receptor**, as set out in §3.2 and
+Supplementary Table S2. The pose-ensemble arm has since been re-run on the repaired receptor and
+its verdict changed; whether the DiffDock null survives the same treatment is untested, and that
+null should be read as conditional.
 
 **Four of the six pre-registered bars predate the floor correction.** Three of them cite a single
 "≈0.04 measurement floor" that §3.1 shows was conflating two quantities. The bars stand as written
 and the verdicts in §3.2 are read against them; the corrected floors are reported beside those
 verdicts, never substituted for them.
+
+**Cross-validation fold assignment moves AUROC differences on these panels by 0.01–0.03**, which
+is the same size as the effects being measured. Two of our own results were misled by single-seed
+estimates: the residual band in §3.4, and the pose-ensemble arm, where a published refutation
+proved to be a 2nd-percentile draw. Every difference of this magnitude is reported here as a
+distribution over fold seeds with its range, and we would treat any single-seed AUROC difference
+below about 0.05 on a benchmark of this size as uninterpretable.
+
+**One analysis script was never committed.** The original pose-ensemble implementation exists
+only as its pre-registration and its write-up, so its published number could not be re-derived
+and had to be reconstructed from a prose description. Every script behind the results reported
+here is in the repository with its outputs.
 
 **The resolution floors are measured on one benchmark of one size**, on the unprotonated receptor.
 They should be re-measured rather than assumed elsewhere; the method costs one extra scoring pass.
