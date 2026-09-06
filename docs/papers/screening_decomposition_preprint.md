@@ -394,22 +394,18 @@ pre-registered and are identified as such in S1.
 
 ## References
 
-[1] Chen L, Cruz A, Ramsey S, Dickson CJ, et al. (2019) Hidden bias in the DUD-E dataset leads to
-misleading performance of deep learning in structure-based virtual screening. *PLOS ONE*
-14:e0220113. doi:10.1371/journal.pone.0220113
-[2] Sieg J, Flachsenberg F, Rarey M (2019) In Need of Bias Control: Evaluating Chemical Data for
-Machine Learning in Structure-Based Virtual Screening. *J Chem Inf Model* 59:947–961.
-doi:10.1021/acs.jcim.8b00712
-[3] Tran-Nguyen VK, Jacquemard C, Rognan D (2020) LIT-PCBA: An Unbiased Data Set for Machine
-Learning and Virtual Screening. *J Chem Inf Model* 60:4263–4273. doi:10.1021/acs.jcim.0c00155
-[4] Abo-Dahab Y, Xiang X, Chun J, Zhao L (2026) Benchmarking Single-Pose Docking, Consensus
-Rescoring, and Supervised ML on the LIT-PCBA Library: A Critical Evaluation of DiffDock,
-AutoDock-GPU, GNINA, and DiffDock-NMDN. arXiv:2605.01681
-[5] Sunseri J, Koes DR (2021) Virtual Screening with Gnina 1.0. *Molecules* 26(23):7369.
-doi:10.3390/molecules26237369
-[6] Furui K, Ohue M (2025) Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided
-Binding Prediction with Boltz-2. arXiv:2508.17555
-[7] Wan S, Zhang X, Xue X, Coveney PV (2026) On the Reliability of AI Methods in Drug Discovery:
-Evaluation of Boltz-2 for Structure and Binding Affinity Prediction. arXiv:2603.05532
-[8] Huang A, Knight IS, Naprienko S (2025) Data Leakage and Redundancy in the LIT-PCBA Benchmark.
-arXiv:2507.21404
+1. Chen L, Cruz A, Ramsey S, Dickson CJ, et al. (2019) Hidden bias in the DUD-E dataset leads to misleading performance of deep learning in structure-based virtual screening. *PLOS ONE* 14:e0220113. doi:10.1371/journal.pone.0220113
+
+2. Sieg J, Flachsenberg F, Rarey M (2019) In Need of Bias Control: Evaluating Chemical Data for Machine Learning in Structure-Based Virtual Screening. *J Chem Inf Model* 59:947–961. doi:10.1021/acs.jcim.8b00712
+
+3. Tran-Nguyen VK, Jacquemard C, Rognan D (2020) LIT-PCBA: An Unbiased Data Set for Machine Learning and Virtual Screening. *J Chem Inf Model* 60:4263–4273. doi:10.1021/acs.jcim.0c00155
+
+4. Abo-Dahab Y, Xiang X, Chun J, Zhao L (2026) Benchmarking Single-Pose Docking, Consensus Rescoring, and Supervised ML on the LIT-PCBA Library: A Critical Evaluation of DiffDock, AutoDock-GPU, GNINA, and DiffDock-NMDN. arXiv:2605.01681
+
+5. Sunseri J, Koes DR (2021) Virtual Screening with Gnina 1.0. *Molecules* 26(23):7369. doi:10.3390/molecules26237369
+
+6. Furui K, Ohue M (2025) Boltzina: Efficient and Accurate Virtual Screening via Docking-Guided Binding Prediction with Boltz-2. arXiv:2508.17555
+
+7. Wan S, Zhang X, Xue X, Coveney PV (2026) On the Reliability of AI Methods in Drug Discovery: Evaluation of Boltz-2 for Structure and Binding Affinity Prediction. arXiv:2603.05532
+
+8. Huang A, Knight IS, Naprienko S (2025) Data Leakage and Redundancy in the LIT-PCBA Benchmark. arXiv:2507.21404
