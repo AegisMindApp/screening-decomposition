@@ -45,7 +45,10 @@ Xa +0.019, both intervals spanning zero) but adds +0.093 [+0.062, +0.125] and +0
 +0.099] respectively when combined with those descriptors. Its advantage is not that it is less
 property-driven — descriptors explain 63% of its score and 63% of Vina's — but that on Mpro its
 residual, the part orthogonal to those descriptors, ranks actives at 0.657 where six docking
-scores residualised the same way sat between 0.494 and 0.573. Across twelve cross-validation fold
+scores residualised the same way sat between 0.494 and 0.573. Both descriptor comparisons are
+supervised on each target's own labels; transferred cold to the other target the descriptor model
+ranks actives *below chance*, and the standalone Boltz-2 score — which requires no labels at all —
+is the only configuration usable on a target with no known actives. Across twelve cross-validation fold
 seeds the two do not overlap: the highest docking residual observed is 0.581, the lowest Boltz-2
 residual 0.644.
 
@@ -247,7 +250,7 @@ a deliberately debiased set is well clear of chance.
 Comparing our AVE descriptor result against a full-set docking result would not be like for like
 and we do not do so. Vina would presumably also fall under debiasing; by how much is unknown to us.
 
-### 3.4 A co-folding model exceeds the floor, but only in combination
+### 3.4 A co-folding model exceeds the floor in combination — but only the standalone score is deployable
 
 | | Mpro | Factor Xa |
 |---|---|---|
@@ -260,6 +263,13 @@ and we do not do so. Vina would presumably also fall under debiasing; by how muc
 Both halves replicate across a viral protease and a coagulation factor with independently
 assembled panels: the standalone comparison fails on both, the combination clears on both with
 overlapping intervals.
+
+**Both rows are fitted on each target's own labels.** The combination in the table above is an
+out-of-fold logistic regression over the target's actives and inactives, and so carries exactly
+the supervision caveat §3.3 attaches to the descriptor baseline. On a target with no known
+actives there is nothing to fit it with. We tested whether the gain survives when the weights
+come from a different target — fitting on one panel in full and applying the model cold to the
+other, in both directions.
 
 Boltz-2 is not less property-driven than docking — descriptors explain 63.1% of its score and
 62.8% of Vina's. The difference is the residual. Regressing the seven descriptors out of each
@@ -282,6 +292,31 @@ residual observed across all seeds is 0.581, the lowest Boltz-2 residual 0.644. 
 the choice of estimator: under linear rather than gradient-boosted residualisation the docking
 band is 0.418–0.614 and Boltz-2 is 0.748. The residual analysis is single-target — we did not
 compute a Factor Xa Boltz-2 residual.
+
+**The increment transfers; the model does not.** Cold, the Boltz-2 increment clears the floor in
+both directions (+0.088 [+0.056, +0.119] Mpro → Factor Xa; +0.248 [+0.210, +0.287] the other
+way), but the transferred *models* are largely unusable. Sorted by what a screener actually has:
+
+| configuration | Mpro | Factor Xa | labels required |
+|---|---|---|---|
+| **Boltz-2 alone, rank by score** | **0.7913** | **0.7227** | **none** |
+| descriptors, in-target out-of-fold | 0.7673 | 0.6994 | the target's own actives |
+| descriptors + Boltz-2, in-target out-of-fold | 0.8647 | 0.7803 | the target's own actives |
+| descriptors, cold from the other target | 0.4553 | 0.4011 | another target's actives |
+| descriptors + Boltz-2, cold from the other target | 0.7036 | 0.4890 | another target's actives |
+
+Two things follow. **Seven descriptors fit on one target and applied to another rank actives
+below chance in both directions** — inverted transfer, not weak transfer. The property signature
+separating actives on one panel is close to the opposite of the other's, which is the strongest
+evidence here that the descriptor baseline measures target-specific bias rather than chemistry
+that generalises, and is why §3.3 treats it as a bias control.
+
+**And on a novel target the only usable configuration is the standalone score**, which needs no
+labels, no receptor preparation and no docking box. That is the configuration reported as *not
+demonstrated* at the top of this section. Both readings are correct and they answer different
+questions: the in-target comparison asks whether Boltz-2 beats a baseline fitted on the answers;
+the prospective question asks what can be run when there are no answers to fit to. Under the
+first it fails; under the second it is the only candidate that works.
 
 Residualising against ligand descriptors is a weaker test than receptor ablation. Binding free
 energy genuinely covaries with size and lipophilicity, so a physically correct scorer would also
