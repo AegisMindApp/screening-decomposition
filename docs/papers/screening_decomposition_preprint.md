@@ -128,6 +128,14 @@ held fixed, the protocol floor where placement or search is allowed to vary.
 
 ### 3.2 One intervention clears its floor; four fall inside it
 
+![**Six interventions against the two measured resolution limits.** Points are
+ΔAUROC with 95% paired-bootstrap intervals; dashed lines are the two floors from §3.1 with their
+own bootstrap intervals shaded. Each intervention is coloured by the floor that applies to it —
+the scoring floor where poses were held fixed, the protocol floor where placement or search was
+allowed to vary. The two floor intervals overlap between 0.024 and 0.029. Note that the
+eight-fold search-effort comparison *is* the measurement that defines the protocol floor, so its
+effect cannot exceed it by construction.](figures/figure1_floors.png)
+
 | intervention | ΔAUROC | 95% CI | pre-registered bar | pre-registered verdict |
 |---|---|---|---|---|
 | Scoring function, identical poses (gnina CNN) | **+0.140** | [+0.091, +0.187] | CI entirely above +0.10 | directionally supported, **not at full strictness** (lower bound 0.091) |
