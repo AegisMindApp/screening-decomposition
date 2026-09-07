@@ -15,13 +15,14 @@ F = json.load(open("analysis/docking_value/FLOOR_INTERVAL.json"))
 SC, PR = F["scoring_floor"], F["protocol_floor"]
 
 # (label, delta, lo, hi, which floor applies)
+# The DiffDock pose-source arm is omitted: it is not evaluable on this panel (biased
+# exclusion of ~20% of compounds). Plotting a void estimate would misrepresent it.
 ARMS = [
     ("Scoring function\n(gnina CNN, identical poses)",  0.140,  0.091,  0.187, "scoring"),
     # Re-run on the repaired receptor across 40 fold seeds; see
     # analysis/pose_ensemble/RECONSTRUCTION.md. Supersedes the published +0.019.
     ("Pose ensemble vs top pose",                       0.055,  0.043,  0.068, "scoring"),
     ("Receptor preparation repair",                     0.045,  0.024,  0.067, "protocol"),
-    ("Pose generator (DiffDock-L)",                     0.017, -0.027,  0.064, "protocol"),
     ("Binding site supplied to Boltz-2",               -0.013, -0.026,  0.000, "protocol"),
     ("Eight-fold search effort",                       -0.019, -0.032, -0.006, "protocol"),
 ]
@@ -32,7 +33,7 @@ C_SC  = "#2f6f9f"   # scoring floor
 C_PR  = "#c2701c"   # protocol floor
 COL   = {"scoring": C_SC, "protocol": C_PR}
 
-fig, ax = plt.subplots(figsize=(7.4, 3.9), dpi=300)
+fig, ax = plt.subplots(figsize=(7.4, 3.5), dpi=300)
 fig.patch.set_facecolor("white"); ax.set_facecolor("white")
 
 # floors: shaded bootstrap interval + median line
