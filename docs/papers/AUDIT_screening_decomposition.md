@@ -578,3 +578,18 @@ commits resolve and date correctly through the unauthenticated GitHub API; a cle
 `floor_interval.py` and its positive control passes; a scan of all 339 objects in the filtered
 history found no credential patterns. S1 gives both the public and origin hashes. §2 and §5 of
 the manuscript updated. **All five blockers are now closed.**
+
+---
+
+**Title corrected, 7 September 2026.** Blocker 5's resolution stated that "decomposition" would be
+retained in the title. That was wrong: §3.2 says in terms that the six arms are "single-factor
+comparisons, **not** a partition of one pipeline", so the title asserted something the body
+denies — the Step 3b failure this audit exists to catch, reintroduced by the fix for Blocker 5.
+
+The title is now *"What actually moves virtual screening performance: two measured resolution
+limits and six pre-registered interventions."* The preprint date was also stale (6 September on
+content last changed 7 September) and is corrected. The repository name `screening-decomposition`
+is an identifier, not a claim, and is left alone.
+
+**Still outstanding:** the manuscript carries no ORCID. ChemRxiv requires one at submission and
+JCIM expects it; it is not something to invent, so it must be added by the author.

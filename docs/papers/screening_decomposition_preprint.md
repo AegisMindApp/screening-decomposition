@@ -1,8 +1,8 @@
-# What actually moves virtual screening performance: two measured resolution limits and a pre-registered decomposition of six interventions
+# What actually moves virtual screening performance: two measured resolution limits and six pre-registered interventions
 
 **John Goodman** · OceanSparx Pty Ltd, Sydney, Australia · john.goodman@oceansparx.com
 
-**PREPRINT — 6 September 2026**
+**PREPRINT — 7 September 2026**
 
 ---
 
