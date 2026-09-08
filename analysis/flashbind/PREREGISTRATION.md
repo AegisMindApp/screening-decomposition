@@ -64,3 +64,45 @@ on the target it is being tested on would clear the ceiling for the wrong reason
 Reported either way, including the outcome that weakens §3.4. The manuscript is not yet submitted
 to a journal; if this lands before submission it goes in, and if it contradicts the current text
 the text changes.
+
+## Pocket agreement — reported regardless of the residual
+
+**Added 8 September 2026, still before any FlashBind score exists.**
+
+The six docking scores that define the band [0.494, 0.573] were all produced inside the same
+22 Å box centred on **[9.05, 8.90, −1.51]** (`bundle_CHEMBL4523582_7VU6/shard*/manifest.json`,
+receptor 7VU6). Boltz-2 — the one method that cleared the ceiling at 0.6567 — chose its own
+binding mode. FABind+ also predicts its own pocket.
+
+So if FlashBind clears the ceiling, the two methods that cleared it are also the two methods
+that were not box-constrained, and "the ceiling is a property of the scoring approach" has a
+live alternative: **the ceiling is a property of being box-constrained**. Same shape as the
+blind-vs-pocket-conditioned error that voided the DiffDock arm.
+
+`pocket_indices.lmdb` is an output of the FABind+ stage, so the check is free. Report:
+
+- the centroid of FABind+'s selected pocket residues per compound, in receptor coordinates
+- its distance to [9.05, 8.90, −1.51], as a distribution over compounds
+- the fraction of compounds whose pocket centroid falls inside the 22 Å box
+
+Reading:
+
+- **Pockets agree** (median centroid distance < 11 Å, i.e. inside the box) → FlashBind is a
+  clean third *scoring* approach and the reading rules above stand unmodified.
+- **Pockets disagree** → the residual is reported with the pocket confound named, and it does
+  not by itself support the generalisation claim. The finding is then about the box, not the
+  score, and that is the more useful result.
+
+This is a **reported quantity, not a gate**. It cannot void the arm; it determines which of two
+claims the number is allowed to support.
+
+## Second leakage surface: FABind+, not just the scorer
+
+`LEAKAGE_CHECK.md` cleared the *affinity head* — 0 protease assays among MF-PCBA's 105 AIDs.
+That says nothing about the pose generator. FABind+ ships a PDBbind-trained checkpoint, and
+PDBbind contains SARS-CoV-2 Mpro complexes. This advantages **pose placement** on our target,
+in the direction of better performance.
+
+Disclosed here, not treated as a blocker: the arm asks whether a third scoring approach carries
+orthogonal signal, and a well-placed pose is the input to that question rather than the answer.
+It is stated in the write-up either way.
