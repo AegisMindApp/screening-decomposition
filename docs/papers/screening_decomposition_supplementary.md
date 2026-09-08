@@ -17,12 +17,14 @@ Paths are relative to `analysis/`; the file is `PREREGISTRATION.md` except where
 | Boltz-2 analysis script, written before the data | `boltz2/analyse_boltz2.py` | `42f94969b` | `5afb5bec8` | 2026-09-03 13:51 |
 | Boltz-2, Mpro, arm 2 (pocket-conditioned) | `boltz2/PREREGISTRATION_ARM2.md` | `064969caf` | `e96d4fea1` | 2026-09-04 11:28 |
 | Boltz-2, Factor Xa | `boltz2/PREREGISTRATION_TARGETS.md` | `00baa6db9` | `68bd9b94a` | 2026-09-04 11:40 |
-| FlashBind, Mpro (third scoring approach) | `flashbind/` | pending export | `c6b4504f9` | 2026-09-08 10:06 |
-| — amendment: pocket-agreement control | `flashbind/` | pending export | `24bc26573` | 2026-09-08 11:36 |
-| — amendment: abort decision on torchdrug | `flashbind/` | pending export | `453e2031f` | 2026-09-08 12:04 |
+| FlashBind, Mpro (third scoring approach) | `flashbind/` | `9769a13e9` | `c6b4504f9` | 2026-09-08 10:06 |
+| — amendment: pocket-agreement control | `flashbind/` | `4bb34fe55` | `24bc26573` | 2026-09-08 11:36 |
+| — amendment: abort decision on torchdrug | `flashbind/` | `96a38a9d1` | `453e2031f` | 2026-09-08 12:04 |
 
 The public repository was produced from the origin repository with `git filter-repo`, which
-rewrites commit hashes but preserves author and committer dates. Both hashes are given so a
+rewrites commit hashes but preserves author and committer dates. The three FlashBind rows were
+added later by replaying those commits onto the existing export with their original dates rather
+than by re-running `filter-repo`, which would have rewritten every hash in this table. Both hashes are given so a
 reader can check either. Verify a date with
 `git log -1 --format=%ad --date=iso <commit>`.
 

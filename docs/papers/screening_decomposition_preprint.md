@@ -439,10 +439,7 @@ turns out to be wrong is part of the record.
 
 All pre-registration files, amendments, analysis code and raw outputs are public at
 **https://github.com/AegisMindApp/screening-decomposition**, with the commit hash and date for
-each pre-registration given in Supplementary Table S1. The FlashBind arm of §3.4 is the
-exception at the time of writing: its pre-registration, amendments, worker, controls and raw
-scores exist in the origin repository at the hashes given in S1 and are marked there as pending
-export. The history is intact rather than a
+each pre-registration given in Supplementary Table S1. The history is intact rather than a
 snapshot, so any cited commit can be resolved and dated directly
 (`git log -1 --format=%ad --date=iso <commit>`).
 
