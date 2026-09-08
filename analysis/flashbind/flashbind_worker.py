@@ -85,10 +85,16 @@ def s_deps():
     # NOT torchdrug. FlashBind's repr/torchdrug.py is a self-contained rdkit reimplementation
     # emitting 56-dim node features; real torchdrug's default emits 67 and the checkpoint was
     # trained on 56. env.yaml lists torchdrug because the training environment had it.
+    # torch-geometric 2.4.0 is FABind+'s own README pin. FlashBind's env.yaml says 2.6.1, but
+    # that is the affinity environment; on 2.6.1 FABind+'s post_optim_mol hits
+    # KeyError: 'complex' in pyg's separate(), because newer Batch.get_example requires every
+    # node type in _slice_dict. If predict.py then needs 2.6.1, the two halves get swapped the
+    # way the two esm packages already are.
     pkgs = ["esm==3.2.0", "lmdb", "biopython", "rdkit", "einops", "omegaconf",
-            "pandas", "joblib", "tqdm", "fair-esm", "torch-geometric==2.6.1",
-            "torchmetrics", "spyrmsd", "accelerate", "mlcrate",
-            "pytorch-lightning", "hydra-core"]
+            "pandas", "joblib", "tqdm", "fair-esm", "torch-geometric==2.4.0",
+            "torchmetrics==1.4.3", "spyrmsd", "accelerate", "mlcrate",
+            "pytorch-lightning", "hydra-core", "timeout-decorator", "gemmi",
+            "xxhash", "scikit-learn", "scipy", "requests"]
     r = sh([sys.executable, "-m", "pip", "install", "-q"] + pkgs, timeout=3000)
     # pyg's compiled ops must match the torch we pinned, not the torch Kaggle shipped.
     # pyg publishes against 2.4.0; 2.4.1 is ABI-compatible with it.
@@ -104,7 +110,12 @@ def s_deps():
     assert rp.returncode == 0, f"pyg wheels ({cp}) failed rc={rp.returncode}"
     import importlib
     got = {}
-    for m in ("esm", "lmdb", "rdkit", "pandas", "joblib", "tqdm"):
+    # Checked against the imports actually present in src/affinity and scripts/, so a missing
+    # one is named here rather than 12 minutes into the run. v8 lost a session to
+    # timeout_decorator, which is in their env.yaml and was not in my list.
+    for m in ("esm", "lmdb", "rdkit", "pandas", "joblib", "tqdm", "timeout_decorator",
+              "gemmi", "xxhash", "sklearn", "scipy", "einops", "omegaconf",
+              "pytorch_lightning", "torchmetrics", "torch_geometric"):
         try:
             importlib.import_module(m); got[m] = "ok"
         except Exception as e:
@@ -145,27 +156,52 @@ def s_pyg():
 
 @stage("esm3_repr")
 def s_esm():
-    """FlashBind's own call, from src/affinity/data/repr/esm3.py - not my guess at the SDK.
-    v2 died on forward_and_sample(); the shipped path is logits(LogitsConfig(...))."""
+    """FlashBind's own call, from src/affinity/data/repr/esm3.py - logits(LogitsConfig(...)),
+    not the forward_and_sample() I first guessed at.
+
+    Mpro is a homodimer and the receptor PDB carries both chains, so the representation must
+    cover all 597 residues FABind+ indexes into. Their prot_id -> sequence format cannot express
+    a dimer, so the encoder is run once per chain and the outputs stacked in structure order:
+    same call, same model, no fabricated peptide bond at the A/B junction. v13 ran with chain A
+    alone and inference indexed past the end of a [298, 1536] tensor.
+    """
     import torch
     from esm.models.esm3 import ESM3
     from esm.sdk.api import LogitsConfig, ESMProtein
+    from Bio.PDB import PDBParser
     seqs = json.load(open(f"{BUNDLE}/prots.json"))
     m = ESM3.from_pretrained("esm3_sm_open_v1").to("cuda").eval()
-    reprs = {}
-    for pid, seq in seqs.items():
-        with torch.no_grad():
-            t = m.encode(ESMProtein(sequence=seq)).to("cuda")
-            out = m.logits(t, LogitsConfig(return_embeddings=True))
-        emb = out.embeddings.squeeze(0)[1:-1]           # strip BOS/EOS, as they do
-        assert emb.shape[0] == len(seq), f"{pid}: {emb.shape[0]} rows vs {len(seq)} residues"
-        # affinity_binary.yaml declares protein_repr_dim 1536. The mirror of the 56-dim
-        # ligand assertion: a wrong encoder here is silent, and the checkpoint would still run.
-        assert emb.shape[1] == 1536, f"{pid}: {emb.shape[1]} dims, expected 1536"
-        reprs[pid] = emb.cpu()
+    reprs, shapes = {}, {}
+    for pid, chains in seqs.items():
+        if isinstance(chains, str):
+            chains = [chains]
+        parts = []
+        for ci, seq in enumerate(chains):
+            with torch.no_grad():
+                t = m.encode(ESMProtein(sequence=seq)).to("cuda")
+                out = m.logits(t, LogitsConfig(return_embeddings=True))
+            emb = out.embeddings.squeeze(0)[1:-1]        # strip BOS/EOS, as they do
+            assert emb.shape[0] == len(seq), \
+                f"{pid} chain {ci}: {emb.shape[0]} rows vs {len(seq)} residues"
+            # affinity_binary.yaml declares protein_repr_dim 1536; a wrong encoder is otherwise
+            # silent and the checkpoint would still run.
+            assert emb.shape[1] == 1536, f"{pid} chain {ci}: {emb.shape[1]} dims, expected 1536"
+            parts.append(emb.cpu())
+        r = torch.cat(parts, dim=0)
+        # The control for the v13 failure: the representation must have exactly one row per
+        # residue FABind+ can index. Anything else is a receptor-identity mismatch, and it
+        # surfaces here rather than as an out-of-bounds error deep inside inference on
+        # whichever compounds happen to select a pocket in the second chain.
+        st = PDBParser(QUIET=True).get_structure("r", f"{BUNDLE}/{pid}_receptor.pdb")[0]
+        n_ca = sum(1 for c in st for res in c if res.id[0] == " " and "CA" in res)
+        assert r.shape[0] == n_ca, \
+            f"{pid}: representation has {r.shape[0]} rows, receptor has {n_ca} CA residues"
+        reprs[pid] = r
+        shapes[pid] = (len(chains), tuple(r.shape), n_ca)
     torch.save(reprs, f"{OUT}/esm3.pt")
     del m; torch.cuda.empty_cache()
-    return f"{len(reprs)} proteins, [{emb.shape[0]}, 1536]"
+    return f"{len(reprs)} proteins; " + "; ".join(
+        f"{k}: {v[0]} chains -> {v[1]}, matches {v[2]} CA residues" for k, v in shapes.items())
 
 @stage("ligand_features")
 def s_ligand():
@@ -240,6 +276,14 @@ def s_torchdrug():
     torch without Pascal kernels and undo the pin the whole run rests on."""
     sh([sys.executable, "-m", "pip", "install", "-q", "decorator", "easydict", "ninja",
         "jinja2", "pyyaml", "networkx", "matplotlib"], timeout=1200)
+    # torchdrug/data/rdkit/draw.py imports rdkit.Chem.Draw.mplCanvas, which current rdkit no
+    # longer ships - it is a plotting module we never touch, but it sits on the import path of
+    # data/__init__.py so nothing in torchdrug loads without it. torchdrug is unmaintained
+    # (v0.2.1, Jul 2023; that import unchanged since 2021), so the fix is on the rdkit side.
+    # 2024.3.6 is the newest cp312 build that still carries mplCanvas - a supported version pin,
+    # not a patch. Safe here because ligand_features and ligand_repr_lmdb have already run.
+    rr = sh([sys.executable, "-m", "pip", "install", "-q", "rdkit==2024.3.6"], timeout=1800)
+    assert rr.returncode == 0, f"rdkit pin rc={rr.returncode}"
     r = sh([sys.executable, "-m", "pip", "install", "-q", "--no-deps",
             "--ignore-requires-python", "torchdrug==0.2.1"], timeout=1200)
     assert r.returncode == 0, f"torchdrug install rc={r.returncode}"
@@ -253,6 +297,21 @@ def s_torchdrug():
     assert "DIMS" in (c.stdout or ""), \
         f"torchdrug installed but unusable on py3.12: {(c.stderr or '')[-600:]}"
     return [l for l in c.stdout.splitlines() if l.startswith("DIMS")][0]
+
+@stage("pin_check")
+def s_pin():
+    """Every pip after the Pascal bootstrap can silently move torch. If it does, the P100 loses
+    its kernels and the failure surfaces as something unrelated - v6 died inside torchvision, a
+    library nothing in this pipeline uses, imported transitively by torchmetrics."""
+    import torch, importlib
+    assert torch.__version__.startswith("2.4.1"), f"torch drifted to {torch.__version__}"
+    x = torch.randn(256, 256, device="cuda"); float((x @ x).sum())
+    try:
+        tv = importlib.import_module("torchvision")
+        tvv = tv.__version__
+    except Exception as e:
+        tvv = f"UNIMPORTABLE {type(e).__name__}"
+    return f"torch {torch.__version__} matmul ok; torchvision {tvv}"
 
 @stage("fabind_prep")
 def s_fbprep():
@@ -294,7 +353,23 @@ def s_fbdock():
     outs = glob.glob(f"{FB}/FABind_plus/work/out/*")
     assert any("ligand_sdf" in o for o in outs), f"no ligand_sdf lmdb; got {outs[:6]}"
     assert any("pocket_indices" in o for o in outs), f"no pocket_indices lmdb; got {outs[:6]}"
-    return f"{[os.path.basename(o) for o in outs]}"
+    # v6 passed this stage on the existence of two lmdbs that FABind+ created and then left
+    # empty when it crashed one line later. The container is not the contents.
+    import lmdb
+    sdfs = sorted(p for p in outs if "ligand_sdf" in p)
+    pkts = sorted(p for p in outs if "pocket_indices" in p)
+    # FABind+ names its output per instance-id. We pass only --instance-id 0, so there must be
+    # exactly one pair; more would mean the panel sharded, and every glob downstream takes the
+    # first match - a fraction of the panel scored, reported at coverage 1.000.
+    assert len(sdfs) == 1 and len(pkts) == 1, f"expected one lmdb pair, got {sdfs} {pkts}"
+    counts = {}
+    for o in outs:
+        with lmdb.open(o, readonly=True, lock=False).begin() as t:
+            counts[os.path.basename(o)] = t.stat()["entries"]
+    for k, v in counts.items():
+        assert v > 0, f"{k} is empty (rc={r.returncode}) - docking wrote nothing"
+    cov = min(counts.values()) / NWANT
+    return f"{counts}, coverage {cov:.3f} of {NWANT}"
 
 @stage("pocket_agreement")
 def s_pocket():
@@ -305,7 +380,9 @@ def s_pocket():
     from Bio.PDB import PDBParser
     ch = PDBParser(QUIET=True).get_structure("r", f"{BUNDLE}/mpro_receptor.pdb")[0]
     ca = [r["CA"].get_coord() for r in ch.get_residues() if "CA" in r]
-    db = next(p for p in glob.glob(f"{FB}/FABind_plus/work/out/pocket_indices*"))
+    dbs = glob.glob(f"{FB}/FABind_plus/work/out/pocket_indices*")
+    assert len(dbs) == 1, f"expected one pocket_indices lmdb, got {dbs}"
+    db = dbs[0]
     dists, inside = [], 0
     with lmdb.open(db, readonly=True, lock=False).begin() as t:
         for k, v in t.cursor():
@@ -317,39 +394,110 @@ def s_pocket():
             dists.append(d)
             inside += all(abs(c[j]-BOX_CENTRE[j]) <= BOX_HALF for j in range(3))
     assert dists, "pocket_indices lmdb read but no centroid computed - empty is not a result"
+    dists = [float(d) for d in dists]   # Bio.PDB coords are numpy float32; json refuses them
     res = {"n": len(dists), "median_dist_A": round(statistics.median(dists), 2),
            "min": round(min(dists), 2), "max": round(max(dists), 2),
-           "frac_in_box": round(inside/len(dists), 3), "box_centre": BOX_CENTRE}
+           "frac_in_box": round(inside/len(dists), 3), "box_centre": list(BOX_CENTRE),
+           "all_dists_A": [round(d, 2) for d in sorted(dists)]}
     json.dump(res, open(f"{OUT}/pocket_agreement.json", "w"), indent=2)
     return res
 
+@stage("swap_pyg")
+def s_swappyg():
+    """The two halves need different torch-geometric versions, and each fails loudly on the
+    other's. FABind+'s post_optim_mol needs <=2.4 (Batch.get_example, KeyError: 'complex' on
+    2.6); FlashBind's affinity EGNN calls inspector.collect_param_data, which is 2.6 API and
+    absent from 2.4. Same structure as the esm collision, same handling: run each half against
+    the version it was written for, and swap once the first half's output is on disk."""
+    for p in ("ligand_sdf_0.lmdb", "pocket_indices_0.lmdb"):
+        d = f"{FB}/FABind_plus/work/out/{p}"
+        assert os.path.isdir(d), f"refusing to swap pyg before {p} exists"
+    r = sh([sys.executable, "-m", "pip", "install", "-q", "torch-geometric==2.6.1"], timeout=1200)
+    assert r.returncode == 0, "pyg 2.6.1 install failed"
+    c = sh([sys.executable, "-c",
+            "import torch_geometric as g; from torch_geometric.inspector import Inspector;"
+            "print(g.__version__, hasattr(Inspector('x'), 'collect_param_data'))"], timeout=300)
+    assert "True" in (c.stdout or ""), \
+        f"pyg swapped but collect_param_data absent: {(c.stdout or '')} {(c.stderr or '')[-300:]}"
+    return f"pyg 2.4.0 -> {c.stdout.strip()}"
+
 @stage("affinity_predict")
 def s_predict():
-    """--devices 1, no torchrun: their predict_binary.sh is --nproc_per_node=4 and would hang
-    at rendezvous on one P100 rather than fail."""
-    import shutil
+    """One subprocess per checkpoint, then average.
+
+    Their ensemble path runs both checkpoints in a single process and reopens the same
+    ligand lmdb for the second, which lmdb refuses ("already open in this process"). Model 1
+    scored 48/48 before it hit that. Running each checkpoint in its own process is exactly
+    what docs/predict.md defines the ensemble to be - "the average of all model predictions" -
+    so this changes nothing about the result, only about the process boundary.
+
+    --devices 1, no torchrun: their predict_binary.sh is --nproc_per_node=4 and would hang on
+    one P100 rather than fail."""
+    import shutil, statistics
     work = f"{FB}/FABind_plus/work/out"
-    sdf = next(p for p in glob.glob(f"{work}/ligand_sdf*"))
-    pkt = next(p for p in glob.glob(f"{work}/pocket_indices*"))
+    sdfs = glob.glob(f"{work}/ligand_sdf*"); pkts = glob.glob(f"{work}/pocket_indices*")
+    assert len(sdfs) == 1 and len(pkts) == 1, f"expected one lmdb pair, got {sdfs} {pkts}"
+    sdf, pkt = sdfs[0], pkts[0]
     os.makedirs(f"{OUT}/data/pdb", exist_ok=True)
     shutil.copy(f"{BUNDLE}/mpro_receptor.pdb", f"{OUT}/data/pdb/mpro.pdb")
-    r = sh([sys.executable, f"{FB}/scripts/predict.py",
-            "--data", f"{OUT}/id_work.json", "--structure", f"{OUT}/data/pdb",
-            "--structure_type", "pdb", "--ligand", sdf, "--ligand_type", "sdf",
-            "--pocket_indices", pkt, "--protein_repr", f"{OUT}/esm3.pt",
-            "--ligand_repr", f"{OUT}/data/repr/torchdrug.lmdb",
-            "--distance_threshold", "20.0", "--out_dir", f"{OUT}/binary", "--devices", "1",
-            "--affinity_checkpoint", f"{OUT}/checkpoints/binary_1.ckpt",
-            f"{OUT}/checkpoints/binary_2.ckpt"], timeout=10800)
-    f = f"{OUT}/binary/affinity_predictions_ensemble.json"
-    assert os.path.exists(f), f"no ensemble predictions (rc={r.returncode})"
-    preds = json.load(open(f))
-    ok = {k: v for k, v in preds.items() if v.get("status") == "success"}
-    # An empty or thin prediction dict is what a protein/ligand key-format mismatch looks like,
-    # and it reads exactly like a model that declined to score. Same guard as residual_band.py.
-    assert len(ok) >= NWANT * 0.5, f"only {len(ok)} of {NWANT} scored - check key formats"
-    json.dump(preds, open(f"{OUT}/flashbind_scores.json", "w"), indent=2)
-    return f"{len(ok)}/{NWANT} scored, coverage {len(ok)/NWANT:.3f}"
+    # Score only what was actually docked. One compound failed conformer generation, so its id
+    # is in id_work.json with no pose in the lmdb; their dataset raises on the missing key and
+    # the batch then dies in collation, taking the whole run with it. Deriving the id list from
+    # the lmdb keys makes the dropped set explicit instead of fatal.
+    import lmdb as _lmdb
+    with _lmdb.open(sdf, readonly=True, lock=False).begin() as t:
+        have = {k.decode() for k, _ in t.cursor()}
+    ids = json.load(open(f"{OUT}/id_work.json"))
+    keep = [i for i in ids if i in have]
+    dropped = [i for i in ids if i not in have]
+    assert len(keep) >= 0.90 * len(ids), \
+        f"only {len(keep)}/{len(ids)} docked - below the pre-registered 90% coverage floor"
+    lab = json.load(open(f"{BUNDLE}/labels.json"))
+    if dropped:
+        da = [lab.get(i.split("_", 1)[1]) for i in dropped]
+        print(f"  dropped {len(dropped)} undocked: {dropped[:5]} labels={da[:5]}", flush=True)
+    json.dump(keep, open(f"{OUT}/id_predict.json", "w"))
+    env_pp = os.environ.get("PYTHONPATH", "")
+    os.environ["PYTHONPATH"] = f"{FB}/src" + (f":{env_pp}" if env_pp else "")
+
+    per_model = []
+    for i, ck in enumerate(("binary_1.ckpt", "binary_2.ckpt")):
+        od = f"{OUT}/binary_{i}"
+        r = sh([sys.executable, f"{FB}/scripts/predict.py",
+                "--data", f"{OUT}/id_predict.json", "--structure", f"{OUT}/data/pdb",
+                "--structure_type", "pdb", "--ligand", sdf, "--ligand_type", "sdf",
+                "--pocket_indices", pkt, "--protein_repr", f"{OUT}/esm3.pt",
+                "--ligand_repr", f"{OUT}/data/repr/torchdrug.lmdb",
+                "--distance_threshold", "20.0", "--out_dir", od, "--devices", "1",
+                "--affinity_checkpoint", f"{OUT}/checkpoints/{ck}"], timeout=10800)
+        # Their writer names it affinity_predictions_{i}.json only in ensemble mode; with a
+        # single checkpoint it is affinity_predictions.json, and "predictions_*" misses it.
+        hits = [h for h in glob.glob(f"{od}/**/affinity_predictions*.json", recursive=True)
+                if "ensemble" not in os.path.basename(h)]
+        assert hits, f"{ck}: no predictions written (rc={r.returncode})"
+        d = json.load(open(hits[0]))
+        ok = {k: v["binary"] for k, v in d.items()
+              if v.get("status") == "success" and "binary" in v}
+        assert len(ok) >= len(keep) * 0.9, f"{ck}: only {len(ok)} of {len(keep)} scored"
+        per_model.append(ok)
+        print(f"  {ck}: {len(ok)}/{NWANT} scored", flush=True)
+
+    shared = set(per_model[0]) & set(per_model[1])
+    assert len(shared) >= NWANT * 0.5, f"only {len(shared)} keys shared across checkpoints"
+    ens = {k: sum(m[k] for m in per_model) / len(per_model) for k in shared}
+    json.dump({"ensemble": ens,
+               "per_model": [{k: v for k, v in m.items()} for m in per_model]},
+              open(f"{OUT}/flashbind_scores.json", "w"), indent=1)
+    # Emitted into the log as well as to disk. /kaggle/working holds the FlashBind clone, so
+    # the output-file listing runs to thousands of entries and paginates; the log is the
+    # reliable channel back. Markers so the parse is exact rather than a regex over prose.
+    print("SCORES_BEGIN", flush=True)
+    print(json.dumps({"ensemble": ens, "per_model": per_model}), flush=True)
+    print("SCORES_END", flush=True)
+    vals = sorted(ens.values())
+    return (f"{len(ens)}/{NWANT} panel scored, coverage {len(ens)/NWANT:.3f} "
+            f"({len(dropped)} undocked); "
+            f"binary min {vals[0]:.4f} median {statistics.median(vals):.4f} max {vals[-1]:.4f}")
 
 if __name__ == "__main__":
     print(f"bundle={BUNDLE} full={FULL}")
@@ -365,8 +513,8 @@ if __name__ == "__main__":
     print(f"working set: {NWANT} compounds")
 
     s_gpu(); s_clone(); s_deps(); s_ckpt(); s_pyg()
-    s_esm(); s_ligand(); s_ligrepr(); s_swap(); s_torchdrug()
-    s_fbprep(); s_fbdock(); s_pocket(); s_predict()
+    s_esm(); s_ligand(); s_ligrepr(); s_swap(); s_torchdrug(); s_pin()
+    s_fbprep(); s_fbdock(); s_pocket(); s_swappyg(); s_predict()
 
     json.dump(STAGES, open(f"{OUT}/flashbind_stages.json", "w"), indent=1)
     ok = [k for k, v in STAGES.items() if v["ok"]]

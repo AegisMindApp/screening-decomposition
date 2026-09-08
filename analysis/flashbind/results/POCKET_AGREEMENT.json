@@ -1,0 +1,12 @@
+{
+  "source": "kaggle oceansparx/flashbind-probe v9, 48-compound probe set",
+  "box_centre": [9.05, 8.9, -1.51],
+  "box_half_width_A": 11.0,
+  "n": 48,
+  "median_dist_A": 7.9,
+  "min_dist_A": 7.6,
+  "max_dist_A": 8.62,
+  "frac_in_box": 1.0,
+  "verdict": "POCKETS AGREE - median 7.9 A, all 48 inside the 22 A box",
+  "reading": "Pre-registered in PREREGISTRATION.md before any FlashBind score existed. FABind+ selects its own pocket and lands in the same site the six docking scores were confined to, so a FlashBind residual is not confounded with being unconstrained by the box. The reading rules for the residual stand unmodified."
+}

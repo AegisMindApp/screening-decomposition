@@ -21,7 +21,13 @@ def main():
     want = (before or 0) + 1
     if not wait_for_dataset(HANDLE, tok, want_version=want):
         raise SystemExit(f"{HANDLE}: v{want} never became attachable")
-    body = {"slug": SLUG, "newTitle": "flashbind probe", "text": launcher_src(HERE / "flashbind_worker.py"),
+    full = "--full" in sys.argv
+    text = launcher_src(HERE / "flashbind_worker.py")
+    if full:
+        # The launcher runs the worker as a subprocess, so the flag has to be in the
+        # environment it inherits, not in argv the worker never reads.
+        text = "import os\nos.environ['FLASHBIND_FULL'] = '1'\n" + text
+    body = {"slug": SLUG, "newTitle": "flashbind probe", "text": text,
             "language": "python", "kernelType": "script", "isPrivate": True,
             "enableGpu": True, "enableTpu": False, "enableInternet": True,
             "datasetDataSources": [HANDLE], "competitionDataSources": [],

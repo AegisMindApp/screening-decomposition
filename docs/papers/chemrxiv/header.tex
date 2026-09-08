@@ -1,0 +1,24 @@
+\usepackage{xurl}
+\usepackage{etoolbox}
+\usepackage{array}
+% Tables in this manuscript are wide (five columns, monospace paths and hashes).
+% Shrink them and let long typewriter strings break rather than overrun the column.
+\AtBeginEnvironment{longtable}{\footnotesize}
+\AtBeginEnvironment{tabular}{\footnotesize}
+\renewcommand{\arraystretch}{1.15}
+\sloppy
+\emergencystretch=3em
+
+% Latin Modern has no glyph for several characters used in the text. xelatex drops them
+% SILENTLY into the PDF - "targets with >=50 actives" rendered as "targets with 50 actives",
+% which changes the claim. Map each one to a maths glyph that exists. Any new symbol added to
+% the manuscript must be checked here: the build warns, but a warning in a 200-line log is not
+% a gate. Verified after every build by comparing pdftotext output against the source.
+\usepackage{newunicodechar}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\newunicodechar{ρ}{\ensuremath{\rho}}

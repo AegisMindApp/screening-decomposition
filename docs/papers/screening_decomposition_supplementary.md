@@ -17,6 +17,9 @@ Paths are relative to `analysis/`; the file is `PREREGISTRATION.md` except where
 | Boltz-2 analysis script, written before the data | `boltz2/analyse_boltz2.py` | `42f94969b` | `5afb5bec8` | 2026-09-03 13:51 |
 | Boltz-2, Mpro, arm 2 (pocket-conditioned) | `boltz2/PREREGISTRATION_ARM2.md` | `064969caf` | `e96d4fea1` | 2026-09-04 11:28 |
 | Boltz-2, Factor Xa | `boltz2/PREREGISTRATION_TARGETS.md` | `00baa6db9` | `68bd9b94a` | 2026-09-04 11:40 |
+| FlashBind, Mpro (third scoring approach) | `flashbind/` | pending export | `c6b4504f9` | 2026-09-08 10:06 |
+| — amendment: pocket-agreement control | `flashbind/` | pending export | `24bc26573` | 2026-09-08 11:36 |
+| — amendment: abort decision on torchdrug | `flashbind/` | pending export | `453e2031f` | 2026-09-08 12:04 |
 
 The public repository was produced from the origin repository with `git filter-repo`, which
 rewrites commit hashes but preserves author and committer dates. Both hashes are given so a
@@ -26,6 +29,13 @@ reader can check either. Verify a date with
 Commit dates above are git metadata carried through from the project's own history; they are not
 a third-party timestamp, and a reader should treat them as the authors' record rather than as
 independent verification of ordering.
+
+The three FlashBind rows are one pre-registration and two amendments appended to it before any
+score existed. The first amendment adds the pocket-agreement control, because FABind+ selects its
+own binding site and a residual above the band would otherwise have been confounded with not
+being box-constrained. The second records, while the environment work was still failing, that the
+arm would be reported blocked rather than assembled from workarounds if a required dependency
+could not run — a condition that was then tested and not met, which is also recorded in place.
 
 Bars citing a "≈0.04 measurement floor" — the pose-ensemble arm and both Boltz-2 arms — were fixed
 before the floor correction described in §3.1 and S3. They are read as written; see §3.2.

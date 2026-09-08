@@ -125,3 +125,10 @@ already forbid.
 
 A blocked arm leaves §3.4's question open with the reason stated, which is an honest outcome.
 A patched-together arm answers it wrongly.
+
+**Condition tested, 8 September 2026 — not met.** torchdrug imports fine on Python 3.12. It
+failed on `rdkit.Chem.Draw.mplCanvas`, removed from current rdkit but present in every cp312
+build up to **2024.3.6**. torchdrug is unmaintained (v0.2.1, July 2023; that import untouched
+since 2021), so the fix belongs on the rdkit side: a supported version pin, not a patch to
+either library and not a substituted component. The arm continues. The abort rule above stands
+unchanged for a failure that actually meets it.

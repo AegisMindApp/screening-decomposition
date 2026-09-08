@@ -1,0 +1,14 @@
+{
+ "mpro": {
+  "chain_order": [
+   "A",
+   "B"
+  ],
+  "lengths": {
+   "A": 298,
+   "B": 299
+  },
+  "total_residues": 597,
+  "derived_from": "bundle/mpro_receptor.pdb, Bio.PDB model order, residues with CA"
+ }
+}

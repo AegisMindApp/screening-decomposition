@@ -1,0 +1,42 @@
+{
+ "n": 750,
+ "n_active": 257,
+ "control_1_descriptor_baseline": {
+  "mean": 0.7664231800327808,
+  "range": [
+   0.7577840743166985,
+   0.7714382680483974
+  ],
+  "target": 0.7654,
+  "pass": true
+ },
+ "control_3_permutation": {
+  "mean": 0.4977524644635797,
+  "pass": true
+ },
+ "raw_auroc": {
+  "ensemble": 0.418504984175342,
+  "per_checkpoint": [
+   0.44445584486310286,
+   0.4067055508638448
+  ],
+  "bootstrap_ci": [
+   0.3698285968595834,
+   0.4674079573535937
+  ]
+ },
+ "marginal_value": {
+  "base": 0.7664231800327808,
+  "plus": 0.7911007016519207,
+  "delta": 0.024677521619140035,
+  "seed_range": [
+   0.021688858020062818,
+   0.02711896512261147
+  ],
+  "straddles_zero": false
+ },
+ "size_proxy": {
+  "auroc_neg_molwt": 0.3801311749709947,
+  "auroc_neg_rotb": 0.3740893915596562
+ }
+}

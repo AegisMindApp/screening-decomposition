@@ -165,3 +165,62 @@ on disk, which costs nothing.
 
 **Cost so far:** three sessions, ~5 GPU-minutes each, against an 11-hour weekly quota. The
 staged design keeps paying — v3 cleared four unknowns and named two blockers in 310 seconds.
+
+---
+
+## v12 — the probe passes end to end
+
+Kernel `oceansparx/flashbind-probe` v12, Tesla P100, 48-compound stratified probe.
+**All 16 stages pass; `FAILED: []`.**
+
+| stage | result |
+|---|---|
+| gpu / pin_check | torch 2.4.1+cu121, live matmul, torchvision 0.19.1+cu121 |
+| pyg_ops | `scatter_add` correct, `radius_graph` 492 edges |
+| esm3_repr | 1 protein, **[298, 1536]** |
+| ligand_features / ligand_repr_lmdb | 48 featurised, 0 failed, **dims=56**; 48 lmdb entries |
+| swap_esm | ESM3 → fair-esm, `esm2_t33_650M_UR50D` reachable |
+| torchdrug | `DIMS (10, 56) EDGES (20, 3)` |
+| fabind_prep / fabind_dock | 48 poses + 48 pocket index sets, **coverage 1.000** |
+| pocket_agreement | median **7.89 Å**, all 48 in box |
+| swap_pyg | 2.4.0 → 2.6.1, `collect_param_data` present |
+| affinity_predict | both checkpoints **48/48**; binary min 0.0800, median 0.4469, max 0.9203 |
+
+**Coverage is 1.000, not merely above the floor.** The pre-registered bar was ≥90% and no
+compound was lost at any stage — no ETKDG failure, no docking failure, no scoring failure. The
+dropout-bias control that voided the DiffDock arm has nothing to fire on here.
+
+**The pocket control reproduced four times** across v9–v12: median 7.90, 7.88, 7.88, 7.89 Å,
+`frac_in_box` 1.000 every run. The spread is FABind+'s own sampling and is far inside anything
+that would change the reading.
+
+### What the twelve iterations actually were
+
+Nine of the twelve failures were environment; three were my own glue. None were FlashBind
+producing a wrong answer. The environment problems clustered into one pattern worth recording:
+**this pipeline is two codebases with incompatible dependency requirements**, and each half
+fails loudly on the other's versions.
+
+| conflict | FABind+ needs | affinity head needs |
+|---|---|---|
+| `esm` namespace | fair-esm (`esm.pretrained.esm2_t33_650M_UR50D`) | esm 3.2.0 (`esm.models.esm3`) |
+| torch-geometric | ≤2.4 (`KeyError: 'complex'` on 2.6) | 2.6 (`inspector.collect_param_data`) |
+| torchdrug | the real package, for `Molecule.from_smiles` | its own 56-dim reimplementation |
+
+Both collisions are handled the same way: run each half against the version it was written
+for, and swap once the first half's output is on disk. Neither half is modified.
+
+The three glue bugs were all the same bug — **an empty or missing artefact passing as a
+result.** An lmdb that existed but held nothing; a stage that returned OK on an empty file
+list; a glob that missed the file because splitting the ensemble had renamed it. Every one was
+caught by an assertion rather than by inspection, and the one that was not asserted (v6's
+`fabind_dock`) produced a clean `rc=0` and two empty databases that the next stage's guard had
+to catch.
+
+**Cost:** twelve sessions, 5–10 GPU-minutes each, against an 11-hour weekly quota.
+
+### What is not yet established
+
+Nothing about the arm's question. The probe proves the plumbing. The pre-registered positive
+control — descriptors reproducing **0.7654 ± 0.005** on the panel — is only readable on the
+full 751, and until it passes, any AUROC from 48 compounds has no reference frame.

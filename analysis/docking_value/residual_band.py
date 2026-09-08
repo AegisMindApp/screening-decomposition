@@ -101,8 +101,17 @@ ARMS = [
 BZ = arm("mpro", "Boltz-2 prob_binary (Mpro)",
          lambda n: bz.get(n, {}).get("affinity_probability_binary"), +1)
 
+# FlashBind keys are "{prot_id}_{ligand_id}"; every other cache is keyed on the ligand alone.
+import os
+FB_PATH = "analysis/flashbind/results/flashbind_scores_751.json"
+FB = None
+if os.path.exists(FB_PATH):
+    fb = {k.split("_", 1)[1]: v for k, v in
+          json.load(open(FB_PATH))["ensemble"].items()}
+    FB = arm("mpro", "FlashBind binary (Mpro)", lambda n: fb.get(n), +1)
+
 print(f"{'score':38s} {'n':>4s} {'raw':>8s} {'resid GB (12-seed range)':>30s}")
-for nm, o in ARMS + [BZ]:
+for nm, o in ARMS + [BZ] + ([FB] if FB else []):
     print(f"{nm:38s} {o['n']:4d} {o['raw']:8.4f} "
           f"{o['gb_mean']:10.4f}  [{o['gb_lo']:.4f}, {o['gb_hi']:.4f}]")
 
@@ -128,10 +137,23 @@ print(f"  Boltz-2 outside the GB band?  {BZ[1]['gb_mean'] > max(dock_gb)}")
 print(f"  Boltz-2 outside the lin band? {BZ[1]['lin_mean'] > max(dock_lin)}")
 
 json.dump({"seed": SEED, "control_pass": bool(ok),
-           "arms": {nm: o for nm, o in ARMS + [BZ]},
+           "arms": {nm: o for nm, o in ARMS + [BZ] + ([FB] if FB else [])},
            "band_gb": [min(dock_gb), max(dock_gb)],
            "band_lin": [min(dock_lin), max(dock_lin)],
            "boltz2": {"gb": BZ[1]["gb_mean"], "lin": BZ[1]["lin_mean"],
                       "gb_range": [BZ[1]["gb_lo"], BZ[1]["gb_hi"]]},
            "seeds": SEEDS},
           open("analysis/docking_value/RESIDUAL_BAND.json", "w"), indent=1)
+
+if FB:
+    print(f"\nFLASHBIND vs the pre-registered reading rules")
+    print(f"  raw AUROC          {FB[1]['raw']:.4f}   (Boltz-2 {BZ[1]['raw']:.4f})")
+    print(f"  residual GB        {FB[1]['gb_mean']:.4f}  "
+          f"[{FB[1]['gb_lo']:.4f}, {FB[1]['gb_hi']:.4f}]  n={FB[1]['n']}")
+    print(f"  docking band top   {max(dock_gb):.4f}   (worst-case seed {dock_gb_hi:.4f})")
+    print(f"  Boltz-2 residual   {BZ[1]['gb_mean']:.4f}  "
+          f"[{BZ[1]['gb_lo']:.4f}, {BZ[1]['gb_hi']:.4f}]")
+    above = FB[1]["gb_lo"] > 0.573
+    within = 0.494 <= FB[1]["gb_mean"] <= 0.573
+    print(f"  > 0.573 with the 12-seed range clear of it : {above}")
+    print(f"  inside the pre-registered band [0.494, 0.573]: {within}")
