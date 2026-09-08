@@ -121,3 +121,47 @@ risk was not in reimplementing their code, it was in using the library their con
   pin from `analysis/boltz2/boltz2_worker.py`.
 - The local py3.10 venv is retained only as the reference that established the 56-vs-67
   difference. It is not part of the pipeline.
+
+---
+
+## v3 — the affinity input side is solved; two environment blockers remain
+
+Kernel `oceansparx/flashbind-probe` v3, Tesla P100, 48-compound working set.
+
+| stage | result |
+|---|---|
+| gpu | OK — torch 2.4.1+cu121, `matmul=True` on the P100 |
+| clone | OK |
+| deps | OK |
+| checkpoints | OK — binary_1/2 43 MB each, `fabind_plus_best_ckpt.bin` **180,353,461 B** |
+| pyg_ops | **FAILED** — `No module named 'torch_scatter'` |
+| esm3_repr | **OK** — 1 protein, **[298, 1536]** |
+| ligand_features | OK — 48 featurised, 0 failed, dims=56 |
+| ligand_repr_lmdb | OK — 48 entries |
+| fabind_prep | **FAILED** — `module 'esm' has no attribute 'pretrained'` |
+| fabind_dock, pocket_agreement, affinity_predict | not reached |
+
+**What is now settled.** The affinity model's entire input surface works. ESM3 produces
+exactly what `affinity_binary.yaml` declares — 298 rows for a 298-residue sequence, 1536
+dims — using FlashBind's own `logits(LogitsConfig(return_embeddings=True))` call rather than
+my guess at the SDK. Ligands featurise 48/48 at 56 dims through their reimplementation, and
+the lmdb container holds all 48. The FABind+ checkpoint is real weights, not the LFS pointer a
+`--depth 1` clone would have handed us.
+
+**Both remaining blockers are mine, and neither is about FlashBind.**
+
+*cp311 wheels on a cp312 image.* I hardcoded the ABI tag and verified only that the URLs
+returned 200. data.pyg.org publishes cp311 **and** cp312, so the 200 never discriminated
+between them — pip skipped all four wheels without erroring and `torch_scatter` was simply
+absent. A reachable wheel is not an installable wheel. Same shape as every other silent
+failure in this project: the check returned a clean answer to a question I had not asked.
+
+*Two packages, one namespace.* `esm==3.2.0` (EvolutionaryScale's ESM3) and `fair-esm`
+(Meta's ESM2) both install a top-level `esm`. Installing both leaves whichever pip wrote last,
+and ESM3 won — so FABind+'s `esm.pretrained.esm2_t33_650M_UR50D()` found no such attribute.
+The pipeline genuinely needs both models: ESM3 for the affinity head, ESM2 for the pose
+generator. They cannot coexist in one interpreter, so v4 swaps packages *after* `esm3.pt` is
+on disk, which costs nothing.
+
+**Cost so far:** three sessions, ~5 GPU-minutes each, against an 11-hour weekly quota. The
+staged design keeps paying — v3 cleared four unknowns and named two blockers in 310 seconds.

@@ -106,3 +106,22 @@ in the direction of better performance.
 Disclosed here, not treated as a blocker: the arm asks whether a third scoring approach carries
 orthogonal signal, and a well-placed pose is the input to that question rather than the answer.
 It is stated in the write-up either way.
+
+## Abort decision, taken before the result exists
+
+**8 September 2026.** FABind+ requires the real `torchdrug` (`inference_mol_utils.py:81`),
+which declares `python<3.11` against Kaggle's 3.12 image. v5 installs past the metadata cap and
+makes FABind+'s exact call as the test.
+
+**If torchdrug fails to run on 3.12, the arm is reported BLOCKED.** No Python 3.10 environment,
+no substituted featuriser. Recorded here before the v5 result is known, so it is a decision
+rather than a rationalisation of one.
+
+Two reasons it is the right call. A 3.10 environment would break the Pascal torch pin the whole
+run rests on, so it is not a small change. And the affinity module's 56-dim featuriser is the
+obvious substitute and the wrong one — it emits nodes only, no `edge_list` or `edge_weight`, and
+swapping an encoder while still calling the output FlashBind is what the abort conditions above
+already forbid.
+
+A blocked arm leaves §3.4's question open with the reason stated, which is an honest outcome.
+A patched-together arm answers it wrongly.
