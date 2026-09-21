@@ -1,0 +1,110 @@
+{
+ "3RXX_receptor.pdbqt": {
+  "verdict": "NOT_APPLICABLE",
+  "pdb_id": "3RXX",
+  "ligand": "NPB",
+  "top_pose_rmsd": null,
+  "best_rmsd": null,
+  "best_rank": null,
+  "failure_mode": null,
+  "covalent": true,
+  "rmsd_method": "CCD template (exact)",
+  "reasons": [
+   "the co-crystal ligand is COVALENTLY bound (1.59 A to SER70A). A non-covalent redocking control cannot reproduce a covalent pose, so this gate cannot validate the protocol here \u2014 and a non-covalent screen against this site is itself suspect."
+  ],
+  "receptor_md5": "d1e168904f702e0e39b480d5fed28e75",
+  "keywords": [
+   "beta-lactamase",
+   "lactamase",
+   "carbapenemase",
+   "kpc"
+  ]
+ },
+ "MSH3_3THW_receptor.pdbqt": {
+  "verdict": "RECEPTOR_SITE_MISMATCH",
+  "pdb_id": "3THW",
+  "ligand": "ADP",
+  "top_pose_rmsd": null,
+  "best_rmsd": null,
+  "best_rank": null,
+  "failure_mode": null,
+  "covalent": null,
+  "rmsd_method": "CCD template (exact)",
+  "reasons": [
+   "the prepared receptor does not enclose ADP's site \u2014 only 0% of ligand atoms lie within 5 A of it (closest 5.46 A). The receptor is probably missing the chain the ligand binds to. Prepare the correct chain; this is not a verdict on the docking protocol."
+  ],
+  "receptor_md5": "1964fd3a5c3995b0c3928d2771e2052a",
+  "keywords": [
+   "msh3",
+   "mismatch repair",
+   "muts\u03b2",
+   "mutsbeta",
+   "muts homolog 3"
+  ]
+ },
+ "elastase_1HNE_receptor.pdbqt": {
+  "verdict": "NOT_APPLICABLE",
+  "pdb_id": "1HNE",
+  "ligand": "MSU",
+  "top_pose_rmsd": null,
+  "best_rmsd": null,
+  "best_rank": null,
+  "failure_mode": null,
+  "covalent": true,
+  "rmsd_method": "CCD template (exact)",
+  "reasons": [
+   "the co-crystal ligand is COVALENTLY bound (1.31 A to ALA2I). A non-covalent redocking control cannot reproduce a covalent pose, so this gate cannot validate the protocol here \u2014 and a non-covalent screen against this site is itself suspect."
+  ],
+  "receptor_md5": "a06b7ac19c25e1c0a162dcb832e9133c",
+  "keywords": [
+   "elastase"
+  ]
+ },
+ "trypsin_1TRN_receptor.pdbqt": {
+  "verdict": "NOT_APPLICABLE",
+  "pdb_id": "1TRN",
+  "ligand": "ISP",
+  "top_pose_rmsd": null,
+  "best_rmsd": null,
+  "best_rank": null,
+  "failure_mode": null,
+  "covalent": true,
+  "rmsd_method": "CCD template (exact)",
+  "reasons": [
+   "the co-crystal ligand is COVALENTLY bound (1.59 A to SER195A). A non-covalent redocking control cannot reproduce a covalent pose, so this gate cannot validate the protocol here \u2014 and a non-covalent screen against this site is itself suspect."
+  ],
+  "receptor_md5": "26c4f7c9ab3ec2d17353fe62e11fa824",
+  "keywords": [
+   "trypsin"
+  ]
+ },
+ "CHEMBL4523582_7VU6_receptor.pdbqt": {
+  "verdict": "PASS",
+  "pdb_id": "7VU6",
+  "ligand": "7YY",
+  "top_pose_rmsd": 0.99,
+  "best_rmsd": 0.99,
+  "best_rank": 1,
+  "failure_mode": null,
+  "covalent": false,
+  "rmsd_method": "CCD template (exact)",
+  "reasons": [],
+  "receptor_md5": "d1bfc9efe1cbf8f78592f72df9be99c4",
+  "keywords": [
+   "mpro",
+   "main protease",
+   "sars-cov-2",
+   "3c-like protease"
+  ]
+ },
+ "CHEMBL4523582_receptor.pdbqt": {
+  "verdict": "NOT_APPLICABLE",
+  "pdb_id": "7K40",
+  "ligand": "U5G",
+  "reason": "co-crystal ligand is covalent to CYS145A (1.91 A); also the configured box sits 6.3 A from the ligand centroid. Superseded by CHEMBL4523582_7VU6_receptor.pdbqt.",
+  "receptor_md5": "1af6603f6a7aa7be5ee831f0ab5c2923",
+  "keywords": [
+   "mpro"
+  ]
+ }
+}

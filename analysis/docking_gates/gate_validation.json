@@ -1,0 +1,425 @@
+[
+ {
+  "pdb": "3PTB",
+  "note": "trypsin/benzamidine \u2014 textbook easy redock",
+  "verdict": {
+   "pdb_id": "3PTB",
+   "receptor": "/tmp/gate_3ptb/3PTB_receptor.pdbqt",
+   "box_center": [
+    -1.7591111111111113,
+    14.461,
+    16.915777777777777
+   ],
+   "box_size": [
+    22,
+    22,
+    22
+   ],
+   "exhaustiveness": 16,
+   "pass_rmsd": 2.0,
+   "verdict": "PASS",
+   "reasons": [],
+   "ligand": {
+    "resname": "BEN",
+    "chain": "A",
+    "n_heavy": 9,
+    "crystal_centroid": [
+     -1.759,
+     14.461,
+     16.916
+    ],
+    "smiles": "[H]/N=C(\\c1ccccc1)/N"
+   },
+   "box_offset_from_ligand": 0.0,
+   "receptor_encloses_site": {
+    "fraction_within_5A": 1.0,
+    "closest_atom": 2.82
+   },
+   "covalent": {
+    "is_covalent": false,
+    "min_dist_to_nucleophile": 2.82,
+    "residue": "GLY219A"
+   },
+   "metal_coordination": {
+    "coordinates_metal": false,
+    "min_dist": 22.61,
+    "atom": "CA480A.CA"
+   },
+   "poses": [
+    {
+     "rank": 1,
+     "score": -6.066,
+     "rmsd": 0.43
+    },
+    {
+     "rank": 2,
+     "score": -6.062,
+     "rmsd": 0.45
+    },
+    {
+     "rank": 3,
+     "score": -5.035,
+     "rmsd": 3.65
+    },
+    {
+     "rank": 4,
+     "score": -5.029,
+     "rmsd": 3.35
+    },
+    {
+     "rank": 5,
+     "score": -4.839,
+     "rmsd": 3.99
+    },
+    {
+     "rank": 6,
+     "score": -4.755,
+     "rmsd": 1.95
+    },
+    {
+     "rank": 7,
+     "score": -4.659,
+     "rmsd": 11.18
+    },
+    {
+     "rank": 8,
+     "score": -4.584,
+     "rmsd": 11.1
+    },
+    {
+     "rank": 9,
+     "score": -4.117,
+     "rmsd": 3.98
+    }
+   ],
+   "best_rmsd": 0.43,
+   "best_rank": 1,
+   "top_pose_rmsd": 0.43
+  }
+ },
+ {
+  "pdb": "1STP",
+  "note": "streptavidin/biotin \u2014 classic tight binder",
+  "verdict": {
+   "pdb_id": "1STP",
+   "receptor": "/tmp/gate_1stp/1STP_receptor.pdbqt",
+   "box_center": [
+    11.117625,
+    1.6800625,
+    -10.7545625
+   ],
+   "box_size": [
+    22,
+    22,
+    22
+   ],
+   "exhaustiveness": 16,
+   "pass_rmsd": 2.0,
+   "verdict": "FAIL",
+   "reasons": [
+    "top pose is 5.98 A from the crystal pose. A near-native pose (1.36 A) IS generated at rank 6 but scores +0.59 kcal/mol worse, so the scoring function prefers a wrong pose. More sampling cannot fix this \u2014 it optimises harder against the same objective."
+   ],
+   "ligand": {
+    "resname": "BTN",
+    "chain": "A",
+    "n_heavy": 16,
+    "crystal_centroid": [
+     11.118,
+     1.68,
+     -10.755
+    ],
+    "smiles": "C1[C@H]2[C@@H]([C@@H](S1)CCCCC(=O)O)NC(=O)N2"
+   },
+   "box_offset_from_ligand": 0.0,
+   "receptor_encloses_site": {
+    "fraction_within_5A": 1.0,
+    "closest_atom": 2.58
+   },
+   "covalent": {
+    "is_covalent": false,
+    "min_dist_to_nucleophile": 2.58,
+    "residue": "TYR43A"
+   },
+   "poses": [
+    {
+     "rank": 1,
+     "score": -5.967,
+     "rmsd": 5.98
+    },
+    {
+     "rank": 2,
+     "score": -5.776,
+     "rmsd": 2.62
+    },
+    {
+     "rank": 3,
+     "score": -5.436,
+     "rmsd": 6.58
+    },
+    {
+     "rank": 4,
+     "score": -5.407,
+     "rmsd": 6.38
+    },
+    {
+     "rank": 5,
+     "score": -5.404,
+     "rmsd": 2.58
+    },
+    {
+     "rank": 6,
+     "score": -5.374,
+     "rmsd": 1.36
+    },
+    {
+     "rank": 7,
+     "score": -5.134,
+     "rmsd": 7.94
+    },
+    {
+     "rank": 8,
+     "score": -4.914,
+     "rmsd": 4.67
+    },
+    {
+     "rank": 9,
+     "score": -4.864,
+     "rmsd": 7.13
+    }
+   ],
+   "best_rmsd": 1.36,
+   "best_rank": 6,
+   "top_pose_rmsd": 5.98,
+   "failure_mode": "scoring"
+  }
+ },
+ {
+  "pdb": "3N4C",
+  "note": "cathepsin S \u2014 the case this gate was built for",
+  "verdict": {
+   "pdb_id": "3N4C",
+   "receptor": "analysis/amr_glass/docking/results/3N4C_ctss_receptor.pdbqt",
+   "box_center": [
+    14.00378787878788,
+    9.016272727272726,
+    21.712090909090918
+   ],
+   "box_size": [
+    24,
+    24,
+    24
+   ],
+   "exhaustiveness": 16,
+   "pass_rmsd": 2.0,
+   "verdict": "NOT_APPLICABLE",
+   "reasons": [
+    "the co-crystal ligand is COVALENTLY bound (1.77 A to CYS25A). A non-covalent redocking control cannot reproduce a covalent pose, so this gate cannot validate the protocol here \u2014 and a non-covalent screen against this site is itself suspect."
+   ],
+   "ligand": {
+    "resname": "EF3",
+    "chain": "A",
+    "n_heavy": 33,
+    "crystal_centroid": [
+     14.004,
+     9.016,
+     21.712
+    ]
+   },
+   "box_offset_from_ligand": 0.0,
+   "receptor_encloses_site": {
+    "fraction_within_5A": 1.0,
+    "closest_atom": 1.77
+   },
+   "covalent": {
+    "is_covalent": true,
+    "min_dist_to_nucleophile": 1.77,
+    "residue": "CYS25A"
+   }
+  }
+ },
+ {
+  "pdb": "1AU0",
+  "note": "cathepsin K",
+  "verdict": {
+   "pdb_id": "1AU0",
+   "receptor": "analysis/amr_glass/docking/results/1AU0_catk_receptor.pdbqt",
+   "box_center": [
+    10.015880952380954,
+    37.7367380952381,
+    68.2922619047619
+   ],
+   "box_size": [
+    24,
+    24,
+    24
+   ],
+   "exhaustiveness": 16,
+   "pass_rmsd": 2.0,
+   "verdict": "NOT_APPLICABLE",
+   "reasons": [
+    "the co-crystal ligand is COVALENTLY bound (1.77 A to CYS25A). A non-covalent redocking control cannot reproduce a covalent pose, so this gate cannot validate the protocol here \u2014 and a non-covalent screen against this site is itself suspect."
+   ],
+   "ligand": {
+    "resname": "SDK",
+    "chain": "A",
+    "n_heavy": 42,
+    "crystal_centroid": [
+     10.016,
+     37.737,
+     68.292
+    ]
+   },
+   "box_offset_from_ligand": 0.0,
+   "receptor_encloses_site": {
+    "fraction_within_5A": 0.93,
+    "closest_atom": 1.77
+   },
+   "covalent": {
+    "is_covalent": true,
+    "min_dist_to_nucleophile": 1.77,
+    "residue": "CYS25A"
+   }
+  }
+ },
+ {
+  "pdb": "2YJ2",
+  "note": "cathepsin L",
+  "verdict": {
+   "pdb_id": "2YJ2",
+   "receptor": "analysis/amr_glass/docking/results/2YJ2_ctsl_receptor.pdbqt",
+   "box_center": [
+    8.635,
+    35.69200000000001,
+    19.26897142857143
+   ],
+   "box_size": [
+    24,
+    24,
+    24
+   ],
+   "exhaustiveness": 16,
+   "pass_rmsd": 2.0,
+   "verdict": "NOT_APPLICABLE",
+   "reasons": [
+    "the co-crystal ligand is COVALENTLY bound (1.77 A to CYS25A). A non-covalent redocking control cannot reproduce a covalent pose, so this gate cannot validate the protocol here \u2014 and a non-covalent screen against this site is itself suspect."
+   ],
+   "ligand": {
+    "resname": "YJ2",
+    "chain": "A",
+    "n_heavy": 35,
+    "crystal_centroid": [
+     8.635,
+     35.692,
+     19.269
+    ]
+   },
+   "box_offset_from_ligand": 0.0,
+   "receptor_encloses_site": {
+    "fraction_within_5A": 1.0,
+    "closest_atom": 1.77
+   },
+   "covalent": {
+    "is_covalent": true,
+    "min_dist_to_nucleophile": 1.77,
+    "residue": "CYS25A"
+   }
+  }
+ },
+ {
+  "pdb": "3AI8",
+  "note": "cathepsin B",
+  "verdict": {
+   "pdb_id": "3AI8",
+   "receptor": "analysis/amr_glass/docking/results/3AI8_ctsb_receptor.pdbqt",
+   "box_center": [
+    -6.519571428571429,
+    -7.593714285714285,
+    2.169714285714286
+   ],
+   "box_size": [
+    24,
+    24,
+    24
+   ],
+   "exhaustiveness": 16,
+   "pass_rmsd": 2.0,
+   "verdict": "FAIL",
+   "reasons": [
+    "top pose is 2.61 A from the crystal pose. A near-native pose (1.86 A) IS generated at rank 2 but scores +0.19 kcal/mol worse, so the scoring function prefers a wrong pose. More sampling cannot fix this \u2014 it optimises harder against the same objective."
+   ],
+   "ligand": {
+    "resname": "HNQ",
+    "chain": "A",
+    "n_heavy": 14,
+    "crystal_centroid": [
+     -6.52,
+     -7.594,
+     2.17
+    ],
+    "smiles": "c1cc2c(ccc(c2nc1)O)[N+](=O)[O-]"
+   },
+   "box_offset_from_ligand": 0.0,
+   "receptor_encloses_site": {
+    "fraction_within_5A": 1.0,
+    "closest_atom": 2.31
+   },
+   "covalent": {
+    "is_covalent": false,
+    "min_dist_to_nucleophile": 2.31,
+    "residue": "HIS110A"
+   },
+   "rmsd_method": "element-matched (LOWER BOUND \u2014 CCD template did not match)",
+   "poses": [
+    {
+     "rank": 1,
+     "score": -5.523,
+     "rmsd": 2.61
+    },
+    {
+     "rank": 2,
+     "score": -5.336,
+     "rmsd": 1.86
+    },
+    {
+     "rank": 3,
+     "score": -5.166,
+     "rmsd": 2.98
+    },
+    {
+     "rank": 4,
+     "score": -5.115,
+     "rmsd": 2.34
+    },
+    {
+     "rank": 5,
+     "score": -5.091,
+     "rmsd": 3.02
+    },
+    {
+     "rank": 6,
+     "score": -5.022,
+     "rmsd": 3.7
+    },
+    {
+     "rank": 7,
+     "score": -4.992,
+     "rmsd": 4.07
+    },
+    {
+     "rank": 8,
+     "score": -4.98,
+     "rmsd": 2.91
+    },
+    {
+     "rank": 9,
+     "score": -4.903,
+     "rmsd": 3.32
+    }
+   ],
+   "best_rmsd": 1.86,
+   "best_rank": 2,
+   "top_pose_rmsd": 2.61,
+   "failure_mode": "scoring"
+  }
+ }
+]
