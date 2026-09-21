@@ -1,0 +1,3002 @@
+{
+ "ALDH1_0012": {
+  "affinity_probability_binary": 0.3619365096092224,
+  "affinity_pred_value": 0.04003848135471344
+ },
+ "ALDH1_0008": {
+  "affinity_probability_binary": 0.7427300810813904,
+  "affinity_pred_value": 0.48920971155166626
+ },
+ "ALDH1_0004": {
+  "affinity_probability_binary": 0.594581663608551,
+  "affinity_pred_value": 0.38454222679138184
+ },
+ "ALDH1_0000": {
+  "affinity_probability_binary": 0.5253419876098633,
+  "affinity_pred_value": -0.8485895395278931
+ },
+ "ALDH1_0016": {
+  "affinity_probability_binary": 0.4936121106147766,
+  "affinity_pred_value": 0.6936210989952087
+ },
+ "ALDH1_0020": {
+  "affinity_probability_binary": 0.4740619659423828,
+  "affinity_pred_value": 0.7182008028030396
+ },
+ "ALDH1_0024": {
+  "affinity_probability_binary": 0.30902981758117676,
+  "affinity_pred_value": 0.4195954203605652
+ },
+ "ALDH1_0032": {
+  "affinity_probability_binary": 0.3325834572315216,
+  "affinity_pred_value": 1.5509464740753174
+ },
+ "ALDH1_0044": {
+  "affinity_probability_binary": 0.7789148092269897,
+  "affinity_pred_value": -0.3212737441062927
+ },
+ "ALDH1_0036": {
+  "affinity_probability_binary": 0.4991341233253479,
+  "affinity_pred_value": 0.3078186511993408
+ },
+ "ALDH1_0040": {
+  "affinity_probability_binary": 0.6712576746940613,
+  "affinity_pred_value": -0.44189560413360596
+ },
+ "ALDH1_0028": {
+  "affinity_probability_binary": 0.416866660118103,
+  "affinity_pred_value": -0.054718196392059326
+ },
+ "ALDH1_0068": {
+  "affinity_probability_binary": 0.3452173173427582,
+  "affinity_pred_value": 0.9096026420593262
+ },
+ "ALDH1_0048": {
+  "affinity_probability_binary": 0.7463338375091553,
+  "affinity_pred_value": -0.1707383245229721
+ },
+ "ALDH1_0072": {
+  "affinity_probability_binary": 0.44746580719947815,
+  "affinity_pred_value": -0.2685878574848175
+ },
+ "ALDH1_0076": {
+  "affinity_probability_binary": 0.6430438756942749,
+  "affinity_pred_value": -0.42309367656707764
+ },
+ "ALDH1_0060": {
+  "affinity_probability_binary": 0.2902848422527313,
+  "affinity_pred_value": -0.3276653289794922
+ },
+ "ALDH1_0052": {
+  "affinity_probability_binary": 0.48254287242889404,
+  "affinity_pred_value": -0.24451109766960144
+ },
+ "ALDH1_0056": {
+  "affinity_probability_binary": 0.4551805257797241,
+  "affinity_pred_value": 0.02752157486975193
+ },
+ "ALDH1_0084": {
+  "affinity_probability_binary": 0.523079514503479,
+  "affinity_pred_value": 0.7293541431427002
+ },
+ "ALDH1_0080": {
+  "affinity_probability_binary": 0.3542156517505646,
+  "affinity_pred_value": 0.05889527127146721
+ },
+ "ALDH1_0064": {
+  "affinity_probability_binary": 0.5738313794136047,
+  "affinity_pred_value": 0.2630276083946228
+ },
+ "ALDH1_0108": {
+  "affinity_probability_binary": 0.19629870355129242,
+  "affinity_pred_value": 0.3585750460624695
+ },
+ "ALDH1_0092": {
+  "affinity_probability_binary": 0.7123982906341553,
+  "affinity_pred_value": -0.3155929446220398
+ },
+ "ALDH1_0100": {
+  "affinity_probability_binary": 0.5042279362678528,
+  "affinity_pred_value": 0.06387713551521301
+ },
+ "ALDH1_0116": {
+  "affinity_probability_binary": 0.6299946904182434,
+  "affinity_pred_value": 0.8138679265975952
+ },
+ "ALDH1_0112": {
+  "affinity_probability_binary": 0.5928199291229248,
+  "affinity_pred_value": 0.8446030616760254
+ },
+ "ALDH1_0124": {
+  "affinity_probability_binary": 0.37613242864608765,
+  "affinity_pred_value": 0.3797171115875244
+ },
+ "ALDH1_0088": {
+  "affinity_probability_binary": 0.5840249061584473,
+  "affinity_pred_value": -0.9028632640838623
+ },
+ "ALDH1_0104": {
+  "affinity_probability_binary": 0.26972585916519165,
+  "affinity_pred_value": -0.09480679035186768
+ },
+ "ALDH1_0120": {
+  "affinity_probability_binary": 0.5902024507522583,
+  "affinity_pred_value": -0.3391491770744324
+ },
+ "ALDH1_0096": {
+  "affinity_probability_binary": 0.5354520082473755,
+  "affinity_pred_value": 1.2474366426467896
+ },
+ "ALDH1_0144": {
+  "affinity_probability_binary": 0.2719835042953491,
+  "affinity_pred_value": 1.1113598346710205
+ },
+ "ALDH1_0132": {
+  "affinity_probability_binary": 0.26219668984413147,
+  "affinity_pred_value": 0.9549087285995483
+ },
+ "ALDH1_0128": {
+  "affinity_probability_binary": 0.14804396033287048,
+  "affinity_pred_value": 0.8097304105758667
+ },
+ "ALDH1_0140": {
+  "affinity_probability_binary": 0.21933075785636902,
+  "affinity_pred_value": -0.10830526053905487
+ },
+ "ALDH1_0148": {
+  "affinity_probability_binary": 0.5680209398269653,
+  "affinity_pred_value": 1.355445146560669
+ },
+ "ALDH1_0156": {
+  "affinity_probability_binary": 0.7483798265457153,
+  "affinity_pred_value": 0.6446910500526428
+ },
+ "ALDH1_0160": {
+  "affinity_probability_binary": 0.5725484490394592,
+  "affinity_pred_value": 0.38663792610168457
+ },
+ "ALDH1_0164": {
+  "affinity_probability_binary": 0.23764164745807648,
+  "affinity_pred_value": 0.17420780658721924
+ },
+ "ALDH1_0152": {
+  "affinity_probability_binary": 0.25009074807167053,
+  "affinity_pred_value": 0.7108550071716309
+ },
+ "ALDH1_0136": {
+  "affinity_probability_binary": 0.58723384141922,
+  "affinity_pred_value": -0.8055640459060669
+ },
+ "ALDH1_0204": {
+  "affinity_probability_binary": 0.449140727519989,
+  "affinity_pred_value": -0.1152183786034584
+ },
+ "ALDH1_0224": {
+  "affinity_probability_binary": 0.7396913170814514,
+  "affinity_pred_value": 0.3691199719905853
+ },
+ "ALDH1_0220": {
+  "affinity_probability_binary": 0.4386232793331146,
+  "affinity_pred_value": 0.6646028161048889
+ },
+ "ALDH1_0172": {
+  "affinity_probability_binary": 0.46241071820259094,
+  "affinity_pred_value": 0.27324560284614563
+ },
+ "ALDH1_0256": {
+  "affinity_probability_binary": 0.7337286472320557,
+  "affinity_pred_value": 0.1712934672832489
+ },
+ "ALDH1_0252": {
+  "affinity_probability_binary": 0.3488464951515198,
+  "affinity_pred_value": -0.3366091847419739
+ },
+ "ALDH1_0188": {
+  "affinity_probability_binary": 0.6637271046638489,
+  "affinity_pred_value": -0.11182160675525665
+ },
+ "ALDH1_0176": {
+  "affinity_probability_binary": 0.5273322463035583,
+  "affinity_pred_value": 0.32097327709198
+ },
+ "ALDH1_0200": {
+  "affinity_probability_binary": 0.3538293242454529,
+  "affinity_pred_value": 0.19641664624214172
+ },
+ "ALDH1_0168": {
+  "affinity_probability_binary": 0.27819326519966125,
+  "affinity_pred_value": 0.6161624789237976
+ },
+ "ALDH1_0216": {
+  "affinity_probability_binary": 0.7955400347709656,
+  "affinity_pred_value": 0.23057346045970917
+ },
+ "ALDH1_0212": {
+  "affinity_probability_binary": 0.7997355461120605,
+  "affinity_pred_value": -0.18271854519844055
+ },
+ "ALDH1_0184": {
+  "affinity_probability_binary": 0.49341267347335815,
+  "affinity_pred_value": 0.39032477140426636
+ },
+ "ALDH1_0232": {
+  "affinity_probability_binary": 0.4418248236179352,
+  "affinity_pred_value": 0.35563743114471436
+ },
+ "ALDH1_0244": {
+  "affinity_probability_binary": 0.7847132682800293,
+  "affinity_pred_value": -1.399510383605957
+ },
+ "ALDH1_0236": {
+  "affinity_probability_binary": 0.4863892197608948,
+  "affinity_pred_value": 0.24055004119873047
+ },
+ "ALDH1_0208": {
+  "affinity_probability_binary": 0.6282675862312317,
+  "affinity_pred_value": 0.7241639494895935
+ },
+ "ALDH1_0260": {
+  "affinity_probability_binary": 0.5964903235435486,
+  "affinity_pred_value": -0.4923698604106903
+ },
+ "ALDH1_0192": {
+  "affinity_probability_binary": 0.6716804504394531,
+  "affinity_pred_value": -0.47902122139930725
+ },
+ "ALDH1_0240": {
+  "affinity_probability_binary": 0.7285237312316895,
+  "affinity_pred_value": 0.45338499546051025
+ },
+ "ALDH1_0180": {
+  "affinity_probability_binary": 0.8324687480926514,
+  "affinity_pred_value": 0.1604975461959839
+ },
+ "ALDH1_0196": {
+  "affinity_probability_binary": 0.7510135173797607,
+  "affinity_pred_value": -0.2421744167804718
+ },
+ "ALDH1_0264": {
+  "affinity_probability_binary": 0.31318801641464233,
+  "affinity_pred_value": 0.4878447353839874
+ },
+ "ALDH1_0248": {
+  "affinity_probability_binary": 0.5232647061347961,
+  "affinity_pred_value": -0.07762986421585083
+ },
+ "ALDH1_0228": {
+  "affinity_probability_binary": 0.8171875476837158,
+  "affinity_pred_value": -1.1591488122940063
+ },
+ "ALDH1_0356": {
+  "affinity_probability_binary": 0.7063028216362,
+  "affinity_pred_value": -0.907995343208313
+ },
+ "ALDH1_0324": {
+  "affinity_probability_binary": 0.48142218589782715,
+  "affinity_pred_value": 0.9458612203598022
+ },
+ "ALDH1_0304": {
+  "affinity_probability_binary": 0.7507402896881104,
+  "affinity_pred_value": 0.7536931037902832
+ },
+ "ALDH1_0284": {
+  "affinity_probability_binary": 0.7604295611381531,
+  "affinity_pred_value": 0.20820856094360352
+ },
+ "ALDH1_0272": {
+  "affinity_probability_binary": 0.5008482933044434,
+  "affinity_pred_value": 0.19031769037246704
+ },
+ "ALDH1_0364": {
+  "affinity_probability_binary": 0.7192239761352539,
+  "affinity_pred_value": -0.773598849773407
+ },
+ "ALDH1_0332": {
+  "affinity_probability_binary": 0.3259187936782837,
+  "affinity_pred_value": 1.434846043586731
+ },
+ "ALDH1_0288": {
+  "affinity_probability_binary": 0.7323213815689087,
+  "affinity_pred_value": 0.06466531753540039
+ },
+ "ALDH1_0352": {
+  "affinity_probability_binary": 0.39759862422943115,
+  "affinity_pred_value": -0.12315839529037476
+ },
+ "ALDH1_0280": {
+  "affinity_probability_binary": 0.38027581572532654,
+  "affinity_pred_value": 0.6043113470077515
+ },
+ "ALDH1_0320": {
+  "affinity_probability_binary": 0.5123922824859619,
+  "affinity_pred_value": 0.41677719354629517
+ },
+ "ALDH1_0268": {
+  "affinity_probability_binary": 0.6352142095565796,
+  "affinity_pred_value": 0.037156373262405396
+ },
+ "ALDH1_0312": {
+  "affinity_probability_binary": 0.1973932981491089,
+  "affinity_pred_value": 0.7545725703239441
+ },
+ "ALDH1_0340": {
+  "affinity_probability_binary": 0.4989796280860901,
+  "affinity_pred_value": 0.16230177879333496
+ },
+ "ALDH1_0328": {
+  "affinity_probability_binary": 0.5557476282119751,
+  "affinity_pred_value": 0.6878132820129395
+ },
+ "ALDH1_0296": {
+  "affinity_probability_binary": 0.2537093460559845,
+  "affinity_pred_value": 0.3571396470069885
+ },
+ "ALDH1_0348": {
+  "affinity_probability_binary": 0.520362138748169,
+  "affinity_pred_value": 0.1962193250656128
+ },
+ "ALDH1_0316": {
+  "affinity_probability_binary": 0.4342464208602905,
+  "affinity_pred_value": 0.08054876327514648
+ },
+ "ALDH1_0308": {
+  "affinity_probability_binary": 0.4496386647224426,
+  "affinity_pred_value": 0.44144895672798157
+ },
+ "ALDH1_0300": {
+  "affinity_probability_binary": 0.4503893554210663,
+  "affinity_pred_value": 0.4145938456058502
+ },
+ "ALDH1_0344": {
+  "affinity_probability_binary": 0.4676207900047302,
+  "affinity_pred_value": -0.005811385810375214
+ },
+ "ALDH1_0336": {
+  "affinity_probability_binary": 0.6291536092758179,
+  "affinity_pred_value": -0.4706018567085266
+ },
+ "ALDH1_0292": {
+  "affinity_probability_binary": 0.41588670015335083,
+  "affinity_pred_value": 0.9669814109802246
+ },
+ "ALDH1_0276": {
+  "affinity_probability_binary": 0.4977278411388397,
+  "affinity_pred_value": 0.3314949572086334
+ },
+ "ALDH1_0360": {
+  "affinity_probability_binary": 0.6258419156074524,
+  "affinity_pred_value": 0.17814379930496216
+ },
+ "ALDH1_0452": {
+  "affinity_probability_binary": 0.3227989375591278,
+  "affinity_pred_value": 1.3595142364501953
+ },
+ "ALDH1_0464": {
+  "affinity_probability_binary": 0.6560854315757751,
+  "affinity_pred_value": 0.16811342537403107
+ },
+ "ALDH1_0388": {
+  "affinity_probability_binary": 0.47148191928863525,
+  "affinity_pred_value": 0.8246440291404724
+ },
+ "ALDH1_0404": {
+  "affinity_probability_binary": 0.5844290256500244,
+  "affinity_pred_value": -0.5626744031906128
+ },
+ "ALDH1_0380": {
+  "affinity_probability_binary": 0.47695744037628174,
+  "affinity_pred_value": 0.6166058778762817
+ },
+ "ALDH1_0432": {
+  "affinity_probability_binary": 0.6481443643569946,
+  "affinity_pred_value": 0.5228159427642822
+ },
+ "ALDH1_0384": {
+  "affinity_probability_binary": 0.4837333559989929,
+  "affinity_pred_value": 0.5779008865356445
+ },
+ "ALDH1_0460": {
+  "affinity_probability_binary": 0.5219140648841858,
+  "affinity_pred_value": 0.3806327283382416
+ },
+ "ALDH1_0440": {
+  "affinity_probability_binary": 0.24715790152549744,
+  "affinity_pred_value": 0.5844203233718872
+ },
+ "ALDH1_0424": {
+  "affinity_probability_binary": 0.41075730323791504,
+  "affinity_pred_value": 0.48445114493370056
+ },
+ "ALDH1_0444": {
+  "affinity_probability_binary": 0.47547435760498047,
+  "affinity_pred_value": 0.2217329442501068
+ },
+ "ALDH1_0456": {
+  "affinity_probability_binary": 0.530609130859375,
+  "affinity_pred_value": 0.30945315957069397
+ },
+ "ALDH1_0416": {
+  "affinity_probability_binary": 0.3646984100341797,
+  "affinity_pred_value": -0.17185255885124207
+ },
+ "ALDH1_0428": {
+  "affinity_probability_binary": 0.5325678586959839,
+  "affinity_pred_value": 0.7511590123176575
+ },
+ "ALDH1_0408": {
+  "affinity_probability_binary": 0.31497567892074585,
+  "affinity_pred_value": -0.3179727792739868
+ },
+ "ALDH1_0372": {
+  "affinity_probability_binary": 0.459713876247406,
+  "affinity_pred_value": 0.9171929359436035
+ },
+ "ALDH1_0368": {
+  "affinity_probability_binary": 0.7153738141059875,
+  "affinity_pred_value": -0.1308232992887497
+ },
+ "ALDH1_0392": {
+  "affinity_probability_binary": 0.30292266607284546,
+  "affinity_pred_value": 0.6279720067977905
+ },
+ "ALDH1_0420": {
+  "affinity_probability_binary": 0.18286828696727753,
+  "affinity_pred_value": 0.15827086567878723
+ },
+ "ALDH1_0448": {
+  "affinity_probability_binary": 0.3459491729736328,
+  "affinity_pred_value": 0.9500964879989624
+ },
+ "ALDH1_0376": {
+  "affinity_probability_binary": 0.43992432951927185,
+  "affinity_pred_value": 0.6096960306167603
+ },
+ "ALDH1_0400": {
+  "affinity_probability_binary": 0.4130893349647522,
+  "affinity_pred_value": 0.6927846074104309
+ },
+ "ALDH1_0412": {
+  "affinity_probability_binary": 0.5168949365615845,
+  "affinity_pred_value": 0.7250257730484009
+ },
+ "ALDH1_0436": {
+  "affinity_probability_binary": 0.677060604095459,
+  "affinity_pred_value": -0.05011194944381714
+ },
+ "ALDH1_0396": {
+  "affinity_probability_binary": 0.388230562210083,
+  "affinity_pred_value": 0.6817388534545898
+ },
+ "ALDH1_0496": {
+  "affinity_probability_binary": 0.41314321756362915,
+  "affinity_pred_value": 0.7905134558677673
+ },
+ "ALDH1_0504": {
+  "affinity_probability_binary": 0.39075446128845215,
+  "affinity_pred_value": 1.5545018911361694
+ },
+ "ALDH1_0528": {
+  "affinity_probability_binary": 0.2820852994918823,
+  "affinity_pred_value": -0.4361710846424103
+ },
+ "ALDH1_0512": {
+  "affinity_probability_binary": 0.39393654465675354,
+  "affinity_pred_value": 0.015089809894561768
+ },
+ "ALDH1_0552": {
+  "affinity_probability_binary": 0.48531854152679443,
+  "affinity_pred_value": 0.43953680992126465
+ },
+ "ALDH1_0520": {
+  "affinity_probability_binary": 0.1854691207408905,
+  "affinity_pred_value": -0.05084039270877838
+ },
+ "ALDH1_0540": {
+  "affinity_probability_binary": 0.532770574092865,
+  "affinity_pred_value": 1.1920411586761475
+ },
+ "ALDH1_0508": {
+  "affinity_probability_binary": 0.6044384837150574,
+  "affinity_pred_value": 0.4308296740055084
+ },
+ "ALDH1_0516": {
+  "affinity_probability_binary": 0.48253828287124634,
+  "affinity_pred_value": 0.5212382674217224
+ },
+ "ALDH1_0556": {
+  "affinity_probability_binary": 0.7720785140991211,
+  "affinity_pred_value": -0.24575448036193848
+ },
+ "ALDH1_0476": {
+  "affinity_probability_binary": 0.40488308668136597,
+  "affinity_pred_value": 0.7538840770721436
+ },
+ "ALDH1_0468": {
+  "affinity_probability_binary": 0.4562699794769287,
+  "affinity_pred_value": 0.18975137174129486
+ },
+ "ALDH1_0564": {
+  "affinity_probability_binary": 0.767290472984314,
+  "affinity_pred_value": -0.08966125547885895
+ },
+ "ALDH1_0544": {
+  "affinity_probability_binary": 0.2636922597885132,
+  "affinity_pred_value": 2.1927125453948975
+ },
+ "ALDH1_0488": {
+  "affinity_probability_binary": 0.5593803524971008,
+  "affinity_pred_value": 1.1044304370880127
+ },
+ "ALDH1_0480": {
+  "affinity_probability_binary": 0.7158873081207275,
+  "affinity_pred_value": 0.6312458515167236
+ },
+ "ALDH1_0492": {
+  "affinity_probability_binary": 0.504711925983429,
+  "affinity_pred_value": 0.3058680295944214
+ },
+ "ALDH1_0548": {
+  "affinity_probability_binary": 0.34472137689590454,
+  "affinity_pred_value": -0.061096206307411194
+ },
+ "ALDH1_0532": {
+  "affinity_probability_binary": 0.6738436818122864,
+  "affinity_pred_value": 0.8808636665344238
+ },
+ "ALDH1_0484": {
+  "affinity_probability_binary": 0.6295486688613892,
+  "affinity_pred_value": 0.29373258352279663
+ },
+ "ALDH1_0536": {
+  "affinity_probability_binary": 0.4011571407318115,
+  "affinity_pred_value": 0.38117265701293945
+ },
+ "ALDH1_0472": {
+  "affinity_probability_binary": 0.5675375461578369,
+  "affinity_pred_value": -0.16699177026748657
+ },
+ "ALDH1_0524": {
+  "affinity_probability_binary": 0.5876876711845398,
+  "affinity_pred_value": 0.675045371055603
+ },
+ "ALDH1_0500": {
+  "affinity_probability_binary": 0.4269197881221771,
+  "affinity_pred_value": -1.1964833736419678
+ },
+ "ALDH1_0560": {
+  "affinity_probability_binary": 0.5518585443496704,
+  "affinity_pred_value": 0.8929555416107178
+ },
+ "ALDH1_0568": {
+  "affinity_probability_binary": 0.518494725227356,
+  "affinity_pred_value": -0.16478651762008667
+ },
+ "ALDH1_0596": {
+  "affinity_probability_binary": 0.42846328020095825,
+  "affinity_pred_value": 0.9354984760284424
+ },
+ "ALDH1_0580": {
+  "affinity_probability_binary": 0.35868561267852783,
+  "affinity_pred_value": 0.6391376256942749
+ },
+ "ALDH1_0648": {
+  "affinity_probability_binary": 0.444685161113739,
+  "affinity_pred_value": 0.4741075336933136
+ },
+ "ALDH1_0584": {
+  "affinity_probability_binary": 0.5726714134216309,
+  "affinity_pred_value": -0.149573415517807
+ },
+ "ALDH1_0656": {
+  "affinity_probability_binary": 0.48139601945877075,
+  "affinity_pred_value": 0.7620933055877686
+ },
+ "ALDH1_0652": {
+  "affinity_probability_binary": 0.5176074504852295,
+  "affinity_pred_value": -0.5393422842025757
+ },
+ "ALDH1_0640": {
+  "affinity_probability_binary": 0.3466130495071411,
+  "affinity_pred_value": -0.09487074613571167
+ },
+ "ALDH1_0600": {
+  "affinity_probability_binary": 0.7704167366027832,
+  "affinity_pred_value": 0.8697479367256165
+ },
+ "ALDH1_0664": {
+  "affinity_probability_binary": 0.8032937049865723,
+  "affinity_pred_value": -0.5373448133468628
+ },
+ "ALDH1_0620": {
+  "affinity_probability_binary": 0.6883066892623901,
+  "affinity_pred_value": -0.1725311428308487
+ },
+ "ALDH1_0628": {
+  "affinity_probability_binary": 0.5506812930107117,
+  "affinity_pred_value": 0.9563925862312317
+ },
+ "ALDH1_0612": {
+  "affinity_probability_binary": 0.5019744634628296,
+  "affinity_pred_value": 0.6611697673797607
+ },
+ "ALDH1_0624": {
+  "affinity_probability_binary": 0.6668803691864014,
+  "affinity_pred_value": 0.2182503342628479
+ },
+ "ALDH1_0588": {
+  "affinity_probability_binary": 0.6129921674728394,
+  "affinity_pred_value": -0.198696106672287
+ },
+ "ALDH1_0604": {
+  "affinity_probability_binary": 0.6974297761917114,
+  "affinity_pred_value": -0.704535961151123
+ },
+ "ALDH1_0632": {
+  "affinity_probability_binary": 0.6451507210731506,
+  "affinity_pred_value": -0.11109268665313721
+ },
+ "ALDH1_0608": {
+  "affinity_probability_binary": 0.3930675983428955,
+  "affinity_pred_value": 1.1319122314453125
+ },
+ "ALDH1_0616": {
+  "affinity_probability_binary": 0.4859161376953125,
+  "affinity_pred_value": -0.03266511857509613
+ },
+ "ALDH1_0636": {
+  "affinity_probability_binary": 0.6806368231773376,
+  "affinity_pred_value": 0.9572494029998779
+ },
+ "ALDH1_0576": {
+  "affinity_probability_binary": 0.5456601977348328,
+  "affinity_pred_value": 0.6360916495323181
+ },
+ "ALDH1_0592": {
+  "affinity_probability_binary": 0.4965016841888428,
+  "affinity_pred_value": -0.47394609451293945
+ },
+ "ALDH1_0660": {
+  "affinity_probability_binary": 0.6752901673316956,
+  "affinity_pred_value": 0.5351487398147583
+ },
+ "ALDH1_0572": {
+  "affinity_probability_binary": 0.4428580403327942,
+  "affinity_pred_value": -0.5318751335144043
+ },
+ "ALDH1_0644": {
+  "affinity_probability_binary": 0.6623184084892273,
+  "affinity_pred_value": -0.482744425535202
+ },
+ "ALDH1_0744": {
+  "affinity_probability_binary": 0.45850813388824463,
+  "affinity_pred_value": 1.5084798336029053
+ },
+ "ALDH1_0732": {
+  "affinity_probability_binary": 0.5708261132240295,
+  "affinity_pred_value": 1.1746137142181396
+ },
+ "ALDH1_0700": {
+  "affinity_probability_binary": 0.714780330657959,
+  "affinity_pred_value": -0.18693488836288452
+ },
+ "ALDH1_0728": {
+  "affinity_probability_binary": 0.3416949510574341,
+  "affinity_pred_value": 1.369203805923462
+ },
+ "ALDH1_0716": {
+  "affinity_probability_binary": 0.5712920427322388,
+  "affinity_pred_value": 0.15525783598423004
+ },
+ "ALDH1_0688": {
+  "affinity_probability_binary": 0.30933505296707153,
+  "affinity_pred_value": 1.2725629806518555
+ },
+ "ALDH1_0676": {
+  "affinity_probability_binary": 0.5214870572090149,
+  "affinity_pred_value": 1.1531672477722168
+ },
+ "ALDH1_0704": {
+  "affinity_probability_binary": 0.46624696254730225,
+  "affinity_pred_value": -0.08425456285476685
+ },
+ "ALDH1_0680": {
+  "affinity_probability_binary": 0.3742099404335022,
+  "affinity_pred_value": -0.08648286759853363
+ },
+ "ALDH1_0692": {
+  "affinity_probability_binary": 0.3902239203453064,
+  "affinity_pred_value": -0.24160271883010864
+ },
+ "ALDH1_0712": {
+  "affinity_probability_binary": 0.42921799421310425,
+  "affinity_pred_value": 0.8846543431282043
+ },
+ "ALDH1_0668": {
+  "affinity_probability_binary": 0.5222628712654114,
+  "affinity_pred_value": 0.30160290002822876
+ },
+ "ALDH1_0720": {
+  "affinity_probability_binary": 0.6819088459014893,
+  "affinity_pred_value": -1.0484670400619507
+ },
+ "ALDH1_0736": {
+  "affinity_probability_binary": 0.6696210503578186,
+  "affinity_pred_value": 0.026353418827056885
+ },
+ "ALDH1_0696": {
+  "affinity_probability_binary": 0.6177621483802795,
+  "affinity_pred_value": 0.11007314920425415
+ },
+ "ALDH1_0724": {
+  "affinity_probability_binary": 0.39405813813209534,
+  "affinity_pred_value": 0.03858834505081177
+ },
+ "ALDH1_0748": {
+  "affinity_probability_binary": 0.468700110912323,
+  "affinity_pred_value": 0.2139628678560257
+ },
+ "ALDH1_0684": {
+  "affinity_probability_binary": 0.321449339389801,
+  "affinity_pred_value": 0.7463057637214661
+ },
+ "ALDH1_0740": {
+  "affinity_probability_binary": 0.5920501351356506,
+  "affinity_pred_value": -0.7445827722549438
+ },
+ "ALDH1_0672": {
+  "affinity_probability_binary": 0.6668789982795715,
+  "affinity_pred_value": -0.24188560247421265
+ },
+ "ALDH1_0708": {
+  "affinity_probability_binary": 0.5992673635482788,
+  "affinity_pred_value": 0.2837083339691162
+ },
+ "ALDH1_0001": {
+  "affinity_probability_binary": 0.770513653755188,
+  "affinity_pred_value": 0.3233834505081177
+ },
+ "ALDH1_0017": {
+  "affinity_probability_binary": 0.4624794125556946,
+  "affinity_pred_value": 0.023817582055926323
+ },
+ "ALDH1_0005": {
+  "affinity_probability_binary": 0.6069292426109314,
+  "affinity_pred_value": 0.9652605056762695
+ },
+ "ALDH1_0009": {
+  "affinity_probability_binary": 0.5570172071456909,
+  "affinity_pred_value": 0.4096927046775818
+ },
+ "ALDH1_0013": {
+  "affinity_probability_binary": 0.47689878940582275,
+  "affinity_pred_value": 0.7106250524520874
+ },
+ "ALDH1_0021": {
+  "affinity_probability_binary": 0.3560662567615509,
+  "affinity_pred_value": -0.3566768169403076
+ },
+ "ALDH1_0029": {
+  "affinity_probability_binary": 0.6037450432777405,
+  "affinity_pred_value": 0.6476095914840698
+ },
+ "ALDH1_0033": {
+  "affinity_probability_binary": 0.57663494348526,
+  "affinity_pred_value": 0.09684804081916809
+ },
+ "ALDH1_0037": {
+  "affinity_probability_binary": 0.5943233966827393,
+  "affinity_pred_value": 0.15979355573654175
+ },
+ "ALDH1_0025": {
+  "affinity_probability_binary": 0.5553024411201477,
+  "affinity_pred_value": 0.6865202188491821
+ },
+ "ALDH1_0053": {
+  "affinity_probability_binary": 0.7531747817993164,
+  "affinity_pred_value": 0.32545655965805054
+ },
+ "ALDH1_0041": {
+  "affinity_probability_binary": 0.4042869210243225,
+  "affinity_pred_value": 0.20221400260925293
+ },
+ "ALDH1_0057": {
+  "affinity_probability_binary": 0.40106189250946045,
+  "affinity_pred_value": -0.2114904820919037
+ },
+ "ALDH1_0045": {
+  "affinity_probability_binary": 0.718874454498291,
+  "affinity_pred_value": -0.39905086159706116
+ },
+ "ALDH1_0049": {
+  "affinity_probability_binary": 0.37794214487075806,
+  "affinity_pred_value": 0.9607231616973877
+ },
+ "ALDH1_0069": {
+  "affinity_probability_binary": 0.6364860534667969,
+  "affinity_pred_value": 0.6262587904930115
+ },
+ "ALDH1_0077": {
+  "affinity_probability_binary": 0.5246154069900513,
+  "affinity_pred_value": 0.10621143132448196
+ },
+ "ALDH1_0073": {
+  "affinity_probability_binary": 0.39163631200790405,
+  "affinity_pred_value": -0.7245577573776245
+ },
+ "ALDH1_0065": {
+  "affinity_probability_binary": 0.6200551390647888,
+  "affinity_pred_value": -0.46570876240730286
+ },
+ "ALDH1_0061": {
+  "affinity_probability_binary": 0.8769595623016357,
+  "affinity_pred_value": 0.5143875479698181
+ },
+ "ALDH1_0081": {
+  "affinity_probability_binary": 0.5307657122612,
+  "affinity_pred_value": 0.6454133987426758
+ },
+ "ALDH1_0097": {
+  "affinity_probability_binary": 0.7672164440155029,
+  "affinity_pred_value": 0.08290235698223114
+ },
+ "ALDH1_0089": {
+  "affinity_probability_binary": 0.691741406917572,
+  "affinity_pred_value": 0.0763465166091919
+ },
+ "ALDH1_0085": {
+  "affinity_probability_binary": 0.5760242938995361,
+  "affinity_pred_value": 1.5107338428497314
+ },
+ "ALDH1_0093": {
+  "affinity_probability_binary": 0.2927646040916443,
+  "affinity_pred_value": -0.0538448840379715
+ },
+ "ALDH1_0117": {
+  "affinity_probability_binary": 0.6520644426345825,
+  "affinity_pred_value": 0.4794938564300537
+ },
+ "ALDH1_0109": {
+  "affinity_probability_binary": 0.6923527717590332,
+  "affinity_pred_value": 0.3871804177761078
+ },
+ "ALDH1_0101": {
+  "affinity_probability_binary": 0.2890954315662384,
+  "affinity_pred_value": -0.4729199707508087
+ },
+ "ALDH1_0113": {
+  "affinity_probability_binary": 0.5627042055130005,
+  "affinity_pred_value": -0.30466634035110474
+ },
+ "ALDH1_0105": {
+  "affinity_probability_binary": 0.22181525826454163,
+  "affinity_pred_value": 0.8036496639251709
+ },
+ "ALDH1_0121": {
+  "affinity_probability_binary": 0.44760411977767944,
+  "affinity_pred_value": -0.9077675342559814
+ },
+ "ALDH1_0133": {
+  "affinity_probability_binary": 0.7515109181404114,
+  "affinity_pred_value": 0.30060720443725586
+ },
+ "ALDH1_0125": {
+  "affinity_probability_binary": 0.2943251430988312,
+  "affinity_pred_value": 1.2627649307250977
+ },
+ "ALDH1_0129": {
+  "affinity_probability_binary": 0.5616135597229004,
+  "affinity_pred_value": 0.8406076431274414
+ },
+ "ALDH1_0137": {
+  "affinity_probability_binary": 0.3649072051048279,
+  "affinity_pred_value": 1.0629801750183105
+ },
+ "ALDH1_0149": {
+  "affinity_probability_binary": 0.8139320611953735,
+  "affinity_pred_value": -0.2320525348186493
+ },
+ "ALDH1_0141": {
+  "affinity_probability_binary": 0.467860609292984,
+  "affinity_pred_value": 0.11234201490879059
+ },
+ "ALDH1_0153": {
+  "affinity_probability_binary": 0.5265123844146729,
+  "affinity_pred_value": 0.29138827323913574
+ },
+ "ALDH1_0145": {
+  "affinity_probability_binary": 0.4657215476036072,
+  "affinity_pred_value": 0.9211005568504333
+ },
+ "ALDH1_0157": {
+  "affinity_probability_binary": 0.4472132921218872,
+  "affinity_pred_value": 0.9083090424537659
+ },
+ "ALDH1_0177": {
+  "affinity_probability_binary": 0.7372823357582092,
+  "affinity_pred_value": 0.3918868899345398
+ },
+ "ALDH1_0165": {
+  "affinity_probability_binary": 0.242118701338768,
+  "affinity_pred_value": 1.02591872215271
+ },
+ "ALDH1_0169": {
+  "affinity_probability_binary": 0.5505771040916443,
+  "affinity_pred_value": -0.04538269340991974
+ },
+ "ALDH1_0161": {
+  "affinity_probability_binary": 0.6085072159767151,
+  "affinity_pred_value": -1.1502432823181152
+ },
+ "ALDH1_0173": {
+  "affinity_probability_binary": 0.5960015058517456,
+  "affinity_pred_value": 0.9513248801231384
+ },
+ "ALDH1_0185": {
+  "affinity_probability_binary": 0.5110605955123901,
+  "affinity_pred_value": 1.6230272054672241
+ },
+ "ALDH1_0189": {
+  "affinity_probability_binary": 0.4348643720149994,
+  "affinity_pred_value": -0.07946407794952393
+ },
+ "ALDH1_0197": {
+  "affinity_probability_binary": 0.6050637364387512,
+  "affinity_pred_value": 0.009609252214431763
+ },
+ "ALDH1_0193": {
+  "affinity_probability_binary": 0.29678875207901,
+  "affinity_pred_value": 0.7032170295715332
+ },
+ "ALDH1_0181": {
+  "affinity_probability_binary": 0.4382645785808563,
+  "affinity_pred_value": -0.5165188312530518
+ },
+ "ALDH1_0205": {
+  "affinity_probability_binary": 0.6361154913902283,
+  "affinity_pred_value": -0.4610302448272705
+ },
+ "ALDH1_0217": {
+  "affinity_probability_binary": 0.5380236506462097,
+  "affinity_pred_value": -0.6002810597419739
+ },
+ "ALDH1_0213": {
+  "affinity_probability_binary": 0.7261175513267517,
+  "affinity_pred_value": 0.35895001888275146
+ },
+ "ALDH1_0209": {
+  "affinity_probability_binary": 0.45969799160957336,
+  "affinity_pred_value": 0.5759811401367188
+ },
+ "ALDH1_0201": {
+  "affinity_probability_binary": 0.4344412088394165,
+  "affinity_pred_value": 0.49380558729171753
+ },
+ "ALDH1_0225": {
+  "affinity_probability_binary": 0.7840447425842285,
+  "affinity_pred_value": 0.0006518363952636719
+ },
+ "ALDH1_0237": {
+  "affinity_probability_binary": 0.6937944889068604,
+  "affinity_pred_value": -0.211439847946167
+ },
+ "ALDH1_0221": {
+  "affinity_probability_binary": 0.7464041709899902,
+  "affinity_pred_value": -0.26641690731048584
+ },
+ "ALDH1_0233": {
+  "affinity_probability_binary": 0.28188467025756836,
+  "affinity_pred_value": 0.769949197769165
+ },
+ "ALDH1_0229": {
+  "affinity_probability_binary": 0.6694306135177612,
+  "affinity_pred_value": 0.6533209085464478
+ },
+ "ALDH1_0249": {
+  "affinity_probability_binary": 0.47200626134872437,
+  "affinity_pred_value": -0.04551658034324646
+ },
+ "ALDH1_0241": {
+  "affinity_probability_binary": 0.5088179707527161,
+  "affinity_pred_value": -0.41879236698150635
+ },
+ "ALDH1_0245": {
+  "affinity_probability_binary": 0.4957005977630615,
+  "affinity_pred_value": 0.13774192333221436
+ },
+ "ALDH1_0257": {
+  "affinity_probability_binary": 0.4105789363384247,
+  "affinity_pred_value": 1.5062661170959473
+ },
+ "ALDH1_0253": {
+  "affinity_probability_binary": 0.4234771132469177,
+  "affinity_pred_value": 0.6301940083503723
+ },
+ "ALDH1_0261": {
+  "affinity_probability_binary": 0.5111737251281738,
+  "affinity_pred_value": 0.5649846196174622
+ },
+ "ALDH1_0269": {
+  "affinity_probability_binary": 0.44507771730422974,
+  "affinity_pred_value": 0.5756282806396484
+ },
+ "ALDH1_0277": {
+  "affinity_probability_binary": 0.6282367706298828,
+  "affinity_pred_value": 0.3731836676597595
+ },
+ "ALDH1_0273": {
+  "affinity_probability_binary": 0.25455546379089355,
+  "affinity_pred_value": -0.07440388202667236
+ },
+ "ALDH1_0265": {
+  "affinity_probability_binary": 0.48838335275650024,
+  "affinity_pred_value": 0.28663957118988037
+ },
+ "ALDH1_0289": {
+  "affinity_probability_binary": 0.1491532325744629,
+  "affinity_pred_value": 1.1860971450805664
+ },
+ "ALDH1_0293": {
+  "affinity_probability_binary": 0.5373058319091797,
+  "affinity_pred_value": -0.46112895011901855
+ },
+ "ALDH1_0285": {
+  "affinity_probability_binary": 0.4761214852333069,
+  "affinity_pred_value": -0.7741544246673584
+ },
+ "ALDH1_0281": {
+  "affinity_probability_binary": 0.8627075552940369,
+  "affinity_pred_value": 0.03512812405824661
+ },
+ "ALDH1_0297": {
+  "affinity_probability_binary": 0.7085168361663818,
+  "affinity_pred_value": 0.4584089517593384
+ },
+ "ALDH1_0309": {
+  "affinity_probability_binary": 0.7117986083030701,
+  "affinity_pred_value": 0.1799033284187317
+ },
+ "ALDH1_0317": {
+  "affinity_probability_binary": 0.47588276863098145,
+  "affinity_pred_value": 0.5459766983985901
+ },
+ "ALDH1_0305": {
+  "affinity_probability_binary": 0.7283623218536377,
+  "affinity_pred_value": -0.24102970957756042
+ },
+ "ALDH1_0313": {
+  "affinity_probability_binary": 0.3433636724948883,
+  "affinity_pred_value": 1.362795352935791
+ },
+ "ALDH1_0301": {
+  "affinity_probability_binary": 0.6416884064674377,
+  "affinity_pred_value": 0.35096728801727295
+ },
+ "ALDH1_0329": {
+  "affinity_probability_binary": 0.43210169672966003,
+  "affinity_pred_value": 0.6354685425758362
+ },
+ "ALDH1_0321": {
+  "affinity_probability_binary": 0.23409277200698853,
+  "affinity_pred_value": 0.5173918008804321
+ },
+ "ALDH1_0337": {
+  "affinity_probability_binary": 0.6260855793952942,
+  "affinity_pred_value": -0.3117273449897766
+ },
+ "ALDH1_0325": {
+  "affinity_probability_binary": 0.3159646987915039,
+  "affinity_pred_value": 0.2778629660606384
+ },
+ "ALDH1_0333": {
+  "affinity_probability_binary": 0.5454369783401489,
+  "affinity_pred_value": 0.30941009521484375
+ },
+ "ALDH1_0357": {
+  "affinity_probability_binary": 0.7859438061714172,
+  "affinity_pred_value": -0.6204180717468262
+ },
+ "ALDH1_0353": {
+  "affinity_probability_binary": 0.5015789866447449,
+  "affinity_pred_value": 0.25765037536621094
+ },
+ "ALDH1_0341": {
+  "affinity_probability_binary": 0.693010687828064,
+  "affinity_pred_value": -0.06773623824119568
+ },
+ "ALDH1_0349": {
+  "affinity_probability_binary": 0.5960812568664551,
+  "affinity_pred_value": -0.24132269620895386
+ },
+ "ALDH1_0345": {
+  "affinity_probability_binary": 0.7942404747009277,
+  "affinity_pred_value": 0.5641810894012451
+ },
+ "ALDH1_0377": {
+  "affinity_probability_binary": 0.24613603949546814,
+  "affinity_pred_value": 0.49467015266418457
+ },
+ "ALDH1_0369": {
+  "affinity_probability_binary": 0.3714219629764557,
+  "affinity_pred_value": 0.29647296667099
+ },
+ "ALDH1_0365": {
+  "affinity_probability_binary": 0.48851728439331055,
+  "affinity_pred_value": -0.07367642223834991
+ },
+ "ALDH1_0361": {
+  "affinity_probability_binary": 0.6511468887329102,
+  "affinity_pred_value": 0.32313072681427
+ },
+ "ALDH1_0373": {
+  "affinity_probability_binary": 0.46577078104019165,
+  "affinity_pred_value": -0.12364199757575989
+ },
+ "ALDH1_0393": {
+  "affinity_probability_binary": 0.23797687888145447,
+  "affinity_pred_value": 0.4752921462059021
+ },
+ "ALDH1_0389": {
+  "affinity_probability_binary": 0.7651299238204956,
+  "affinity_pred_value": -0.6818740963935852
+ },
+ "ALDH1_0381": {
+  "affinity_probability_binary": 0.785358190536499,
+  "affinity_pred_value": -0.30695751309394836
+ },
+ "ALDH1_0385": {
+  "affinity_probability_binary": 0.5375698208808899,
+  "affinity_pred_value": 0.10598334670066833
+ },
+ "ALDH1_0397": {
+  "affinity_probability_binary": 0.4547369182109833,
+  "affinity_pred_value": -0.8495770692825317
+ },
+ "ALDH1_0413": {
+  "affinity_probability_binary": 0.568345844745636,
+  "affinity_pred_value": 0.5536432862281799
+ },
+ "ALDH1_0409": {
+  "affinity_probability_binary": 0.4089328646659851,
+  "affinity_pred_value": -0.13454723358154297
+ },
+ "ALDH1_0401": {
+  "affinity_probability_binary": 0.5153485536575317,
+  "affinity_pred_value": 0.801540195941925
+ },
+ "ALDH1_0417": {
+  "affinity_probability_binary": 0.4131234586238861,
+  "affinity_pred_value": 0.6294896602630615
+ },
+ "ALDH1_0405": {
+  "affinity_probability_binary": 0.3326767086982727,
+  "affinity_pred_value": 0.24362701177597046
+ },
+ "ALDH1_0437": {
+  "affinity_probability_binary": 0.3479512333869934,
+  "affinity_pred_value": 0.5945818424224854
+ },
+ "ALDH1_0425": {
+  "affinity_probability_binary": 0.7717592120170593,
+  "affinity_pred_value": 0.2856966555118561
+ },
+ "ALDH1_0421": {
+  "affinity_probability_binary": 0.17916658520698547,
+  "affinity_pred_value": 0.7087113857269287
+ },
+ "ALDH1_0429": {
+  "affinity_probability_binary": 0.6634210348129272,
+  "affinity_pred_value": 0.45569735765457153
+ },
+ "ALDH1_0433": {
+  "affinity_probability_binary": 0.5841140747070312,
+  "affinity_pred_value": 0.9916474223136902
+ },
+ "ALDH1_0457": {
+  "affinity_probability_binary": 0.526070237159729,
+  "affinity_pred_value": 0.6987854242324829
+ },
+ "ALDH1_0453": {
+  "affinity_probability_binary": 0.38483572006225586,
+  "affinity_pred_value": 1.1405750513076782
+ },
+ "ALDH1_0441": {
+  "affinity_probability_binary": 0.325602650642395,
+  "affinity_pred_value": -0.3697715401649475
+ },
+ "ALDH1_0445": {
+  "affinity_probability_binary": 0.7443876266479492,
+  "affinity_pred_value": 0.6234204173088074
+ },
+ "ALDH1_0449": {
+  "affinity_probability_binary": 0.4936850965023041,
+  "affinity_pred_value": 0.22162781655788422
+ },
+ "ALDH1_0473": {
+  "affinity_probability_binary": 0.8239235281944275,
+  "affinity_pred_value": -0.7024855613708496
+ },
+ "ALDH1_0469": {
+  "affinity_probability_binary": 0.30416402220726013,
+  "affinity_pred_value": 0.7205584049224854
+ },
+ "ALDH1_0461": {
+  "affinity_probability_binary": 0.4313184320926666,
+  "affinity_pred_value": 0.6027166843414307
+ },
+ "ALDH1_0477": {
+  "affinity_probability_binary": 0.4625736474990845,
+  "affinity_pred_value": 0.706318736076355
+ },
+ "ALDH1_0465": {
+  "affinity_probability_binary": 0.37429988384246826,
+  "affinity_pred_value": -0.48826342821121216
+ },
+ "ALDH1_0497": {
+  "affinity_probability_binary": 0.5234936475753784,
+  "affinity_pred_value": 0.15025267004966736
+ },
+ "ALDH1_0493": {
+  "affinity_probability_binary": 0.7704782485961914,
+  "affinity_pred_value": -1.402426838874817
+ },
+ "ALDH1_0485": {
+  "affinity_probability_binary": 0.5293905735015869,
+  "affinity_pred_value": 1.47501802444458
+ },
+ "ALDH1_0481": {
+  "affinity_probability_binary": 0.3058198094367981,
+  "affinity_pred_value": -0.08587700128555298
+ },
+ "ALDH1_0489": {
+  "affinity_probability_binary": 0.3692777156829834,
+  "affinity_pred_value": 0.7412534356117249
+ },
+ "ALDH1_0509": {
+  "affinity_probability_binary": 0.42923402786254883,
+  "affinity_pred_value": 0.7623254060745239
+ },
+ "ALDH1_0501": {
+  "affinity_probability_binary": 0.5055710077285767,
+  "affinity_pred_value": -0.22755326330661774
+ },
+ "ALDH1_0513": {
+  "affinity_probability_binary": 0.47888410091400146,
+  "affinity_pred_value": 0.8896921873092651
+ },
+ "ALDH1_0517": {
+  "affinity_probability_binary": 0.4680989384651184,
+  "affinity_pred_value": 1.587838053703308
+ },
+ "ALDH1_0505": {
+  "affinity_probability_binary": 0.3149579167366028,
+  "affinity_pred_value": 0.20341835916042328
+ },
+ "ALDH1_0533": {
+  "affinity_probability_binary": 0.5765668153762817,
+  "affinity_pred_value": -0.03193017840385437
+ },
+ "ALDH1_0529": {
+  "affinity_probability_binary": 0.5632825493812561,
+  "affinity_pred_value": -0.039445340633392334
+ },
+ "ALDH1_0537": {
+  "affinity_probability_binary": 0.4643480181694031,
+  "affinity_pred_value": 0.9483017921447754
+ },
+ "ALDH1_0525": {
+  "affinity_probability_binary": 0.6460525989532471,
+  "affinity_pred_value": 0.5510344505310059
+ },
+ "ALDH1_0521": {
+  "affinity_probability_binary": 0.43788331747055054,
+  "affinity_pred_value": 0.4575587511062622
+ },
+ "ALDH1_0557": {
+  "affinity_probability_binary": 0.29307663440704346,
+  "affinity_pred_value": 0.8065509796142578
+ },
+ "ALDH1_0541": {
+  "affinity_probability_binary": 0.5003305673599243,
+  "affinity_pred_value": 0.5243624448776245
+ },
+ "ALDH1_0545": {
+  "affinity_probability_binary": 0.5846580862998962,
+  "affinity_pred_value": 0.9261424541473389
+ },
+ "ALDH1_0549": {
+  "affinity_probability_binary": 0.6497383713722229,
+  "affinity_pred_value": -0.546837329864502
+ },
+ "ALDH1_0553": {
+  "affinity_probability_binary": 0.5045537352561951,
+  "affinity_pred_value": -0.36861494183540344
+ },
+ "ALDH1_0569": {
+  "affinity_probability_binary": 0.20571260154247284,
+  "affinity_pred_value": 0.0840834528207779
+ },
+ "ALDH1_0577": {
+  "affinity_probability_binary": 0.6218774914741516,
+  "affinity_pred_value": -0.3064448833465576
+ },
+ "ALDH1_0565": {
+  "affinity_probability_binary": 0.6153441071510315,
+  "affinity_pred_value": -0.23163409531116486
+ },
+ "ALDH1_0561": {
+  "affinity_probability_binary": 0.6163175702095032,
+  "affinity_pred_value": -0.05990183353424072
+ },
+ "ALDH1_0573": {
+  "affinity_probability_binary": 0.5434987545013428,
+  "affinity_pred_value": 0.7111774682998657
+ },
+ "ALDH1_0581": {
+  "affinity_probability_binary": 0.5259689092636108,
+  "affinity_pred_value": 0.5379791855812073
+ },
+ "ALDH1_0593": {
+  "affinity_probability_binary": 0.5539758205413818,
+  "affinity_pred_value": 0.6697242856025696
+ },
+ "ALDH1_0585": {
+  "affinity_probability_binary": 0.18793122470378876,
+  "affinity_pred_value": 0.4133812487125397
+ },
+ "ALDH1_0597": {
+  "affinity_probability_binary": 0.19402897357940674,
+  "affinity_pred_value": 0.27774298191070557
+ },
+ "ALDH1_0589": {
+  "affinity_probability_binary": 0.6607919931411743,
+  "affinity_pred_value": 0.38078951835632324
+ },
+ "ALDH1_0617": {
+  "affinity_probability_binary": 0.6145849227905273,
+  "affinity_pred_value": -0.34555864334106445
+ },
+ "ALDH1_0601": {
+  "affinity_probability_binary": 0.37559783458709717,
+  "affinity_pred_value": 1.2085809707641602
+ },
+ "ALDH1_0609": {
+  "affinity_probability_binary": 0.5682152509689331,
+  "affinity_pred_value": -0.16353952884674072
+ },
+ "ALDH1_0613": {
+  "affinity_probability_binary": 0.5887176990509033,
+  "affinity_pred_value": -0.30445221066474915
+ },
+ "ALDH1_0605": {
+  "affinity_probability_binary": 0.46823620796203613,
+  "affinity_pred_value": 0.6988754868507385
+ },
+ "ALDH1_0625": {
+  "affinity_probability_binary": 0.3168134093284607,
+  "affinity_pred_value": 0.6081087589263916
+ },
+ "ALDH1_0637": {
+  "affinity_probability_binary": 0.5619431734085083,
+  "affinity_pred_value": 0.5177270770072937
+ },
+ "ALDH1_0629": {
+  "affinity_probability_binary": 0.6613733768463135,
+  "affinity_pred_value": 0.9443682432174683
+ },
+ "ALDH1_0633": {
+  "affinity_probability_binary": 0.4651108384132385,
+  "affinity_pred_value": 0.5632464289665222
+ },
+ "ALDH1_0621": {
+  "affinity_probability_binary": 0.2635847330093384,
+  "affinity_pred_value": 0.9897753000259399
+ },
+ "ALDH1_0645": {
+  "affinity_probability_binary": 0.21988481283187866,
+  "affinity_pred_value": 0.7451589703559875
+ },
+ "ALDH1_0661": {
+  "affinity_probability_binary": 0.3558714985847473,
+  "affinity_pred_value": 0.3244943916797638
+ },
+ "ALDH1_0665": {
+  "affinity_probability_binary": 0.5752164125442505,
+  "affinity_pred_value": 0.008322983980178833
+ },
+ "ALDH1_0653": {
+  "affinity_probability_binary": 0.4153905510902405,
+  "affinity_pred_value": -0.5566204190254211
+ },
+ "ALDH1_0657": {
+  "affinity_probability_binary": 0.47478312253952026,
+  "affinity_pred_value": 0.3784406781196594
+ },
+ "ALDH1_0641": {
+  "affinity_probability_binary": 0.5567165613174438,
+  "affinity_pred_value": 1.1648519039154053
+ },
+ "ALDH1_0649": {
+  "affinity_probability_binary": 0.5771952867507935,
+  "affinity_pred_value": 0.8038213849067688
+ },
+ "ALDH1_0673": {
+  "affinity_probability_binary": 0.38627174496650696,
+  "affinity_pred_value": 1.075100302696228
+ },
+ "ALDH1_0669": {
+  "affinity_probability_binary": 0.5495103597640991,
+  "affinity_pred_value": 0.538517415523529
+ },
+ "ALDH1_0677": {
+  "affinity_probability_binary": 0.3678939640522003,
+  "affinity_pred_value": 0.6501330137252808
+ },
+ "ALDH1_0681": {
+  "affinity_probability_binary": 0.2849489152431488,
+  "affinity_pred_value": 0.4570903480052948
+ },
+ "ALDH1_0685": {
+  "affinity_probability_binary": 0.6707150936126709,
+  "affinity_pred_value": -0.3532748222351074
+ },
+ "ALDH1_0697": {
+  "affinity_probability_binary": 0.6822760105133057,
+  "affinity_pred_value": -0.02723976969718933
+ },
+ "ALDH1_0709": {
+  "affinity_probability_binary": 0.43471527099609375,
+  "affinity_pred_value": 0.8226895928382874
+ },
+ "ALDH1_0705": {
+  "affinity_probability_binary": 0.6190961599349976,
+  "affinity_pred_value": 0.20329511165618896
+ },
+ "ALDH1_0701": {
+  "affinity_probability_binary": 0.3866012990474701,
+  "affinity_pred_value": 0.7311912178993225
+ },
+ "ALDH1_0693": {
+  "affinity_probability_binary": 0.501145601272583,
+  "affinity_pred_value": 0.8388173580169678
+ },
+ "ALDH1_0689": {
+  "affinity_probability_binary": 0.42908114194869995,
+  "affinity_pred_value": 1.0826153755187988
+ },
+ "ALDH1_0713": {
+  "affinity_probability_binary": 0.6170432567596436,
+  "affinity_pred_value": -0.426722913980484
+ },
+ "ALDH1_0717": {
+  "affinity_probability_binary": 0.24398568272590637,
+  "affinity_pred_value": 0.42710113525390625
+ },
+ "ALDH1_0745": {
+  "affinity_probability_binary": 0.6065788269042969,
+  "affinity_pred_value": 0.1583613008260727
+ },
+ "ALDH1_0741": {
+  "affinity_probability_binary": 0.3566262423992157,
+  "affinity_pred_value": 0.28465309739112854
+ },
+ "ALDH1_0733": {
+  "affinity_probability_binary": 0.23411372303962708,
+  "affinity_pred_value": 1.5446839332580566
+ },
+ "ALDH1_0729": {
+  "affinity_probability_binary": 0.6225631833076477,
+  "affinity_pred_value": -0.8914469480514526
+ },
+ "ALDH1_0737": {
+  "affinity_probability_binary": 0.7356668710708618,
+  "affinity_pred_value": 0.04581534117460251
+ },
+ "ALDH1_0725": {
+  "affinity_probability_binary": 0.4998830556869507,
+  "affinity_pred_value": 0.48568201065063477
+ },
+ "ALDH1_0721": {
+  "affinity_probability_binary": 0.6545680165290833,
+  "affinity_pred_value": 0.025522291660308838
+ },
+ "ALDH1_0749": {
+  "affinity_probability_binary": 0.26934972405433655,
+  "affinity_pred_value": 0.30341991782188416
+ },
+ "ALDH1_0014": {
+  "affinity_probability_binary": 0.18712221086025238,
+  "affinity_pred_value": 0.7852997779846191
+ },
+ "ALDH1_0006": {
+  "affinity_probability_binary": 0.43247509002685547,
+  "affinity_pred_value": -0.09694460034370422
+ },
+ "ALDH1_0018": {
+  "affinity_probability_binary": 0.5067193508148193,
+  "affinity_pred_value": 0.9365684390068054
+ },
+ "ALDH1_0002": {
+  "affinity_probability_binary": 0.28150635957717896,
+  "affinity_pred_value": 0.6854536533355713
+ },
+ "ALDH1_0010": {
+  "affinity_probability_binary": 0.8894723653793335,
+  "affinity_pred_value": -0.09920104593038559
+ },
+ "ALDH1_0034": {
+  "affinity_probability_binary": 0.7143099308013916,
+  "affinity_pred_value": -1.2744957208633423
+ },
+ "ALDH1_0026": {
+  "affinity_probability_binary": 0.5606691837310791,
+  "affinity_pred_value": 0.4202118515968323
+ },
+ "ALDH1_0022": {
+  "affinity_probability_binary": 0.47238677740097046,
+  "affinity_pred_value": -0.3585062623023987
+ },
+ "ALDH1_0038": {
+  "affinity_probability_binary": 0.609089732170105,
+  "affinity_pred_value": -0.13664180040359497
+ },
+ "ALDH1_0030": {
+  "affinity_probability_binary": 0.5948767066001892,
+  "affinity_pred_value": 0.22401773929595947
+ },
+ "ALDH1_0058": {
+  "affinity_probability_binary": 0.766871452331543,
+  "affinity_pred_value": -0.06719177961349487
+ },
+ "ALDH1_0046": {
+  "affinity_probability_binary": 0.5924441814422607,
+  "affinity_pred_value": -0.3113994598388672
+ },
+ "ALDH1_0050": {
+  "affinity_probability_binary": 0.6869711875915527,
+  "affinity_pred_value": -0.7194002866744995
+ },
+ "ALDH1_0054": {
+  "affinity_probability_binary": 0.47313910722732544,
+  "affinity_pred_value": 0.270577073097229
+ },
+ "ALDH1_0042": {
+  "affinity_probability_binary": 0.5085151195526123,
+  "affinity_pred_value": -0.44680482149124146
+ },
+ "ALDH1_0078": {
+  "affinity_probability_binary": 0.8256507515907288,
+  "affinity_pred_value": -0.8632806539535522
+ },
+ "ALDH1_0066": {
+  "affinity_probability_binary": 0.8483580350875854,
+  "affinity_pred_value": -0.44240444898605347
+ },
+ "ALDH1_0074": {
+  "affinity_probability_binary": 0.3847656548023224,
+  "affinity_pred_value": 0.3708995282649994
+ },
+ "ALDH1_0070": {
+  "affinity_probability_binary": 0.7298710346221924,
+  "affinity_pred_value": -0.23714230954647064
+ },
+ "ALDH1_0062": {
+  "affinity_probability_binary": 0.4804117679595947,
+  "affinity_pred_value": 1.4006750583648682
+ },
+ "ALDH1_0090": {
+  "affinity_probability_binary": 0.40775835514068604,
+  "affinity_pred_value": 1.0852978229522705
+ },
+ "ALDH1_0086": {
+  "affinity_probability_binary": 0.43535029888153076,
+  "affinity_pred_value": 0.13852354884147644
+ },
+ "ALDH1_0094": {
+  "affinity_probability_binary": 0.23618122935295105,
+  "affinity_pred_value": 0.6103137731552124
+ },
+ "ALDH1_0082": {
+  "affinity_probability_binary": 0.669310450553894,
+  "affinity_pred_value": -0.4365220069885254
+ },
+ "ALDH1_0098": {
+  "affinity_probability_binary": 0.7294821739196777,
+  "affinity_pred_value": 0.1813705861568451
+ },
+ "ALDH1_0118": {
+  "affinity_probability_binary": 0.22873850166797638,
+  "affinity_pred_value": 1.0954669713974
+ },
+ "ALDH1_0114": {
+  "affinity_probability_binary": 0.7114595174789429,
+  "affinity_pred_value": 0.33939793705940247
+ },
+ "ALDH1_0106": {
+  "affinity_probability_binary": 0.761223554611206,
+  "affinity_pred_value": 0.6562367081642151
+ },
+ "ALDH1_0110": {
+  "affinity_probability_binary": 0.7220386862754822,
+  "affinity_pred_value": 0.2550700604915619
+ },
+ "ALDH1_0102": {
+  "affinity_probability_binary": 0.802854597568512,
+  "affinity_pred_value": -0.4743671119213104
+ },
+ "ALDH1_0138": {
+  "affinity_probability_binary": 0.3329261839389801,
+  "affinity_pred_value": 0.4233047366142273
+ },
+ "ALDH1_0126": {
+  "affinity_probability_binary": 0.4677240252494812,
+  "affinity_pred_value": 0.8227953910827637
+ },
+ "ALDH1_0134": {
+  "affinity_probability_binary": 0.4427264332771301,
+  "affinity_pred_value": 0.03333473205566406
+ },
+ "ALDH1_0122": {
+  "affinity_probability_binary": 0.48378467559814453,
+  "affinity_pred_value": 0.961796224117279
+ },
+ "ALDH1_0130": {
+  "affinity_probability_binary": 0.5542160272598267,
+  "affinity_pred_value": -0.20650795102119446
+ },
+ "ALDH1_0154": {
+  "affinity_probability_binary": 0.6654254794120789,
+  "affinity_pred_value": -0.14929582178592682
+ },
+ "ALDH1_0150": {
+  "affinity_probability_binary": 0.7649194598197937,
+  "affinity_pred_value": -0.18626993894577026
+ },
+ "ALDH1_0158": {
+  "affinity_probability_binary": 0.4909762144088745,
+  "affinity_pred_value": 0.9651446342468262
+ },
+ "ALDH1_0146": {
+  "affinity_probability_binary": 0.4059791564941406,
+  "affinity_pred_value": -0.010870203375816345
+ },
+ "ALDH1_0142": {
+  "affinity_probability_binary": 0.4930354356765747,
+  "affinity_pred_value": 0.10486480593681335
+ },
+ "ALDH1_0178": {
+  "affinity_probability_binary": 0.6500892639160156,
+  "affinity_pred_value": 0.0066910237073898315
+ },
+ "ALDH1_0166": {
+  "affinity_probability_binary": 0.506676435470581,
+  "affinity_pred_value": 0.7877597808837891
+ },
+ "ALDH1_0174": {
+  "affinity_probability_binary": 0.6923116445541382,
+  "affinity_pred_value": -0.520052433013916
+ },
+ "ALDH1_0170": {
+  "affinity_probability_binary": 0.21125978231430054,
+  "affinity_pred_value": 0.7436157464981079
+ },
+ "ALDH1_0162": {
+  "affinity_probability_binary": 0.6289054751396179,
+  "affinity_pred_value": 0.11338162422180176
+ },
+ "ALDH1_0190": {
+  "affinity_probability_binary": 0.28198444843292236,
+  "affinity_pred_value": -0.32708311080932617
+ },
+ "ALDH1_0194": {
+  "affinity_probability_binary": 0.522310197353363,
+  "affinity_pred_value": -0.913646936416626
+ },
+ "ALDH1_0198": {
+  "affinity_probability_binary": 0.28016653656959534,
+  "affinity_pred_value": 0.8049255609512329
+ },
+ "ALDH1_0186": {
+  "affinity_probability_binary": 0.4600045680999756,
+  "affinity_pred_value": 0.736099123954773
+ },
+ "ALDH1_0182": {
+  "affinity_probability_binary": 0.6386862993240356,
+  "affinity_pred_value": -0.11508475244045258
+ },
+ "ALDH1_0214": {
+  "affinity_probability_binary": 0.804315447807312,
+  "affinity_pred_value": 0.026047445833683014
+ },
+ "ALDH1_0202": {
+  "affinity_probability_binary": 0.7315372228622437,
+  "affinity_pred_value": 0.5448613166809082
+ },
+ "ALDH1_0210": {
+  "affinity_probability_binary": 0.4458412826061249,
+  "affinity_pred_value": 0.7998515367507935
+ },
+ "ALDH1_0206": {
+  "affinity_probability_binary": 0.6263962984085083,
+  "affinity_pred_value": 0.8559235334396362
+ },
+ "ALDH1_0218": {
+  "affinity_probability_binary": 0.18309122323989868,
+  "affinity_pred_value": 0.7090499997138977
+ },
+ "ALDH1_0222": {
+  "affinity_probability_binary": 0.32926976680755615,
+  "affinity_pred_value": 0.3733736276626587
+ },
+ "ALDH1_0230": {
+  "affinity_probability_binary": 0.36226698756217957,
+  "affinity_pred_value": 0.7192447185516357
+ },
+ "ALDH1_0226": {
+  "affinity_probability_binary": 0.23369616270065308,
+  "affinity_pred_value": 0.47240033745765686
+ },
+ "ALDH1_0234": {
+  "affinity_probability_binary": 0.6575590968132019,
+  "affinity_pred_value": 0.33188772201538086
+ },
+ "ALDH1_0238": {
+  "affinity_probability_binary": 0.7167940139770508,
+  "affinity_pred_value": -0.46567660570144653
+ },
+ "ALDH1_0246": {
+  "affinity_probability_binary": 0.3141900300979614,
+  "affinity_pred_value": -0.3464803099632263
+ },
+ "ALDH1_0258": {
+  "affinity_probability_binary": 0.7736281156539917,
+  "affinity_pred_value": -0.5962907671928406
+ },
+ "ALDH1_0254": {
+  "affinity_probability_binary": 0.5917823910713196,
+  "affinity_pred_value": 0.031993985176086426
+ },
+ "ALDH1_0250": {
+  "affinity_probability_binary": 0.6649898290634155,
+  "affinity_pred_value": -0.4949302673339844
+ },
+ "ALDH1_0242": {
+  "affinity_probability_binary": 0.6811859607696533,
+  "affinity_pred_value": 0.6249417662620544
+ },
+ "ALDH1_0262": {
+  "affinity_probability_binary": 0.6778153777122498,
+  "affinity_pred_value": -0.54085373878479
+ },
+ "ALDH1_0274": {
+  "affinity_probability_binary": 0.6694915294647217,
+  "affinity_pred_value": 0.5577563047409058
+ },
+ "ALDH1_0270": {
+  "affinity_probability_binary": 0.45482608675956726,
+  "affinity_pred_value": 0.24876970052719116
+ },
+ "ALDH1_0278": {
+  "affinity_probability_binary": 0.6593835949897766,
+  "affinity_pred_value": -0.21344220638275146
+ },
+ "ALDH1_0266": {
+  "affinity_probability_binary": 0.6505629420280457,
+  "affinity_pred_value": -0.29198992252349854
+ },
+ "ALDH1_0290": {
+  "affinity_probability_binary": 0.43848857283592224,
+  "affinity_pred_value": -0.30208754539489746
+ },
+ "ALDH1_0282": {
+  "affinity_probability_binary": 0.6379759311676025,
+  "affinity_pred_value": -0.15878069400787354
+ },
+ "ALDH1_0286": {
+  "affinity_probability_binary": 0.7594058513641357,
+  "affinity_pred_value": -0.5498526096343994
+ },
+ "ALDH1_0298": {
+  "affinity_probability_binary": 0.7255032062530518,
+  "affinity_pred_value": -0.643776535987854
+ },
+ "ALDH1_0294": {
+  "affinity_probability_binary": 0.6033527255058289,
+  "affinity_pred_value": 0.8780293464660645
+ },
+ "ALDH1_0310": {
+  "affinity_probability_binary": 0.5820372104644775,
+  "affinity_pred_value": -0.3042465150356293
+ },
+ "ALDH1_0302": {
+  "affinity_probability_binary": 0.6835668087005615,
+  "affinity_pred_value": 0.06679288297891617
+ },
+ "ALDH1_0306": {
+  "affinity_probability_binary": 0.6756317615509033,
+  "affinity_pred_value": -0.1831672489643097
+ },
+ "ALDH1_0314": {
+  "affinity_probability_binary": 0.48236626386642456,
+  "affinity_pred_value": -0.0044693052768707275
+ },
+ "ALDH1_0318": {
+  "affinity_probability_binary": 0.45664581656455994,
+  "affinity_pred_value": 0.1311887502670288
+ },
+ "ALDH1_0338": {
+  "affinity_probability_binary": 0.23000262677669525,
+  "affinity_pred_value": 0.49036189913749695
+ },
+ "ALDH1_0334": {
+  "affinity_probability_binary": 0.3866479694843292,
+  "affinity_pred_value": 1.464369297027588
+ },
+ "ALDH1_0330": {
+  "affinity_probability_binary": 0.43042582273483276,
+  "affinity_pred_value": 0.48080241680145264
+ },
+ "ALDH1_0322": {
+  "affinity_probability_binary": 0.5819727182388306,
+  "affinity_pred_value": -0.6702389717102051
+ },
+ "ALDH1_0326": {
+  "affinity_probability_binary": 0.7477327585220337,
+  "affinity_pred_value": -0.4279036223888397
+ },
+ "ALDH1_0342": {
+  "affinity_probability_binary": 0.4280855059623718,
+  "affinity_pred_value": 1.118280291557312
+ },
+ "ALDH1_0346": {
+  "affinity_probability_binary": 0.5282039046287537,
+  "affinity_pred_value": 0.2935895621776581
+ },
+ "ALDH1_0358": {
+  "affinity_probability_binary": 0.27535128593444824,
+  "affinity_pred_value": 1.0100467205047607
+ },
+ "ALDH1_0350": {
+  "affinity_probability_binary": 0.8437478542327881,
+  "affinity_pred_value": -0.01424621045589447
+ },
+ "ALDH1_0354": {
+  "affinity_probability_binary": 0.12150322645902634,
+  "affinity_pred_value": 1.2448227405548096
+ },
+ "ALDH1_0378": {
+  "affinity_probability_binary": 0.3911176323890686,
+  "affinity_pred_value": -0.580090343952179
+ },
+ "ALDH1_0366": {
+  "affinity_probability_binary": 0.47934871912002563,
+  "affinity_pred_value": 1.056829571723938
+ },
+ "ALDH1_0374": {
+  "affinity_probability_binary": 0.417236328125,
+  "affinity_pred_value": 1.2725318670272827
+ },
+ "ALDH1_0370": {
+  "affinity_probability_binary": 0.6859591603279114,
+  "affinity_pred_value": -0.1489197164773941
+ },
+ "ALDH1_0362": {
+  "affinity_probability_binary": 0.6316259503364563,
+  "affinity_pred_value": -0.9201964139938354
+ },
+ "ALDH1_0394": {
+  "affinity_probability_binary": 0.7528851628303528,
+  "affinity_pred_value": -0.04131722450256348
+ },
+ "ALDH1_0386": {
+  "affinity_probability_binary": 0.5173988342285156,
+  "affinity_pred_value": 0.4804060161113739
+ },
+ "ALDH1_0398": {
+  "affinity_probability_binary": 0.4988797903060913,
+  "affinity_pred_value": 0.8854596614837646
+ },
+ "ALDH1_0382": {
+  "affinity_probability_binary": 0.8309822082519531,
+  "affinity_pred_value": -0.9758503437042236
+ },
+ "ALDH1_0390": {
+  "affinity_probability_binary": 0.2685738801956177,
+  "affinity_pred_value": 0.3127592206001282
+ },
+ "ALDH1_0410": {
+  "affinity_probability_binary": 0.5487781167030334,
+  "affinity_pred_value": 0.028327852487564087
+ },
+ "ALDH1_0418": {
+  "affinity_probability_binary": 0.19982744753360748,
+  "affinity_pred_value": 0.07019686698913574
+ },
+ "ALDH1_0402": {
+  "affinity_probability_binary": 0.48898541927337646,
+  "affinity_pred_value": -0.17830142378807068
+ },
+ "ALDH1_0406": {
+  "affinity_probability_binary": 0.3313850164413452,
+  "affinity_pred_value": -0.6967538595199585
+ },
+ "ALDH1_0414": {
+  "affinity_probability_binary": 0.48490476608276367,
+  "affinity_pred_value": 0.8682649731636047
+ },
+ "ALDH1_0422": {
+  "affinity_probability_binary": 0.6087347269058228,
+  "affinity_pred_value": -0.13411584496498108
+ },
+ "ALDH1_0434": {
+  "affinity_probability_binary": 0.5133739709854126,
+  "affinity_pred_value": 0.2823784649372101
+ },
+ "ALDH1_0438": {
+  "affinity_probability_binary": 0.6768463850021362,
+  "affinity_pred_value": 0.030596300959587097
+ },
+ "ALDH1_0426": {
+  "affinity_probability_binary": 0.17073273658752441,
+  "affinity_pred_value": 1.2718796730041504
+ },
+ "ALDH1_0430": {
+  "affinity_probability_binary": 0.2910737991333008,
+  "affinity_pred_value": -0.9430052042007446
+ },
+ "ALDH1_0446": {
+  "affinity_probability_binary": 0.2728576064109802,
+  "affinity_pred_value": 0.39857184886932373
+ },
+ "ALDH1_0442": {
+  "affinity_probability_binary": 0.350064754486084,
+  "affinity_pred_value": 1.2571332454681396
+ },
+ "ALDH1_0450": {
+  "affinity_probability_binary": 0.705809473991394,
+  "affinity_pred_value": -0.5301402807235718
+ },
+ "ALDH1_0454": {
+  "affinity_probability_binary": 0.5507453083992004,
+  "affinity_pred_value": -0.03833989053964615
+ },
+ "ALDH1_0458": {
+  "affinity_probability_binary": 0.4070276618003845,
+  "affinity_pred_value": 0.15075673162937164
+ },
+ "ALDH1_0462": {
+  "affinity_probability_binary": 0.7688969373703003,
+  "affinity_pred_value": -0.248294860124588
+ },
+ "ALDH1_0474": {
+  "affinity_probability_binary": 0.7192584276199341,
+  "affinity_pred_value": 0.12529593706130981
+ },
+ "ALDH1_0478": {
+  "affinity_probability_binary": 0.5717233419418335,
+  "affinity_pred_value": 0.20627529919147491
+ },
+ "ALDH1_0466": {
+  "affinity_probability_binary": 0.33920422196388245,
+  "affinity_pred_value": 0.6630157828330994
+ },
+ "ALDH1_0470": {
+  "affinity_probability_binary": 0.5969530344009399,
+  "affinity_pred_value": 0.19633318483829498
+ },
+ "ALDH1_0486": {
+  "affinity_probability_binary": 0.6095372438430786,
+  "affinity_pred_value": -0.2472989410161972
+ },
+ "ALDH1_0498": {
+  "affinity_probability_binary": 0.37565624713897705,
+  "affinity_pred_value": 0.7507287263870239
+ },
+ "ALDH1_0494": {
+  "affinity_probability_binary": 0.2896708846092224,
+  "affinity_pred_value": 0.6626634001731873
+ },
+ "ALDH1_0490": {
+  "affinity_probability_binary": 0.2711348235607147,
+  "affinity_pred_value": 0.4708169400691986
+ },
+ "ALDH1_0482": {
+  "affinity_probability_binary": 0.26160871982574463,
+  "affinity_pred_value": -0.5274601578712463
+ },
+ "ALDH1_0502": {
+  "affinity_probability_binary": 0.37969979643821716,
+  "affinity_pred_value": 0.4302442669868469
+ },
+ "ALDH1_0510": {
+  "affinity_probability_binary": 0.7937924861907959,
+  "affinity_pred_value": 0.2023257315158844
+ },
+ "ALDH1_0506": {
+  "affinity_probability_binary": 0.48325401544570923,
+  "affinity_pred_value": 1.7451093196868896
+ },
+ "ALDH1_0518": {
+  "affinity_probability_binary": 0.6922364234924316,
+  "affinity_pred_value": 0.4237775504589081
+ },
+ "ALDH1_0514": {
+  "affinity_probability_binary": 0.330524742603302,
+  "affinity_pred_value": -0.551993727684021
+ },
+ "ALDH1_0526": {
+  "affinity_probability_binary": 0.23125708103179932,
+  "affinity_pred_value": 0.36418479681015015
+ },
+ "ALDH1_0530": {
+  "affinity_probability_binary": 0.4862684905529022,
+  "affinity_pred_value": -0.7088770866394043
+ },
+ "ALDH1_0522": {
+  "affinity_probability_binary": 0.6596800088882446,
+  "affinity_pred_value": 0.8773828744888306
+ },
+ "ALDH1_0534": {
+  "affinity_probability_binary": 0.5076266527175903,
+  "affinity_pred_value": 0.05685168504714966
+ },
+ "ALDH1_0538": {
+  "affinity_probability_binary": 0.6930956244468689,
+  "affinity_pred_value": -0.6641038060188293
+ },
+ "ALDH1_0546": {
+  "affinity_probability_binary": 0.37699124217033386,
+  "affinity_pred_value": 0.30988067388534546
+ },
+ "ALDH1_0554": {
+  "affinity_probability_binary": 0.6787710189819336,
+  "affinity_pred_value": -0.013186253607273102
+ },
+ "ALDH1_0558": {
+  "affinity_probability_binary": 0.44024795293807983,
+  "affinity_pred_value": 0.29050350189208984
+ },
+ "ALDH1_0550": {
+  "affinity_probability_binary": 0.462910532951355,
+  "affinity_pred_value": 1.4193973541259766
+ },
+ "ALDH1_0542": {
+  "affinity_probability_binary": 0.35791707038879395,
+  "affinity_pred_value": 0.6548936367034912
+ },
+ "ALDH1_0570": {
+  "affinity_probability_binary": 0.481086790561676,
+  "affinity_pred_value": 0.8249159455299377
+ },
+ "ALDH1_0578": {
+  "affinity_probability_binary": 0.37589335441589355,
+  "affinity_pred_value": 0.05383847653865814
+ },
+ "ALDH1_0562": {
+  "affinity_probability_binary": 0.22361961007118225,
+  "affinity_pred_value": 0.00633355975151062
+ },
+ "ALDH1_0574": {
+  "affinity_probability_binary": 0.5671145915985107,
+  "affinity_pred_value": 0.58035808801651
+ },
+ "ALDH1_0566": {
+  "affinity_probability_binary": 0.5985903739929199,
+  "affinity_pred_value": 0.5960969924926758
+ },
+ "ALDH1_0582": {
+  "affinity_probability_binary": 0.4012027382850647,
+  "affinity_pred_value": 1.1489076614379883
+ },
+ "ALDH1_0598": {
+  "affinity_probability_binary": 0.5607575178146362,
+  "affinity_pred_value": -0.24994654953479767
+ },
+ "ALDH1_0586": {
+  "affinity_probability_binary": 0.4929787814617157,
+  "affinity_pred_value": 0.3221884071826935
+ },
+ "ALDH1_0594": {
+  "affinity_probability_binary": 0.7085728645324707,
+  "affinity_pred_value": -0.053478240966796875
+ },
+ "ALDH1_0590": {
+  "affinity_probability_binary": 0.39500850439071655,
+  "affinity_pred_value": 0.5480654239654541
+ },
+ "ALDH1_0606": {
+  "affinity_probability_binary": 0.6078153848648071,
+  "affinity_pred_value": -0.06967964768409729
+ },
+ "ALDH1_0610": {
+  "affinity_probability_binary": 0.5134146213531494,
+  "affinity_pred_value": 0.5317326784133911
+ },
+ "ALDH1_0618": {
+  "affinity_probability_binary": 0.4203435182571411,
+  "affinity_pred_value": -0.2587052583694458
+ },
+ "ALDH1_0602": {
+  "affinity_probability_binary": 0.2355656623840332,
+  "affinity_pred_value": 0.3304087519645691
+ },
+ "ALDH1_0614": {
+  "affinity_probability_binary": 0.5693153738975525,
+  "affinity_pred_value": 0.44776615500450134
+ },
+ "ALDH1_0622": {
+  "affinity_probability_binary": 0.5481380224227905,
+  "affinity_pred_value": 1.0084717273712158
+ },
+ "ALDH1_0626": {
+  "affinity_probability_binary": 0.42821773886680603,
+  "affinity_pred_value": 0.55134117603302
+ },
+ "ALDH1_0638": {
+  "affinity_probability_binary": 0.597883939743042,
+  "affinity_pred_value": 1.0404891967773438
+ },
+ "ALDH1_0634": {
+  "affinity_probability_binary": 0.517570972442627,
+  "affinity_pred_value": 0.47383272647857666
+ },
+ "ALDH1_0630": {
+  "affinity_probability_binary": 0.7853957414627075,
+  "affinity_pred_value": -0.7985669374465942
+ },
+ "ALDH1_0642": {
+  "affinity_probability_binary": 0.5902768969535828,
+  "affinity_pred_value": 0.7999373078346252
+ },
+ "ALDH1_0654": {
+  "affinity_probability_binary": 0.8074882626533508,
+  "affinity_pred_value": -0.21099576354026794
+ },
+ "ALDH1_0646": {
+  "affinity_probability_binary": 0.6308540105819702,
+  "affinity_pred_value": -0.22526922821998596
+ },
+ "ALDH1_0658": {
+  "affinity_probability_binary": 0.5564321279525757,
+  "affinity_pred_value": -0.42543479800224304
+ },
+ "ALDH1_0650": {
+  "affinity_probability_binary": 0.653444230556488,
+  "affinity_pred_value": -0.7918741703033447
+ },
+ "ALDH1_0662": {
+  "affinity_probability_binary": 0.5018568634986877,
+  "affinity_pred_value": -0.47667396068573
+ },
+ "ALDH1_0674": {
+  "affinity_probability_binary": 0.35582876205444336,
+  "affinity_pred_value": -0.4159085750579834
+ },
+ "ALDH1_0678": {
+  "affinity_probability_binary": 0.824486494064331,
+  "affinity_pred_value": -0.4267125427722931
+ },
+ "ALDH1_0670": {
+  "affinity_probability_binary": 0.40342336893081665,
+  "affinity_pred_value": 0.26445430517196655
+ },
+ "ALDH1_0666": {
+  "affinity_probability_binary": 0.22545331716537476,
+  "affinity_pred_value": 0.8006546497344971
+ },
+ "ALDH1_0698": {
+  "affinity_probability_binary": 0.24179919064044952,
+  "affinity_pred_value": 0.2506910562515259
+ },
+ "ALDH1_0682": {
+  "affinity_probability_binary": 0.6603109836578369,
+  "affinity_pred_value": -0.6354654431343079
+ },
+ "ALDH1_0694": {
+  "affinity_probability_binary": 0.6203932166099548,
+  "affinity_pred_value": -0.8233088254928589
+ },
+ "ALDH1_0686": {
+  "affinity_probability_binary": 0.5933620929718018,
+  "affinity_pred_value": 0.29902952909469604
+ },
+ "ALDH1_0690": {
+  "affinity_probability_binary": 0.627515435218811,
+  "affinity_pred_value": -0.3963826596736908
+ },
+ "ALDH1_0714": {
+  "affinity_probability_binary": 0.3258805274963379,
+  "affinity_pred_value": 0.2300516963005066
+ },
+ "ALDH1_0702": {
+  "affinity_probability_binary": 0.6779571771621704,
+  "affinity_pred_value": 0.909222424030304
+ },
+ "ALDH1_0706": {
+  "affinity_probability_binary": 0.4741419851779938,
+  "affinity_pred_value": 0.7815268039703369
+ },
+ "ALDH1_0710": {
+  "affinity_probability_binary": 0.7291345596313477,
+  "affinity_pred_value": 0.3928270936012268
+ },
+ "ALDH1_0718": {
+  "affinity_probability_binary": 0.785431981086731,
+  "affinity_pred_value": -0.45762354135513306
+ },
+ "ALDH1_0738": {
+  "affinity_probability_binary": 0.6744874715805054,
+  "affinity_pred_value": 0.18854278326034546
+ },
+ "ALDH1_0730": {
+  "affinity_probability_binary": 0.41442251205444336,
+  "affinity_pred_value": 0.20122882723808289
+ },
+ "ALDH1_0734": {
+  "affinity_probability_binary": 0.3581555485725403,
+  "affinity_pred_value": 0.6652810573577881
+ },
+ "ALDH1_0726": {
+  "affinity_probability_binary": 0.32622623443603516,
+  "affinity_pred_value": -0.1391487866640091
+ },
+ "ALDH1_0722": {
+  "affinity_probability_binary": 0.6359525918960571,
+  "affinity_pred_value": -1.4382258653640747
+ },
+ "ALDH1_0746": {
+  "affinity_probability_binary": 0.7190999984741211,
+  "affinity_pred_value": -0.2907784581184387
+ },
+ "ALDH1_0742": {
+  "affinity_probability_binary": 0.7978739738464355,
+  "affinity_pred_value": -1.1891894340515137
+ },
+ "ALDH1_0007": {
+  "affinity_probability_binary": 0.5893113017082214,
+  "affinity_pred_value": -0.4256591200828552
+ },
+ "ALDH1_0003": {
+  "affinity_probability_binary": 0.6965938806533813,
+  "affinity_pred_value": -0.19715183973312378
+ },
+ "ALDH1_0011": {
+  "affinity_probability_binary": 0.6893311142921448,
+  "affinity_pred_value": 0.20337969064712524
+ },
+ "ALDH1_0015": {
+  "affinity_probability_binary": 0.5569065809249878,
+  "affinity_pred_value": 0.4796055555343628
+ },
+ "ALDH1_0043": {
+  "affinity_probability_binary": 0.5981062650680542,
+  "affinity_pred_value": 0.5038356781005859
+ },
+ "ALDH1_0039": {
+  "affinity_probability_binary": 0.5287462472915649,
+  "affinity_pred_value": 0.2441457360982895
+ },
+ "ALDH1_0035": {
+  "affinity_probability_binary": 0.7253745198249817,
+  "affinity_pred_value": -0.03818868100643158
+ },
+ "ALDH1_0027": {
+  "affinity_probability_binary": 0.5648544430732727,
+  "affinity_pred_value": -0.22126463055610657
+ },
+ "ALDH1_0019": {
+  "affinity_probability_binary": 0.39694511890411377,
+  "affinity_pred_value": 0.3714706301689148
+ },
+ "ALDH1_0023": {
+  "affinity_probability_binary": 0.6723190546035767,
+  "affinity_pred_value": -0.6771016716957092
+ },
+ "ALDH1_0031": {
+  "affinity_probability_binary": 0.8508487939834595,
+  "affinity_pred_value": -0.893970251083374
+ },
+ "ALDH1_0047": {
+  "affinity_probability_binary": 0.5621242523193359,
+  "affinity_pred_value": -0.39463868737220764
+ },
+ "ALDH1_0059": {
+  "affinity_probability_binary": 0.6792439222335815,
+  "affinity_pred_value": 0.2988659143447876
+ },
+ "ALDH1_0119": {
+  "affinity_probability_binary": 0.4206497073173523,
+  "affinity_pred_value": 0.6217889785766602
+ },
+ "ALDH1_0075": {
+  "affinity_probability_binary": 0.387981116771698,
+  "affinity_pred_value": -0.4572533369064331
+ },
+ "ALDH1_0083": {
+  "affinity_probability_binary": 0.2831971049308777,
+  "affinity_pred_value": 0.5807017683982849
+ },
+ "ALDH1_0127": {
+  "affinity_probability_binary": 0.49443453550338745,
+  "affinity_pred_value": 0.3542713522911072
+ },
+ "ALDH1_0055": {
+  "affinity_probability_binary": 0.40939173102378845,
+  "affinity_pred_value": 1.3483638763427734
+ },
+ "ALDH1_0103": {
+  "affinity_probability_binary": 0.4335371255874634,
+  "affinity_pred_value": 0.0019837915897369385
+ },
+ "ALDH1_0087": {
+  "affinity_probability_binary": 0.30281972885131836,
+  "affinity_pred_value": -0.14590856432914734
+ },
+ "ALDH1_0131": {
+  "affinity_probability_binary": 0.5729989409446716,
+  "affinity_pred_value": 0.12211982905864716
+ },
+ "ALDH1_0107": {
+  "affinity_probability_binary": 0.3958584666252136,
+  "affinity_pred_value": 0.10004960000514984
+ },
+ "ALDH1_0147": {
+  "affinity_probability_binary": 0.42774516344070435,
+  "affinity_pred_value": -0.5103688836097717
+ },
+ "ALDH1_0115": {
+  "affinity_probability_binary": 0.6178397536277771,
+  "affinity_pred_value": -0.3528963625431061
+ },
+ "ALDH1_0079": {
+  "affinity_probability_binary": 0.5945130586624146,
+  "affinity_pred_value": 0.4992005228996277
+ },
+ "ALDH1_0139": {
+  "affinity_probability_binary": 0.5837761163711548,
+  "affinity_pred_value": 0.25186049938201904
+ },
+ "ALDH1_0063": {
+  "affinity_probability_binary": 0.5517983436584473,
+  "affinity_pred_value": -0.6438441276550293
+ },
+ "ALDH1_0091": {
+  "affinity_probability_binary": 0.7416430711746216,
+  "affinity_pred_value": 0.10055044293403625
+ },
+ "ALDH1_0135": {
+  "affinity_probability_binary": 0.6232421398162842,
+  "affinity_pred_value": 0.6116020679473877
+ },
+ "ALDH1_0095": {
+  "affinity_probability_binary": 0.5249332189559937,
+  "affinity_pred_value": 0.6729831099510193
+ },
+ "ALDH1_0071": {
+  "affinity_probability_binary": 0.43015056848526,
+  "affinity_pred_value": 0.3061298727989197
+ },
+ "ALDH1_0143": {
+  "affinity_probability_binary": 0.6316101551055908,
+  "affinity_pred_value": -0.2006416618824005
+ },
+ "ALDH1_0051": {
+  "affinity_probability_binary": 0.5312495231628418,
+  "affinity_pred_value": 0.1261644959449768
+ },
+ "ALDH1_0111": {
+  "affinity_probability_binary": 0.5207579731941223,
+  "affinity_pred_value": -0.23387311398983002
+ },
+ "ALDH1_0123": {
+  "affinity_probability_binary": 0.7747206687927246,
+  "affinity_pred_value": 0.6821001768112183
+ },
+ "ALDH1_0099": {
+  "affinity_probability_binary": 0.5204137563705444,
+  "affinity_pred_value": 0.4800955355167389
+ },
+ "ALDH1_0067": {
+  "affinity_probability_binary": 0.6640937328338623,
+  "affinity_pred_value": -0.6870520114898682
+ },
+ "ALDH1_0215": {
+  "affinity_probability_binary": 0.5486414432525635,
+  "affinity_pred_value": -0.09807854890823364
+ },
+ "ALDH1_0207": {
+  "affinity_probability_binary": 0.9384782314300537,
+  "affinity_pred_value": -0.6518773436546326
+ },
+ "ALDH1_0239": {
+  "affinity_probability_binary": 0.6263961791992188,
+  "affinity_pred_value": -0.2688504159450531
+ },
+ "ALDH1_0155": {
+  "affinity_probability_binary": 0.7266412973403931,
+  "affinity_pred_value": -0.24559929966926575
+ },
+ "ALDH1_0219": {
+  "affinity_probability_binary": 0.6973370313644409,
+  "affinity_pred_value": -1.0715612173080444
+ },
+ "ALDH1_0179": {
+  "affinity_probability_binary": 0.4850611984729767,
+  "affinity_pred_value": 0.34312206506729126
+ },
+ "ALDH1_0195": {
+  "affinity_probability_binary": 0.5114232301712036,
+  "affinity_pred_value": -1.1212035417556763
+ },
+ "ALDH1_0167": {
+  "affinity_probability_binary": 0.7371716499328613,
+  "affinity_pred_value": 0.05620216578245163
+ },
+ "ALDH1_0187": {
+  "affinity_probability_binary": 0.6809478402137756,
+  "affinity_pred_value": 0.04218748211860657
+ },
+ "ALDH1_0171": {
+  "affinity_probability_binary": 0.624555230140686,
+  "affinity_pred_value": 0.9503778219223022
+ },
+ "ALDH1_0231": {
+  "affinity_probability_binary": 0.2306726574897766,
+  "affinity_pred_value": -0.061652034521102905
+ },
+ "ALDH1_0227": {
+  "affinity_probability_binary": 0.4941168427467346,
+  "affinity_pred_value": 0.6046085357666016
+ },
+ "ALDH1_0247": {
+  "affinity_probability_binary": 0.28928282856941223,
+  "affinity_pred_value": 0.20419684052467346
+ },
+ "ALDH1_0159": {
+  "affinity_probability_binary": 0.813386082649231,
+  "affinity_pred_value": -0.22203467786312103
+ },
+ "ALDH1_0183": {
+  "affinity_probability_binary": 0.22610798478126526,
+  "affinity_pred_value": 0.31871914863586426
+ },
+ "ALDH1_0235": {
+  "affinity_probability_binary": 0.5284222960472107,
+  "affinity_pred_value": 0.9755353331565857
+ },
+ "ALDH1_0243": {
+  "affinity_probability_binary": 0.3325536847114563,
+  "affinity_pred_value": 0.2981947958469391
+ },
+ "ALDH1_0175": {
+  "affinity_probability_binary": 0.5061357021331787,
+  "affinity_pred_value": 0.35399240255355835
+ },
+ "ALDH1_0191": {
+  "affinity_probability_binary": 0.6204917430877686,
+  "affinity_pred_value": 0.06940290331840515
+ },
+ "ALDH1_0223": {
+  "affinity_probability_binary": 0.6477819681167603,
+  "affinity_pred_value": 0.4439268112182617
+ },
+ "ALDH1_0151": {
+  "affinity_probability_binary": 0.3762652575969696,
+  "affinity_pred_value": 0.3660012483596802
+ },
+ "ALDH1_0199": {
+  "affinity_probability_binary": 0.5607224702835083,
+  "affinity_pred_value": 0.9440698623657227
+ },
+ "ALDH1_0163": {
+  "affinity_probability_binary": 0.4031047821044922,
+  "affinity_pred_value": 0.004624098539352417
+ },
+ "ALDH1_0211": {
+  "affinity_probability_binary": 0.6831280589103699,
+  "affinity_pred_value": -0.538314938545227
+ },
+ "ALDH1_0203": {
+  "affinity_probability_binary": 0.6675887703895569,
+  "affinity_pred_value": -0.9163852334022522
+ },
+ "ALDH1_0311": {
+  "affinity_probability_binary": 0.36493781208992004,
+  "affinity_pred_value": 0.8295519351959229
+ },
+ "ALDH1_0251": {
+  "affinity_probability_binary": 0.52052903175354,
+  "affinity_pred_value": -0.43947210907936096
+ },
+ "ALDH1_0339": {
+  "affinity_probability_binary": 0.5545018911361694,
+  "affinity_pred_value": 0.9703390598297119
+ },
+ "ALDH1_0323": {
+  "affinity_probability_binary": 0.7306429147720337,
+  "affinity_pred_value": 0.21643278002738953
+ },
+ "ALDH1_0263": {
+  "affinity_probability_binary": 0.6973454356193542,
+  "affinity_pred_value": 0.09765507280826569
+ },
+ "ALDH1_0327": {
+  "affinity_probability_binary": 0.6359541416168213,
+  "affinity_pred_value": 0.20307005941867828
+ },
+ "ALDH1_0283": {
+  "affinity_probability_binary": 0.37320926785469055,
+  "affinity_pred_value": -0.29708975553512573
+ },
+ "ALDH1_0267": {
+  "affinity_probability_binary": 0.6987801790237427,
+  "affinity_pred_value": 0.32964497804641724
+ },
+ "ALDH1_0279": {
+  "affinity_probability_binary": 0.6617323160171509,
+  "affinity_pred_value": -0.8873869180679321
+ },
+ "ALDH1_0295": {
+  "affinity_probability_binary": 0.48532363772392273,
+  "affinity_pred_value": -0.12234243750572205
+ },
+ "ALDH1_0335": {
+  "affinity_probability_binary": 0.5512666702270508,
+  "affinity_pred_value": 0.1593913435935974
+ },
+ "ALDH1_0299": {
+  "affinity_probability_binary": 0.7496722936630249,
+  "affinity_pred_value": -0.4406331181526184
+ },
+ "ALDH1_0343": {
+  "affinity_probability_binary": 0.26086434721946716,
+  "affinity_pred_value": -0.1418820172548294
+ },
+ "ALDH1_0275": {
+  "affinity_probability_binary": 0.579196035861969,
+  "affinity_pred_value": -0.17115511000156403
+ },
+ "ALDH1_0315": {
+  "affinity_probability_binary": 0.5040959119796753,
+  "affinity_pred_value": -0.05394360423088074
+ },
+ "ALDH1_0259": {
+  "affinity_probability_binary": 0.7501189708709717,
+  "affinity_pred_value": -0.5469903945922852
+ },
+ "ALDH1_0303": {
+  "affinity_probability_binary": 0.6566927433013916,
+  "affinity_pred_value": 1.0806061029434204
+ },
+ "ALDH1_0287": {
+  "affinity_probability_binary": 0.43032461404800415,
+  "affinity_pred_value": -0.3716951608657837
+ },
+ "ALDH1_0347": {
+  "affinity_probability_binary": 0.3251767158508301,
+  "affinity_pred_value": 0.7655855417251587
+ },
+ "ALDH1_0291": {
+  "affinity_probability_binary": 0.4257853031158447,
+  "affinity_pred_value": 0.7412774562835693
+ },
+ "ALDH1_0271": {
+  "affinity_probability_binary": 0.5106357932090759,
+  "affinity_pred_value": 0.27693551778793335
+ },
+ "ALDH1_0319": {
+  "affinity_probability_binary": 0.6998352408409119,
+  "affinity_pred_value": -0.3973996341228485
+ },
+ "ALDH1_0307": {
+  "affinity_probability_binary": 0.2344493269920349,
+  "affinity_pred_value": 0.28202155232429504
+ },
+ "ALDH1_0331": {
+  "affinity_probability_binary": 0.6216335296630859,
+  "affinity_pred_value": -0.23144200444221497
+ },
+ "ALDH1_0255": {
+  "affinity_probability_binary": 0.5386025309562683,
+  "affinity_pred_value": -0.3968244791030884
+ },
+ "ALDH1_0399": {
+  "affinity_probability_binary": 0.5464208722114563,
+  "affinity_pred_value": 1.9278993606567383
+ },
+ "ALDH1_0355": {
+  "affinity_probability_binary": 0.5709354281425476,
+  "affinity_pred_value": 0.6060057878494263
+ },
+ "ALDH1_0379": {
+  "affinity_probability_binary": 0.8049590587615967,
+  "affinity_pred_value": -0.4126995801925659
+ },
+ "ALDH1_0435": {
+  "affinity_probability_binary": 0.7634838819503784,
+  "affinity_pred_value": -0.43733808398246765
+ },
+ "ALDH1_0415": {
+  "affinity_probability_binary": 0.5885512828826904,
+  "affinity_pred_value": -0.12074737250804901
+ },
+ "ALDH1_0411": {
+  "affinity_probability_binary": 0.5396283864974976,
+  "affinity_pred_value": 0.39488840103149414
+ },
+ "ALDH1_0419": {
+  "affinity_probability_binary": 0.22834861278533936,
+  "affinity_pred_value": 0.3320164084434509
+ },
+ "ALDH1_0387": {
+  "affinity_probability_binary": 0.6999560594558716,
+  "affinity_pred_value": -0.09112247824668884
+ },
+ "ALDH1_0439": {
+  "affinity_probability_binary": 0.6832469701766968,
+  "affinity_pred_value": -0.6805058717727661
+ },
+ "ALDH1_0423": {
+  "affinity_probability_binary": 0.1828332245349884,
+  "affinity_pred_value": 0.15618960559368134
+ },
+ "ALDH1_0447": {
+  "affinity_probability_binary": 0.3783506453037262,
+  "affinity_pred_value": -0.8632392883300781
+ },
+ "ALDH1_0359": {
+  "affinity_probability_binary": 0.6474814414978027,
+  "affinity_pred_value": -0.28516554832458496
+ },
+ "ALDH1_0363": {
+  "affinity_probability_binary": 0.6701802015304565,
+  "affinity_pred_value": -0.08822154998779297
+ },
+ "ALDH1_0403": {
+  "affinity_probability_binary": 0.6067324876785278,
+  "affinity_pred_value": 0.15583595633506775
+ },
+ "ALDH1_0427": {
+  "affinity_probability_binary": 0.6787898540496826,
+  "affinity_pred_value": 0.6592577695846558
+ },
+ "ALDH1_0443": {
+  "affinity_probability_binary": 0.5802935361862183,
+  "affinity_pred_value": 0.23336663842201233
+ },
+ "ALDH1_0375": {
+  "affinity_probability_binary": 0.6383604407310486,
+  "affinity_pred_value": 0.8730760812759399
+ },
+ "ALDH1_0407": {
+  "affinity_probability_binary": 0.6180207133293152,
+  "affinity_pred_value": 0.2603253424167633
+ },
+ "ALDH1_0371": {
+  "affinity_probability_binary": 0.5264852046966553,
+  "affinity_pred_value": -0.5666745901107788
+ },
+ "ALDH1_0367": {
+  "affinity_probability_binary": 0.3342968821525574,
+  "affinity_pred_value": 1.1798384189605713
+ },
+ "ALDH1_0383": {
+  "affinity_probability_binary": 0.35002005100250244,
+  "affinity_pred_value": -0.13037660717964172
+ },
+ "ALDH1_0351": {
+  "affinity_probability_binary": 0.2765282392501831,
+  "affinity_pred_value": 1.100278615951538
+ },
+ "ALDH1_0395": {
+  "affinity_probability_binary": 0.7299890518188477,
+  "affinity_pred_value": -0.9351048469543457
+ },
+ "ALDH1_0431": {
+  "affinity_probability_binary": 0.5615636110305786,
+  "affinity_pred_value": -0.10918653011322021
+ },
+ "ALDH1_0391": {
+  "affinity_probability_binary": 0.4935351610183716,
+  "affinity_pred_value": 0.11596492677927017
+ },
+ "ALDH1_0455": {
+  "affinity_probability_binary": 0.43055111169815063,
+  "affinity_pred_value": 0.7388024926185608
+ },
+ "ALDH1_0527": {
+  "affinity_probability_binary": 0.6999016404151917,
+  "affinity_pred_value": 0.6994432210922241
+ },
+ "ALDH1_0507": {
+  "affinity_probability_binary": 0.4832230806350708,
+  "affinity_pred_value": 0.4894635081291199
+ },
+ "ALDH1_0483": {
+  "affinity_probability_binary": 0.3730891942977905,
+  "affinity_pred_value": 0.3912108242511749
+ },
+ "ALDH1_0523": {
+  "affinity_probability_binary": 0.6100017428398132,
+  "affinity_pred_value": 0.13238325715065002
+ },
+ "ALDH1_0451": {
+  "affinity_probability_binary": 0.4737659692764282,
+  "affinity_pred_value": 0.7166895866394043
+ },
+ "ALDH1_0463": {
+  "affinity_probability_binary": 0.7578333616256714,
+  "affinity_pred_value": -0.027924425899982452
+ },
+ "ALDH1_0543": {
+  "affinity_probability_binary": 0.5477147698402405,
+  "affinity_pred_value": 0.6568502187728882
+ },
+ "ALDH1_0511": {
+  "affinity_probability_binary": 0.2184496521949768,
+  "affinity_pred_value": 0.32558754086494446
+ },
+ "ALDH1_0491": {
+  "affinity_probability_binary": 0.6529008150100708,
+  "affinity_pred_value": 0.5395526885986328
+ },
+ "ALDH1_0495": {
+  "affinity_probability_binary": 0.5425837635993958,
+  "affinity_pred_value": 0.9153159856796265
+ },
+ "ALDH1_0467": {
+  "affinity_probability_binary": 0.38684260845184326,
+  "affinity_pred_value": 0.3675469756126404
+ },
+ "ALDH1_0539": {
+  "affinity_probability_binary": 0.4639865756034851,
+  "affinity_pred_value": -0.22408786416053772
+ },
+ "ALDH1_0547": {
+  "affinity_probability_binary": 0.5841500759124756,
+  "affinity_pred_value": 0.4870566129684448
+ },
+ "ALDH1_0471": {
+  "affinity_probability_binary": 0.33540821075439453,
+  "affinity_pred_value": -0.46529248356819153
+ },
+ "ALDH1_0459": {
+  "affinity_probability_binary": 0.2613712251186371,
+  "affinity_pred_value": -0.013813517987728119
+ },
+ "ALDH1_0519": {
+  "affinity_probability_binary": 0.2822471261024475,
+  "affinity_pred_value": 0.49317795038223267
+ },
+ "ALDH1_0531": {
+  "affinity_probability_binary": 0.6201037764549255,
+  "affinity_pred_value": 0.25844088196754456
+ },
+ "ALDH1_0475": {
+  "affinity_probability_binary": 0.5135526061058044,
+  "affinity_pred_value": -0.10013562440872192
+ },
+ "ALDH1_0535": {
+  "affinity_probability_binary": 0.7165440320968628,
+  "affinity_pred_value": -0.32449474930763245
+ },
+ "ALDH1_0515": {
+  "affinity_probability_binary": 0.269206166267395,
+  "affinity_pred_value": 0.9408033490180969
+ },
+ "ALDH1_0499": {
+  "affinity_probability_binary": 0.5898834466934204,
+  "affinity_pred_value": 0.09336037933826447
+ },
+ "ALDH1_0487": {
+  "affinity_probability_binary": 0.38037675619125366,
+  "affinity_pred_value": 0.11859026551246643
+ },
+ "ALDH1_0503": {
+  "affinity_probability_binary": 0.5182773470878601,
+  "affinity_pred_value": 0.08644387125968933
+ },
+ "ALDH1_0479": {
+  "affinity_probability_binary": 0.5688028335571289,
+  "affinity_pred_value": 1.2191996574401855
+ },
+ "ALDH1_0611": {
+  "affinity_probability_binary": 0.5990405082702637,
+  "affinity_pred_value": 0.5105215311050415
+ },
+ "ALDH1_0619": {
+  "affinity_probability_binary": 0.3446221947669983,
+  "affinity_pred_value": 0.5765625834465027
+ },
+ "ALDH1_0639": {
+  "affinity_probability_binary": 0.3174164891242981,
+  "affinity_pred_value": 0.4878653287887573
+ },
+ "ALDH1_0555": {
+  "affinity_probability_binary": 0.4218639135360718,
+  "affinity_pred_value": 0.32539331912994385
+ },
+ "ALDH1_0599": {
+  "affinity_probability_binary": 0.3091472387313843,
+  "affinity_pred_value": 0.4911509156227112
+ },
+ "ALDH1_0587": {
+  "affinity_probability_binary": 0.4639297127723694,
+  "affinity_pred_value": -0.01027186494320631
+ },
+ "ALDH1_0627": {
+  "affinity_probability_binary": 0.7636624574661255,
+  "affinity_pred_value": -0.7799643874168396
+ },
+ "ALDH1_0575": {
+  "affinity_probability_binary": 0.4184877872467041,
+  "affinity_pred_value": -0.998071551322937
+ },
+ "ALDH1_0635": {
+  "affinity_probability_binary": 0.43268537521362305,
+  "affinity_pred_value": 0.32482725381851196
+ },
+ "ALDH1_0603": {
+  "affinity_probability_binary": 0.5402927994728088,
+  "affinity_pred_value": 0.11502641439437866
+ },
+ "ALDH1_0595": {
+  "affinity_probability_binary": 0.2975690960884094,
+  "affinity_pred_value": 0.3561399579048157
+ },
+ "ALDH1_0551": {
+  "affinity_probability_binary": 0.45053213834762573,
+  "affinity_pred_value": 0.7868735790252686
+ },
+ "ALDH1_0591": {
+  "affinity_probability_binary": 0.31822437047958374,
+  "affinity_pred_value": 0.7263728976249695
+ },
+ "ALDH1_0571": {
+  "affinity_probability_binary": 0.7697867155075073,
+  "affinity_pred_value": -0.6057298183441162
+ },
+ "ALDH1_0567": {
+  "affinity_probability_binary": 0.3817007839679718,
+  "affinity_pred_value": 0.4501578211784363
+ },
+ "ALDH1_0647": {
+  "affinity_probability_binary": 0.6227560043334961,
+  "affinity_pred_value": 1.5848751068115234
+ },
+ "ALDH1_0579": {
+  "affinity_probability_binary": 0.4817785620689392,
+  "affinity_pred_value": 0.47002822160720825
+ },
+ "ALDH1_0563": {
+  "affinity_probability_binary": 0.35831257700920105,
+  "affinity_pred_value": -0.13261686265468597
+ },
+ "ALDH1_0559": {
+  "affinity_probability_binary": 0.6060656905174255,
+  "affinity_pred_value": -0.27633237838745117
+ },
+ "ALDH1_0583": {
+  "affinity_probability_binary": 0.6126421093940735,
+  "affinity_pred_value": -0.4123130440711975
+ },
+ "ALDH1_0615": {
+  "affinity_probability_binary": 0.6466630101203918,
+  "affinity_pred_value": 0.5022965669631958
+ },
+ "ALDH1_0631": {
+  "affinity_probability_binary": 0.7328871488571167,
+  "affinity_pred_value": -1.204714059829712
+ },
+ "ALDH1_0607": {
+  "affinity_probability_binary": 0.28269124031066895,
+  "affinity_pred_value": 0.5509757399559021
+ },
+ "ALDH1_0623": {
+  "affinity_probability_binary": 0.6968493461608887,
+  "affinity_pred_value": -0.23205530643463135
+ },
+ "ALDH1_0643": {
+  "affinity_probability_binary": 0.48649829626083374,
+  "affinity_pred_value": 2.0658843517303467
+ },
+ "ALDH1_0687": {
+  "affinity_probability_binary": 0.5826645493507385,
+  "affinity_pred_value": 0.2918013334274292
+ },
+ "ALDH1_0663": {
+  "affinity_probability_binary": 0.4847325086593628,
+  "affinity_pred_value": -0.2972818911075592
+ },
+ "ALDH1_0735": {
+  "affinity_probability_binary": 0.6161588430404663,
+  "affinity_pred_value": 0.39220738410949707
+ },
+ "ALDH1_0739": {
+  "affinity_probability_binary": 0.502094030380249,
+  "affinity_pred_value": 0.8504400253295898
+ },
+ "ALDH1_0655": {
+  "affinity_probability_binary": 0.2710106372833252,
+  "affinity_pred_value": 0.1970614790916443
+ },
+ "ALDH1_0683": {
+  "affinity_probability_binary": 0.48378950357437134,
+  "affinity_pred_value": 0.8593335151672363
+ },
+ "ALDH1_0711": {
+  "affinity_probability_binary": 0.6158343553543091,
+  "affinity_pred_value": 0.8395964503288269
+ },
+ "ALDH1_0743": {
+  "affinity_probability_binary": 0.674052894115448,
+  "affinity_pred_value": -0.07923606038093567
+ },
+ "ALDH1_0747": {
+  "affinity_probability_binary": 0.42050445079803467,
+  "affinity_pred_value": 0.2641827464103699
+ },
+ "ALDH1_0651": {
+  "affinity_probability_binary": 0.5127399563789368,
+  "affinity_pred_value": -0.03693591058254242
+ },
+ "ALDH1_0671": {
+  "affinity_probability_binary": 0.46040356159210205,
+  "affinity_pred_value": -0.017626553773880005
+ },
+ "ALDH1_0659": {
+  "affinity_probability_binary": 0.6535251140594482,
+  "affinity_pred_value": 0.7500864267349243
+ },
+ "ALDH1_0691": {
+  "affinity_probability_binary": 0.49785274267196655,
+  "affinity_pred_value": -0.4285909831523895
+ },
+ "ALDH1_0667": {
+  "affinity_probability_binary": 0.5932468771934509,
+  "affinity_pred_value": -0.21306338906288147
+ },
+ "ALDH1_0719": {
+  "affinity_probability_binary": 0.5398885011672974,
+  "affinity_pred_value": 0.20315781235694885
+ },
+ "ALDH1_0707": {
+  "affinity_probability_binary": 0.4346049427986145,
+  "affinity_pred_value": 1.1477315425872803
+ },
+ "ALDH1_0699": {
+  "affinity_probability_binary": 0.5893515348434448,
+  "affinity_pred_value": 0.775686502456665
+ },
+ "ALDH1_0679": {
+  "affinity_probability_binary": 0.41076940298080444,
+  "affinity_pred_value": 1.1119275093078613
+ },
+ "ALDH1_0695": {
+  "affinity_probability_binary": 0.6959673762321472,
+  "affinity_pred_value": 1.4760591983795166
+ },
+ "ALDH1_0731": {
+  "affinity_probability_binary": 0.18937820196151733,
+  "affinity_pred_value": 0.9801864624023438
+ },
+ "ALDH1_0715": {
+  "affinity_probability_binary": 0.4737248718738556,
+  "affinity_pred_value": 0.5141786336898804
+ },
+ "ALDH1_0723": {
+  "affinity_probability_binary": 0.6569855809211731,
+  "affinity_pred_value": -1.276383399963379
+ },
+ "ALDH1_0727": {
+  "affinity_probability_binary": 0.5924019813537598,
+  "affinity_pred_value": -0.32064348459243774
+ },
+ "ALDH1_0703": {
+  "affinity_probability_binary": 0.5203200578689575,
+  "affinity_pred_value": 0.5484038591384888
+ },
+ "ALDH1_0675": {
+  "affinity_probability_binary": 0.24258507788181305,
+  "affinity_pred_value": -0.02649421989917755
+ }
+}

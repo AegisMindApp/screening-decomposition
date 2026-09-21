@@ -1,0 +1,117 @@
+{
+ "vina": {
+  "method": "vina",
+  "floor": 0.00817,
+  "n_targets_supplied": 3,
+  "in_target": {
+   "Mpro": 0.4268498243513603,
+   "FXa": 0.6645363312029978
+  },
+  "residual": {
+   "Mpro": 0.5221569337891271,
+   "FXa": 0.5282923949590617
+  },
+  "cold": {
+   "FXa->Mpro": {
+    "cold_absolute": 0.36481356039005025,
+    "descriptors_only": 0.3567085177775327,
+    "cold_increment": 0.008105042612517543,
+    "absolute_usable": false,
+    "increment_clears_floor": false
+   },
+   "Mpro->FXa": {
+    "cold_absolute": 0.39565719565719565,
+    "descriptors_only": 0.40461487128153795,
+    "cold_increment": -0.008957675624342298,
+    "absolute_usable": false,
+    "increment_clears_floor": false
+   }
+  },
+  "inadmissible": {
+   "PDL1": "descriptor baseline 0.9177 > 0.8; properties already separate this panel, so nothing measured here can show a method exceeds them"
+  },
+  "descriptor_baseline": {
+   "Mpro": 0.713606074449818,
+   "FXa": 0.6815841482508149,
+   "PDL1": 0.9177003136583974
+  },
+  "residual_null": {
+   "Mpro": 0.5050882969170907,
+   "FXa": 0.5410821077487744
+  },
+  "n_targets": 2,
+  "verdict": "INSUFFICIENT \u2014 2 targets; 3 needed before transferability means anything"
+ },
+ "boltz2": {
+  "method": "boltz2",
+  "floor": 0.00592,
+  "n_targets_supplied": 3,
+  "in_target": {
+   "Mpro": 0.7910482062336057,
+   "FXa": 0.7226697530864198,
+   "ALDH1": 0.5628740740740741
+  },
+  "residual": {
+   "Mpro": 0.64055726818135,
+   "FXa": 0.5473662551440329,
+   "ALDH1": 0.5817777777777777
+  },
+  "cold": {
+   "ALDH1->FXa": {
+    "cold_absolute": 0.6653292181069959,
+    "descriptors_only": 0.5306275720164609,
+    "cold_increment": 0.13470164609053492,
+    "absolute_usable": true,
+    "increment_clears_floor": true
+   },
+   "ALDH1->Mpro": {
+    "cold_absolute": 0.727071726881533,
+    "descriptors_only": 0.5439149833184084,
+    "cold_increment": 0.1831567435631246,
+    "absolute_usable": true,
+    "increment_clears_floor": true
+   },
+   "FXa->ALDH1": {
+    "cold_absolute": 0.5731851851851851,
+    "descriptors_only": 0.5194814814814814,
+    "cold_increment": 0.0537037037037037,
+    "absolute_usable": false,
+    "increment_clears_floor": true
+   },
+   "FXa->Mpro": {
+    "cold_absolute": 0.6800304310269679,
+    "descriptors_only": 0.35536148731644307,
+    "cold_increment": 0.32466894371052485,
+    "absolute_usable": true,
+    "increment_clears_floor": true
+   },
+   "Mpro->ALDH1": {
+    "cold_absolute": 0.5054518518518518,
+    "descriptors_only": 0.4953925925925926,
+    "cold_increment": 0.010059259259259212,
+    "absolute_usable": false,
+    "increment_clears_floor": true
+   },
+   "Mpro->FXa": {
+    "cold_absolute": 0.4970267489711934,
+    "descriptors_only": 0.4046502057613169,
+    "cold_increment": 0.09237654320987654,
+    "absolute_usable": false,
+    "increment_clears_floor": true
+   }
+  },
+  "inadmissible": {},
+  "descriptor_baseline": {
+   "Mpro": 0.7209458977549192,
+   "FXa": 0.7469521604938272,
+   "ALDH1": 0.5698
+  },
+  "residual_null": {
+   "Mpro": 0.5834911678699074,
+   "FXa": 0.5431378600823046,
+   "ALDH1": 0.5218148148148148
+  },
+  "n_targets": 3,
+  "verdict": "NOT_BEYOND_PROPERTIES \u2014 worst residual margin +0.0042 over the measured pure-descriptor null does not clear the floor (0.00592); it is ranking by molecular properties"
+ }
+}

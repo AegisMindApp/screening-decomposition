@@ -19,7 +19,71 @@ OUT = Path(os.environ.get("BOLTZ_OUT", "/kaggle/working"))
 # before any GCP run. No scientific reading rule changed.
 CEILING_HOURS = float(os.environ.get("BOLTZ_CEILING_HOURS", "6.0"))
 PROBE_A, PROBE_B = 4, 8
+# Chunk size for the main loop, env-overridable. Defined HERE rather than lower down because
+# the probe's projection needs it: cost is one fixed overhead per chunk plus the marginal per
+# ligand, and using it before definition was a NameError.
+#
+# A checkpoint is pushed after each chunk, so the in-flight chunk is exactly what a preemption
+# destroys. At the measured 105 s/ligand, 25 ligands puts 44 minutes of work at risk against an
+# observed time-to-preemption of ~30 min (attempt 1, 19 Sep), so on spot the chunk should be
+# smaller: a little more per-chunk overhead in exchange for far less lost work. 25 remains the
+# default so nothing already measured changes.
+CH = int(os.environ.get("BOLTZ_CHUNK", "25"))
 _TAG = ("_s" + os.environ["BOLTZ_SHARD"]) if os.environ.get("BOLTZ_NSHARDS","1") != "1" else ""
+
+CKPT = os.environ.get("BOLTZ_CKPT_URI", "").rstrip("/")   # e.g. gs://bucket/aldh1
+_LIVE = {"scores": {}, "fails": {}, "out": None, "tag": ""}
+
+
+def _on_preempt(signum, frame):
+    """GCP gives ~30 s notice before reclaiming a spot VM, delivered as SIGTERM. Flush and
+    sync rather than losing the chunk in flight."""
+    print(f"\n!! signal {signum} -- preemption notice; flushing checkpoint", flush=True)
+    try:
+        if _LIVE["out"]:
+            json.dump(_LIVE["scores"],
+                      open(os.path.join(_LIVE["out"], f"boltz2_scores{_LIVE['tag']}.json"), "w"))
+            json.dump(_LIVE["fails"],
+                      open(os.path.join(_LIVE["out"], f"boltz2_failures{_LIVE['tag']}.json"), "w"))
+            ckpt_push(_LIVE["out"], _LIVE["tag"])
+            print("   checkpoint synced", flush=True)
+    finally:
+        sys.exit(143)
+
+
+def _sh_quiet(cmd):
+    return subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+
+def ckpt_pull(out_dir, tag):
+    """Restore scores/failures from durable storage. Spot VMs lose local disk on preemption,
+    so a run that only writes locally restarts from zero every time it is reclaimed."""
+    if not CKPT:
+        return {}, {}
+    got = {}
+    for kind in ("scores", "failures"):
+        dst = os.path.join(out_dir, f"boltz2_{kind}{tag}.json")
+        r = _sh_quiet(f"gsutil -q cp {CKPT}/boltz2_{kind}{tag}.json {dst}")
+        if r.returncode == 0 and os.path.exists(dst):
+            try:
+                got[kind] = json.load(open(dst))
+            except Exception:
+                got[kind] = {}
+        else:
+            got[kind] = {}
+    print(f"  resume: {len(got['scores'])} scored, {len(got['failures'])} failed "
+          f"recovered from {CKPT}", flush=True)
+    return got["scores"], got["failures"]
+
+
+def ckpt_push(out_dir, tag):
+    """Sync after every chunk. A preemption then costs at most one chunk, not the run."""
+    if not CKPT:
+        return
+    for kind in ("scores", "failures"):
+        _sh_quiet(f"gsutil -q cp {os.path.join(out_dir, f'boltz2_{kind}{tag}.json')} "
+                  f"{CKPT}/boltz2_{kind}{tag}.json")
+
 
 def sh(cmd, **kw):
     return subprocess.run(cmd, shell=isinstance(cmd, str), capture_output=True, text=True, **kw)
@@ -314,88 +378,235 @@ def harvest(o: Path):
             got[nm] = {"affinity_probability_binary": pb, "affinity_pred_value": pv}
     return got, err
 
-print("\n== STAGE 1 probe", flush=True)
-dtA, oA, rA = run_batch("a", names[:PROBE_A], None, True)
-gotA, errA = harvest(oA)
-if not gotA:
-    sys.exit(f"probe batch A produced no affinity output in {dtA:.0f}s\n"
-             f"STDERR:\n{(rA.stderr or '')[-4000:]}\nSTDOUT:\n{(rA.stdout or '')[-2000:]}")
-def pick_msa():
-    """Find the MSA boltz actually produced, and prove it is usable before reusing it.
+def prestaged_msa():
+    """Pull an MSA built by an EARLIER run against this same protein, if one was staged.
 
-    v6 globbed for *.a3m and took the first hit, which was a ColabFold scratch file
-    (msa/<name>_unpaired_tmp_env/bfd.mgnify30.metaeuk30.smag30.a3m) -- a raw database
-    intermediate containing NUL bytes, not the processed alignment. Every ligand in batch B
-    then died on KeyError: '\\x00' inside boltz's a3m parser. Boltz writes the real MSA as
-    msa/<name>_0.csv, so prefer that, and never accept anything under a tmp_env directory.
+    Batch A otherwise rebuilds the MSA from the server on every instance. Inside one run that is
+    a one-off; on a spot VM it is a one-off PER PREEMPTION. The first ALDH1 probe was reclaimed
+    30 minutes in (compute.instances.preempted, 19 Sep 2026 14:01 UTC) having just spent 984 s on
+    batch A, and a restart would have paid every second of it again. Sharding multiplies the same
+    charge by the number of instances.
+
+    The MSA is a function of the protein sequence alone, and the sequence is fixed by the bundle,
+    so it carries across runs of the same target. It is NOT trusted on arrival: the same NUL-byte
+    and empty checks pick_msa applies are applied here, and if boltz still produces no affinity
+    from it, batch A is re-run against the server. A stale or malformed cache must be able to
+    cost time, never to change a score.
     """
-    cands = [p for p in sorted(glob.glob(str(OUT / "**" / "msa" / "*.csv"), recursive=True))
-             if "tmp_env" not in p]
-    if not cands:
-        cands = [p for p in sorted(glob.glob(str(OUT / "**" / "*.a3m"), recursive=True))
+    if not CKPT:
+        return None
+    dst = OUT / "msa_prestaged.csv"
+    if _sh_quiet(f"gsutil -q cp {CKPT}/msa_shared.csv {dst}").returncode or not dst.exists():
+        return None
+    head = open(dst, "rb").read(65536)
+    # Built as a plain expression, not inside the f-string: a backslash in an f-string
+    # expression is a SyntaxError before Python 3.12, and this runs on whatever python3 the
+    # deep-learning image ships.
+    bad = "NUL bytes" if b"\x00" in head else ("empty" if not head.strip() else None)
+    if bad:
+        print(f"  rejecting pre-staged MSA: {bad}", flush=True)
+        return None
+    print(f"  pre-staged MSA from {CKPT}/msa_shared.csv ({dst.stat().st_size} bytes) "
+          f"-- batch A skips MSA generation", flush=True)
+    return str(dst)
+
+
+# Pull the checkpoint BEFORE the probe, not after, so a resumed shard can skip the probe
+# entirely. Measured reason: spot L4 time-to-preemption on 20 Sep ran 14, 18, 30 and 106 min
+# (median ~24), while the un-checkpointed prologue -- batch A ~14 min plus batch B ~14 min --
+# is ~28 min. About half of all instances were being reclaimed before reaching the main loop,
+# committing nothing, so the run could churn indefinitely without advancing. Shard 1 is the
+# worked example: batch A finished in 811 s and it was preempted 5 min into batch B.
+#
+# This was left in place deliberately earlier, on the grounds that restructuring the probe path
+# of a long unattended run was the worse risk and the fix should wait for data. The data arrived.
+_prev_scores, _prev_fails = ckpt_pull(str(OUT), _TAG)
+_resuming = bool(_prev_scores or _prev_fails)
+
+print("\n== STAGE 1 probe", flush=True)
+_pre = prestaged_msa()
+
+# BOLTZ_SKIP_PROBE bypasses the timing probe on a shard with no checkpoint yet. Only legitimate
+# when the rate is ALREADY established for this exact target, model and hardware -- here L4 /
+# Boltz-2 2.2.1 / ALDH1, measured three times independently at 104.76, 106.0 and 107.8 s/ligand.
+# The probe exists to price a run before committing to it; when the price is already known from
+# the same configuration, re-deriving it costs ~28 min of a ~24 min expected spot life and is
+# what stops a shard ever reaching its first checkpoint.
+#
+# The bypass is RECORDED, not silent: a probe report is still written saying the ceiling check
+# was skipped and why, so no run can later be mistaken for one that priced itself.
+_skip_probe = os.environ.get("BOLTZ_SKIP_PROBE") == "1"
+if (_resuming or _skip_probe) and _pre:
+    # The ceiling was already cleared on the attempt that produced this checkpoint, and the
+    # marginal rate is recorded in boltz2_probe*.json. Re-deriving both costs ~28 min of a
+    # ~24 min expected instance life.
+    why = (f"RESUMING with {len(_prev_scores)} scored -- its ceiling check already passed on an "
+           f"earlier attempt" if _resuming else
+           "BOLTZ_SKIP_PROBE=1 -- rate already established on this target/model/hardware "
+           "(104.76, 106.0, 107.8 s/ligand across three instances)")
+    print(f"  {why}; skipping the timing probe", flush=True)
+    json.dump({"decision": "PROCEED - timing probe SKIPPED",
+               "reason": why,
+               "ceiling_gpu_hours": CEILING_HOURS,
+               "n_ligands": len(names),
+               "prior_scored": len(_prev_scores),
+               "note": "No cost projection was computed on this instance. The ceiling was not "
+                       "re-checked here; see analysis/method_bench/ALDH1_PROBE_RESULT.md."},
+              open(OUT / f"boltz2_probe{_TAG}.json", "w"), indent=2)
+    scores, fails = dict(_prev_scores), dict(_prev_fails)
+    msa = _pre
+else:
+    dtA, oA, rA = run_batch("a", names[:PROBE_A], _pre, _pre is None)
+    gotA, errA = harvest(oA)
+    if not gotA and _pre:
+        print(f"  pre-staged MSA gave no affinity in {dtA:.0f}s; re-running batch A on the server",
+              flush=True)
+        _pre = None
+        dtA, oA, rA = run_batch("a2", names[:PROBE_A], None, True)
+        gotA, errA = harvest(oA)
+    if not gotA:
+        sys.exit(f"probe batch A produced no affinity output in {dtA:.0f}s\n"
+                 f"STDERR:\n{(rA.stderr or '')[-4000:]}\nSTDOUT:\n{(rA.stdout or '')[-2000:]}")
+    def pick_msa():
+        """Find the MSA boltz actually produced, and prove it is usable before reusing it.
+
+        v6 globbed for *.a3m and took the first hit, which was a ColabFold scratch file
+        (msa/<name>_unpaired_tmp_env/bfd.mgnify30.metaeuk30.smag30.a3m) -- a raw database
+        intermediate containing NUL bytes, not the processed alignment. Every ligand in batch B
+        then died on KeyError: '\\x00' inside boltz's a3m parser. Boltz writes the real MSA as
+        msa/<name>_0.csv, so prefer that, and never accept anything under a tmp_env directory.
+        """
+        cands = [p for p in sorted(glob.glob(str(OUT / "**" / "msa" / "*.csv"), recursive=True))
                  if "tmp_env" not in p]
-    for p in cands:
-        with open(p, "rb") as fh:
-            head = fh.read(65536)
-        if b"\x00" in head:
-            print(f"  rejecting {p}: contains NUL bytes", flush=True)
-            continue
-        if not head.strip():
-            print(f"  rejecting {p}: empty", flush=True)
-            continue
-        stable = OUT / ("msa_shared" + os.path.splitext(p)[1])
-        shutil.copy(p, stable)
-        print(f"  MSA reuse -> {stable} (from {p}, {os.path.getsize(p)} bytes)", flush=True)
-        return str(stable)
-    print(f"  no reusable MSA among {len(cands)} candidates; falling back to the server per batch",
-          flush=True)
-    return None
+        if not cands:
+            cands = [p for p in sorted(glob.glob(str(OUT / "**" / "*.a3m"), recursive=True))
+                     if "tmp_env" not in p]
+        for p in cands:
+            with open(p, "rb") as fh:
+                head = fh.read(65536)
+            if b"\x00" in head:
+                print(f"  rejecting {p}: contains NUL bytes", flush=True)
+                continue
+            if not head.strip():
+                print(f"  rejecting {p}: empty", flush=True)
+                continue
+            stable = OUT / ("msa_shared" + os.path.splitext(p)[1])
+            shutil.copy(p, stable)
+            print(f"  MSA reuse -> {stable} (from {p}, {os.path.getsize(p)} bytes)", flush=True)
+            return str(stable)
+        print(f"  no reusable MSA among {len(cands)} candidates; falling back to the server per batch",
+              flush=True)
+        return None
 
-msa = pick_msa()
-print(f"  batch A {len(gotA)}/{PROBE_A} in {dtA:.0f}s   msa reuse: {msa or 'NONE (server)'}",
-      flush=True)
+    # A pre-staged MSA that worked IS the reusable MSA; pick_msa would find nothing to harvest
+    # because boltz never ran the server step that writes msa/*.csv.
+    msa = _pre or pick_msa()
+    # Stage a freshly built one so the next instance -- a later shard, or this job after a
+    # preemption -- does not rebuild it. Best-effort: failing to cache must not fail the run.
+    if msa and not _pre and CKPT:
+        if _sh_quiet(f"gsutil -q cp {msa} {CKPT}/msa_shared.csv").returncode == 0:
+            print(f"  staged MSA to {CKPT}/msa_shared.csv for later instances", flush=True)
+    print(f"  batch A {len(gotA)}/{PROBE_A} in {dtA:.0f}s   "
+          f"msa: {'PRE-STAGED' if _pre else (msa or 'NONE (server)')}", flush=True)
 
-dtB, oB, rB = run_batch("b", names[PROBE_A:PROBE_A + PROBE_B], msa, msa is None)
-gotB, errB = harvest(oB)
-if not gotB and msa:
-    # The reused MSA was rejected by boltz (wrong format, or an artefact we should not have
-    # picked). Fall back to the server so the probe still measures a WORKING path -- that path
-    # pays MSA generation per ligand, so the projection will almost certainly exceed the ceiling
-    # and abort, which is the honest answer rather than a silent stall.
-    print(f"  reused MSA produced nothing; retrying batch B via the server\n"
-          f"  stderr: {(rB.stderr or '')[-800:]}", flush=True)
-    msa = None
-    dtB, oB, rB = run_batch("b2", names[PROBE_A:PROBE_A + PROBE_B], None, True)
+    dtB, oB, rB = run_batch("b", names[PROBE_A:PROBE_A + PROBE_B], msa, msa is None)
     gotB, errB = harvest(oB)
-if not gotB:
-    sys.exit(f"probe batch B produced no affinity output in {dtB:.0f}s\n"
-             f"STDERR:\n{(rB.stderr or '')[-4000:]}")
-print(f"  MSA path in use for stage 2: {'reused file' if msa else 'SERVER per ligand (costly)'}",
-      flush=True)
-marginal = dtB / len(gotB)
-projected = marginal * len(names) / 3600.0
-print(f"  batch B {len(gotB)}/{PROBE_B} in {dtB:.0f}s", flush=True)
-print(f"\n  MARGINAL {marginal:.1f} s/ligand   PROJECTED {projected:.2f} GPU-hours "
-      f"for {len(names)}   CEILING {CEILING_HOURS}", flush=True)
+    if not gotB and msa:
+        # The reused MSA was rejected by boltz (wrong format, or an artefact we should not have
+        # picked). Fall back to the server so the probe still measures a WORKING path -- that path
+        # pays MSA generation per ligand, so the projection will almost certainly exceed the ceiling
+        # and abort, which is the honest answer rather than a silent stall.
+        print(f"  reused MSA produced nothing; retrying batch B via the server\n"
+              f"  stderr: {(rB.stderr or '')[-800:]}", flush=True)
+        msa = None
+        dtB, oB, rB = run_batch("b2", names[PROBE_A:PROBE_A + PROBE_B], None, True)
+        gotB, errB = harvest(oB)
+    if not gotB:
+        sys.exit(f"probe batch B produced no affinity output in {dtB:.0f}s\n"
+                 f"STDERR:\n{(rB.stderr or '')[-4000:]}")
+    print(f"  MSA path in use for stage 2: {'reused file' if msa else 'SERVER per ligand (costly)'}",
+          flush=True)
+    # MARGINAL is the TWO-POINT DIFFERENCE, not batch B's average.
+    #
+    # `dtB / len(gotB)` was the average, which still carries the per-invocation fixed cost --
+    # model load, CCD data, weight files -- because each batch is a separate `boltz predict` call.
+    # That contradicts this module's own docstring ("model load and MSA are one-time and would
+    # otherwise inflate the projection and trigger a false abort") and it did exactly that on
+    # ALDH1: reported 421.5 s/ligand where the two-point difference is 136.8, projecting 88
+    # GPU-hours for a panel that actually costs ~48 at this chunk size. Directionally right there,
+    # but 1.8x wrong, and a false abort on a cheaper panel is the same bug pointing the other way.
+    #
+    # The projection now models what the run actually does: one fixed cost per CHUNK plus the
+    # marginal per ligand.
+    # NEITHER estimator is clean, so take the CONSERVATIVE one.
+    #
+    #  * average (dtB / nB) OVER-counts: it carries batch B's own model load.
+    #  * two-point ((dtB-dtA)/(nB-nA)) UNDER-counts: batch A also generates the MSA, which batch B
+    #    reuses. On the stored L4 probe batch B was FASTER than batch A (807.9s for 8 vs 851.1s
+    #    for 4), so the difference is negative and the projection collapses to 5.2 GPU-hours.
+    #    That is a false PASS, which is worse than the false abort it was meant to fix: it lets a
+    #    run start that then consumes the budget.
+    #
+    # So compute both and keep the larger projection. Over-spending a ceiling costs an abort;
+    # under-spending it costs the quota.
+    _denom = max(1, len(gotB) - len(gotA))
+    _marg_diff = (dtB - dtA) / _denom
+    _marg_avg = dtB / max(1, len(gotB))
+    _n_chunks = max(1, -(-len(names) // CH))
+    # projection A: fixed-per-chunk + marginal, only meaningful when the difference is positive
+    _fixed = max(0.0, dtA - len(gotA) * _marg_diff) if _marg_diff > 0 else 0.0
+    _proj_diff = ((_n_chunks * _fixed + len(names) * _marg_diff) / 3600.0
+                  if _marg_diff > 0 else 0.0)
+    # projection B: treat batch B as a representative chunk and scale it up
+    _proj_avg = (_n_chunks * dtB * (CH / max(1, len(gotB)))) / 3600.0
+    projected = max(_proj_diff, _proj_avg)
+    marginal = _marg_diff if _marg_diff > 0 else _marg_avg
+    fixed = _fixed
+    if _marg_diff <= 0:
+        print(f"  NOTE: two-point marginal is {_marg_diff:.1f} s/ligand (batch B faster than A, "
+              f"usually MSA reuse); falling back to the conservative scaled-chunk projection",
+              flush=True)
+    print(f"  batch B {len(gotB)}/{PROBE_B} in {dtB:.0f}s", flush=True)
+    print(f"\n  MARGINAL {marginal:.1f} s/ligand  FIXED {fixed:.0f}s/chunk  "
+          f"PROJECTED {projected:.2f} GPU-hours for {len(names)} in {_n_chunks} chunks   "
+          f"CEILING {CEILING_HOURS}", flush=True)
 
-report = {"marginal_s_per_ligand": round(marginal, 2), "projected_gpu_hours": round(projected, 3),
-          "ceiling_gpu_hours": CEILING_HOURS, "n_ligands": len(names),
-          "probe_a_s": round(dtA, 1), "probe_b_s": round(dtB, 1),
-          "paper_estimate_s_per_ligand": 20}
-if projected > CEILING_HOURS:
-    report["decision"] = "ABANDONED - projected cost exceeds pre-registered ceiling"
+    report = {"marginal_s_per_ligand": round(marginal, 2), "projected_gpu_hours": round(projected, 3),
+              "fixed_s_per_chunk": round(fixed, 1), "n_chunks": _n_chunks, "chunk_size": CH,
+              "projection_two_point_h": round(_proj_diff, 3),
+              "projection_scaled_chunk_h": round(_proj_avg, 3),
+              "projection_used": "max of both (conservative)",
+              "ceiling_gpu_hours": CEILING_HOURS, "n_ligands": len(names),
+              "probe_a_s": round(dtA, 1), "probe_b_s": round(dtB, 1),
+              "probe_a_n": len(gotA), "probe_b_n": len(gotB),
+              "paper_estimate_s_per_ligand": 20}
+    if projected > CEILING_HOURS:
+        report["decision"] = "ABANDONED - projected cost exceeds pre-registered ceiling"
+        json.dump(report, open(OUT / f"boltz2_probe{_TAG}.json", "w"), indent=2)
+        print("\n  ABORT per pre-registration. Not spending the quota.", flush=True)
+        sys.exit(0)
+
+    report["decision"] = "PROCEED"
     json.dump(report, open(OUT / f"boltz2_probe{_TAG}.json", "w"), indent=2)
-    print("\n  ABORT per pre-registration. Not spending the quota.", flush=True)
-    sys.exit(0)
 
-report["decision"] = "PROCEED"
-json.dump(report, open(OUT / f"boltz2_probe{_TAG}.json", "w"), indent=2)
+    scores = dict(_prev_scores); scores.update(gotA); scores.update(gotB)
+    fails = dict(_prev_fails); fails.update(errA); fails.update(errB)
 
 print(f"\n== STAGE 2 full panel ({len(names)} ligands)", flush=True)
-scores = dict(gotA); scores.update(gotB)
-fails = dict(errA); fails.update(errB)
-rest = names[PROBE_A + PROBE_B:]
-CH = 25
+
+# Skip anything a previous attempt already settled. Without this a preempted spot run repeats
+# every compound it had already paid for.
+# Over ALL names, not names[12:]. When the probe is skipped there is nothing guaranteeing the
+# first 12 are already done, and when it runs they are in `scores` so they are filtered anyway.
+rest = [n for n in names if n not in scores and n not in fails]
+_LIVE.update(scores=scores, fails=fails, out=str(OUT), tag=_TAG)
+import signal as _signal
+_signal.signal(_signal.SIGTERM, _on_preempt)
+_signal.signal(_signal.SIGINT, _on_preempt)
+if _prev_scores or _prev_fails:
+    # Against the whole shard, not the post-probe slice: with the probe skipped that slice is
+    # not the denominator any more, and a wrong denominator here reads as lost work.
+    print(f"  resuming: {len(rest)} of {len(names)} remain", flush=True)
 t0 = time.time()
 for i in range(0, len(rest), CH):
     chunk = rest[i:i + CH]
@@ -411,6 +622,7 @@ for i in range(0, len(rest), CH):
           f"{(time.time()-t0)/60:.1f} min", flush=True)
     json.dump(scores, open(OUT / f"boltz2_scores{_TAG}.json", "w"))
     json.dump(fails, open(OUT / f"boltz2_failures{_TAG}.json", "w"))
+    ckpt_push(str(OUT), _TAG)
 
 json.dump(scores, open(OUT / f"boltz2_scores{_TAG}.json", "w"), indent=1)
 json.dump(fails, open(OUT / f"boltz2_failures{_TAG}.json", "w"), indent=1)

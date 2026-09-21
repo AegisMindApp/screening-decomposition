@@ -1,0 +1,212 @@
+{
+ "_what_this_is": [
+  "The measured ladder of virtual-screening methods: what each one is worth, what its own",
+  "run-to-run noise is, and whether it survives transfer to a new target. Every number here",
+  "was measured by us and carries a provenance pointer.",
+  "",
+  "It is BOTH the proprietary knowledge asset and the thing the generation gate consults.",
+  "One artifact, so the gate can never drift from the evidence.",
+  "",
+  "A method may only be entered once its floor is MEASURED. An unmeasured floor of 0",
+  "silently asserts perfect reproducibility, which is the error that produced the JCIM",
+  "rejection in the first place."
+ ],
+ "_updated": "2026-09-19",
+ "noise_floors": {
+  "vina_exh4_mpro": {
+   "auroc_sd": 0.00497,
+   "auroc_floor_95upper": 0.00817,
+   "per_ligand_score_sd_eV": 0.096,
+   "n_replicates": 10,
+   "provenance": "analysis/seed_floor/RESULT.md",
+   "note": "Measured by varying ONLY --seed. Two single runs differ by sqrt(2) x this. Measured on 755 compounds -- see _floors_are_panel_specific before charging it against a claim computed on a different panel.",
+   "panel_n_compounds": 755,
+   "rank_span_median": 70
+  },
+  "vina_exh32": {
+   "auroc_sd": 0.00641,
+   "auroc_floor_95upper": 0.01338,
+   "panel_n_compounds": 343,
+   "n_replicates": 6,
+   "per_ligand_score_sd_eV": 0.0346,
+   "rank_span_median": 10,
+   "provenance": "analysis/seed_floor/RESULT_STAGE2.md (seeds 1-6, 343-compound panel)",
+   "measured": true,
+   "note": "MEASURED, replacing the earlier MEASURING placeholder. Per-ligand scores are far more reproducible than at exh=4 (0.035 vs 0.096 eV; median rank span 10 vs 70), yet the AUROC sd is similar -- because AUROC sd is set by panel size, not by per-ligand precision.",
+   "vs_exh4": "Matched on 339 compounds and the same 6 seeds: exh=4 sd 0.00812, exh=32 0.00626, ratio 0.77, Pitman-Morgan paired p=0.624. NOT distinguishable at n=6. Substituting the exh=4 floor is conservative in DIRECTION only; that is not established. Paired rather than F-test because the arms share seeds. analysis/seed_floor/floor_exh4_vs_exh32.py"
+  },
+  "gnina_rescore": {
+   "auroc_floor": 0.0,
+   "measured": true,
+   "n_replicates": 2,
+   "provenance": "analysis/gnina_determinism/RESULT.md",
+   "note": "745/745 poses bitwise identical across repeat runs -- contributes NO run-to-run noise. A floor of 0 is entered here because it was MEASURED, not assumed.",
+   "seed_is_inert": true,
+   "caveat": "Seed 42 vs 43 also gives 745/745 identical. Determinism is implementation-level (--score_only does no stochastic search); the worker --seed does nothing. Do NOT infer that seeding DiffDock or Boltz-2 makes them reproducible."
+  },
+  "boltz2": {
+   "auroc_floor": 0.00592,
+   "auroc_floor_metric": "residual AUROC (the quantity the harness margin uses), 95% upper bound",
+   "auroc_sd": 0.00543,
+   "per_compound_score_sd": 0.01542,
+   "panel_n_compounds": 885,
+   "target": "FXa",
+   "measured": true,
+   "n_pairs": 24,
+   "provenance": "analysis/boltz2/FLOOR_RESULT.md",
+   "supersedes": "0.0201, which was FLOOR_SCORING from analysis/pose_ensemble -- the VINA scoring floor, borrowed for Boltz-2 by PREREGISTRATION_TRANSFER.md. It was about 4x too large, i.e. wrong in the direction that made a negative verdict look stronger than the evidence supported.",
+   "stochastic": true,
+   "note": "0 of 24 duplicated-ligand pairs identical to 5 dp; max difference 0.0905 in binding probability. Unlike gnina (745/745 bitwise identical) Boltz-2 has no zero floor. Noise is heteroscedastic, r=+0.80 with distance from the 0/1 bounds.",
+   "caveat": "Derived by propagating per-compound noise measured on 24 pairs through the real 885-compound panel, not by full-panel replication. The FXa decision turns on the third decimal, so 100 pairs (~$5) would tighten it materially."
+  },
+  "_floors_are_panel_specific": [
+   "An AUROC noise floor is a property of (method, protocol, PANEL SIZE) -- not of the method",
+   "alone. AUROC variance scales as 1/n_compounds, verified rather than assumed: the stage-1",
+   "exh=4 sd of 0.00497 on 755 compounds predicts 0.00742 on a 339-compound panel, and the",
+   "matched re-measurement gave 0.00767 -- a ratio of 1.034, from a prediction using data the",
+   "check did not otherwise touch.",
+   "",
+   "So a floor measured on 755 compounds is ~1.5x too SMALL to charge against a claim computed",
+   "on 339, and using it there would wave through effects that are really inside the noise.",
+   "Re-scale by sqrt(n_measured / n_claim), or measure the floor on the claim's own panel.",
+   "Every entry here carries panel_n_compounds for that reason."
+  ]
+ },
+ "residual_beyond_properties": {
+  "_metric": "AUROC after out-of-fold descriptor residualisation, against a MEASURED pure-descriptor null (not 0.5)",
+  "vina_raw_mpro": {
+   "residual": 0.5092,
+   "provenance": "manuscript 3.4"
+  },
+  "vina_repaired_mpro": {
+   "residual": 0.5187,
+   "provenance": "manuscript 3.4"
+  },
+  "vina_repaired_fxa": {
+   "residual": 0.5733,
+   "provenance": "manuscript 3.4"
+  },
+  "gnina_vina_term": {
+   "residual": 0.4941,
+   "provenance": "manuscript 3.4"
+  },
+  "gnina_cnnaffinity": {
+   "residual": 0.4994,
+   "provenance": "manuscript 3.4"
+  },
+  "gnina_cnnscore": {
+   "residual": 0.5426,
+   "provenance": "manuscript 3.4"
+  },
+  "flashbind": {
+   "residual": 0.5384,
+   "provenance": "manuscript 3.4"
+  },
+  "boltz2_mpro": {
+   "residual": 0.6567,
+   "margin_over_measured_null": 0.0571,
+   "provenance": "analysis/method_bench/RESULT.md"
+  },
+  "boltz2_fxa": {
+   "residual": 0.5882,
+   "margin_over_measured_null": 0.0042,
+   "provenance": "analysis/method_bench/RESULT.md",
+   "note": "Does NOT clear its own 0.0201 floor."
+  },
+  "boltz2_aldh1": {
+   "residual": 0.5818,
+   "margin_over_measured_null": 0.06,
+   "provenance": "analysis/method_bench/RESULT_3TARGET.md",
+   "note": "Clears its floor, unlike FXa. In-target AUROC only 0.5629."
+  }
+ },
+ "transferability": {
+  "vina": {
+   "verdict": "INSUFFICIENT",
+   "n_targets_admissible": 2,
+   "n_targets_supplied": 3,
+   "inadmissible": {
+    "PDL1": "descriptor baseline 0.874 > 0.80 -- properties already separate this panel (79% active, inactives 127 Da heavier), so nothing measured on it can show a method exceeds properties"
+   },
+   "provenance": "analysis/method_bench/RESULT.md",
+   "correction": "Previously recorded as NOT_BEYOND_PROPERTIES on 3 targets. PD-L1 was inadmissible and should never have counted; with it removed the harness has 2 targets and refuses a transferability verdict."
+  },
+  "boltz2": {
+   "verdict": "NOT_BEYOND_PROPERTIES",
+   "n_targets_admissible": 3,
+   "provenance": "analysis/method_bench/RESULT_3TARGET.md",
+   "decided_by": "harness.py rule fixed before the ALDH1 numbers existed",
+   "worst_margin": 0.0042,
+   "worst_margin_target": "FXa",
+   "floor_used": 0.00592,
+   "margins": {
+    "Mpro": 0.0571,
+    "ALDH1": 0.06,
+    "FXa": 0.0042
+   },
+   "cold_absolute": {
+    "ALDH1->Mpro": 0.7271,
+    "FXa->Mpro": 0.68,
+    "ALDH1->FXa": 0.6653,
+    "FXa->ALDH1": 0.5732,
+    "Mpro->ALDH1": 0.5055,
+    "Mpro->FXa": 0.497
+   },
+   "CAVEAT_floor_is_inherited": "RESOLVED 21 Sep 2026. The floor is now MEASURED for Boltz-2 itself: 0.00592 (analysis/boltz2/FLOOR_RESULT.md), replacing the borrowed Vina 0.0201. The verdict is UNCHANGED -- FXa's +0.0042 still fails -- but by a whisker rather than by 5x, so the confidence behind NOT_BEYOND_PROPERTIES is much lower than the original numbers implied.",
+   "note": "The target where Boltz-2 is WEAKEST in-target (ALDH1, 0.5629) is its BEST donor, transferring usably to both proteases, and its hardest recipient. Consistent with ALDH1 having the lowest descriptor baseline (0.5698): least property signal to lean on, so what is learned there travels."
+  }
+ },
+ "interventions": {
+  "_metric": "delta AUROC, charged for run-to-run noise (analysis/seed_floor/RESULT.md)",
+  "scoring_function_gnina_cnn": {
+   "delta": 0.14,
+   "ci_with_seed": [
+    0.089,
+    0.191
+   ],
+   "survives": true
+  },
+  "pose_ensemble": {
+   "delta": 0.055,
+   "ci_with_seed": [
+    0.035,
+    0.075
+   ],
+   "survives": true
+  },
+  "receptor_preparation_repair": {
+   "delta": 0.045,
+   "ci_with_seed": [
+    0.014,
+    0.076
+   ],
+   "survives": true
+  },
+  "binding_site_to_boltz2": {
+   "delta": -0.013,
+   "ci_with_seed": [
+    -0.039,
+    0.013
+   ],
+   "survives": false
+  },
+  "eightfold_search_effort": {
+   "delta": 0.00417,
+   "ci_with_seed": [
+    -0.00598,
+    0.01433
+   ],
+   "survives": false,
+   "note": "Re-measured PAIRED within seed, the estimator fixed before the data existed. t-test p=0.339, Wilcoxon p=0.5625; both reported because the script computes both and picking afterwards is circular. The manuscript's single unpaired +0.0185 lies outside this CI, though it was computed on a different panel so that comparison is indicative of magnitude rather than a test. Perturbs the ranking LESS than a reseed does (Spearman 0.9593 vs 0.9551).",
+   "n_seeds": 6,
+   "panel_n_compounds": 339
+  }
+ },
+ "gate_rules": {
+  "_used_by": "intelligence/auto_publish_gate.py::evidence_below_method_floor",
+  "docking_gap_min_eV": 0.096,
+  "_docking_gap_rationale": "Median per-ligand score sd across 10 seeds of an unchanged protocol. A quoted gap below this is within the noise of re-running the same calculation.",
+  "docking_alone_is_not_evidence": true,
+  "_docking_alone_rationale": "On both ADMISSIBLE targets Vina's residual sits at or below a measured pure-descriptor null (Factor Xa -0.0128, Mpro +0.0171 against a 0.00817 floor), and the manuscript's residual table puts six docking scores in 0.494-0.573. The harness verdict is formally INSUFFICIENT at 2 targets -- the rule rests on the per-target residuals and the independent AcrB decoy control, NOT on a transferability verdict we do not have."
+ }
+}

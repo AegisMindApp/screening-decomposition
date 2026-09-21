@@ -1,0 +1,194 @@
+{
+ "FXAREP_A_0003": {
+  "affinity_probability_binary": 0.9714944362640381,
+  "affinity_pred_value": -0.9912960529327393
+ },
+ "FXAREP_A_0002": {
+  "affinity_probability_binary": 0.9799920320510864,
+  "affinity_pred_value": -2.3471338748931885
+ },
+ "FXAREP_A_0001": {
+  "affinity_probability_binary": 0.4947006106376648,
+  "affinity_pred_value": 1.2455501556396484
+ },
+ "FXAREP_A_0000": {
+  "affinity_probability_binary": 0.9303815364837646,
+  "affinity_pred_value": 0.024732112884521484
+ },
+ "FXAREP_A_0010": {
+  "affinity_probability_binary": 0.7845891714096069,
+  "affinity_pred_value": -0.10912454128265381
+ },
+ "FXAREP_A_0008": {
+  "affinity_probability_binary": 0.8754144310951233,
+  "affinity_pred_value": -1.852979302406311
+ },
+ "FXAREP_A_0006": {
+  "affinity_probability_binary": 0.9822279214859009,
+  "affinity_pred_value": -2.5117321014404297
+ },
+ "FXAREP_A_0004": {
+  "affinity_probability_binary": 0.9622546434402466,
+  "affinity_pred_value": -1.0667150020599365
+ },
+ "FXAREP_A_0007": {
+  "affinity_probability_binary": 0.7513288259506226,
+  "affinity_pred_value": -1.9421852827072144
+ },
+ "FXAREP_A_0009": {
+  "affinity_probability_binary": 0.8147177696228027,
+  "affinity_pred_value": 1.1287928819656372
+ },
+ "FXAREP_A_0011": {
+  "affinity_probability_binary": 0.9213088750839233,
+  "affinity_pred_value": 0.0038642287254333496
+ },
+ "FXAREP_A_0005": {
+  "affinity_probability_binary": 0.9512351751327515,
+  "affinity_pred_value": -1.5226843357086182
+ },
+ "FXAREP_A_0013": {
+  "affinity_probability_binary": 0.984071671962738,
+  "affinity_pred_value": -2.079681396484375
+ },
+ "FXAREP_A_0015": {
+  "affinity_probability_binary": 0.9706206321716309,
+  "affinity_pred_value": -1.976109266281128
+ },
+ "FXAREP_A_0012": {
+  "affinity_probability_binary": 0.9835131168365479,
+  "affinity_pred_value": -2.0821378231048584
+ },
+ "FXAREP_A_0016": {
+  "affinity_probability_binary": 0.9913821816444397,
+  "affinity_pred_value": -3.166607141494751
+ },
+ "FXAREP_A_0017": {
+  "affinity_probability_binary": 0.925908088684082,
+  "affinity_pred_value": -0.10830724239349365
+ },
+ "FXAREP_A_0019": {
+  "affinity_probability_binary": 0.9547132253646851,
+  "affinity_pred_value": 0.3496967554092407
+ },
+ "FXAREP_A_0018": {
+  "affinity_probability_binary": 0.9422040581703186,
+  "affinity_pred_value": -2.4585723876953125
+ },
+ "FXAREP_A_0014": {
+  "affinity_probability_binary": 0.7062398195266724,
+  "affinity_pred_value": 0.9703949689865112
+ },
+ "FXAREP_B_0003": {
+  "affinity_probability_binary": 0.9690037369728088,
+  "affinity_pred_value": -1.0031414031982422
+ },
+ "FXAREP_A_0023": {
+  "affinity_probability_binary": 0.9627277851104736,
+  "affinity_pred_value": -2.2790262699127197
+ },
+ "FXAREP_B_0002": {
+  "affinity_probability_binary": 0.9791840314865112,
+  "affinity_pred_value": -2.3111493587493896
+ },
+ "FXAREP_A_0021": {
+  "affinity_probability_binary": 0.3510143756866455,
+  "affinity_pred_value": 1.185121774673462
+ },
+ "FXAREP_B_0000": {
+  "affinity_probability_binary": 0.9298080205917358,
+  "affinity_pred_value": -0.05855637788772583
+ },
+ "FXAREP_A_0022": {
+  "affinity_probability_binary": 0.869346022605896,
+  "affinity_pred_value": -0.952398955821991
+ },
+ "FXAREP_A_0020": {
+  "affinity_probability_binary": 0.3221540153026581,
+  "affinity_pred_value": 0.8338422775268555
+ },
+ "FXAREP_B_0001": {
+  "affinity_probability_binary": 0.5851932168006897,
+  "affinity_pred_value": 1.0865211486816406
+ },
+ "FXAREP_B_0007": {
+  "affinity_probability_binary": 0.7589007019996643,
+  "affinity_pred_value": -1.9452698230743408
+ },
+ "FXAREP_B_0011": {
+  "affinity_probability_binary": 0.9170948266983032,
+  "affinity_pred_value": -0.032919466495513916
+ },
+ "FXAREP_B_0004": {
+  "affinity_probability_binary": 0.9575859308242798,
+  "affinity_pred_value": -1.0689280033111572
+ },
+ "FXAREP_B_0009": {
+  "affinity_probability_binary": 0.8082678318023682,
+  "affinity_pred_value": 1.0597370862960815
+ },
+ "FXAREP_B_0008": {
+  "affinity_probability_binary": 0.8739540576934814,
+  "affinity_pred_value": -1.8535637855529785
+ },
+ "FXAREP_B_0006": {
+  "affinity_probability_binary": 0.9842033982276917,
+  "affinity_pred_value": -2.5391557216644287
+ },
+ "FXAREP_B_0010": {
+  "affinity_probability_binary": 0.7908145189285278,
+  "affinity_pred_value": -0.12123692035675049
+ },
+ "FXAREP_B_0005": {
+  "affinity_probability_binary": 0.9547920227050781,
+  "affinity_pred_value": -1.6314845085144043
+ },
+ "FXAREP_B_0014": {
+  "affinity_probability_binary": 0.6815524101257324,
+  "affinity_pred_value": 0.8882358074188232
+ },
+ "FXAREP_B_0015": {
+  "affinity_probability_binary": 0.9699280261993408,
+  "affinity_pred_value": -2.0642919540405273
+ },
+ "FXAREP_B_0017": {
+  "affinity_probability_binary": 0.9243203997612,
+  "affinity_pred_value": -0.17014062404632568
+ },
+ "FXAREP_B_0016": {
+  "affinity_probability_binary": 0.9910975694656372,
+  "affinity_pred_value": -3.142666816711426
+ },
+ "FXAREP_B_0019": {
+  "affinity_probability_binary": 0.9543088674545288,
+  "affinity_pred_value": 0.32554900646209717
+ },
+ "FXAREP_B_0012": {
+  "affinity_probability_binary": 0.9837781190872192,
+  "affinity_pred_value": -2.0327200889587402
+ },
+ "FXAREP_B_0018": {
+  "affinity_probability_binary": 0.9262732267379761,
+  "affinity_pred_value": -2.3500258922576904
+ },
+ "FXAREP_B_0013": {
+  "affinity_probability_binary": 0.9818164110183716,
+  "affinity_pred_value": -2.1432061195373535
+ },
+ "FXAREP_B_0023": {
+  "affinity_probability_binary": 0.963028073310852,
+  "affinity_pred_value": -2.3501358032226562
+ },
+ "FXAREP_B_0021": {
+  "affinity_probability_binary": 0.332723468542099,
+  "affinity_pred_value": 1.1862839460372925
+ },
+ "FXAREP_B_0022": {
+  "affinity_probability_binary": 0.870651125907898,
+  "affinity_pred_value": -0.9164671897888184
+ },
+ "FXAREP_B_0020": {
+  "affinity_probability_binary": 0.28545913100242615,
+  "affinity_pred_value": 0.904080867767334
+ }
+}

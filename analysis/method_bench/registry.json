@@ -1,0 +1,30 @@
+{
+ "_comment": [
+  "Adding a method costs one entry. Point each target at a JSON file holding",
+  "{'y': [...], 'score': [...], 'D': [[...]]} -- labels, the method's score, and the",
+  "descriptor matrix, aligned by row. 'floor' is that method's own measured run-to-run",
+  "reproducibility; leave it 0.0 ONLY if you have measured it and it is zero, never because",
+  "it is unmeasured -- an unmeasured floor of 0 silently asserts perfect reproducibility.",
+  "MIN_TARGETS is 3: two targets give one transfer direction each way and no replication."
+ ],
+ "methods": {
+  "vina": {
+   "floor": 0.00817,
+   "_floor_source": "analysis/seed_floor/RESULT.md -- 10 seeded replicates, 95% upper bound",
+   "scores": {
+    "Mpro": "analysis/method_bench/scores/vina__Mpro.json",
+    "FXa": "analysis/method_bench/scores/vina__FXa.json",
+    "PDL1": "analysis/method_bench/scores/vina__PDL1.json"
+   }
+  },
+  "boltz2": {
+   "floor": 0.00592,
+   "_floor_source": "analysis/boltz2/FLOOR_RESULT.md -- MEASURED for Boltz-2 (24 duplicated-ligand pairs propagated through the 885-compound FXa panel, residual-AUROC 95% upper bound). Replaces 0.0201, which was the Vina scoring floor borrowed from analysis/pose_ensemble.",
+   "scores": {
+    "Mpro": "analysis/method_bench/scores/boltz2__Mpro.json",
+    "FXa": "analysis/method_bench/scores/boltz2__FXa.json",
+    "ALDH1": "analysis/method_bench/scores/boltz2__ALDH1.json"
+   }
+  }
+ }
+}

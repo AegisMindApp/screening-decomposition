@@ -1,0 +1,3004 @@
+{
+ "compounds": [
+  {
+   "name": "ALDH1_0000",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0001",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0002",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0003",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0004",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0005",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0006",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0007",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0008",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0009",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0010",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0011",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0012",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0013",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0014",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0015",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0016",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0017",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0018",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0019",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0020",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0021",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0022",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0023",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0024",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0025",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0026",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0027",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0028",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0029",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0030",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0031",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0032",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0033",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0034",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0035",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0036",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0037",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0038",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0039",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0040",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0041",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0042",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0043",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0044",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0045",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0046",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0047",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0048",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0049",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0050",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0051",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0052",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0053",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0054",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0055",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0056",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0057",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0058",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0059",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0060",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0061",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0062",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0063",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0064",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0065",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0066",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0067",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0068",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0069",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0070",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0071",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0072",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0073",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0074",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0075",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0076",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0077",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0078",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0079",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0080",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0081",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0082",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0083",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0084",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0085",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0086",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0087",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0088",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0089",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0090",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0091",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0092",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0093",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0094",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0095",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0096",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0097",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0098",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0099",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0100",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0101",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0102",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0103",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0104",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0105",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0106",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0107",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0108",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0109",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0110",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0111",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0112",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0113",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0114",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0115",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0116",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0117",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0118",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0119",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0120",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0121",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0122",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0123",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0124",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0125",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0126",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0127",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0128",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0129",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0130",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0131",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0132",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0133",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0134",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0135",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0136",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0137",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0138",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0139",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0140",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0141",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0142",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0143",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0144",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0145",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0146",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0147",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0148",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0149",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0150",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0151",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0152",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0153",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0154",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0155",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0156",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0157",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0158",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0159",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0160",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0161",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0162",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0163",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0164",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0165",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0166",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0167",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0168",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0169",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0170",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0171",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0172",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0173",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0174",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0175",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0176",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0177",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0178",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0179",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0180",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0181",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0182",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0183",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0184",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0185",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0186",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0187",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0188",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0189",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0190",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0191",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0192",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0193",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0194",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0195",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0196",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0197",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0198",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0199",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0200",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0201",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0202",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0203",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0204",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0205",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0206",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0207",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0208",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0209",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0210",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0211",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0212",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0213",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0214",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0215",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0216",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0217",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0218",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0219",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0220",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0221",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0222",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0223",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0224",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0225",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0226",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0227",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0228",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0229",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0230",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0231",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0232",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0233",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0234",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0235",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0236",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0237",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0238",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0239",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0240",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0241",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0242",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0243",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0244",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0245",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0246",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0247",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0248",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0249",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0250",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0251",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0252",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0253",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0254",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0255",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0256",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0257",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0258",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0259",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0260",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0261",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0262",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0263",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0264",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0265",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0266",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0267",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0268",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0269",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0270",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0271",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0272",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0273",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0274",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0275",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0276",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0277",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0278",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0279",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0280",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0281",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0282",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0283",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0284",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0285",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0286",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0287",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0288",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0289",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0290",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0291",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0292",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0293",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0294",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0295",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0296",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0297",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0298",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0299",
+   "label": 1
+  },
+  {
+   "name": "ALDH1_0300",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0301",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0302",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0303",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0304",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0305",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0306",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0307",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0308",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0309",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0310",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0311",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0312",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0313",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0314",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0315",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0316",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0317",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0318",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0319",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0320",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0321",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0322",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0323",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0324",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0325",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0326",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0327",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0328",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0329",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0330",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0331",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0332",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0333",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0334",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0335",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0336",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0337",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0338",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0339",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0340",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0341",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0342",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0343",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0344",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0345",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0346",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0347",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0348",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0349",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0350",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0351",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0352",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0353",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0354",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0355",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0356",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0357",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0358",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0359",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0360",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0361",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0362",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0363",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0364",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0365",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0366",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0367",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0368",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0369",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0370",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0371",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0372",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0373",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0374",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0375",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0376",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0377",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0378",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0379",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0380",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0381",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0382",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0383",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0384",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0385",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0386",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0387",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0388",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0389",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0390",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0391",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0392",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0393",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0394",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0395",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0396",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0397",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0398",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0399",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0400",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0401",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0402",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0403",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0404",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0405",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0406",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0407",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0408",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0409",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0410",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0411",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0412",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0413",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0414",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0415",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0416",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0417",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0418",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0419",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0420",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0421",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0422",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0423",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0424",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0425",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0426",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0427",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0428",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0429",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0430",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0431",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0432",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0433",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0434",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0435",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0436",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0437",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0438",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0439",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0440",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0441",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0442",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0443",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0444",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0445",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0446",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0447",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0448",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0449",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0450",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0451",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0452",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0453",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0454",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0455",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0456",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0457",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0458",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0459",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0460",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0461",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0462",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0463",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0464",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0465",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0466",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0467",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0468",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0469",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0470",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0471",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0472",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0473",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0474",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0475",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0476",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0477",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0478",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0479",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0480",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0481",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0482",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0483",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0484",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0485",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0486",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0487",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0488",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0489",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0490",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0491",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0492",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0493",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0494",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0495",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0496",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0497",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0498",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0499",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0500",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0501",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0502",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0503",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0504",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0505",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0506",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0507",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0508",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0509",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0510",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0511",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0512",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0513",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0514",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0515",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0516",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0517",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0518",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0519",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0520",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0521",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0522",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0523",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0524",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0525",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0526",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0527",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0528",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0529",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0530",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0531",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0532",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0533",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0534",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0535",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0536",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0537",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0538",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0539",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0540",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0541",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0542",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0543",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0544",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0545",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0546",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0547",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0548",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0549",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0550",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0551",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0552",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0553",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0554",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0555",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0556",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0557",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0558",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0559",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0560",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0561",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0562",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0563",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0564",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0565",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0566",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0567",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0568",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0569",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0570",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0571",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0572",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0573",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0574",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0575",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0576",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0577",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0578",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0579",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0580",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0581",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0582",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0583",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0584",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0585",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0586",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0587",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0588",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0589",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0590",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0591",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0592",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0593",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0594",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0595",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0596",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0597",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0598",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0599",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0600",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0601",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0602",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0603",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0604",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0605",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0606",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0607",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0608",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0609",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0610",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0611",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0612",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0613",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0614",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0615",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0616",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0617",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0618",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0619",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0620",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0621",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0622",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0623",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0624",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0625",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0626",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0627",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0628",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0629",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0630",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0631",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0632",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0633",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0634",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0635",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0636",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0637",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0638",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0639",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0640",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0641",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0642",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0643",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0644",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0645",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0646",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0647",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0648",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0649",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0650",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0651",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0652",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0653",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0654",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0655",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0656",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0657",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0658",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0659",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0660",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0661",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0662",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0663",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0664",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0665",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0666",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0667",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0668",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0669",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0670",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0671",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0672",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0673",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0674",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0675",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0676",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0677",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0678",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0679",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0680",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0681",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0682",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0683",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0684",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0685",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0686",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0687",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0688",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0689",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0690",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0691",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0692",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0693",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0694",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0695",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0696",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0697",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0698",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0699",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0700",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0701",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0702",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0703",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0704",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0705",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0706",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0707",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0708",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0709",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0710",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0711",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0712",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0713",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0714",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0715",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0716",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0717",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0718",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0719",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0720",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0721",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0722",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0723",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0724",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0725",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0726",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0727",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0728",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0729",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0730",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0731",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0732",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0733",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0734",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0735",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0736",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0737",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0738",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0739",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0740",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0741",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0742",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0743",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0744",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0745",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0746",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0747",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0748",
+   "label": 0
+  },
+  {
+   "name": "ALDH1_0749",
+   "label": 0
+  }
+ ]
+}
