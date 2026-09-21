@@ -8,6 +8,22 @@ This is not an attempt to rescue anything. It applies three diagnostics develope
 descriptor baseline, marginal value, residual AUROC — to every panel on disk, to establish which
 historical docking claims were readable at all.
 
+> **`CHEMBL612545` is not a target.** Added 21 September 2026, after the identity was
+> established. The receptor used with this panel is genuine PD-L1 (PDB 5J89), but the ligand set
+> is not: `CHEMBL612545` is a ChEMBL **`UNCHECKED`** record — `target_type` UNCHECKED, no
+> organism, **zero target components**, 2,317,536 heterogeneous activities. It is a catch-all
+> bucket for bioactivity with no validated target assignment. Human PD-L1 is `CHEMBL3580522`.
+> Of twelve sampled "actives", one has any recorded activity against it; the remainder are
+> largely HCN1 channel blockers and IL-6 release inhibitors.
+>
+> **This changes how the row below should be read.** Its "no target-specific signal" is not a
+> finding about docking — it is the expected result for a set assembled from unrelated assays,
+> which has no shared pharmacophore for any method to recover. The row is retained because
+> removing it would hide a real error, but it must not be counted as a docking panel.
+>
+> Full documentation of the identity error is in the companion benchmark study, where the same
+> identifier is the subject rather than an aside.
+
 ## Result: 0 of 4 panels survive
 
 | target | n | act% | descriptors | docking | marginal value | residual | verdict |

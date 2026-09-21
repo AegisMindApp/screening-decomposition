@@ -21,6 +21,9 @@ Every target with labels, SMILES and at least one score vector on disk:
 | CHEMBL3580522 PD-L1 | 418 | 79.9 | **no** |
 | CHEMBL612545 | 2249 | 3.3 | **no** |
 
+> **Note (21 Sep 2026):** `CHEMBL612545` is a ChEMBL `UNCHECKED` bucket, not a target — no organism, zero target components. See `analysis/docking_audit/RESULT.md` for the full caveat. Rows referring to it are not target panels.
+
+
 ## Diagnostics, all pre-specified
 
 1. **Descriptor baseline** — seven free descriptors, out-of-fold logistic regression, 5-fold.

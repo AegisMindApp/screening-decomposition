@@ -13,6 +13,9 @@ entirely"* — pointed at something real.
 | PD-L1 (CHEMBL3580522) | **0** | **0** | 315 | 360 |
 | CHEMBL612545 | **0** | **0** | 644 | 722 |
 
+> **Note (21 Sep 2026):** `CHEMBL612545` is a ChEMBL `UNCHECKED` bucket, not a target — no organism, zero target components. See `analysis/docking_audit/RESULT.md` for the full caveat. Rows referring to it are not target panels.
+
+
 Not one polar hydrogen, and not one donor nitrogen, in any receptor in the programme.
 
 ## The cause, in one line of source
