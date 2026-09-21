@@ -21,10 +21,14 @@ historical docking claims were readable at all.
 > which has no shared pharmacophore for any method to recover. The row is retained because
 > removing it would hide a real error, but it must not be counted as a docking panel.
 >
-> Full documentation of the identity error is in the companion benchmark study, where the same
-> identifier is the subject rather than an aside.
+> Full documentation of the identity error is in the companion benchmark study —
+> **https://github.com/AegisMindApp/retrospective-benchmark** (`README.md`,
+> `PREREGISTRATION.md`) — where the same identifier is the subject rather than an aside.
 
-## Result: 0 of 4 panels survive
+## Result: 0 of 3 docking panels survive, plus one non-target control
+
+Three real panels, then `CHEMBL612545`, which is listed separately below because it is
+not a target and is not counted in the three.
 
 | target | n | act% | descriptors | docking | marginal value | residual | verdict |
 |---|---|---|---|---|---|---|---|
@@ -46,8 +50,22 @@ was already flagged as confounded in this project's records; this quantifies it.
 AUROC is 0.5356, barely above chance, and its marginal value (+0.0296) sits below the 0.0393
 protocol floor even though its interval excludes zero.
 
-**CHEMBL612545 is the only panel whose residual range includes 0.50** ([0.4571, 0.5026]). The part
-of the docking score orthogonal to ligand properties does not rank actives at all.
+**`CHEMBL612545`'s residual of 0.4865 [0.4571, 0.5026] is an UNINTENDED positive control for the
+residual metric** — distinct from the four designed positive controls the gate passes, noted at the
+top of this file. It was not built to be one. This is the only row in the table with no target behind it, so the
+correct answer for a residual metric is "nothing here" — and it is the only row whose interval
+contains 0.50.
+
+Read as a statement about docking the row would be vacuous: there are no target-specific actives
+to rank, so failing to rank them is not informative. Read as a statement about the *instrument*
+it is the most useful row present, because it demonstrates the residual metric can return chance
+when chance is the truth. Every other diagnostic here reports a shortfall; without a case like
+this one, a reader cannot tell a metric that detects absence from a metric that only ever
+reports absence.
+
+This mirrors the companion study's finding that the debias gate ranked the same non-target as its
+most admissible library: a set assembled from unrelated assays has no coherent property structure,
+which is invisible to a gate asking only whether actives separate from decoys.
 
 **Mpro and Factor Xa reproduce their published numbers** and are here as controls, not findings.
 Both are property-confounded by the 0.70 criterion; neither shows resolvable marginal value.
