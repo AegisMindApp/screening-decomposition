@@ -1,0 +1,42 @@
+[{"stream_name":"stdout","time":1.652302436,"data":"input dirs: ['/kaggle/input/datasets']\n"}
+,{"stream_name":"stdout","time":1.6613400170000001,"data":"bundle -\u003e /kaggle/input/datasets env: {'BOLTZ_CEILING_HOURS': '10.0', 'BOLTZ_POCKET': '0', 'BOLTZ_CHUNK': '12', 'BOLTZ_OUT': '/kaggle/working'}\n"}
+,{"stream_name":"stdout","time":1.772602899,"data":"== accelerator\n"}
+,{"stream_name":"stdout","time":1.8123591449999998,"data":"Tesla T4, 15360 MiB, 580.159.04\n"}
+,{"stream_name":"stdout","time":1.812401412,"data":"Tesla T4, 15360 MiB, 580.159.04\n"}
+,{"stream_name":"stdout","time":1.81240565,"data":"== install\n"}
+,{"stream_name":"stdout","time":26.945399543,"data":"  constraining torch==2.10.0 torchvision==0.25.0\n"}
+,{"stream_name":"stdout","time":145.489191381,"data":"  torch/torchvision pair OK\n"}
+,{"stream_name":"stdout","time":145.605126699,"data":"  boltz version 2.2.1\n"}
+,{"stream_name":"stdout","time":148.616571221,"data":"  torch 2.10.0+cu128  cuda_available=True  card sm_75\n"}
+,{"stream_name":"stdout","time":148.616626449,"data":"  kernels: sm_70,sm_75,sm_80,sm_86,sm_90,sm_100,sm_120\n"}
+,{"stream_name":"stdout","time":152.293227322,"data":"  CUDA functional check passed on sm_75\n"}
+,{"stream_name":"stdout","time":178.375518023,"data":"  boltz installed -\u003e /usr/local/bin/boltz\n"}
+,{"stream_name":"stdout","time":191.392275348,"data":"  predict opts: ['--diffusion_samples', '1', '--output_format', 'pdb']\n"}
+,{"stream_name":"stdout","time":199.625283909,"data":"  cueq cuequivariance_torch\n"}
+,{"stream_name":"stdout","time":199.670584997,"data":"  protein 298 aa (dimer A+B)   ligands 70   labelled 70\n"}
+,{"stream_name":"stdout","time":199.68424045,"data":"  pocket from bundle: 14 residues [('A', 162), ('A', 143), ('A', 39), ('A', 187)]...\n"}
+,{"stream_name":"stdout","time":199.684279884,"data":"  conditioning: BLIND\n"}
+,{"stream_name":"stdout","time":199.684301183,"data":"\n"}
+,{"stream_name":"stdout","time":199.684308019,"data":"== STAGE 1 probe\n"}
+,{"stream_name":"stdout","time":2793.509394851,"data":"  MSA reuse -\u003e /kaggle/working/msa_shared.csv (from /kaggle/working/out_a/boltz_results_in_a/msa/MP3_A_0000_0.csv, 184942 bytes)\n"}
+,{"stream_name":"stdout","time":2793.509507276,"data":"  batch A 4/4 in 2594s   msa: /kaggle/working/msa_shared.csv\n"}
+,{"stream_name":"stdout","time":6678.48782636,"data":"  MSA path in use for stage 2: reused file\n"}
+,{"stream_name":"stdout","time":6678.487896183,"data":"  batch B 8/8 in 3885s\n"}
+,{"stream_name":"stdout","time":6678.487901369,"data":"\n"}
+,{"stream_name":"stdout","time":6678.487905063,"data":"  MARGINAL 322.8 s/ligand  FIXED 1303s/chunk  PROJECTED 9.71 GPU-hours for 70 in 6 chunks   CEILING 10.0\n"}
+,{"stream_name":"stdout","time":6678.488250649,"data":"\n"}
+,{"stream_name":"stdout","time":6678.488261981,"data":"== STAGE 2 full panel (70 ligands)\n"}
+,{"stream_name":"stdout","time":12413.881653803,"data":"  24/70 ok=24 fail=0 95.6 min\n"}
+,{"stream_name":"stdout","time":18141.07195151,"data":"  36/70 ok=36 fail=0 191.0 min\n"}
+,{"stream_name":"stdout","time":23888.837123066,"data":"  48/70 ok=48 fail=0 286.8 min\n"}
+,{"stream_name":"stdout","time":29591.510092749,"data":"  60/70 ok=60 fail=0 381.9 min\n"}
+,{"stream_name":"stdout","time":34420.182314468,"data":"  70/70 ok=70 fail=0 462.4 min\n"}
+,{"stream_name":"stdout","time":34420.184214102,"data":"\n"}
+,{"stream_name":"stdout","time":34420.184235822,"data":"DONE scored 70  failed 0\n"}
+,{"stream_name":"stderr","time":34422.658849551,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":34422.658919515,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":34423.021778451,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":34423.021810225,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":34423.833508762,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":34424.74551995,"data":"[NbConvertApp] Writing 327539 bytes to __results__.html\n"}
+]

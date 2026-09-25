@@ -41,10 +41,29 @@ def md5(p) -> str:
     return hashlib.md5(Path(p).read_bytes()).hexdigest()
 
 
+def shard_dirs(root: Path):
+    """Which shard directories to read.
+
+    The Mpro paths stay hardcoded and take precedence, because the published stage-1 floor is
+    computed from exactly those three and a discovery rule that happened to pick up a fourth
+    would silently change a number the manuscript quotes. Only when none of them is present --
+    i.e. this is some other target's bundle -- fall back to discovering `*/shardN` or `shardN`
+    under the root.
+    """
+    named = [s for s in SRC if (root / s / "manifest.json").exists()]
+    if named:
+        return named
+    found = sorted(q.parent.relative_to(root).as_posix()
+                   for q in root.glob("*/shard*/manifest.json"))
+    found += sorted(q.parent.relative_to(root).as_posix()
+                    for q in root.glob("shard*/manifest.json"))
+    return found
+
+
 def collect(root: Path):
     """Every (name, label, ligand path) in the panel, plus the protocol they share."""
     recs, proto = {}, None
-    for s in SRC:
+    for s in shard_dirs(root):
         d = root / s
         if not (d / "manifest.json").exists():
             continue
@@ -72,7 +91,8 @@ def dock(a):
            "--center_x", str(ctr[0]), "--center_y", str(ctr[1]), "--center_z", str(ctr[2]),
            "--size_x", str(size[0]), "--size_y", str(size[1]), "--size_z", str(size[2]),
            "--exhaustiveness", str(exh), "--num_modes", str(modes),
-           "--cpu", "1", "--seed", str(seed), "--out", os.devnull]
+           "--cpu", "1", "--seed", str(seed),
+           "--out", (os.path.join(POSES, f"{name}_out.pdbqt") if POSES else os.devnull)]
     t0 = time.time()
     try:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=tmo)
@@ -91,6 +111,12 @@ def main() -> int:
     ap.add_argument("--seeds", type=int, nargs="+", required=True)
     ap.add_argument("--jobs", type=int, default=os.cpu_count() or 4)
     ap.add_argument("--shard", type=int, default=0)
+    ap.add_argument("--poses", default=None,
+                    help="directory to KEEP the docked poses in, one {name}_out.pdbqt per "
+                         "compound holding all --num_modes modes. Default discards them to "
+                         "/dev/null, which is what the seed-floor runs want and is why no "
+                         "Factor Xa pose set existed. Needed for the pose-ensemble and gnina "
+                         "replications (analysis/replication_fxa/PREREGISTRATION.md).")
     ap.add_argument("--n-shards", type=int, default=1)
     ap.add_argument("--timeout", type=int, default=3600)
     ap.add_argument("--panel", type=int, default=0,
@@ -102,6 +128,10 @@ def main() -> int:
     ap.add_argument("--bundle", default=str(BUNDLE))
     ap.add_argument("--out-dir", default=str(HERE / "results"))
     a = ap.parse_args()
+    global POSES
+    POSES = a.poses
+    if POSES:
+        os.makedirs(POSES, exist_ok=True)
 
     recs, proto = collect(Path(a.bundle))
     if not recs:

@@ -1,0 +1,22 @@
+{
+ "n": 849,
+ "coverage": 0.9582,
+ "failures": 37,
+ "control_r": 0.9934,
+ "auroc_vina": 0.6872,
+ "auroc_gnina": 0.6289,
+ "delta": -0.0583,
+ "ci95": [
+  -0.093,
+  -0.0235
+ ],
+ "floor": 0.00697,
+ "verdict": "DOES NOT REPLICATE",
+ "mpro_reference": {
+  "delta": 0.1397,
+  "ci95": [
+   0.0913,
+   0.1867
+  ]
+ }
+}

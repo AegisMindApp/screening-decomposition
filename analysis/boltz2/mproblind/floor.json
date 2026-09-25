@@ -1,0 +1,30 @@
+{
+ "target": "Mpro",
+ "n_pairs": 35,
+ "per_compound_sd": 0.02341,
+ "level_k": 0.09172,
+ "panel_n": 748,
+ "draws": 200,
+ "floors": {
+  "uniform": {
+   "resid": {
+    "sd": 0.00374,
+    "upper95": 0.00408
+   },
+   "margin": {
+    "sd": 0.00979,
+    "upper95": 0.01068
+   }
+  },
+  "level": {
+   "resid": {
+    "sd": 0.00435,
+    "upper95": 0.00474
+   },
+   "margin": {
+    "sd": 0.01007,
+    "upper95": 0.01098
+   }
+  }
+ }
+}

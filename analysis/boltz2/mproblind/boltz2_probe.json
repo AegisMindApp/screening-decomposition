@@ -1,0 +1,18 @@
+{
+  "marginal_s_per_ligand": 322.79,
+  "projected_gpu_hours": 9.712,
+  "fixed_s_per_chunk": 1302.7,
+  "n_chunks": 6,
+  "chunk_size": 12,
+  "projection_two_point_h": 8.448,
+  "projection_scaled_chunk_h": 9.712,
+  "projection_used": "max of both (conservative)",
+  "ceiling_gpu_hours": 10.0,
+  "n_ligands": 70,
+  "probe_a_s": 2593.8,
+  "probe_b_s": 3885.0,
+  "probe_a_n": 4,
+  "probe_b_n": 8,
+  "paper_estimate_s_per_ligand": 20,
+  "decision": "PROCEED"
+}

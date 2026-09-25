@@ -1,0 +1,4289 @@
+{
+ "scores": {
+  "CHEMBL100732": {
+   "cnn_affinity": 6.94934,
+   "cnn_score": 0.3507,
+   "vina_affinity": -10.7826
+  },
+  "CHEMBL100751": {
+   "cnn_affinity": 5.93889,
+   "cnn_score": 0.49903,
+   "vina_affinity": -9.47653
+  },
+  "CHEMBL101040": {
+   "cnn_affinity": 6.16107,
+   "cnn_score": 0.24243,
+   "vina_affinity": -9.15505
+  },
+  "CHEMBL101671": {
+   "cnn_affinity": 6.71641,
+   "cnn_score": 0.24464,
+   "vina_affinity": -10.9407
+  },
+  "CHEMBL102186": {
+   "cnn_affinity": 7.55458,
+   "cnn_score": 0.32425,
+   "vina_affinity": -10.05515
+  },
+  "CHEMBL104815": {
+   "cnn_affinity": 7.00532,
+   "cnn_score": 0.5697,
+   "vina_affinity": -11.02125
+  },
+  "CHEMBL105819": {
+   "cnn_affinity": 6.76579,
+   "cnn_score": 0.29566,
+   "vina_affinity": -9.41127
+  },
+  "CHEMBL105980": {
+   "cnn_affinity": 6.91645,
+   "cnn_score": 0.60811,
+   "vina_affinity": -9.99168
+  },
+  "CHEMBL107598": {
+   "cnn_affinity": 6.37693,
+   "cnn_score": 0.91597,
+   "vina_affinity": -8.43423
+  },
+  "CHEMBL1076911": {
+   "cnn_affinity": 5.40702,
+   "cnn_score": 0.43497,
+   "vina_affinity": -7.18689
+  },
+  "CHEMBL108458": {
+   "cnn_affinity": 7.43328,
+   "cnn_score": 0.73846,
+   "vina_affinity": -8.91365
+  },
+  "CHEMBL108848": {
+   "cnn_affinity": 6.12412,
+   "cnn_score": 0.53464,
+   "vina_affinity": -9.19688
+  },
+  "CHEMBL109217": {
+   "cnn_affinity": 6.91425,
+   "cnn_score": 0.24689,
+   "vina_affinity": -9.48845
+  },
+  "CHEMBL109546": {
+   "cnn_affinity": 7.38643,
+   "cnn_score": 0.52606,
+   "vina_affinity": -9.64944
+  },
+  "CHEMBL110419": {
+   "cnn_affinity": 7.62815,
+   "cnn_score": 0.93673,
+   "vina_affinity": -9.82368
+  },
+  "CHEMBL111160": {
+   "cnn_affinity": 6.77069,
+   "cnn_score": 0.22489,
+   "vina_affinity": -9.28397
+  },
+  "CHEMBL111468": {
+   "cnn_affinity": 5.68807,
+   "cnn_score": 0.16582,
+   "vina_affinity": -9.02553
+  },
+  "CHEMBL115378": {
+   "cnn_affinity": 7.26053,
+   "cnn_score": 0.51665,
+   "vina_affinity": -10.48342
+  },
+  "CHEMBL115707": {
+   "cnn_affinity": 6.82826,
+   "cnn_score": 0.33818,
+   "vina_affinity": -9.58708
+  },
+  "CHEMBL115902": {
+   "cnn_affinity": 6.40554,
+   "cnn_score": 0.13098,
+   "vina_affinity": -9.80917
+  },
+  "CHEMBL1160895": {
+   "cnn_affinity": 7.33064,
+   "cnn_score": 0.77825,
+   "vina_affinity": -9.58114
+  },
+  "CHEMBL1161244": {
+   "cnn_affinity": 5.87907,
+   "cnn_score": 0.19947,
+   "vina_affinity": -9.93678
+  },
+  "CHEMBL1161245": {
+   "cnn_affinity": 5.73583,
+   "cnn_score": 0.14484,
+   "vina_affinity": -10.39134
+  },
+  "CHEMBL1161247": {
+   "cnn_affinity": 7.21306,
+   "cnn_score": 0.43873,
+   "vina_affinity": -9.26267
+  },
+  "CHEMBL1161248": {
+   "cnn_affinity": 6.91829,
+   "cnn_score": 0.21725,
+   "vina_affinity": -9.31751
+  },
+  "CHEMBL1161250": {
+   "cnn_affinity": 6.90556,
+   "cnn_score": 0.39623,
+   "vina_affinity": -9.63712
+  },
+  "CHEMBL1161253": {
+   "cnn_affinity": 7.20665,
+   "cnn_score": 0.69437,
+   "vina_affinity": -10.23569
+  },
+  "CHEMBL1161255": {
+   "cnn_affinity": 6.08208,
+   "cnn_score": 0.11591,
+   "vina_affinity": -8.34247
+  },
+  "CHEMBL1161263": {
+   "cnn_affinity": 7.21484,
+   "cnn_score": 0.29871,
+   "vina_affinity": -10.07593
+  },
+  "CHEMBL1161409": {
+   "cnn_affinity": 3.8334,
+   "cnn_score": 0.04721,
+   "vina_affinity": -7.70928
+  },
+  "CHEMBL1161410": {
+   "cnn_affinity": 4.5537,
+   "cnn_score": 0.08029,
+   "vina_affinity": -8.43913
+  },
+  "CHEMBL1161426": {
+   "cnn_affinity": 4.28259,
+   "cnn_score": 0.09274,
+   "vina_affinity": -7.73845
+  },
+  "CHEMBL116245": {
+   "cnn_affinity": 6.21568,
+   "cnn_score": 0.27255,
+   "vina_affinity": -10.11976
+  },
+  "CHEMBL1166": {
+   "cnn_affinity": 5.40233,
+   "cnn_score": 0.0428,
+   "vina_affinity": -8.43367
+  },
+  "CHEMBL117092": {
+   "cnn_affinity": 7.35933,
+   "cnn_score": 0.48191,
+   "vina_affinity": -11.22005
+  },
+  "CHEMBL117656": {
+   "cnn_affinity": 5.00078,
+   "cnn_score": 0.02751,
+   "vina_affinity": -9.05984
+  },
+  "CHEMBL117672": {
+   "cnn_affinity": 4.48678,
+   "cnn_score": 0.05192,
+   "vina_affinity": -8.47939
+  },
+  "CHEMBL117678": {
+   "cnn_affinity": 6.67191,
+   "cnn_score": 0.20626,
+   "vina_affinity": -8.71411
+  },
+  "CHEMBL117716": {
+   "cnn_affinity": 5.0666,
+   "cnn_score": 0.03442,
+   "vina_affinity": -9.62469
+  },
+  "CHEMBL117721": {
+   "cnn_affinity": 6.61483,
+   "cnn_score": 0.38127,
+   "vina_affinity": -9.15966
+  },
+  "CHEMBL119057": {
+   "cnn_affinity": 4.8779,
+   "cnn_score": 0.03212,
+   "vina_affinity": -7.64454
+  },
+  "CHEMBL121917": {
+   "cnn_affinity": 7.58701,
+   "cnn_score": 0.97739,
+   "vina_affinity": -9.38795
+  },
+  "CHEMBL122023": {
+   "cnn_affinity": 7.94213,
+   "cnn_score": 0.99032,
+   "vina_affinity": -9.07358
+  },
+  "CHEMBL122102": {
+   "cnn_affinity": 7.76934,
+   "cnn_score": 0.81778,
+   "vina_affinity": -9.16247
+  },
+  "CHEMBL1222020": {
+   "cnn_affinity": 6.70721,
+   "cnn_score": 0.15849,
+   "vina_affinity": -7.76409
+  },
+  "CHEMBL1222129": {
+   "cnn_affinity": 8.37636,
+   "cnn_score": 0.93703,
+   "vina_affinity": -10.5671
+  },
+  "CHEMBL122286": {
+   "cnn_affinity": 7.6068,
+   "cnn_score": 0.97191,
+   "vina_affinity": -9.21856
+  },
+  "CHEMBL122329": {
+   "cnn_affinity": 5.72374,
+   "cnn_score": 0.10572,
+   "vina_affinity": -8.53064
+  },
+  "CHEMBL123142": {
+   "cnn_affinity": 7.25003,
+   "cnn_score": 0.29614,
+   "vina_affinity": -8.27076
+  },
+  "CHEMBL123150": {
+   "cnn_affinity": 5.03618,
+   "cnn_score": 0.15262,
+   "vina_affinity": -8.07035
+  },
+  "CHEMBL123151": {
+   "cnn_affinity": 5.86286,
+   "cnn_score": 0.13521,
+   "vina_affinity": -8.65074
+  },
+  "CHEMBL123381": {
+   "cnn_affinity": 7.72287,
+   "cnn_score": 0.9367,
+   "vina_affinity": -8.49078
+  },
+  "CHEMBL123759": {
+   "cnn_affinity": 7.80335,
+   "cnn_score": 0.61984,
+   "vina_affinity": -9.70313
+  },
+  "CHEMBL124370": {
+   "cnn_affinity": 5.57267,
+   "cnn_score": 0.11244,
+   "vina_affinity": -8.28296
+  },
+  "CHEMBL124427": {
+   "cnn_affinity": 4.88028,
+   "cnn_score": 0.12472,
+   "vina_affinity": -7.52198
+  },
+  "CHEMBL124658": {
+   "cnn_affinity": 6.8143,
+   "cnn_score": 0.38228,
+   "vina_affinity": -8.6221
+  },
+  "CHEMBL124705": {
+   "cnn_affinity": 6.07377,
+   "cnn_score": 0.14635,
+   "vina_affinity": -7.81779
+  },
+  "CHEMBL124846": {
+   "cnn_affinity": 7.80968,
+   "cnn_score": 0.93486,
+   "vina_affinity": -9.48542
+  },
+  "CHEMBL125477": {
+   "cnn_affinity": 5.84525,
+   "cnn_score": 0.28125,
+   "vina_affinity": -7.2221
+  },
+  "CHEMBL125491": {
+   "cnn_affinity": 6.70393,
+   "cnn_score": 0.23299,
+   "vina_affinity": -8.553
+  },
+  "CHEMBL125495": {
+   "cnn_affinity": 7.52035,
+   "cnn_score": 0.99069,
+   "vina_affinity": -9.50486
+  },
+  "CHEMBL125499": {
+   "cnn_affinity": 5.76431,
+   "cnn_score": 0.14846,
+   "vina_affinity": -8.33917
+  },
+  "CHEMBL125552": {
+   "cnn_affinity": 5.90388,
+   "cnn_score": 0.09268,
+   "vina_affinity": -8.37945
+  },
+  "CHEMBL125839": {
+   "cnn_affinity": 6.00323,
+   "cnn_score": 0.17903,
+   "vina_affinity": -7.72191
+  },
+  "CHEMBL125939": {
+   "cnn_affinity": 7.53817,
+   "cnn_score": 0.82594,
+   "vina_affinity": -8.41533
+  },
+  "CHEMBL126208": {
+   "cnn_affinity": 7.65006,
+   "cnn_score": 0.88232,
+   "vina_affinity": -8.98537
+  },
+  "CHEMBL126575": {
+   "cnn_affinity": 5.9067,
+   "cnn_score": 0.23673,
+   "vina_affinity": -9.57408
+  },
+  "CHEMBL126707": {
+   "cnn_affinity": 4.44364,
+   "cnn_score": 0.09717,
+   "vina_affinity": -8.4253
+  },
+  "CHEMBL1270555": {
+   "cnn_affinity": 7.08178,
+   "cnn_score": 0.86023,
+   "vina_affinity": -8.68203
+  },
+  "CHEMBL129854": {
+   "cnn_affinity": 5.02963,
+   "cnn_score": 0.1107,
+   "vina_affinity": -7.28788
+  },
+  "CHEMBL130313": {
+   "cnn_affinity": 5.19827,
+   "cnn_score": 0.12587,
+   "vina_affinity": -7.9204
+  },
+  "CHEMBL130378": {
+   "cnn_affinity": 7.14263,
+   "cnn_score": 0.96152,
+   "vina_affinity": -8.83731
+  },
+  "CHEMBL130464": {
+   "cnn_affinity": 7.42229,
+   "cnn_score": 0.19779,
+   "vina_affinity": -8.93026
+  },
+  "CHEMBL130491": {
+   "cnn_affinity": 7.30786,
+   "cnn_score": 0.89116,
+   "vina_affinity": -9.11552
+  },
+  "CHEMBL130507": {
+   "cnn_affinity": 7.29449,
+   "cnn_score": 0.93747,
+   "vina_affinity": -9.23459
+  },
+  "CHEMBL130569": {
+   "cnn_affinity": 5.05369,
+   "cnn_score": 0.07752,
+   "vina_affinity": -7.85736
+  },
+  "CHEMBL130592": {
+   "cnn_affinity": 7.16644,
+   "cnn_score": 0.08557,
+   "vina_affinity": -9.78107
+  },
+  "CHEMBL130673": {
+   "cnn_affinity": 7.93281,
+   "cnn_score": 0.95697,
+   "vina_affinity": -9.39224
+  },
+  "CHEMBL130967": {
+   "cnn_affinity": 5.77785,
+   "cnn_score": 0.53286,
+   "vina_affinity": -8.76571
+  },
+  "CHEMBL131192": {
+   "cnn_affinity": 5.75912,
+   "cnn_score": 0.05045,
+   "vina_affinity": -8.37689
+  },
+  "CHEMBL131401": {
+   "cnn_affinity": 6.81273,
+   "cnn_score": 0.15133,
+   "vina_affinity": -9.18259
+  },
+  "CHEMBL131452": {
+   "cnn_affinity": 7.47031,
+   "cnn_score": 0.16627,
+   "vina_affinity": -9.0459
+  },
+  "CHEMBL131876": {
+   "cnn_affinity": 7.68928,
+   "cnn_score": 0.93441,
+   "vina_affinity": -9.22466
+  },
+  "CHEMBL132057": {
+   "cnn_affinity": 7.02605,
+   "cnn_score": 0.08726,
+   "vina_affinity": -8.78634
+  },
+  "CHEMBL132528": {
+   "cnn_affinity": 7.23762,
+   "cnn_score": 0.89602,
+   "vina_affinity": -9.8852
+  },
+  "CHEMBL133027": {
+   "cnn_affinity": 6.18432,
+   "cnn_score": 0.44128,
+   "vina_affinity": -9.98325
+  },
+  "CHEMBL133326": {
+   "cnn_affinity": 7.25616,
+   "cnn_score": 0.76771,
+   "vina_affinity": -9.44897
+  },
+  "CHEMBL134736": {
+   "cnn_affinity": 7.54699,
+   "cnn_score": 0.9553,
+   "vina_affinity": -11.57286
+  },
+  "CHEMBL136591": {
+   "cnn_affinity": 6.98711,
+   "cnn_score": 0.91621,
+   "vina_affinity": -8.93239
+  },
+  "CHEMBL138996": {
+   "cnn_affinity": 6.70815,
+   "cnn_score": 0.78821,
+   "vina_affinity": -9.72344
+  },
+  "CHEMBL139474": {
+   "cnn_affinity": 7.47781,
+   "cnn_score": 0.72679,
+   "vina_affinity": -9.89653
+  },
+  "CHEMBL141782": {
+   "cnn_affinity": 6.93028,
+   "cnn_score": 0.1731,
+   "vina_affinity": -9.69471
+  },
+  "CHEMBL142241": {
+   "cnn_affinity": 6.43403,
+   "cnn_score": 0.13228,
+   "vina_affinity": -8.44062
+  },
+  "CHEMBL142312": {
+   "cnn_affinity": 7.34789,
+   "cnn_score": 0.53489,
+   "vina_affinity": -10.57109
+  },
+  "CHEMBL142417": {
+   "cnn_affinity": 7.04736,
+   "cnn_score": 0.71877,
+   "vina_affinity": -9.84025
+  },
+  "CHEMBL142447": {
+   "cnn_affinity": 5.78008,
+   "cnn_score": 0.2142,
+   "vina_affinity": -10.00061
+  },
+  "CHEMBL142747": {
+   "cnn_affinity": 7.37784,
+   "cnn_score": 0.70737,
+   "vina_affinity": -10.00787
+  },
+  "CHEMBL143067": {
+   "cnn_affinity": 6.12728,
+   "cnn_score": 0.15033,
+   "vina_affinity": -7.78907
+  },
+  "CHEMBL143205": {
+   "cnn_affinity": 5.82278,
+   "cnn_score": 0.20357,
+   "vina_affinity": -8.54536
+  },
+  "CHEMBL143501": {
+   "cnn_affinity": 6.80639,
+   "cnn_score": 0.92511,
+   "vina_affinity": -9.55761
+  },
+  "CHEMBL143594": {
+   "cnn_affinity": 5.8437,
+   "cnn_score": 0.14902,
+   "vina_affinity": -9.56774
+  },
+  "CHEMBL143910": {
+   "cnn_affinity": 7.728,
+   "cnn_score": 0.88748,
+   "vina_affinity": -9.31588
+  },
+  "CHEMBL145108": {
+   "cnn_affinity": 6.98889,
+   "cnn_score": 0.71998,
+   "vina_affinity": -9.87567
+  },
+  "CHEMBL145211": {
+   "cnn_affinity": 5.58358,
+   "cnn_score": 0.16736,
+   "vina_affinity": -9.93432
+  },
+  "CHEMBL145250": {
+   "cnn_affinity": 5.20187,
+   "cnn_score": 0.06232,
+   "vina_affinity": -9.71464
+  },
+  "CHEMBL145504": {
+   "cnn_affinity": 5.59118,
+   "cnn_score": 0.12245,
+   "vina_affinity": -9.93175
+  },
+  "CHEMBL145517": {
+   "cnn_affinity": 7.23107,
+   "cnn_score": 0.54322,
+   "vina_affinity": -9.74855
+  },
+  "CHEMBL145655": {
+   "cnn_affinity": 5.52383,
+   "cnn_score": 0.15066,
+   "vina_affinity": -8.93067
+  },
+  "CHEMBL145795": {
+   "cnn_affinity": 5.6976,
+   "cnn_score": 0.08896,
+   "vina_affinity": -10.21205
+  },
+  "CHEMBL146492": {
+   "cnn_affinity": 4.8704,
+   "cnn_score": 0.09077,
+   "vina_affinity": -8.85734
+  },
+  "CHEMBL149960": {
+   "cnn_affinity": 5.92596,
+   "cnn_score": 0.32799,
+   "vina_affinity": -8.52652
+  },
+  "CHEMBL150277": {
+   "cnn_affinity": 5.22733,
+   "cnn_score": 0.30128,
+   "vina_affinity": -7.2245
+  },
+  "CHEMBL150612": {
+   "cnn_affinity": 7.14637,
+   "cnn_score": 0.45261,
+   "vina_affinity": -9.90946
+  },
+  "CHEMBL151049": {
+   "cnn_affinity": 5.93689,
+   "cnn_score": 0.32945,
+   "vina_affinity": -9.14933
+  },
+  "CHEMBL151144": {
+   "cnn_affinity": 5.24648,
+   "cnn_score": 0.27033,
+   "vina_affinity": -7.26564
+  },
+  "CHEMBL151164": {
+   "cnn_affinity": 6.07446,
+   "cnn_score": 0.21965,
+   "vina_affinity": -9.13582
+  },
+  "CHEMBL151661": {
+   "cnn_affinity": 6.56181,
+   "cnn_score": 0.27745,
+   "vina_affinity": -8.66661
+  },
+  "CHEMBL151985": {
+   "cnn_affinity": 8.44593,
+   "cnn_score": 0.77387,
+   "vina_affinity": -9.8799
+  },
+  "CHEMBL152276": {
+   "cnn_affinity": 7.31784,
+   "cnn_score": 0.95178,
+   "vina_affinity": -12.18324
+  },
+  "CHEMBL152792": {
+   "cnn_affinity": 7.05191,
+   "cnn_score": 0.49361,
+   "vina_affinity": -8.74592
+  },
+  "CHEMBL152859": {
+   "cnn_affinity": 7.8271,
+   "cnn_score": 0.92703,
+   "vina_affinity": -12.28682
+  },
+  "CHEMBL153946": {
+   "cnn_affinity": 7.88869,
+   "cnn_score": 0.96703,
+   "vina_affinity": -11.85257
+  },
+  "CHEMBL154504": {
+   "cnn_affinity": 7.83354,
+   "cnn_score": 0.9553,
+   "vina_affinity": -11.87123
+  },
+  "CHEMBL154512": {
+   "cnn_affinity": 7.49269,
+   "cnn_score": 0.94242,
+   "vina_affinity": -12.37921
+  },
+  "CHEMBL154680": {
+   "cnn_affinity": 8.04734,
+   "cnn_score": 0.93397,
+   "vina_affinity": -11.80583
+  },
+  "CHEMBL155871": {
+   "cnn_affinity": 5.66925,
+   "cnn_score": 0.50696,
+   "vina_affinity": -8.43078
+  },
+  "CHEMBL1560937": {
+   "cnn_affinity": 6.53929,
+   "cnn_score": 0.755,
+   "vina_affinity": -8.29569
+  },
+  "CHEMBL156161": {
+   "cnn_affinity": 5.348,
+   "cnn_score": 0.26414,
+   "vina_affinity": -8.37439
+  },
+  "CHEMBL156472": {
+   "cnn_affinity": 5.54848,
+   "cnn_score": 0.33583,
+   "vina_affinity": -8.92325
+  },
+  "CHEMBL156578": {
+   "cnn_affinity": 6.08421,
+   "cnn_score": 0.29088,
+   "vina_affinity": -7.83454
+  },
+  "CHEMBL156702": {
+   "cnn_affinity": 5.08318,
+   "cnn_score": 0.26108,
+   "vina_affinity": -8.47152
+  },
+  "CHEMBL156775": {
+   "cnn_affinity": 7.62169,
+   "cnn_score": 0.96764,
+   "vina_affinity": -11.60637
+  },
+  "CHEMBL156858": {
+   "cnn_affinity": 6.78466,
+   "cnn_score": 0.86383,
+   "vina_affinity": -10.93711
+  },
+  "CHEMBL157131": {
+   "cnn_affinity": 6.9376,
+   "cnn_score": 0.38288,
+   "vina_affinity": -8.84397
+  },
+  "CHEMBL159162": {
+   "cnn_affinity": 6.75728,
+   "cnn_score": 0.57458,
+   "vina_affinity": -9.34351
+  },
+  "CHEMBL160076": {
+   "cnn_affinity": 6.97953,
+   "cnn_score": 0.78856,
+   "vina_affinity": -9.14668
+  },
+  "CHEMBL162599": {
+   "cnn_affinity": 5.83894,
+   "cnn_score": 0.14495,
+   "vina_affinity": -7.95744
+  },
+  "CHEMBL162615": {
+   "cnn_affinity": 6.4697,
+   "cnn_score": 0.08581,
+   "vina_affinity": -8.73678
+  },
+  "CHEMBL162710": {
+   "cnn_affinity": 6.69682,
+   "cnn_score": 0.15734,
+   "vina_affinity": -9.10702
+  },
+  "CHEMBL162803": {
+   "cnn_affinity": 7.26687,
+   "cnn_score": 0.93766,
+   "vina_affinity": -8.81584
+  },
+  "CHEMBL163166": {
+   "cnn_affinity": 5.90563,
+   "cnn_score": 0.13976,
+   "vina_affinity": -9.00156
+  },
+  "CHEMBL163407": {
+   "cnn_affinity": 6.73282,
+   "cnn_score": 0.34832,
+   "vina_affinity": -7.78514
+  },
+  "CHEMBL163466": {
+   "cnn_affinity": 6.3191,
+   "cnn_score": 0.27938,
+   "vina_affinity": -8.97489
+  },
+  "CHEMBL164166": {
+   "cnn_affinity": 7.14914,
+   "cnn_score": 0.54359,
+   "vina_affinity": -9.55259
+  },
+  "CHEMBL164239": {
+   "cnn_affinity": 6.77019,
+   "cnn_score": 0.36651,
+   "vina_affinity": -11.17559
+  },
+  "CHEMBL1644912": {
+   "cnn_affinity": 6.16008,
+   "cnn_score": 0.49283,
+   "vina_affinity": -9.33901
+  },
+  "CHEMBL1644915": {
+   "cnn_affinity": 6.69912,
+   "cnn_score": 0.68152,
+   "vina_affinity": -8.89299
+  },
+  "CHEMBL164985": {
+   "cnn_affinity": 7.5724,
+   "cnn_score": 0.73854,
+   "vina_affinity": -9.21777
+  },
+  "CHEMBL168290": {
+   "cnn_affinity": 5.96493,
+   "cnn_score": 0.41043,
+   "vina_affinity": -9.76487
+  },
+  "CHEMBL171854": {
+   "cnn_affinity": 8.1409,
+   "cnn_score": 0.93609,
+   "vina_affinity": -11.84344
+  },
+  "CHEMBL171966": {
+   "cnn_affinity": 7.76406,
+   "cnn_score": 0.50847,
+   "vina_affinity": -9.24765
+  },
+  "CHEMBL172378": {
+   "cnn_affinity": 7.29627,
+   "cnn_score": 0.63015,
+   "vina_affinity": -9.57562
+  },
+  "CHEMBL172532": {
+   "cnn_affinity": 6.86803,
+   "cnn_score": 0.2928,
+   "vina_affinity": -10.54154
+  },
+  "CHEMBL172795": {
+   "cnn_affinity": 7.86547,
+   "cnn_score": 0.78257,
+   "vina_affinity": -9.01604
+  },
+  "CHEMBL172831": {
+   "cnn_affinity": 6.80164,
+   "cnn_score": 0.22503,
+   "vina_affinity": -10.53842
+  },
+  "CHEMBL173020": {
+   "cnn_affinity": 6.71594,
+   "cnn_score": 0.31246,
+   "vina_affinity": -10.42362
+  },
+  "CHEMBL173877": {
+   "cnn_affinity": 7.59427,
+   "cnn_score": 0.9631,
+   "vina_affinity": -10.59076
+  },
+  "CHEMBL173878": {
+   "cnn_affinity": 8.10602,
+   "cnn_score": 0.93573,
+   "vina_affinity": -12.0851
+  },
+  "CHEMBL174005": {
+   "cnn_affinity": 7.95668,
+   "cnn_score": 0.984,
+   "vina_affinity": -11.85858
+  },
+  "CHEMBL174330": {
+   "cnn_affinity": 8.30045,
+   "cnn_score": 0.95018,
+   "vina_affinity": -11.91236
+  },
+  "CHEMBL174335": {
+   "cnn_affinity": 7.91506,
+   "cnn_score": 0.92906,
+   "vina_affinity": -11.14459
+  },
+  "CHEMBL174750": {
+   "cnn_affinity": 7.89074,
+   "cnn_score": 0.96337,
+   "vina_affinity": -11.80065
+  },
+  "CHEMBL174815": {
+   "cnn_affinity": 8.16171,
+   "cnn_score": 0.95655,
+   "vina_affinity": -11.88953
+  },
+  "CHEMBL174829": {
+   "cnn_affinity": 6.68367,
+   "cnn_score": 0.14443,
+   "vina_affinity": -9.756
+  },
+  "CHEMBL175141": {
+   "cnn_affinity": 7.40794,
+   "cnn_score": 0.44266,
+   "vina_affinity": -10.20526
+  },
+  "CHEMBL175183": {
+   "cnn_affinity": 7.01858,
+   "cnn_score": 0.41843,
+   "vina_affinity": -10.02515
+  },
+  "CHEMBL175286": {
+   "cnn_affinity": 6.47109,
+   "cnn_score": 0.11293,
+   "vina_affinity": -10.58189
+  },
+  "CHEMBL175381": {
+   "cnn_affinity": 7.84685,
+   "cnn_score": 0.96393,
+   "vina_affinity": -11.96577
+  },
+  "CHEMBL175562": {
+   "cnn_affinity": 8.05211,
+   "cnn_score": 0.97073,
+   "vina_affinity": -11.95304
+  },
+  "CHEMBL176136": {
+   "cnn_affinity": 8.05538,
+   "cnn_score": 0.92333,
+   "vina_affinity": -11.28403
+  },
+  "CHEMBL176636": {
+   "cnn_affinity": 5.77578,
+   "cnn_score": 0.20328,
+   "vina_affinity": -9.91009
+  },
+  "CHEMBL176640": {
+   "cnn_affinity": 7.85811,
+   "cnn_score": 0.5892,
+   "vina_affinity": -8.97932
+  },
+  "CHEMBL176694": {
+   "cnn_affinity": 8.04354,
+   "cnn_score": 0.91804,
+   "vina_affinity": -10.798
+  },
+  "CHEMBL176744": {
+   "cnn_affinity": 7.56866,
+   "cnn_score": 0.4822,
+   "vina_affinity": -8.82768
+  },
+  "CHEMBL176813": {
+   "cnn_affinity": 7.96308,
+   "cnn_score": 0.85327,
+   "vina_affinity": -10.06879
+  },
+  "CHEMBL176830": {
+   "cnn_affinity": 7.95369,
+   "cnn_score": 0.88336,
+   "vina_affinity": -10.81287
+  },
+  "CHEMBL176866": {
+   "cnn_affinity": 7.90682,
+   "cnn_score": 0.89343,
+   "vina_affinity": -10.60699
+  },
+  "CHEMBL177136": {
+   "cnn_affinity": 6.52644,
+   "cnn_score": 0.13908,
+   "vina_affinity": -10.29352
+  },
+  "CHEMBL177142": {
+   "cnn_affinity": 7.88204,
+   "cnn_score": 0.85257,
+   "vina_affinity": -10.37606
+  },
+  "CHEMBL177206": {
+   "cnn_affinity": 7.98709,
+   "cnn_score": 0.97258,
+   "vina_affinity": -11.96028
+  },
+  "CHEMBL177212": {
+   "cnn_affinity": 7.04661,
+   "cnn_score": 0.20864,
+   "vina_affinity": -10.19174
+  },
+  "CHEMBL177225": {
+   "cnn_affinity": 7.04131,
+   "cnn_score": 0.20115,
+   "vina_affinity": -9.27248
+  },
+  "CHEMBL177332": {
+   "cnn_affinity": 7.27313,
+   "cnn_score": 0.2888,
+   "vina_affinity": -9.93073
+  },
+  "CHEMBL177564": {
+   "cnn_affinity": 8.12309,
+   "cnn_score": 0.95806,
+   "vina_affinity": -11.35013
+  },
+  "CHEMBL177652": {
+   "cnn_affinity": 8.12711,
+   "cnn_score": 0.94143,
+   "vina_affinity": -11.6406
+  },
+  "CHEMBL177996": {
+   "cnn_affinity": 8.03561,
+   "cnn_score": 0.94102,
+   "vina_affinity": -10.97708
+  },
+  "CHEMBL178112": {
+   "cnn_affinity": 7.90562,
+   "cnn_score": 0.90538,
+   "vina_affinity": -10.84055
+  },
+  "CHEMBL178134": {
+   "cnn_affinity": 6.29898,
+   "cnn_score": 0.05883,
+   "vina_affinity": -9.06345
+  },
+  "CHEMBL1790570": {
+   "cnn_affinity": 6.11636,
+   "cnn_score": 0.14509,
+   "vina_affinity": -8.15369
+  },
+  "CHEMBL179983": {
+   "cnn_affinity": 5.99486,
+   "cnn_score": 0.29651,
+   "vina_affinity": -8.67123
+  },
+  "CHEMBL180105": {
+   "cnn_affinity": 6.47659,
+   "cnn_score": 0.46827,
+   "vina_affinity": -9.54883
+  },
+  "CHEMBL1808958": {
+   "cnn_affinity": 7.56286,
+   "cnn_score": 0.51382,
+   "vina_affinity": -9.47702
+  },
+  "CHEMBL181265": {
+   "cnn_affinity": 5.61898,
+   "cnn_score": 0.47102,
+   "vina_affinity": -7.54878
+  },
+  "CHEMBL184686": {
+   "cnn_affinity": 7.8417,
+   "cnn_score": 0.98532,
+   "vina_affinity": -8.8979
+  },
+  "CHEMBL184956": {
+   "cnn_affinity": 7.53828,
+   "cnn_score": 0.71278,
+   "vina_affinity": -8.35972
+  },
+  "CHEMBL185642": {
+   "cnn_affinity": 8.09295,
+   "cnn_score": 0.97584,
+   "vina_affinity": -8.66891
+  },
+  "CHEMBL186686": {
+   "cnn_affinity": 8.12838,
+   "cnn_score": 0.98371,
+   "vina_affinity": -8.60471
+  },
+  "CHEMBL187051": {
+   "cnn_affinity": 8.33358,
+   "cnn_score": 0.99479,
+   "vina_affinity": -8.91106
+  },
+  "CHEMBL187102": {
+   "cnn_affinity": 7.98522,
+   "cnn_score": 0.98474,
+   "vina_affinity": -8.97474
+  },
+  "CHEMBL187155": {
+   "cnn_affinity": 8.20961,
+   "cnn_score": 0.99306,
+   "vina_affinity": -8.48399
+  },
+  "CHEMBL187301": {
+   "cnn_affinity": 3.62045,
+   "cnn_score": 0.69024,
+   "vina_affinity": -6.49003
+  },
+  "CHEMBL187423": {
+   "cnn_affinity": 8.28815,
+   "cnn_score": 0.98794,
+   "vina_affinity": -8.59592
+  },
+  "CHEMBL1907778": {
+   "cnn_affinity": 6.66286,
+   "cnn_score": 0.28063,
+   "vina_affinity": -7.55536
+  },
+  "CHEMBL1907779": {
+   "cnn_affinity": 6.60078,
+   "cnn_score": 0.23013,
+   "vina_affinity": -7.83294
+  },
+  "CHEMBL191264": {
+   "cnn_affinity": 7.10309,
+   "cnn_score": 0.1764,
+   "vina_affinity": -9.11008
+  },
+  "CHEMBL19139": {
+   "cnn_affinity": 7.3242,
+   "cnn_score": 0.89329,
+   "vina_affinity": -8.891
+  },
+  "CHEMBL1923443": {
+   "cnn_affinity": 7.50916,
+   "cnn_score": 0.95878,
+   "vina_affinity": -8.38208
+  },
+  "CHEMBL19365": {
+   "cnn_affinity": 6.68905,
+   "cnn_score": 0.44038,
+   "vina_affinity": -9.66141
+  },
+  "CHEMBL19368": {
+   "cnn_affinity": 6.63832,
+   "cnn_score": 0.42291,
+   "vina_affinity": -9.23855
+  },
+  "CHEMBL193709": {
+   "cnn_affinity": 7.62438,
+   "cnn_score": 0.76852,
+   "vina_affinity": -10.4811
+  },
+  "CHEMBL1949837": {
+   "cnn_affinity": 5.84403,
+   "cnn_score": 0.1484,
+   "vina_affinity": -8.59841
+  },
+  "CHEMBL1952400": {
+   "cnn_affinity": 6.82621,
+   "cnn_score": 0.32383,
+   "vina_affinity": -10.20367
+  },
+  "CHEMBL1952404": {
+   "cnn_affinity": 6.01835,
+   "cnn_score": 0.16322,
+   "vina_affinity": -9.19163
+  },
+  "CHEMBL1952409": {
+   "cnn_affinity": 6.73901,
+   "cnn_score": 0.25941,
+   "vina_affinity": -9.39402
+  },
+  "CHEMBL19594": {
+   "cnn_affinity": 7.14086,
+   "cnn_score": 0.73252,
+   "vina_affinity": -9.29904
+  },
+  "CHEMBL19626": {
+   "cnn_affinity": 6.12315,
+   "cnn_score": 0.3506,
+   "vina_affinity": -8.429
+  },
+  "CHEMBL19660": {
+   "cnn_affinity": 6.3544,
+   "cnn_score": 0.25879,
+   "vina_affinity": -9.55901
+  },
+  "CHEMBL198533": {
+   "cnn_affinity": 6.48027,
+   "cnn_score": 0.41801,
+   "vina_affinity": -8.87873
+  },
+  "CHEMBL19902": {
+   "cnn_affinity": 6.62211,
+   "cnn_score": 0.35233,
+   "vina_affinity": -9.47809
+  },
+  "CHEMBL202010": {
+   "cnn_affinity": 5.72666,
+   "cnn_score": 0.41508,
+   "vina_affinity": -8.54501
+  },
+  "CHEMBL202433": {
+   "cnn_affinity": 5.65611,
+   "cnn_score": 0.66464,
+   "vina_affinity": -7.69101
+  },
+  "CHEMBL2040947": {
+   "cnn_affinity": 8.01692,
+   "cnn_score": 0.96288,
+   "vina_affinity": -10.4184
+  },
+  "CHEMBL2040948": {
+   "cnn_affinity": 7.31065,
+   "cnn_score": 0.80158,
+   "vina_affinity": -9.94917
+  },
+  "CHEMBL2040949": {
+   "cnn_affinity": 6.78824,
+   "cnn_score": 0.26651,
+   "vina_affinity": -9.12398
+  },
+  "CHEMBL2040950": {
+   "cnn_affinity": 6.15215,
+   "cnn_score": 0.4481,
+   "vina_affinity": -9.31947
+  },
+  "CHEMBL2040951": {
+   "cnn_affinity": 6.08878,
+   "cnn_score": 0.24498,
+   "vina_affinity": -8.85061
+  },
+  "CHEMBL2040958": {
+   "cnn_affinity": 6.92771,
+   "cnn_score": 0.5368,
+   "vina_affinity": -9.33087
+  },
+  "CHEMBL2040959": {
+   "cnn_affinity": 7.46733,
+   "cnn_score": 0.72495,
+   "vina_affinity": -9.83922
+  },
+  "CHEMBL2040962": {
+   "cnn_affinity": 6.59325,
+   "cnn_score": 0.24781,
+   "vina_affinity": -9.43697
+  },
+  "CHEMBL2040964": {
+   "cnn_affinity": 8.24019,
+   "cnn_score": 0.96515,
+   "vina_affinity": -11.09328
+  },
+  "CHEMBL2040965": {
+   "cnn_affinity": 7.44482,
+   "cnn_score": 0.8711,
+   "vina_affinity": -10.13969
+  },
+  "CHEMBL2040966": {
+   "cnn_affinity": 8.28118,
+   "cnn_score": 0.94186,
+   "vina_affinity": -10.7526
+  },
+  "CHEMBL2040969": {
+   "cnn_affinity": 6.51081,
+   "cnn_score": 0.18349,
+   "vina_affinity": -9.61644
+  },
+  "CHEMBL2040972": {
+   "cnn_affinity": 5.1825,
+   "cnn_score": 0.16579,
+   "vina_affinity": -8.49302
+  },
+  "CHEMBL2040981": {
+   "cnn_affinity": 5.02423,
+   "cnn_score": 0.182,
+   "vina_affinity": -9.37116
+  },
+  "CHEMBL2040985": {
+   "cnn_affinity": 6.65304,
+   "cnn_score": 0.27445,
+   "vina_affinity": -9.73939
+  },
+  "CHEMBL2040988": {
+   "cnn_affinity": 7.90512,
+   "cnn_score": 0.90869,
+   "vina_affinity": -8.7712
+  },
+  "CHEMBL2040989": {
+   "cnn_affinity": 6.80679,
+   "cnn_score": 0.43906,
+   "vina_affinity": -8.60922
+  },
+  "CHEMBL2040990": {
+   "cnn_affinity": 5.23277,
+   "cnn_score": 0.18888,
+   "vina_affinity": -8.8821
+  },
+  "CHEMBL205904": {
+   "cnn_affinity": 6.99866,
+   "cnn_score": 0.38247,
+   "vina_affinity": -9.13749
+  },
+  "CHEMBL20912": {
+   "cnn_affinity": 6.68682,
+   "cnn_score": 0.88354,
+   "vina_affinity": -9.40619
+  },
+  "CHEMBL209841": {
+   "cnn_affinity": 7.09787,
+   "cnn_score": 0.22518,
+   "vina_affinity": -9.34801
+  },
+  "CHEMBL210019": {
+   "cnn_affinity": 8.28359,
+   "cnn_score": 0.97841,
+   "vina_affinity": -10.14845
+  },
+  "CHEMBL210189": {
+   "cnn_affinity": 8.30897,
+   "cnn_score": 0.69588,
+   "vina_affinity": -11.03892
+  },
+  "CHEMBL210771": {
+   "cnn_affinity": 6.95414,
+   "cnn_score": 0.41241,
+   "vina_affinity": -11.00446
+  },
+  "CHEMBL210815": {
+   "cnn_affinity": 7.86119,
+   "cnn_score": 0.80797,
+   "vina_affinity": -10.18156
+  },
+  "CHEMBL21090": {
+   "cnn_affinity": 7.43755,
+   "cnn_score": 0.41646,
+   "vina_affinity": -8.64898
+  },
+  "CHEMBL211401": {
+   "cnn_affinity": 5.30114,
+   "cnn_score": 0.14264,
+   "vina_affinity": -7.59687
+  },
+  "CHEMBL211549": {
+   "cnn_affinity": 6.5089,
+   "cnn_score": 0.14883,
+   "vina_affinity": -10.16447
+  },
+  "CHEMBL211659": {
+   "cnn_affinity": 6.52225,
+   "cnn_score": 0.20355,
+   "vina_affinity": -9.51744
+  },
+  "CHEMBL211939": {
+   "cnn_affinity": 7.23971,
+   "cnn_score": 0.50932,
+   "vina_affinity": -9.37692
+  },
+  "CHEMBL212014": {
+   "cnn_affinity": 6.72771,
+   "cnn_score": 0.24073,
+   "vina_affinity": -9.62747
+  },
+  "CHEMBL212271": {
+   "cnn_affinity": 6.92489,
+   "cnn_score": 0.30873,
+   "vina_affinity": -11.14226
+  },
+  "CHEMBL212310": {
+   "cnn_affinity": 5.7578,
+   "cnn_score": 0.07515,
+   "vina_affinity": -10.08297
+  },
+  "CHEMBL212401": {
+   "cnn_affinity": 7.50923,
+   "cnn_score": 0.88489,
+   "vina_affinity": -10.33771
+  },
+  "CHEMBL212577": {
+   "cnn_affinity": 5.39231,
+   "cnn_score": 0.15857,
+   "vina_affinity": -9.45075
+  },
+  "CHEMBL212616": {
+   "cnn_affinity": 6.08309,
+   "cnn_score": 0.06402,
+   "vina_affinity": -8.52967
+  },
+  "CHEMBL213180": {
+   "cnn_affinity": 7.30402,
+   "cnn_score": 0.85518,
+   "vina_affinity": -10.23156
+  },
+  "CHEMBL213927": {
+   "cnn_affinity": 6.85318,
+   "cnn_score": 0.30388,
+   "vina_affinity": -9.28119
+  },
+  "CHEMBL214814": {
+   "cnn_affinity": 6.54811,
+   "cnn_score": 0.11349,
+   "vina_affinity": -8.36856
+  },
+  "CHEMBL215295": {
+   "cnn_affinity": 6.92362,
+   "cnn_score": 0.33924,
+   "vina_affinity": -10.02846
+  },
+  "CHEMBL219354": {
+   "cnn_affinity": 6.34235,
+   "cnn_score": 0.14965,
+   "vina_affinity": -8.1662
+  },
+  "CHEMBL219440": {
+   "cnn_affinity": 7.79486,
+   "cnn_score": 0.2307,
+   "vina_affinity": -8.44141
+  },
+  "CHEMBL2303826": {
+   "cnn_affinity": 3.6959,
+   "cnn_score": 0.01557,
+   "vina_affinity": -6.76794
+  },
+  "CHEMBL2334319": {
+   "cnn_affinity": 6.99584,
+   "cnn_score": 0.69647,
+   "vina_affinity": -8.24881
+  },
+  "CHEMBL233611": {
+   "cnn_affinity": 5.90498,
+   "cnn_score": 0.39055,
+   "vina_affinity": -7.8995
+  },
+  "CHEMBL236642": {
+   "cnn_affinity": 7.33552,
+   "cnn_score": 0.52712,
+   "vina_affinity": -8.79497
+  },
+  "CHEMBL2370422": {
+   "cnn_affinity": 5.79985,
+   "cnn_score": 0.32045,
+   "vina_affinity": -8.31435
+  },
+  "CHEMBL2372433": {
+   "cnn_affinity": 6.72212,
+   "cnn_score": 0.83296,
+   "vina_affinity": -7.18481
+  },
+  "CHEMBL238913": {
+   "cnn_affinity": 6.88265,
+   "cnn_score": 0.61409,
+   "vina_affinity": -9.34298
+  },
+  "CHEMBL2391191": {
+   "cnn_affinity": 6.2252,
+   "cnn_score": 0.17557,
+   "vina_affinity": -8.94298
+  },
+  "CHEMBL2391199": {
+   "cnn_affinity": 6.19076,
+   "cnn_score": 0.26448,
+   "vina_affinity": -8.87437
+  },
+  "CHEMBL2391200": {
+   "cnn_affinity": 7.63015,
+   "cnn_score": 0.90693,
+   "vina_affinity": -8.51818
+  },
+  "CHEMBL2391201": {
+   "cnn_affinity": 6.87188,
+   "cnn_score": 0.46176,
+   "vina_affinity": -8.85239
+  },
+  "CHEMBL2391202": {
+   "cnn_affinity": 5.8731,
+   "cnn_score": 0.21859,
+   "vina_affinity": -8.79222
+  },
+  "CHEMBL2391203": {
+   "cnn_affinity": 6.25222,
+   "cnn_score": 0.11551,
+   "vina_affinity": -9.68928
+  },
+  "CHEMBL239535": {
+   "cnn_affinity": 6.5278,
+   "cnn_score": 0.23989,
+   "vina_affinity": -9.28809
+  },
+  "CHEMBL24012": {
+   "cnn_affinity": 7.35804,
+   "cnn_score": 0.44248,
+   "vina_affinity": -8.90548
+  },
+  "CHEMBL2441025": {
+   "cnn_affinity": 7.07395,
+   "cnn_score": 0.74213,
+   "vina_affinity": -8.73938
+  },
+  "CHEMBL2441028": {
+   "cnn_affinity": 7.53598,
+   "cnn_score": 0.7636,
+   "vina_affinity": -9.89075
+  },
+  "CHEMBL2441029": {
+   "cnn_affinity": 6.76999,
+   "cnn_score": 0.45366,
+   "vina_affinity": -9.38369
+  },
+  "CHEMBL2441034": {
+   "cnn_affinity": 6.61502,
+   "cnn_score": 0.66884,
+   "vina_affinity": -9.6821
+  },
+  "CHEMBL2441038": {
+   "cnn_affinity": 7.18555,
+   "cnn_score": 0.95263,
+   "vina_affinity": -9.4888
+  },
+  "CHEMBL2441040": {
+   "cnn_affinity": 6.69856,
+   "cnn_score": 0.48592,
+   "vina_affinity": -9.01099
+  },
+  "CHEMBL2441041": {
+   "cnn_affinity": 7.04891,
+   "cnn_score": 0.42909,
+   "vina_affinity": -8.78089
+  },
+  "CHEMBL2441042": {
+   "cnn_affinity": 7.77184,
+   "cnn_score": 0.8169,
+   "vina_affinity": -9.80961
+  },
+  "CHEMBL2441043": {
+   "cnn_affinity": 6.46153,
+   "cnn_score": 0.3247,
+   "vina_affinity": -8.90139
+  },
+  "CHEMBL2441044": {
+   "cnn_affinity": 7.60824,
+   "cnn_score": 0.96263,
+   "vina_affinity": -9.85376
+  },
+  "CHEMBL2441045": {
+   "cnn_affinity": 5.88693,
+   "cnn_score": 0.18075,
+   "vina_affinity": -8.72762
+  },
+  "CHEMBL2441046": {
+   "cnn_affinity": 7.81763,
+   "cnn_score": 0.79457,
+   "vina_affinity": -9.69296
+  },
+  "CHEMBL2441051": {
+   "cnn_affinity": 5.98697,
+   "cnn_score": 0.26931,
+   "vina_affinity": -8.05159
+  },
+  "CHEMBL2441052": {
+   "cnn_affinity": 5.8735,
+   "cnn_score": 0.25982,
+   "vina_affinity": -8.38891
+  },
+  "CHEMBL2441054": {
+   "cnn_affinity": 7.68087,
+   "cnn_score": 0.95198,
+   "vina_affinity": -9.44045
+  },
+  "CHEMBL2441059": {
+   "cnn_affinity": 7.29137,
+   "cnn_score": 0.89494,
+   "vina_affinity": -9.90247
+  },
+  "CHEMBL2441061": {
+   "cnn_affinity": 7.40486,
+   "cnn_score": 0.9515,
+   "vina_affinity": -9.98527
+  },
+  "CHEMBL2441062": {
+   "cnn_affinity": 5.51956,
+   "cnn_score": 0.18411,
+   "vina_affinity": -9.29087
+  },
+  "CHEMBL2441064": {
+   "cnn_affinity": 7.1115,
+   "cnn_score": 0.96064,
+   "vina_affinity": -9.94981
+  },
+  "CHEMBL2441065": {
+   "cnn_affinity": 5.59497,
+   "cnn_score": 0.23469,
+   "vina_affinity": -9.36954
+  },
+  "CHEMBL24460": {
+   "cnn_affinity": 5.24892,
+   "cnn_score": 0.13261,
+   "vina_affinity": -9.64369
+  },
+  "CHEMBL24565": {
+   "cnn_affinity": 6.67119,
+   "cnn_score": 0.24725,
+   "vina_affinity": -10.5083
+  },
+  "CHEMBL24780": {
+   "cnn_affinity": 6.7847,
+   "cnn_score": 0.34613,
+   "vina_affinity": -9.99947
+  },
+  "CHEMBL24907": {
+   "cnn_affinity": 7.94168,
+   "cnn_score": 0.80427,
+   "vina_affinity": -9.74343
+  },
+  "CHEMBL24915": {
+   "cnn_affinity": 7.39637,
+   "cnn_score": 0.7963,
+   "vina_affinity": -9.20425
+  },
+  "CHEMBL25063": {
+   "cnn_affinity": 7.43122,
+   "cnn_score": 0.30052,
+   "vina_affinity": -10.3472
+  },
+  "CHEMBL25068": {
+   "cnn_affinity": 5.81191,
+   "cnn_score": 0.13387,
+   "vina_affinity": -9.46801
+  },
+  "CHEMBL25073": {
+   "cnn_affinity": 8.38967,
+   "cnn_score": 0.87626,
+   "vina_affinity": -10.11857
+  },
+  "CHEMBL25184": {
+   "cnn_affinity": 7.52289,
+   "cnn_score": 0.45265,
+   "vina_affinity": -10.21042
+  },
+  "CHEMBL25351": {
+   "cnn_affinity": 8.23662,
+   "cnn_score": 0.81627,
+   "vina_affinity": -10.18298
+  },
+  "CHEMBL25474": {
+   "cnn_affinity": 7.76142,
+   "cnn_score": 0.83002,
+   "vina_affinity": -9.3279
+  },
+  "CHEMBL25477": {
+   "cnn_affinity": 6.9977,
+   "cnn_score": 0.43944,
+   "vina_affinity": -10.69213
+  },
+  "CHEMBL25478": {
+   "cnn_affinity": 7.88811,
+   "cnn_score": 0.93764,
+   "vina_affinity": -9.44745
+  },
+  "CHEMBL25484": {
+   "cnn_affinity": 6.78911,
+   "cnn_score": 0.36731,
+   "vina_affinity": -10.42165
+  },
+  "CHEMBL25527": {
+   "cnn_affinity": 5.65069,
+   "cnn_score": 0.12214,
+   "vina_affinity": -9.31578
+  },
+  "CHEMBL25698": {
+   "cnn_affinity": 6.70773,
+   "cnn_score": 0.17698,
+   "vina_affinity": -10.75505
+  },
+  "CHEMBL264258": {
+   "cnn_affinity": 7.38588,
+   "cnn_score": 0.06171,
+   "vina_affinity": -8.7305
+  },
+  "CHEMBL264876": {
+   "cnn_affinity": 4.36333,
+   "cnn_score": 0.04826,
+   "vina_affinity": -7.95722
+  },
+  "CHEMBL266349": {
+   "cnn_affinity": 6.83876,
+   "cnn_score": 0.63297,
+   "vina_affinity": -9.10151
+  },
+  "CHEMBL270204": {
+   "cnn_affinity": 6.88267,
+   "cnn_score": 0.12176,
+   "vina_affinity": -9.32584
+  },
+  "CHEMBL272961": {
+   "cnn_affinity": 5.07156,
+   "cnn_score": 0.05317,
+   "vina_affinity": -7.78188
+  },
+  "CHEMBL273196": {
+   "cnn_affinity": 5.17264,
+   "cnn_score": 0.14977,
+   "vina_affinity": -7.80299
+  },
+  "CHEMBL273264": {
+   "cnn_affinity": 5.42383,
+   "cnn_score": 0.17735,
+   "vina_affinity": -9.62427
+  },
+  "CHEMBL275368": {
+   "cnn_affinity": 7.38647,
+   "cnn_score": 0.71182,
+   "vina_affinity": -10.13738
+  },
+  "CHEMBL275859": {
+   "cnn_affinity": 6.85199,
+   "cnn_score": 0.35051,
+   "vina_affinity": -8.61714
+  },
+  "CHEMBL277204": {
+   "cnn_affinity": 7.18171,
+   "cnn_score": 0.33409,
+   "vina_affinity": -9.30405
+  },
+  "CHEMBL277240": {
+   "cnn_affinity": 7.07515,
+   "cnn_score": 0.7721,
+   "vina_affinity": -8.99968
+  },
+  "CHEMBL277267": {
+   "cnn_affinity": 7.55387,
+   "cnn_score": 0.87964,
+   "vina_affinity": -8.59616
+  },
+  "CHEMBL279077": {
+   "cnn_affinity": 6.43463,
+   "cnn_score": 0.34903,
+   "vina_affinity": -9.31452
+  },
+  "CHEMBL279367": {
+   "cnn_affinity": 6.45537,
+   "cnn_score": 0.35443,
+   "vina_affinity": -8.52467
+  },
+  "CHEMBL279721": {
+   "cnn_affinity": 6.81152,
+   "cnn_score": 0.25566,
+   "vina_affinity": -9.40558
+  },
+  "CHEMBL279962": {
+   "cnn_affinity": 6.58028,
+   "cnn_score": 0.74868,
+   "vina_affinity": -10.13296
+  },
+  "CHEMBL280158": {
+   "cnn_affinity": 7.04937,
+   "cnn_score": 0.79041,
+   "vina_affinity": -8.85643
+  },
+  "CHEMBL280162": {
+   "cnn_affinity": 6.33973,
+   "cnn_score": 0.18869,
+   "vina_affinity": -8.88582
+  },
+  "CHEMBL280342": {
+   "cnn_affinity": 6.54808,
+   "cnn_score": 0.26118,
+   "vina_affinity": -10.00928
+  },
+  "CHEMBL280769": {
+   "cnn_affinity": 8.30775,
+   "cnn_score": 0.80836,
+   "vina_affinity": -9.96967
+  },
+  "CHEMBL281591": {
+   "cnn_affinity": 7.85077,
+   "cnn_score": 0.49741,
+   "vina_affinity": -9.47776
+  },
+  "CHEMBL282260": {
+   "cnn_affinity": 7.43359,
+   "cnn_score": 0.34428,
+   "vina_affinity": -10.63966
+  },
+  "CHEMBL283293": {
+   "cnn_affinity": 7.599,
+   "cnn_score": 0.41122,
+   "vina_affinity": -9.55045
+  },
+  "CHEMBL283570": {
+   "cnn_affinity": 8.08267,
+   "cnn_score": 0.84434,
+   "vina_affinity": -10.25131
+  },
+  "CHEMBL283901": {
+   "cnn_affinity": 5.46037,
+   "cnn_score": 0.14261,
+   "vina_affinity": -9.02718
+  },
+  "CHEMBL284316": {
+   "cnn_affinity": 6.281,
+   "cnn_score": 0.15656,
+   "vina_affinity": -10.36162
+  },
+  "CHEMBL285289": {
+   "cnn_affinity": 7.40373,
+   "cnn_score": 0.93132,
+   "vina_affinity": -11.8748
+  },
+  "CHEMBL285725": {
+   "cnn_affinity": 7.38378,
+   "cnn_score": 0.92117,
+   "vina_affinity": -11.48089
+  },
+  "CHEMBL287973": {
+   "cnn_affinity": 7.2215,
+   "cnn_score": 0.89771,
+   "vina_affinity": -11.11748
+  },
+  "CHEMBL288232": {
+   "cnn_affinity": 7.73377,
+   "cnn_score": 0.9153,
+   "vina_affinity": -11.62584
+  },
+  "CHEMBL288481": {
+   "cnn_affinity": 7.59739,
+   "cnn_score": 0.89228,
+   "vina_affinity": -11.56928
+  },
+  "CHEMBL289395": {
+   "cnn_affinity": 6.37796,
+   "cnn_score": 0.2034,
+   "vina_affinity": -9.26349
+  },
+  "CHEMBL290025": {
+   "cnn_affinity": 6.58982,
+   "cnn_score": 0.24284,
+   "vina_affinity": -9.07863
+  },
+  "CHEMBL290361": {
+   "cnn_affinity": 6.70471,
+   "cnn_score": 0.37417,
+   "vina_affinity": -10.34505
+  },
+  "CHEMBL290382": {
+   "cnn_affinity": 7.22657,
+   "cnn_score": 0.93652,
+   "vina_affinity": -11.37304
+  },
+  "CHEMBL291429": {
+   "cnn_affinity": 6.34197,
+   "cnn_score": 0.12586,
+   "vina_affinity": -9.66639
+  },
+  "CHEMBL291430": {
+   "cnn_affinity": 5.67844,
+   "cnn_score": 0.09898,
+   "vina_affinity": -8.4376
+  },
+  "CHEMBL291644": {
+   "cnn_affinity": 6.33337,
+   "cnn_score": 0.17012,
+   "vina_affinity": -8.97203
+  },
+  "CHEMBL292254": {
+   "cnn_affinity": 5.66389,
+   "cnn_score": 0.17445,
+   "vina_affinity": -9.5406
+  },
+  "CHEMBL292305": {
+   "cnn_affinity": 5.88974,
+   "cnn_score": 0.08451,
+   "vina_affinity": -9.76672
+  },
+  "CHEMBL292941": {
+   "cnn_affinity": 5.66135,
+   "cnn_score": 0.1316,
+   "vina_affinity": -9.12141
+  },
+  "CHEMBL292977": {
+   "cnn_affinity": 4.32347,
+   "cnn_score": 0.28238,
+   "vina_affinity": -9.41048
+  },
+  "CHEMBL293217": {
+   "cnn_affinity": 6.48743,
+   "cnn_score": 0.31161,
+   "vina_affinity": -9.47205
+  },
+  "CHEMBL293248": {
+   "cnn_affinity": 6.01191,
+   "cnn_score": 0.17987,
+   "vina_affinity": -9.42354
+  },
+  "CHEMBL293423": {
+   "cnn_affinity": 6.61022,
+   "cnn_score": 0.27068,
+   "vina_affinity": -10.69501
+  },
+  "CHEMBL293425": {
+   "cnn_affinity": 6.83077,
+   "cnn_score": 0.36974,
+   "vina_affinity": -8.53866
+  },
+  "CHEMBL293462": {
+   "cnn_affinity": 5.83537,
+   "cnn_score": 0.10158,
+   "vina_affinity": -9.26419
+  },
+  "CHEMBL293682": {
+   "cnn_affinity": 5.2443,
+   "cnn_score": 0.13177,
+   "vina_affinity": -9.06272
+  },
+  "CHEMBL293892": {
+   "cnn_affinity": 6.57795,
+   "cnn_score": 0.78713,
+   "vina_affinity": -8.56938
+  },
+  "CHEMBL294067": {
+   "cnn_affinity": 6.53382,
+   "cnn_score": 0.72111,
+   "vina_affinity": -8.78366
+  },
+  "CHEMBL294115": {
+   "cnn_affinity": 5.64136,
+   "cnn_score": 0.13205,
+   "vina_affinity": -9.76167
+  },
+  "CHEMBL294121": {
+   "cnn_affinity": 6.10531,
+   "cnn_score": 0.17256,
+   "vina_affinity": -8.18078
+  },
+  "CHEMBL294594": {
+   "cnn_affinity": 5.40524,
+   "cnn_score": 0.22653,
+   "vina_affinity": -9.15302
+  },
+  "CHEMBL294782": {
+   "cnn_affinity": 5.7647,
+   "cnn_score": 0.15786,
+   "vina_affinity": -9.46288
+  },
+  "CHEMBL295408": {
+   "cnn_affinity": 7.26764,
+   "cnn_score": 0.75647,
+   "vina_affinity": -11.6236
+  },
+  "CHEMBL295525": {
+   "cnn_affinity": 6.30572,
+   "cnn_score": 0.15107,
+   "vina_affinity": -10.00228
+  },
+  "CHEMBL296005": {
+   "cnn_affinity": 7.23289,
+   "cnn_score": 0.79788,
+   "vina_affinity": -10.38624
+  },
+  "CHEMBL296334": {
+   "cnn_affinity": 8.23666,
+   "cnn_score": 0.95067,
+   "vina_affinity": -12.39043
+  },
+  "CHEMBL296345": {
+   "cnn_affinity": 8.52598,
+   "cnn_score": 0.97645,
+   "vina_affinity": -12.23651
+  },
+  "CHEMBL296514": {
+   "cnn_affinity": 7.38485,
+   "cnn_score": 0.79682,
+   "vina_affinity": -10.25707
+  },
+  "CHEMBL297169": {
+   "cnn_affinity": 6.03296,
+   "cnn_score": 0.11464,
+   "vina_affinity": -8.39652
+  },
+  "CHEMBL297835": {
+   "cnn_affinity": 6.5211,
+   "cnn_score": 0.38902,
+   "vina_affinity": -11.13431
+  },
+  "CHEMBL298891": {
+   "cnn_affinity": 5.418,
+   "cnn_score": 0.31037,
+   "vina_affinity": -9.67123
+  },
+  "CHEMBL298964": {
+   "cnn_affinity": 7.54925,
+   "cnn_score": 0.71349,
+   "vina_affinity": -8.43579
+  },
+  "CHEMBL299541": {
+   "cnn_affinity": 5.02981,
+   "cnn_score": 0.28911,
+   "vina_affinity": -8.98741
+  },
+  "CHEMBL300235": {
+   "cnn_affinity": 6.56266,
+   "cnn_score": 0.75395,
+   "vina_affinity": -8.2623
+  },
+  "CHEMBL300908": {
+   "cnn_affinity": 5.28032,
+   "cnn_score": 0.25055,
+   "vina_affinity": -7.50661
+  },
+  "CHEMBL301563": {
+   "cnn_affinity": 5.71819,
+   "cnn_score": 0.28579,
+   "vina_affinity": -9.78469
+  },
+  "CHEMBL301729": {
+   "cnn_affinity": 5.01963,
+   "cnn_score": 0.24827,
+   "vina_affinity": -9.20575
+  },
+  "CHEMBL302178": {
+   "cnn_affinity": 5.78451,
+   "cnn_score": 0.1278,
+   "vina_affinity": -8.08084
+  },
+  "CHEMBL302913": {
+   "cnn_affinity": 4.9681,
+   "cnn_score": 0.04663,
+   "vina_affinity": -8.54885
+  },
+  "CHEMBL302968": {
+   "cnn_affinity": 5.71878,
+   "cnn_score": 0.11913,
+   "vina_affinity": -8.84287
+  },
+  "CHEMBL303345": {
+   "cnn_affinity": 5.56583,
+   "cnn_score": 0.08129,
+   "vina_affinity": -9.9589
+  },
+  "CHEMBL303504": {
+   "cnn_affinity": 6.81374,
+   "cnn_score": 0.4644,
+   "vina_affinity": -8.96779
+  },
+  "CHEMBL303790": {
+   "cnn_affinity": 7.19133,
+   "cnn_score": 0.64981,
+   "vina_affinity": -8.65251
+  },
+  "CHEMBL303970": {
+   "cnn_affinity": 4.51295,
+   "cnn_score": 0.23617,
+   "vina_affinity": -8.98957
+  },
+  "CHEMBL304080": {
+   "cnn_affinity": 6.12337,
+   "cnn_score": 0.16648,
+   "vina_affinity": -8.74685
+  },
+  "CHEMBL304859": {
+   "cnn_affinity": 5.90326,
+   "cnn_score": 0.12088,
+   "vina_affinity": -8.16892
+  },
+  "CHEMBL305097": {
+   "cnn_affinity": 6.32128,
+   "cnn_score": 0.24464,
+   "vina_affinity": -10.14088
+  },
+  "CHEMBL305349": {
+   "cnn_affinity": 4.7627,
+   "cnn_score": 0.08929,
+   "vina_affinity": -7.48388
+  },
+  "CHEMBL305379": {
+   "cnn_affinity": 5.76111,
+   "cnn_score": 0.21586,
+   "vina_affinity": -9.48099
+  },
+  "CHEMBL305394": {
+   "cnn_affinity": 8.10415,
+   "cnn_score": 0.46541,
+   "vina_affinity": -9.6535
+  },
+  "CHEMBL307655": {
+   "cnn_affinity": 7.32728,
+   "cnn_score": 0.62039,
+   "vina_affinity": -9.99154
+  },
+  "CHEMBL308600": {
+   "cnn_affinity": 7.0617,
+   "cnn_score": 0.7394,
+   "vina_affinity": -9.38825
+  },
+  "CHEMBL309394": {
+   "cnn_affinity": 5.81341,
+   "cnn_score": 0.05678,
+   "vina_affinity": -9.21595
+  },
+  "CHEMBL311067": {
+   "cnn_affinity": 6.9767,
+   "cnn_score": 0.24715,
+   "vina_affinity": -8.70233
+  },
+  "CHEMBL311553": {
+   "cnn_affinity": 6.6229,
+   "cnn_score": 0.04999,
+   "vina_affinity": -9.72279
+  },
+  "CHEMBL3115900": {
+   "cnn_affinity": 7.5882,
+   "cnn_score": 0.88582,
+   "vina_affinity": -10.1373
+  },
+  "CHEMBL3115903": {
+   "cnn_affinity": 7.40736,
+   "cnn_score": 0.54954,
+   "vina_affinity": -9.52603
+  },
+  "CHEMBL316053": {
+   "cnn_affinity": 7.54701,
+   "cnn_score": 0.50928,
+   "vina_affinity": -10.2394
+  },
+  "CHEMBL316646": {
+   "cnn_affinity": 7.11152,
+   "cnn_score": 0.31975,
+   "vina_affinity": -11.98208
+  },
+  "CHEMBL316820": {
+   "cnn_affinity": 7.07634,
+   "cnn_score": 0.41902,
+   "vina_affinity": -9.5748
+  },
+  "CHEMBL318352": {
+   "cnn_affinity": 7.05353,
+   "cnn_score": 0.4817,
+   "vina_affinity": -11.28195
+  },
+  "CHEMBL318526": {
+   "cnn_affinity": 4.61004,
+   "cnn_score": 0.15567,
+   "vina_affinity": -8.42917
+  },
+  "CHEMBL320098": {
+   "cnn_affinity": 6.86955,
+   "cnn_score": 0.91319,
+   "vina_affinity": -8.73566
+  },
+  "CHEMBL320512": {
+   "cnn_affinity": 5.96528,
+   "cnn_score": 0.19716,
+   "vina_affinity": -10.07066
+  },
+  "CHEMBL320542": {
+   "cnn_affinity": 6.75542,
+   "cnn_score": 0.52219,
+   "vina_affinity": -9.16628
+  },
+  "CHEMBL321510": {
+   "cnn_affinity": 5.51256,
+   "cnn_score": 0.23747,
+   "vina_affinity": -9.26146
+  },
+  "CHEMBL321895": {
+   "cnn_affinity": 6.32217,
+   "cnn_score": 0.39712,
+   "vina_affinity": -9.67556
+  },
+  "CHEMBL3219088": {
+   "cnn_affinity": 6.49342,
+   "cnn_score": 0.16166,
+   "vina_affinity": -9.91359
+  },
+  "CHEMBL3219089": {
+   "cnn_affinity": 5.57306,
+   "cnn_score": 0.11844,
+   "vina_affinity": -10.27322
+  },
+  "CHEMBL3219091": {
+   "cnn_affinity": 5.8226,
+   "cnn_score": 0.09069,
+   "vina_affinity": -10.51363
+  },
+  "CHEMBL323101": {
+   "cnn_affinity": 6.68837,
+   "cnn_score": 0.42068,
+   "vina_affinity": -10.30593
+  },
+  "CHEMBL323642": {
+   "cnn_affinity": 6.82118,
+   "cnn_score": 0.22693,
+   "vina_affinity": -9.35909
+  },
+  "CHEMBL323833": {
+   "cnn_affinity": 7.27884,
+   "cnn_score": 0.49398,
+   "vina_affinity": -9.99412
+  },
+  "CHEMBL323963": {
+   "cnn_affinity": 6.95729,
+   "cnn_score": 0.91379,
+   "vina_affinity": -8.81682
+  },
+  "CHEMBL324485": {
+   "cnn_affinity": 7.30677,
+   "cnn_score": 0.46698,
+   "vina_affinity": -10.21898
+  },
+  "CHEMBL325869": {
+   "cnn_affinity": 7.35285,
+   "cnn_score": 0.34841,
+   "vina_affinity": -10.74978
+  },
+  "CHEMBL327113": {
+   "cnn_affinity": 6.95049,
+   "cnn_score": 0.92314,
+   "vina_affinity": -8.46352
+  },
+  "CHEMBL327136": {
+   "cnn_affinity": 7.18292,
+   "cnn_score": 0.39574,
+   "vina_affinity": -9.92634
+  },
+  "CHEMBL330102": {
+   "cnn_affinity": 4.71616,
+   "cnn_score": 0.21322,
+   "vina_affinity": -8.19393
+  },
+  "CHEMBL330460": {
+   "cnn_affinity": 6.1561,
+   "cnn_score": 0.78029,
+   "vina_affinity": -8.00309
+  },
+  "CHEMBL330572": {
+   "cnn_affinity": 7.41997,
+   "cnn_score": 0.6588,
+   "vina_affinity": -9.47807
+  },
+  "CHEMBL331231": {
+   "cnn_affinity": 7.78224,
+   "cnn_score": 0.87795,
+   "vina_affinity": -10.59088
+  },
+  "CHEMBL331807": {
+   "cnn_affinity": 7.20592,
+   "cnn_score": 0.54348,
+   "vina_affinity": -10.15093
+  },
+  "CHEMBL332983": {
+   "cnn_affinity": 6.72787,
+   "cnn_score": 0.49158,
+   "vina_affinity": -9.39366
+  },
+  "CHEMBL3330446": {
+   "cnn_affinity": 7.96251,
+   "cnn_score": 0.99195,
+   "vina_affinity": -9.52328
+  },
+  "CHEMBL3330456": {
+   "cnn_affinity": 7.02286,
+   "cnn_score": 0.70105,
+   "vina_affinity": -8.44342
+  },
+  "CHEMBL3330457": {
+   "cnn_affinity": 6.97819,
+   "cnn_score": 0.60189,
+   "vina_affinity": -8.44389
+  },
+  "CHEMBL3330470": {
+   "cnn_affinity": 6.39777,
+   "cnn_score": 0.31491,
+   "vina_affinity": -9.82241
+  },
+  "CHEMBL3330474": {
+   "cnn_affinity": 5.95124,
+   "cnn_score": 0.23091,
+   "vina_affinity": -7.78162
+  },
+  "CHEMBL333264": {
+   "cnn_affinity": 7.81191,
+   "cnn_score": 0.98739,
+   "vina_affinity": -9.62819
+  },
+  "CHEMBL334121": {
+   "cnn_affinity": 7.57785,
+   "cnn_score": 0.27689,
+   "vina_affinity": -9.42451
+  },
+  "CHEMBL3343302": {
+   "cnn_affinity": 5.35825,
+   "cnn_score": 0.36291,
+   "vina_affinity": -7.49574
+  },
+  "CHEMBL3343303": {
+   "cnn_affinity": 5.52775,
+   "cnn_score": 0.25092,
+   "vina_affinity": -8.25043
+  },
+  "CHEMBL337014": {
+   "cnn_affinity": 7.56938,
+   "cnn_score": 0.18116,
+   "vina_affinity": -9.12547
+  },
+  "CHEMBL337238": {
+   "cnn_affinity": 6.6858,
+   "cnn_score": 0.05334,
+   "vina_affinity": -8.96321
+  },
+  "CHEMBL337921": {
+   "cnn_affinity": 7.6853,
+   "cnn_score": 0.75999,
+   "vina_affinity": -9.41532
+  },
+  "CHEMBL338060": {
+   "cnn_affinity": 5.93233,
+   "cnn_score": 0.34115,
+   "vina_affinity": -8.61396
+  },
+  "CHEMBL338788": {
+   "cnn_affinity": 7.28333,
+   "cnn_score": 0.13405,
+   "vina_affinity": -8.54648
+  },
+  "CHEMBL339241": {
+   "cnn_affinity": 7.2275,
+   "cnn_score": 0.17346,
+   "vina_affinity": -9.62507
+  },
+  "CHEMBL339341": {
+   "cnn_affinity": 7.67995,
+   "cnn_score": 0.25161,
+   "vina_affinity": -9.02533
+  },
+  "CHEMBL339902": {
+   "cnn_affinity": 4.93344,
+   "cnn_score": 0.08933,
+   "vina_affinity": -7.72974
+  },
+  "CHEMBL340500": {
+   "cnn_affinity": 5.86224,
+   "cnn_score": 0.09215,
+   "vina_affinity": -7.64176
+  },
+  "CHEMBL34067": {
+   "cnn_affinity": 6.17587,
+   "cnn_score": 0.46892,
+   "vina_affinity": -9.67634
+  },
+  "CHEMBL341187": {
+   "cnn_affinity": 7.08242,
+   "cnn_score": 0.77518,
+   "vina_affinity": -9.19383
+  },
+  "CHEMBL341510": {
+   "cnn_affinity": 7.72833,
+   "cnn_score": 0.955,
+   "vina_affinity": -10.21689
+  },
+  "CHEMBL3415991": {
+   "cnn_affinity": 7.71916,
+   "cnn_score": 0.896,
+   "vina_affinity": -9.64942
+  },
+  "CHEMBL3415992": {
+   "cnn_affinity": 7.52272,
+   "cnn_score": 0.73748,
+   "vina_affinity": -9.81198
+  },
+  "CHEMBL3415993": {
+   "cnn_affinity": 7.83368,
+   "cnn_score": 0.84864,
+   "vina_affinity": -10.00226
+  },
+  "CHEMBL3415994": {
+   "cnn_affinity": 8.29805,
+   "cnn_score": 0.93818,
+   "vina_affinity": -9.51681
+  },
+  "CHEMBL341636": {
+   "cnn_affinity": 7.25947,
+   "cnn_score": 0.44149,
+   "vina_affinity": -9.29237
+  },
+  "CHEMBL3423050": {
+   "cnn_affinity": 6.11132,
+   "cnn_score": 0.18996,
+   "vina_affinity": -7.53394
+  },
+  "CHEMBL342621": {
+   "cnn_affinity": 6.54359,
+   "cnn_score": 0.40462,
+   "vina_affinity": -10.88294
+  },
+  "CHEMBL343892": {
+   "cnn_affinity": 6.17701,
+   "cnn_score": 0.23317,
+   "vina_affinity": -10.00864
+  },
+  "CHEMBL344104": {
+   "cnn_affinity": 5.0403,
+   "cnn_score": 0.0682,
+   "vina_affinity": -9.57894
+  },
+  "CHEMBL344283": {
+   "cnn_affinity": 5.8549,
+   "cnn_score": 0.04679,
+   "vina_affinity": -8.60789
+  },
+  "CHEMBL344552": {
+   "cnn_affinity": 7.08584,
+   "cnn_score": 0.46306,
+   "vina_affinity": -9.53748
+  },
+  "CHEMBL345435": {
+   "cnn_affinity": 7.01579,
+   "cnn_score": 0.53282,
+   "vina_affinity": -9.24869
+  },
+  "CHEMBL345492": {
+   "cnn_affinity": 5.12483,
+   "cnn_score": 0.2341,
+   "vina_affinity": -7.66533
+  },
+  "CHEMBL345710": {
+   "cnn_affinity": 6.37087,
+   "cnn_score": 0.67382,
+   "vina_affinity": -8.57995
+  },
+  "CHEMBL346117": {
+   "cnn_affinity": 7.19739,
+   "cnn_score": 0.88466,
+   "vina_affinity": -10.91148
+  },
+  "CHEMBL347846": {
+   "cnn_affinity": 7.77081,
+   "cnn_score": 0.94695,
+   "vina_affinity": -12.4616
+  },
+  "CHEMBL349134": {
+   "cnn_affinity": 7.62728,
+   "cnn_score": 0.95332,
+   "vina_affinity": -9.84101
+  },
+  "CHEMBL349606": {
+   "cnn_affinity": 7.00894,
+   "cnn_score": 0.29482,
+   "vina_affinity": -8.68772
+  },
+  "CHEMBL350280": {
+   "cnn_affinity": 7.28685,
+   "cnn_score": 0.62064,
+   "vina_affinity": -8.48182
+  },
+  "CHEMBL350380": {
+   "cnn_affinity": 7.72833,
+   "cnn_score": 0.87736,
+   "vina_affinity": -9.92839
+  },
+  "CHEMBL350513": {
+   "cnn_affinity": 6.1348,
+   "cnn_score": 0.31855,
+   "vina_affinity": -8.72787
+  },
+  "CHEMBL351052": {
+   "cnn_affinity": 5.81684,
+   "cnn_score": 0.17003,
+   "vina_affinity": -7.38748
+  },
+  "CHEMBL351209": {
+   "cnn_affinity": 6.93494,
+   "cnn_score": 0.42667,
+   "vina_affinity": -7.99849
+  },
+  "CHEMBL351312": {
+   "cnn_affinity": 6.78139,
+   "cnn_score": 0.37557,
+   "vina_affinity": -8.90132
+  },
+  "CHEMBL351982": {
+   "cnn_affinity": 6.71159,
+   "cnn_score": 0.48329,
+   "vina_affinity": -8.91855
+  },
+  "CHEMBL352009": {
+   "cnn_affinity": 6.74264,
+   "cnn_score": 0.66334,
+   "vina_affinity": -9.52745
+  },
+  "CHEMBL352605": {
+   "cnn_affinity": 8.44713,
+   "cnn_score": 0.83578,
+   "vina_affinity": -9.70442
+  },
+  "CHEMBL352681": {
+   "cnn_affinity": 6.59501,
+   "cnn_score": 0.25088,
+   "vina_affinity": -8.65378
+  },
+  "CHEMBL355097": {
+   "cnn_affinity": 6.51522,
+   "cnn_score": 0.25351,
+   "vina_affinity": -8.60537
+  },
+  "CHEMBL355573": {
+   "cnn_affinity": 8.18173,
+   "cnn_score": 0.98041,
+   "vina_affinity": -11.85716
+  },
+  "CHEMBL355796": {
+   "cnn_affinity": 7.55159,
+   "cnn_score": 0.25712,
+   "vina_affinity": -9.69732
+  },
+  "CHEMBL356071": {
+   "cnn_affinity": 7.33927,
+   "cnn_score": 0.44115,
+   "vina_affinity": -10.62121
+  },
+  "CHEMBL356094": {
+   "cnn_affinity": 5.32506,
+   "cnn_score": 0.23896,
+   "vina_affinity": -9.42519
+  },
+  "CHEMBL356295": {
+   "cnn_affinity": 4.77375,
+   "cnn_score": 0.21418,
+   "vina_affinity": -7.43663
+  },
+  "CHEMBL35632": {
+   "cnn_affinity": 6.55159,
+   "cnn_score": 0.31096,
+   "vina_affinity": -10.41947
+  },
+  "CHEMBL356580": {
+   "cnn_affinity": 7.24014,
+   "cnn_score": 0.55095,
+   "vina_affinity": -9.8107
+  },
+  "CHEMBL356792": {
+   "cnn_affinity": 7.00561,
+   "cnn_score": 0.56772,
+   "vina_affinity": -10.4566
+  },
+  "CHEMBL357210": {
+   "cnn_affinity": 7.01854,
+   "cnn_score": 0.68755,
+   "vina_affinity": -9.69308
+  },
+  "CHEMBL357211": {
+   "cnn_affinity": 7.36462,
+   "cnn_score": 0.31175,
+   "vina_affinity": -10.65721
+  },
+  "CHEMBL357635": {
+   "cnn_affinity": 6.79352,
+   "cnn_score": 0.12096,
+   "vina_affinity": -10.90442
+  },
+  "CHEMBL357660": {
+   "cnn_affinity": 5.29126,
+   "cnn_score": 0.0987,
+   "vina_affinity": -9.4101
+  },
+  "CHEMBL358081": {
+   "cnn_affinity": 6.87939,
+   "cnn_score": 0.69057,
+   "vina_affinity": -9.29243
+  },
+  "CHEMBL358180": {
+   "cnn_affinity": 5.12271,
+   "cnn_score": 0.13256,
+   "vina_affinity": -8.74502
+  },
+  "CHEMBL358366": {
+   "cnn_affinity": 7.42846,
+   "cnn_score": 0.70849,
+   "vina_affinity": -10.02115
+  },
+  "CHEMBL358491": {
+   "cnn_affinity": 4.80455,
+   "cnn_score": 0.09211,
+   "vina_affinity": -8.84399
+  },
+  "CHEMBL358526": {
+   "cnn_affinity": 5.3739,
+   "cnn_score": 0.18437,
+   "vina_affinity": -9.16285
+  },
+  "CHEMBL358961": {
+   "cnn_affinity": 7.55661,
+   "cnn_score": 0.21035,
+   "vina_affinity": -8.41216
+  },
+  "CHEMBL358970": {
+   "cnn_affinity": 6.32034,
+   "cnn_score": 0.45233,
+   "vina_affinity": -10.61308
+  },
+  "CHEMBL360313": {
+   "cnn_affinity": 6.93946,
+   "cnn_score": 0.7822,
+   "vina_affinity": -8.54942
+  },
+  "CHEMBL360852": {
+   "cnn_affinity": 5.05607,
+   "cnn_score": 0.11579,
+   "vina_affinity": -8.63248
+  },
+  "CHEMBL360856": {
+   "cnn_affinity": 8.1019,
+   "cnn_score": 0.97649,
+   "vina_affinity": -8.6922
+  },
+  "CHEMBL361728": {
+   "cnn_affinity": 8.40001,
+   "cnn_score": 0.9867,
+   "vina_affinity": -9.1323
+  },
+  "CHEMBL361870": {
+   "cnn_affinity": 6.06131,
+   "cnn_score": 0.3792,
+   "vina_affinity": -7.8327
+  },
+  "CHEMBL362110": {
+   "cnn_affinity": 8.28325,
+   "cnn_score": 0.98688,
+   "vina_affinity": -8.83564
+  },
+  "CHEMBL362161": {
+   "cnn_affinity": 8.02918,
+   "cnn_score": 0.98334,
+   "vina_affinity": -8.75402
+  },
+  "CHEMBL362229": {
+   "cnn_affinity": 8.32598,
+   "cnn_score": 0.96192,
+   "vina_affinity": -11.61624
+  },
+  "CHEMBL36265": {
+   "cnn_affinity": 7.71199,
+   "cnn_score": 0.91624,
+   "vina_affinity": -11.35704
+  },
+  "CHEMBL36276": {
+   "cnn_affinity": 7.02157,
+   "cnn_score": 0.45029,
+   "vina_affinity": -11.16787
+  },
+  "CHEMBL3627893": {
+   "cnn_affinity": 6.1202,
+   "cnn_score": 0.11057,
+   "vina_affinity": -9.21187
+  },
+  "CHEMBL3627895": {
+   "cnn_affinity": 8.41348,
+   "cnn_score": 0.8713,
+   "vina_affinity": -9.70033
+  },
+  "CHEMBL3628833": {
+   "cnn_affinity": 8.27292,
+   "cnn_score": 0.7468,
+   "vina_affinity": -9.21487
+  },
+  "CHEMBL3628834": {
+   "cnn_affinity": 5.91606,
+   "cnn_score": 0.06981,
+   "vina_affinity": -8.06382
+  },
+  "CHEMBL36316": {
+   "cnn_affinity": 7.69677,
+   "cnn_score": 0.92117,
+   "vina_affinity": -11.48491
+  },
+  "CHEMBL364066": {
+   "cnn_affinity": 7.67724,
+   "cnn_score": 0.77574,
+   "vina_affinity": -10.47722
+  },
+  "CHEMBL364371": {
+   "cnn_affinity": 8.16511,
+   "cnn_score": 0.9872,
+   "vina_affinity": -9.08616
+  },
+  "CHEMBL364422": {
+   "cnn_affinity": 8.21599,
+   "cnn_score": 0.99265,
+   "vina_affinity": -8.80211
+  },
+  "CHEMBL36547": {
+   "cnn_affinity": 7.71408,
+   "cnn_score": 0.9103,
+   "vina_affinity": -10.80707
+  },
+  "CHEMBL366405": {
+   "cnn_affinity": 8.39909,
+   "cnn_score": 0.81913,
+   "vina_affinity": -10.10197
+  },
+  "CHEMBL366535": {
+   "cnn_affinity": 6.56935,
+   "cnn_score": 0.09961,
+   "vina_affinity": -9.48722
+  },
+  "CHEMBL366556": {
+   "cnn_affinity": 6.9719,
+   "cnn_score": 0.19781,
+   "vina_affinity": -9.20962
+  },
+  "CHEMBL366802": {
+   "cnn_affinity": 8.07948,
+   "cnn_score": 0.96638,
+   "vina_affinity": -12.0872
+  },
+  "CHEMBL366855": {
+   "cnn_affinity": 7.12346,
+   "cnn_score": 0.26213,
+   "vina_affinity": -9.80892
+  },
+  "CHEMBL366862": {
+   "cnn_affinity": 7.98469,
+   "cnn_score": 0.96027,
+   "vina_affinity": -11.76922
+  },
+  "CHEMBL366921": {
+   "cnn_affinity": 7.13684,
+   "cnn_score": 0.24414,
+   "vina_affinity": -9.73016
+  },
+  "CHEMBL366962": {
+   "cnn_affinity": 8.20036,
+   "cnn_score": 0.95877,
+   "vina_affinity": -11.26454
+  },
+  "CHEMBL36735": {
+   "cnn_affinity": 7.29847,
+   "cnn_score": 0.76074,
+   "vina_affinity": -11.12833
+  },
+  "CHEMBL367386": {
+   "cnn_affinity": 7.84966,
+   "cnn_score": 0.82513,
+   "vina_affinity": -10.44999
+  },
+  "CHEMBL367472": {
+   "cnn_affinity": 8.02479,
+   "cnn_score": 0.86496,
+   "vina_affinity": -10.63391
+  },
+  "CHEMBL367476": {
+   "cnn_affinity": 8.22394,
+   "cnn_score": 0.83763,
+   "vina_affinity": -10.12913
+  },
+  "CHEMBL367609": {
+   "cnn_affinity": 7.86272,
+   "cnn_score": 0.97125,
+   "vina_affinity": -11.97532
+  },
+  "CHEMBL367644": {
+   "cnn_affinity": 7.83188,
+   "cnn_score": 0.8969,
+   "vina_affinity": -10.55975
+  },
+  "CHEMBL367725": {
+   "cnn_affinity": 6.48694,
+   "cnn_score": 0.2022,
+   "vina_affinity": -10.36378
+  },
+  "CHEMBL367840": {
+   "cnn_affinity": 5.01377,
+   "cnn_score": 0.07568,
+   "vina_affinity": -9.20063
+  },
+  "CHEMBL368089": {
+   "cnn_affinity": 8.19693,
+   "cnn_score": 0.97885,
+   "vina_affinity": -11.37862
+  },
+  "CHEMBL368411": {
+   "cnn_affinity": 8.29497,
+   "cnn_score": 0.9437,
+   "vina_affinity": -11.70507
+  },
+  "CHEMBL368676": {
+   "cnn_affinity": 8.0924,
+   "cnn_score": 0.96925,
+   "vina_affinity": -12.12392
+  },
+  "CHEMBL368862": {
+   "cnn_affinity": 8.00129,
+   "cnn_score": 0.97081,
+   "vina_affinity": -11.82339
+  },
+  "CHEMBL368984": {
+   "cnn_affinity": 7.99006,
+   "cnn_score": 0.90851,
+   "vina_affinity": -11.3531
+  },
+  "CHEMBL369084": {
+   "cnn_affinity": 7.15498,
+   "cnn_score": 0.27112,
+   "vina_affinity": -9.05545
+  },
+  "CHEMBL369130": {
+   "cnn_affinity": 8.26158,
+   "cnn_score": 0.97199,
+   "vina_affinity": -11.78167
+  },
+  "CHEMBL369159": {
+   "cnn_affinity": 8.06539,
+   "cnn_score": 0.87182,
+   "vina_affinity": -10.43171
+  },
+  "CHEMBL369161": {
+   "cnn_affinity": 8.01798,
+   "cnn_score": 0.83338,
+   "vina_affinity": -9.75996
+  },
+  "CHEMBL369165": {
+   "cnn_affinity": 5.75535,
+   "cnn_score": 0.06821,
+   "vina_affinity": -9.59786
+  },
+  "CHEMBL369480": {
+   "cnn_affinity": 5.79145,
+   "cnn_score": 0.07061,
+   "vina_affinity": -9.70508
+  },
+  "CHEMBL369583": {
+   "cnn_affinity": 6.22568,
+   "cnn_score": 0.13065,
+   "vina_affinity": -9.74739
+  },
+  "CHEMBL37034": {
+   "cnn_affinity": 7.49747,
+   "cnn_score": 0.92294,
+   "vina_affinity": -11.0071
+  },
+  "CHEMBL37152": {
+   "cnn_affinity": 7.21665,
+   "cnn_score": 0.76574,
+   "vina_affinity": -10.96767
+  },
+  "CHEMBL372108": {
+   "cnn_affinity": 6.64183,
+   "cnn_score": 0.40724,
+   "vina_affinity": -9.266
+  },
+  "CHEMBL3740904": {
+   "cnn_affinity": 5.98316,
+   "cnn_score": 0.22493,
+   "vina_affinity": -8.4887
+  },
+  "CHEMBL374524": {
+   "cnn_affinity": 6.08928,
+   "cnn_score": 0.11836,
+   "vina_affinity": -8.52951
+  },
+  "CHEMBL375599": {
+   "cnn_affinity": 6.26013,
+   "cnn_score": 0.06917,
+   "vina_affinity": -8.03723
+  },
+  "CHEMBL3780039": {
+   "cnn_affinity": 7.46612,
+   "cnn_score": 0.91828,
+   "vina_affinity": -11.27693
+  },
+  "CHEMBL3780277": {
+   "cnn_affinity": 7.24539,
+   "cnn_score": 0.77667,
+   "vina_affinity": -10.62635
+  },
+  "CHEMBL3780437": {
+   "cnn_affinity": 5.07495,
+   "cnn_score": 0.09482,
+   "vina_affinity": -9.30541
+  },
+  "CHEMBL379068": {
+   "cnn_affinity": 7.03472,
+   "cnn_score": 0.14111,
+   "vina_affinity": -9.23213
+  },
+  "CHEMBL379186": {
+   "cnn_affinity": 7.20703,
+   "cnn_score": 0.19041,
+   "vina_affinity": -9.2215
+  },
+  "CHEMBL379194": {
+   "cnn_affinity": 6.47456,
+   "cnn_score": 0.28883,
+   "vina_affinity": -9.42898
+  },
+  "CHEMBL379357": {
+   "cnn_affinity": 7.31815,
+   "cnn_score": 0.31453,
+   "vina_affinity": -10.26778
+  },
+  "CHEMBL379960": {
+   "cnn_affinity": 6.86291,
+   "cnn_score": 0.16469,
+   "vina_affinity": -7.89777
+  },
+  "CHEMBL381148": {
+   "cnn_affinity": 5.77054,
+   "cnn_score": 0.78642,
+   "vina_affinity": -7.80667
+  },
+  "CHEMBL381222": {
+   "cnn_affinity": 6.32622,
+   "cnn_score": 0.45965,
+   "vina_affinity": -9.37244
+  },
+  "CHEMBL38231": {
+   "cnn_affinity": 7.39513,
+   "cnn_score": 0.91618,
+   "vina_affinity": -10.97696
+  },
+  "CHEMBL383382": {
+   "cnn_affinity": 7.26267,
+   "cnn_score": 0.87784,
+   "vina_affinity": -9.33013
+  },
+  "CHEMBL384431": {
+   "cnn_affinity": 7.17863,
+   "cnn_score": 0.15615,
+   "vina_affinity": -7.96886
+  },
+  "CHEMBL384603": {
+   "cnn_affinity": 6.00594,
+   "cnn_score": 0.12776,
+   "vina_affinity": -8.03735
+  },
+  "CHEMBL384693": {
+   "cnn_affinity": 6.6739,
+   "cnn_score": 0.16059,
+   "vina_affinity": -9.05879
+  },
+  "CHEMBL391344": {
+   "cnn_affinity": 6.63602,
+   "cnn_score": 0.16027,
+   "vina_affinity": -8.43333
+  },
+  "CHEMBL391916": {
+   "cnn_affinity": 5.74492,
+   "cnn_score": 0.08708,
+   "vina_affinity": -7.40002
+  },
+  "CHEMBL391968": {
+   "cnn_affinity": 6.18809,
+   "cnn_score": 0.16994,
+   "vina_affinity": -9.73881
+  },
+  "CHEMBL39297": {
+   "cnn_affinity": 7.99129,
+   "cnn_score": 0.94485,
+   "vina_affinity": -11.94009
+  },
+  "CHEMBL39375": {
+   "cnn_affinity": 7.64902,
+   "cnn_score": 0.23723,
+   "vina_affinity": -9.56314
+  },
+  "CHEMBL393979": {
+   "cnn_affinity": 6.69653,
+   "cnn_score": 0.27354,
+   "vina_affinity": -9.25058
+  },
+  "CHEMBL39425": {
+   "cnn_affinity": 6.55267,
+   "cnn_score": 0.34398,
+   "vina_affinity": -9.94715
+  },
+  "CHEMBL39482": {
+   "cnn_affinity": 7.39087,
+   "cnn_score": 0.92393,
+   "vina_affinity": -10.79804
+  },
+  "CHEMBL39676": {
+   "cnn_affinity": 7.73269,
+   "cnn_score": 0.90684,
+   "vina_affinity": -11.72929
+  },
+  "CHEMBL39760": {
+   "cnn_affinity": 5.89511,
+   "cnn_score": 0.20678,
+   "vina_affinity": -9.8662
+  },
+  "CHEMBL40074": {
+   "cnn_affinity": 7.77032,
+   "cnn_score": 0.95282,
+   "vina_affinity": -11.69397
+  },
+  "CHEMBL40129": {
+   "cnn_affinity": 7.80036,
+   "cnn_score": 0.93285,
+   "vina_affinity": -12.03073
+  },
+  "CHEMBL40162": {
+   "cnn_affinity": 7.64551,
+   "cnn_score": 0.93057,
+   "vina_affinity": -11.01453
+  },
+  "CHEMBL405427": {
+   "cnn_affinity": 6.51355,
+   "cnn_score": 0.25182,
+   "vina_affinity": -8.98857
+  },
+  "CHEMBL4066380": {
+   "cnn_affinity": 5.18656,
+   "cnn_score": 0.06376,
+   "vina_affinity": -7.59844
+  },
+  "CHEMBL4072364": {
+   "cnn_affinity": 5.9986,
+   "cnn_score": 0.1356,
+   "vina_affinity": -8.58078
+  },
+  "CHEMBL4074983": {
+   "cnn_affinity": 4.97666,
+   "cnn_score": 0.08166,
+   "vina_affinity": -7.5628
+  },
+  "CHEMBL40765": {
+   "cnn_affinity": 6.74296,
+   "cnn_score": 0.50146,
+   "vina_affinity": -7.46251
+  },
+  "CHEMBL4082857": {
+   "cnn_affinity": 5.46019,
+   "cnn_score": 0.11091,
+   "vina_affinity": -8.07627
+  },
+  "CHEMBL4084611": {
+   "cnn_affinity": 8.21379,
+   "cnn_score": 0.97154,
+   "vina_affinity": -10.30449
+  },
+  "CHEMBL4095415": {
+   "cnn_affinity": 5.05646,
+   "cnn_score": 0.07076,
+   "vina_affinity": -7.67879
+  },
+  "CHEMBL4096341": {
+   "cnn_affinity": 5.87797,
+   "cnn_score": 0.10502,
+   "vina_affinity": -8.52453
+  },
+  "CHEMBL4099310": {
+   "cnn_affinity": 6.12983,
+   "cnn_score": 0.15595,
+   "vina_affinity": -9.22693
+  },
+  "CHEMBL410550": {
+   "cnn_affinity": 5.77238,
+   "cnn_score": 0.18609,
+   "vina_affinity": -8.36568
+  },
+  "CHEMBL41220": {
+   "cnn_affinity": 5.50441,
+   "cnn_score": 0.10747,
+   "vina_affinity": -9.99932
+  },
+  "CHEMBL414606": {
+   "cnn_affinity": 7.63935,
+   "cnn_score": 0.57247,
+   "vina_affinity": -9.85972
+  },
+  "CHEMBL415741": {
+   "cnn_affinity": 6.75242,
+   "cnn_score": 0.79114,
+   "vina_affinity": -9.60604
+  },
+  "CHEMBL416674": {
+   "cnn_affinity": 5.36226,
+   "cnn_score": 0.08232,
+   "vina_affinity": -9.09935
+  },
+  "CHEMBL416834": {
+   "cnn_affinity": 5.30814,
+   "cnn_score": 0.10657,
+   "vina_affinity": -8.68219
+  },
+  "CHEMBL41722": {
+   "cnn_affinity": 5.33233,
+   "cnn_score": 0.16557,
+   "vina_affinity": -7.19312
+  },
+  "CHEMBL417409": {
+   "cnn_affinity": 5.22856,
+   "cnn_score": 0.32337,
+   "vina_affinity": -7.72883
+  },
+  "CHEMBL417738": {
+   "cnn_affinity": 7.75715,
+   "cnn_score": 0.90427,
+   "vina_affinity": -8.96424
+  },
+  "CHEMBL41862": {
+   "cnn_affinity": 4.88547,
+   "cnn_score": 0.16433,
+   "vina_affinity": -8.60952
+  },
+  "CHEMBL41876": {
+   "cnn_affinity": 6.3542,
+   "cnn_score": 0.64121,
+   "vina_affinity": -9.94007
+  },
+  "CHEMBL419222": {
+   "cnn_affinity": 5.95245,
+   "cnn_score": 0.18892,
+   "vina_affinity": -9.78757
+  },
+  "CHEMBL419608": {
+   "cnn_affinity": 7.8585,
+   "cnn_score": 0.88726,
+   "vina_affinity": -9.14728
+  },
+  "CHEMBL420070": {
+   "cnn_affinity": 4.80049,
+   "cnn_score": 0.47206,
+   "vina_affinity": -7.56246
+  },
+  "CHEMBL420322": {
+   "cnn_affinity": 6.93112,
+   "cnn_score": 0.30685,
+   "vina_affinity": -9.333
+  },
+  "CHEMBL4203384": {
+   "cnn_affinity": 4.12217,
+   "cnn_score": 0.45152,
+   "vina_affinity": -7.63783
+  },
+  "CHEMBL420338": {
+   "cnn_affinity": 5.22455,
+   "cnn_score": 0.09701,
+   "vina_affinity": -7.44769
+  },
+  "CHEMBL420688": {
+   "cnn_affinity": 6.77349,
+   "cnn_score": 0.43494,
+   "vina_affinity": -9.65026
+  },
+  "CHEMBL4208256": {
+   "cnn_affinity": 4.75077,
+   "cnn_score": 0.70179,
+   "vina_affinity": -7.62304
+  },
+  "CHEMBL421272": {
+   "cnn_affinity": 8.1656,
+   "cnn_score": 0.79287,
+   "vina_affinity": -9.0995
+  },
+  "CHEMBL42134": {
+   "cnn_affinity": 7.30942,
+   "cnn_score": 0.83023,
+   "vina_affinity": -11.8267
+  },
+  "CHEMBL421808": {
+   "cnn_affinity": 7.6388,
+   "cnn_score": 0.94052,
+   "vina_affinity": -11.95115
+  },
+  "CHEMBL422351": {
+   "cnn_affinity": 7.59713,
+   "cnn_score": 0.95494,
+   "vina_affinity": -11.57796
+  },
+  "CHEMBL422688": {
+   "cnn_affinity": 7.73812,
+   "cnn_score": 0.9555,
+   "vina_affinity": -12.27501
+  },
+  "CHEMBL423149": {
+   "cnn_affinity": 6.92643,
+   "cnn_score": 0.76048,
+   "vina_affinity": -8.44685
+  },
+  "CHEMBL423160": {
+   "cnn_affinity": 7.33404,
+   "cnn_score": 0.75854,
+   "vina_affinity": -9.01779
+  },
+  "CHEMBL423420": {
+   "cnn_affinity": 6.85436,
+   "cnn_score": 0.73138,
+   "vina_affinity": -9.20699
+  },
+  "CHEMBL423480": {
+   "cnn_affinity": 6.83393,
+   "cnn_score": 0.30959,
+   "vina_affinity": -9.9044
+  },
+  "CHEMBL423555": {
+   "cnn_affinity": 7.14245,
+   "cnn_score": 0.60944,
+   "vina_affinity": -9.59485
+  },
+  "CHEMBL424260": {
+   "cnn_affinity": 7.50068,
+   "cnn_score": 0.91301,
+   "vina_affinity": -9.66666
+  },
+  "CHEMBL425132": {
+   "cnn_affinity": 6.62264,
+   "cnn_score": 0.2489,
+   "vina_affinity": -10.77607
+  },
+  "CHEMBL425142": {
+   "cnn_affinity": 7.8847,
+   "cnn_score": 0.89248,
+   "vina_affinity": -11.37239
+  },
+  "CHEMBL425889": {
+   "cnn_affinity": 8.32708,
+   "cnn_score": 0.98832,
+   "vina_affinity": -8.34152
+  },
+  "CHEMBL427479": {
+   "cnn_affinity": 7.98511,
+   "cnn_score": 0.8303,
+   "vina_affinity": -11.24166
+  },
+  "CHEMBL42825": {
+   "cnn_affinity": 7.72236,
+   "cnn_score": 0.90444,
+   "vina_affinity": -11.16679
+  },
+  "CHEMBL429170": {
+   "cnn_affinity": 6.87359,
+   "cnn_score": 0.06913,
+   "vina_affinity": -9.33883
+  },
+  "CHEMBL43008": {
+   "cnn_affinity": 6.47287,
+   "cnn_score": 0.23252,
+   "vina_affinity": -11.06277
+  },
+  "CHEMBL43039": {
+   "cnn_affinity": 6.90772,
+   "cnn_score": 0.92116,
+   "vina_affinity": -10.39771
+  },
+  "CHEMBL43105": {
+   "cnn_affinity": 7.07235,
+   "cnn_score": 0.77837,
+   "vina_affinity": -11.40185
+  },
+  "CHEMBL431745": {
+   "cnn_affinity": 5.41832,
+   "cnn_score": 0.29084,
+   "vina_affinity": -9.46867
+  },
+  "CHEMBL432306": {
+   "cnn_affinity": 7.23995,
+   "cnn_score": 0.93953,
+   "vina_affinity": -10.92001
+  },
+  "CHEMBL433179": {
+   "cnn_affinity": 5.78198,
+   "cnn_score": 0.78696,
+   "vina_affinity": -8.64784
+  },
+  "CHEMBL433501": {
+   "cnn_affinity": 5.71581,
+   "cnn_score": 0.83886,
+   "vina_affinity": -8.50037
+  },
+  "CHEMBL433510": {
+   "cnn_affinity": 7.11618,
+   "cnn_score": 0.55824,
+   "vina_affinity": -9.15731
+  },
+  "CHEMBL435423": {
+   "cnn_affinity": 6.80126,
+   "cnn_score": 0.83903,
+   "vina_affinity": -8.63725
+  },
+  "CHEMBL436026": {
+   "cnn_affinity": 6.29598,
+   "cnn_score": 0.5507,
+   "vina_affinity": -8.4318
+  },
+  "CHEMBL436356": {
+   "cnn_affinity": 5.67688,
+   "cnn_score": 0.09423,
+   "vina_affinity": -8.97432
+  },
+  "CHEMBL437307": {
+   "cnn_affinity": 7.21584,
+   "cnn_score": 0.38316,
+   "vina_affinity": -9.79484
+  },
+  "CHEMBL439642": {
+   "cnn_affinity": 5.57887,
+   "cnn_score": 0.34591,
+   "vina_affinity": -8.52142
+  },
+  "CHEMBL439810": {
+   "cnn_affinity": 5.44247,
+   "cnn_score": 0.23294,
+   "vina_affinity": -10.14339
+  },
+  "CHEMBL44048": {
+   "cnn_affinity": 7.42911,
+   "cnn_score": 0.78952,
+   "vina_affinity": -10.68706
+  },
+  "CHEMBL44049": {
+   "cnn_affinity": 6.7859,
+   "cnn_score": 0.40175,
+   "vina_affinity": -10.99203
+  },
+  "CHEMBL441157": {
+   "cnn_affinity": 7.98695,
+   "cnn_score": 0.96794,
+   "vina_affinity": -11.88361
+  },
+  "CHEMBL441670": {
+   "cnn_affinity": 7.09485,
+   "cnn_score": 0.42692,
+   "vina_affinity": -9.41172
+  },
+  "CHEMBL441812": {
+   "cnn_affinity": 4.94263,
+   "cnn_score": 0.06742,
+   "vina_affinity": -9.25182
+  },
+  "CHEMBL442980": {
+   "cnn_affinity": 7.29884,
+   "cnn_score": 0.43973,
+   "vina_affinity": -10.22006
+  },
+  "CHEMBL443990": {
+   "cnn_affinity": 6.26982,
+   "cnn_score": 0.23069,
+   "vina_affinity": -9.34407
+  },
+  "CHEMBL444074": {
+   "cnn_affinity": 7.13495,
+   "cnn_score": 0.9363,
+   "vina_affinity": -12.01567
+  },
+  "CHEMBL4441232": {
+   "cnn_affinity": 7.91832,
+   "cnn_score": 0.85291,
+   "vina_affinity": -11.44218
+  },
+  "CHEMBL4444938": {
+   "cnn_affinity": 5.69944,
+   "cnn_score": 0.07024,
+   "vina_affinity": -9.29721
+  },
+  "CHEMBL444601": {
+   "cnn_affinity": 6.90471,
+   "cnn_score": 0.52097,
+   "vina_affinity": -9.15449
+  },
+  "CHEMBL4447848": {
+   "cnn_affinity": 5.62235,
+   "cnn_score": 0.17413,
+   "vina_affinity": -8.30297
+  },
+  "CHEMBL444809": {
+   "cnn_affinity": 8.33351,
+   "cnn_score": 0.96898,
+   "vina_affinity": -11.74844
+  },
+  "CHEMBL4448473": {
+   "cnn_affinity": 7.1897,
+   "cnn_score": 0.39491,
+   "vina_affinity": -10.70802
+  },
+  "CHEMBL445562": {
+   "cnn_affinity": 7.57416,
+   "cnn_score": 0.89856,
+   "vina_affinity": -11.30278
+  },
+  "CHEMBL445616": {
+   "cnn_affinity": 7.13095,
+   "cnn_score": 0.24416,
+   "vina_affinity": -9.59549
+  },
+  "CHEMBL44591": {
+   "cnn_affinity": 7.47299,
+   "cnn_score": 0.82368,
+   "vina_affinity": -11.14726
+  },
+  "CHEMBL4460456": {
+   "cnn_affinity": 4.94627,
+   "cnn_score": 0.05911,
+   "vina_affinity": -7.51341
+  },
+  "CHEMBL446398": {
+   "cnn_affinity": 5.81713,
+   "cnn_score": 0.1435,
+   "vina_affinity": -8.12936
+  },
+  "CHEMBL4464490": {
+   "cnn_affinity": 5.58911,
+   "cnn_score": 0.22077,
+   "vina_affinity": -7.03596
+  },
+  "CHEMBL4468511": {
+   "cnn_affinity": 5.61124,
+   "cnn_score": 0.33932,
+   "vina_affinity": -6.93808
+  },
+  "CHEMBL4470727": {
+   "cnn_affinity": 5.62607,
+   "cnn_score": 0.25222,
+   "vina_affinity": -7.45332
+  },
+  "CHEMBL4476255": {
+   "cnn_affinity": 7.83819,
+   "cnn_score": 0.7631,
+   "vina_affinity": -11.25319
+  },
+  "CHEMBL44891": {
+   "cnn_affinity": 7.34242,
+   "cnn_score": 0.21361,
+   "vina_affinity": -7.50237
+  },
+  "CHEMBL45030": {
+   "cnn_affinity": 7.67955,
+   "cnn_score": 0.93264,
+   "vina_affinity": -11.77432
+  },
+  "CHEMBL45127": {
+   "cnn_affinity": 7.34888,
+   "cnn_score": 0.80317,
+   "vina_affinity": -11.5773
+  },
+  "CHEMBL4528862": {
+   "cnn_affinity": 5.92867,
+   "cnn_score": 0.09023,
+   "vina_affinity": -8.89091
+  },
+  "CHEMBL45302": {
+   "cnn_affinity": 7.31515,
+   "cnn_score": 0.83295,
+   "vina_affinity": -11.61733
+  },
+  "CHEMBL4530688": {
+   "cnn_affinity": 5.85392,
+   "cnn_score": 0.24095,
+   "vina_affinity": -8.28544
+  },
+  "CHEMBL4533350": {
+   "cnn_affinity": 6.08122,
+   "cnn_score": 0.23571,
+   "vina_affinity": -8.32231
+  },
+  "CHEMBL4554578": {
+   "cnn_affinity": 7.26611,
+   "cnn_score": 0.75705,
+   "vina_affinity": -9.12825
+  },
+  "CHEMBL4560959": {
+   "cnn_affinity": 5.31343,
+   "cnn_score": 0.24633,
+   "vina_affinity": -7.56539
+  },
+  "CHEMBL457392": {
+   "cnn_affinity": 6.68131,
+   "cnn_score": 0.91599,
+   "vina_affinity": -9.12352
+  },
+  "CHEMBL4587713": {
+   "cnn_affinity": 4.59294,
+   "cnn_score": 0.14482,
+   "vina_affinity": -7.98045
+  },
+  "CHEMBL45888": {
+   "cnn_affinity": 6.33695,
+   "cnn_score": 0.1244,
+   "vina_affinity": -10.23657
+  },
+  "CHEMBL459524": {
+   "cnn_affinity": 7.21174,
+   "cnn_score": 0.38834,
+   "vina_affinity": -9.69126
+  },
+  "CHEMBL459525": {
+   "cnn_affinity": 6.83839,
+   "cnn_score": 0.49033,
+   "vina_affinity": -9.50892
+  },
+  "CHEMBL459941": {
+   "cnn_affinity": 6.48488,
+   "cnn_score": 0.22291,
+   "vina_affinity": -10.15567
+  },
+  "CHEMBL460143": {
+   "cnn_affinity": 7.14786,
+   "cnn_score": 0.48858,
+   "vina_affinity": -9.19597
+  },
+  "CHEMBL460355": {
+   "cnn_affinity": 7.45055,
+   "cnn_score": 0.73998,
+   "vina_affinity": -10.24112
+  },
+  "CHEMBL461191": {
+   "cnn_affinity": 6.52789,
+   "cnn_score": 0.31863,
+   "vina_affinity": -10.45172
+  },
+  "CHEMBL461192": {
+   "cnn_affinity": 6.89027,
+   "cnn_score": 0.65591,
+   "vina_affinity": -9.53176
+  },
+  "CHEMBL461210": {
+   "cnn_affinity": 6.81507,
+   "cnn_score": 0.56219,
+   "vina_affinity": -9.3269
+  },
+  "CHEMBL461417": {
+   "cnn_affinity": 6.46971,
+   "cnn_score": 0.54473,
+   "vina_affinity": -10.76509
+  },
+  "CHEMBL461440": {
+   "cnn_affinity": 7.22351,
+   "cnn_score": 0.48215,
+   "vina_affinity": -9.64972
+  },
+  "CHEMBL461441": {
+   "cnn_affinity": 7.02305,
+   "cnn_score": 0.44017,
+   "vina_affinity": -9.60205
+  },
+  "CHEMBL461629": {
+   "cnn_affinity": 6.93306,
+   "cnn_score": 0.66286,
+   "vina_affinity": -11.19199
+  },
+  "CHEMBL461870": {
+   "cnn_affinity": 6.272,
+   "cnn_score": 0.21188,
+   "vina_affinity": -9.66231
+  },
+  "CHEMBL462653": {
+   "cnn_affinity": 4.80058,
+   "cnn_score": 0.43387,
+   "vina_affinity": -7.59781
+  },
+  "CHEMBL4632627": {
+   "cnn_affinity": 5.74837,
+   "cnn_score": 0.10093,
+   "vina_affinity": -8.38574
+  },
+  "CHEMBL4633908": {
+   "cnn_affinity": 4.8174,
+   "cnn_score": 0.03091,
+   "vina_affinity": -7.55608
+  },
+  "CHEMBL4633967": {
+   "cnn_affinity": 5.31884,
+   "cnn_score": 0.21057,
+   "vina_affinity": -9.47963
+  },
+  "CHEMBL4634094": {
+   "cnn_affinity": 5.90241,
+   "cnn_score": 0.35269,
+   "vina_affinity": -8.56305
+  },
+  "CHEMBL4634142": {
+   "cnn_affinity": 6.47235,
+   "cnn_score": 0.24204,
+   "vina_affinity": -7.71744
+  },
+  "CHEMBL46365": {
+   "cnn_affinity": 6.97851,
+   "cnn_score": 0.56195,
+   "vina_affinity": -8.54012
+  },
+  "CHEMBL4636760": {
+   "cnn_affinity": 5.03793,
+   "cnn_score": 0.21813,
+   "vina_affinity": -9.36585
+  },
+  "CHEMBL4637320": {
+   "cnn_affinity": 5.5589,
+   "cnn_score": 0.1192,
+   "vina_affinity": -8.53992
+  },
+  "CHEMBL4638079": {
+   "cnn_affinity": 7.10468,
+   "cnn_score": 0.43792,
+   "vina_affinity": -8.2683
+  },
+  "CHEMBL4638756": {
+   "cnn_affinity": 5.37593,
+   "cnn_score": 0.11698,
+   "vina_affinity": -7.89052
+  },
+  "CHEMBL4639084": {
+   "cnn_affinity": 6.03284,
+   "cnn_score": 0.30491,
+   "vina_affinity": -8.13551
+  },
+  "CHEMBL4639437": {
+   "cnn_affinity": 5.17467,
+   "cnn_score": 0.05862,
+   "vina_affinity": -8.3576
+  },
+  "CHEMBL4639518": {
+   "cnn_affinity": 5.05164,
+   "cnn_score": 0.23645,
+   "vina_affinity": -7.22298
+  },
+  "CHEMBL4640092": {
+   "cnn_affinity": 5.90488,
+   "cnn_score": 0.28922,
+   "vina_affinity": -8.55719
+  },
+  "CHEMBL46410": {
+   "cnn_affinity": 7.15507,
+   "cnn_score": 0.61993,
+   "vina_affinity": -10.87663
+  },
+  "CHEMBL4641576": {
+   "cnn_affinity": 5.60376,
+   "cnn_score": 0.1039,
+   "vina_affinity": -7.3156
+  },
+  "CHEMBL4641891": {
+   "cnn_affinity": 6.59537,
+   "cnn_score": 0.35632,
+   "vina_affinity": -8.83633
+  },
+  "CHEMBL4642705": {
+   "cnn_affinity": 4.6471,
+   "cnn_score": 0.04273,
+   "vina_affinity": -8.27602
+  },
+  "CHEMBL4645081": {
+   "cnn_affinity": 5.32739,
+   "cnn_score": 0.10019,
+   "vina_affinity": -7.63752
+  },
+  "CHEMBL4645685": {
+   "cnn_affinity": 6.84503,
+   "cnn_score": 0.31174,
+   "vina_affinity": -7.72914
+  },
+  "CHEMBL4645908": {
+   "cnn_affinity": 5.25517,
+   "cnn_score": 0.1731,
+   "vina_affinity": -9.30188
+  },
+  "CHEMBL4647508": {
+   "cnn_affinity": 6.09108,
+   "cnn_score": 0.36032,
+   "vina_affinity": -8.44151
+  },
+  "CHEMBL4647950": {
+   "cnn_affinity": 6.74062,
+   "cnn_score": 0.53734,
+   "vina_affinity": -10.10993
+  },
+  "CHEMBL4648414": {
+   "cnn_affinity": 6.10861,
+   "cnn_score": 0.36749,
+   "vina_affinity": -10.02005
+  },
+  "CHEMBL466529": {
+   "cnn_affinity": 6.79008,
+   "cnn_score": 0.36091,
+   "vina_affinity": -10.15794
+  },
+  "CHEMBL466530": {
+   "cnn_affinity": 6.05372,
+   "cnn_score": 0.17308,
+   "vina_affinity": -9.6501
+  },
+  "CHEMBL46653": {
+   "cnn_affinity": 7.85683,
+   "cnn_score": 0.97652,
+   "vina_affinity": -12.05996
+  },
+  "CHEMBL466585": {
+   "cnn_affinity": 6.80503,
+   "cnn_score": 0.42732,
+   "vina_affinity": -9.84922
+  },
+  "CHEMBL46727": {
+   "cnn_affinity": 7.70607,
+   "cnn_score": 0.89822,
+   "vina_affinity": -11.63317
+  },
+  "CHEMBL46770": {
+   "cnn_affinity": 7.11103,
+   "cnn_score": 0.88267,
+   "vina_affinity": -10.4866
+  },
+  "CHEMBL46845": {
+   "cnn_affinity": 7.08121,
+   "cnn_score": 0.66967,
+   "vina_affinity": -8.75087
+  },
+  "CHEMBL468464": {
+   "cnn_affinity": 6.94538,
+   "cnn_score": 0.3961,
+   "vina_affinity": -8.47484
+  },
+  "CHEMBL46959": {
+   "cnn_affinity": 7.66045,
+   "cnn_score": 0.87668,
+   "vina_affinity": -10.98296
+  },
+  "CHEMBL46993": {
+   "cnn_affinity": 6.10962,
+   "cnn_score": 0.15119,
+   "vina_affinity": -8.13012
+  },
+  "CHEMBL47145": {
+   "cnn_affinity": 7.63349,
+   "cnn_score": 0.90603,
+   "vina_affinity": -11.7657
+  },
+  "CHEMBL471642": {
+   "cnn_affinity": 4.97702,
+   "cnn_score": 0.4679,
+   "vina_affinity": -7.70192
+  },
+  "CHEMBL47201": {
+   "cnn_affinity": 6.66286,
+   "cnn_score": 0.42858,
+   "vina_affinity": -11.56634
+  },
+  "CHEMBL47252": {
+   "cnn_affinity": 7.06442,
+   "cnn_score": 0.85441,
+   "vina_affinity": -9.75735
+  },
+  "CHEMBL47939": {
+   "cnn_affinity": 7.33001,
+   "cnn_score": 0.86262,
+   "vina_affinity": -11.08769
+  },
+  "CHEMBL48131": {
+   "cnn_affinity": 7.24078,
+   "cnn_score": 0.72954,
+   "vina_affinity": -10.97905
+  },
+  "CHEMBL490892": {
+   "cnn_affinity": 6.5451,
+   "cnn_score": 0.72583,
+   "vina_affinity": -9.17292
+  },
+  "CHEMBL493094": {
+   "cnn_affinity": 5.76736,
+   "cnn_score": 0.14129,
+   "vina_affinity": -9.51152
+  },
+  "CHEMBL493140": {
+   "cnn_affinity": 5.90825,
+   "cnn_score": 0.16142,
+   "vina_affinity": -9.99929
+  },
+  "CHEMBL493936": {
+   "cnn_affinity": 6.25541,
+   "cnn_score": 0.15978,
+   "vina_affinity": -9.42476
+  },
+  "CHEMBL494128": {
+   "cnn_affinity": 6.06927,
+   "cnn_score": 0.23287,
+   "vina_affinity": -9.14616
+  },
+  "CHEMBL494513": {
+   "cnn_affinity": 6.87417,
+   "cnn_score": 0.32159,
+   "vina_affinity": -9.29912
+  },
+  "CHEMBL494514": {
+   "cnn_affinity": 6.51047,
+   "cnn_score": 0.38428,
+   "vina_affinity": -10.28804
+  },
+  "CHEMBL494715": {
+   "cnn_affinity": 6.72154,
+   "cnn_score": 0.33613,
+   "vina_affinity": -8.70932
+  },
+  "CHEMBL495010": {
+   "cnn_affinity": 5.98504,
+   "cnn_score": 0.20576,
+   "vina_affinity": -9.40825
+  },
+  "CHEMBL495143": {
+   "cnn_affinity": 5.76687,
+   "cnn_score": 0.09434,
+   "vina_affinity": -9.21886
+  },
+  "CHEMBL50091": {
+   "cnn_affinity": 5.29183,
+   "cnn_score": 0.25508,
+   "vina_affinity": -8.79605
+  },
+  "CHEMBL502016": {
+   "cnn_affinity": 5.58114,
+   "cnn_score": 0.04665,
+   "vina_affinity": -8.83301
+  },
+  "CHEMBL506502": {
+   "cnn_affinity": 7.27812,
+   "cnn_score": 0.73442,
+   "vina_affinity": -9.94082
+  },
+  "CHEMBL507322": {
+   "cnn_affinity": 7.18569,
+   "cnn_score": 0.31083,
+   "vina_affinity": -11.01576
+  },
+  "CHEMBL50788": {
+   "cnn_affinity": 5.33673,
+   "cnn_score": 0.25598,
+   "vina_affinity": -8.97951
+  },
+  "CHEMBL511597": {
+   "cnn_affinity": 4.31962,
+   "cnn_score": 0.07549,
+   "vina_affinity": -8.21404
+  },
+  "CHEMBL511761": {
+   "cnn_affinity": 7.33066,
+   "cnn_score": 0.92841,
+   "vina_affinity": -10.2926
+  },
+  "CHEMBL512630": {
+   "cnn_affinity": 6.74834,
+   "cnn_score": 0.29014,
+   "vina_affinity": -8.62533
+  },
+  "CHEMBL513339": {
+   "cnn_affinity": 6.19849,
+   "cnn_score": 0.18382,
+   "vina_affinity": -10.10739
+  },
+  "CHEMBL513670": {
+   "cnn_affinity": 6.48331,
+   "cnn_score": 0.36651,
+   "vina_affinity": -7.95789
+  },
+  "CHEMBL513767": {
+   "cnn_affinity": 5.15724,
+   "cnn_score": 0.38732,
+   "vina_affinity": -6.93245
+  },
+  "CHEMBL51413": {
+   "cnn_affinity": 7.87593,
+   "cnn_score": 0.94858,
+   "vina_affinity": -10.60306
+  },
+  "CHEMBL51527": {
+   "cnn_affinity": 5.50289,
+   "cnn_score": 0.29311,
+   "vina_affinity": -9.5837
+  },
+  "CHEMBL517269": {
+   "cnn_affinity": 7.51303,
+   "cnn_score": 0.79459,
+   "vina_affinity": -10.18355
+  },
+  "CHEMBL5176283": {
+   "cnn_affinity": 7.88325,
+   "cnn_score": 0.96515,
+   "vina_affinity": -8.56868
+  },
+  "CHEMBL5205339": {
+   "cnn_affinity": 7.57478,
+   "cnn_score": 0.94385,
+   "vina_affinity": -8.79889
+  },
+  "CHEMBL52122": {
+   "cnn_affinity": 5.57487,
+   "cnn_score": 0.31874,
+   "vina_affinity": -9.42268
+  },
+  "CHEMBL521570": {
+   "cnn_affinity": 6.68644,
+   "cnn_score": 0.72003,
+   "vina_affinity": -10.10854
+  },
+  "CHEMBL523865": {
+   "cnn_affinity": 6.68412,
+   "cnn_score": 0.19788,
+   "vina_affinity": -8.71905
+  },
+  "CHEMBL524462": {
+   "cnn_affinity": 6.83779,
+   "cnn_score": 0.56532,
+   "vina_affinity": -7.69961
+  },
+  "CHEMBL53178": {
+   "cnn_affinity": 6.93761,
+   "cnn_score": 0.67615,
+   "vina_affinity": -8.89053
+  },
+  "CHEMBL5420305": {
+   "cnn_affinity": 6.38902,
+   "cnn_score": 0.52118,
+   "vina_affinity": -9.76176
+  },
+  "CHEMBL5423279": {
+   "cnn_affinity": 4.57047,
+   "cnn_score": 0.27975,
+   "vina_affinity": -7.47763
+  },
+  "CHEMBL5424957": {
+   "cnn_affinity": 5.80894,
+   "cnn_score": 0.2979,
+   "vina_affinity": -8.21595
+  },
+  "CHEMBL5430930": {
+   "cnn_affinity": 6.06736,
+   "cnn_score": 0.57389,
+   "vina_affinity": -8.22883
+  },
+  "CHEMBL5438252": {
+   "cnn_affinity": 6.16789,
+   "cnn_score": 0.25229,
+   "vina_affinity": -8.94356
+  },
+  "CHEMBL55": {
+   "cnn_affinity": 6.63897,
+   "cnn_score": 0.84997,
+   "vina_affinity": -8.45236
+  },
+  "CHEMBL5632713": {
+   "cnn_affinity": 6.57924,
+   "cnn_score": 0.70407,
+   "vina_affinity": -9.66974
+  },
+  "CHEMBL563794": {
+   "cnn_affinity": 7.43745,
+   "cnn_score": 0.92989,
+   "vina_affinity": -9.79386
+  },
+  "CHEMBL566340": {
+   "cnn_affinity": 7.61845,
+   "cnn_score": 0.12946,
+   "vina_affinity": -8.75767
+  },
+  "CHEMBL569280": {
+   "cnn_affinity": 5.5405,
+   "cnn_score": 0.04675,
+   "vina_affinity": -7.93956
+  },
+  "CHEMBL598170": {
+   "cnn_affinity": 6.68971,
+   "cnn_score": 0.85014,
+   "vina_affinity": -9.40448
+  },
+  "CHEMBL598370": {
+   "cnn_affinity": 7.67382,
+   "cnn_score": 0.94125,
+   "vina_affinity": -9.86046
+  },
+  "CHEMBL598384": {
+   "cnn_affinity": 5.50873,
+   "cnn_score": 0.54842,
+   "vina_affinity": -7.2093
+  },
+  "CHEMBL59936": {
+   "cnn_affinity": 5.11886,
+   "cnn_score": 0.18956,
+   "vina_affinity": -9.02914
+  },
+  "CHEMBL599628": {
+   "cnn_affinity": 6.13299,
+   "cnn_score": 0.57885,
+   "vina_affinity": -9.10548
+  },
+  "CHEMBL60088": {
+   "cnn_affinity": 3.8202,
+   "cnn_score": 0.51003,
+   "vina_affinity": -5.87168
+  },
+  "CHEMBL609410": {
+   "cnn_affinity": 7.78859,
+   "cnn_score": 0.78948,
+   "vina_affinity": -11.14087
+  },
+  "CHEMBL609911": {
+   "cnn_affinity": 4.794,
+   "cnn_score": 0.24851,
+   "vina_affinity": -7.74837
+  },
+  "CHEMBL6103254": {
+   "cnn_affinity": 6.72234,
+   "cnn_score": 0.1843,
+   "vina_affinity": -9.46272
+  },
+  "CHEMBL6133665": {
+   "cnn_affinity": 5.61566,
+   "cnn_score": 0.08084,
+   "vina_affinity": -9.00689
+  },
+  "CHEMBL6134688": {
+   "cnn_affinity": 7.27612,
+   "cnn_score": 0.27864,
+   "vina_affinity": -9.40263
+  },
+  "CHEMBL61442": {
+   "cnn_affinity": 5.4578,
+   "cnn_score": 0.19274,
+   "vina_affinity": -8.86439
+  },
+  "CHEMBL6146429": {
+   "cnn_affinity": 6.74755,
+   "cnn_score": 0.26972,
+   "vina_affinity": -9.4982
+  },
+  "CHEMBL6151636": {
+   "cnn_affinity": 6.86943,
+   "cnn_score": 0.21136,
+   "vina_affinity": -9.5688
+  },
+  "CHEMBL61791": {
+   "cnn_affinity": 5.46223,
+   "cnn_score": 0.18036,
+   "vina_affinity": -8.24481
+  },
+  "CHEMBL61950": {
+   "cnn_affinity": 5.5463,
+   "cnn_score": 0.13702,
+   "vina_affinity": -8.79381
+  },
+  "CHEMBL62279": {
+   "cnn_affinity": 7.73954,
+   "cnn_score": 0.51353,
+   "vina_affinity": -9.27266
+  },
+  "CHEMBL62490": {
+   "cnn_affinity": 4.6381,
+   "cnn_score": 0.14392,
+   "vina_affinity": -7.88591
+  },
+  "CHEMBL62492": {
+   "cnn_affinity": 5.63956,
+   "cnn_score": 0.29622,
+   "vina_affinity": -7.93281
+  },
+  "CHEMBL62509": {
+   "cnn_affinity": 6.40964,
+   "cnn_score": 0.32173,
+   "vina_affinity": -9.38924
+  },
+  "CHEMBL62563": {
+   "cnn_affinity": 4.8364,
+   "cnn_score": 0.18018,
+   "vina_affinity": -8.12122
+  },
+  "CHEMBL62588": {
+   "cnn_affinity": 6.44531,
+   "cnn_score": 0.85725,
+   "vina_affinity": -9.26613
+  },
+  "CHEMBL62656": {
+   "cnn_affinity": 6.64611,
+   "cnn_score": 0.21854,
+   "vina_affinity": -9.42633
+  },
+  "CHEMBL62736": {
+   "cnn_affinity": 4.86389,
+   "cnn_score": 0.14692,
+   "vina_affinity": -8.18424
+  },
+  "CHEMBL62746": {
+   "cnn_affinity": 6.87529,
+   "cnn_score": 0.60262,
+   "vina_affinity": -10.58453
+  },
+  "CHEMBL62753": {
+   "cnn_affinity": 5.56849,
+   "cnn_score": 0.55328,
+   "vina_affinity": -8.16578
+  },
+  "CHEMBL62758": {
+   "cnn_affinity": 4.90339,
+   "cnn_score": 0.15129,
+   "vina_affinity": -8.09737
+  },
+  "CHEMBL62807": {
+   "cnn_affinity": 6.67066,
+   "cnn_score": 0.80935,
+   "vina_affinity": -8.36544
+  },
+  "CHEMBL62836": {
+   "cnn_affinity": 6.62079,
+   "cnn_score": 0.9192,
+   "vina_affinity": -8.44755
+  },
+  "CHEMBL62870": {
+   "cnn_affinity": 5.61314,
+   "cnn_score": 0.15302,
+   "vina_affinity": -8.90626
+  },
+  "CHEMBL63216": {
+   "cnn_affinity": 5.16262,
+   "cnn_score": 0.2183,
+   "vina_affinity": -8.33382
+  },
+  "CHEMBL63307": {
+   "cnn_affinity": 5.9453,
+   "cnn_score": 0.10918,
+   "vina_affinity": -8.84513
+  },
+  "CHEMBL63369": {
+   "cnn_affinity": 5.86414,
+   "cnn_score": 0.15192,
+   "vina_affinity": -9.35201
+  },
+  "CHEMBL63475": {
+   "cnn_affinity": 5.88947,
+   "cnn_score": 0.16653,
+   "vina_affinity": -7.93842
+  },
+  "CHEMBL63518": {
+   "cnn_affinity": 5.93567,
+   "cnn_score": 0.17737,
+   "vina_affinity": -9.39765
+  },
+  "CHEMBL63672": {
+   "cnn_affinity": 7.63645,
+   "cnn_score": 0.26962,
+   "vina_affinity": -10.44598
+  },
+  "CHEMBL63690": {
+   "cnn_affinity": 6.69999,
+   "cnn_score": 0.21786,
+   "vina_affinity": -9.15238
+  },
+  "CHEMBL64654": {
+   "cnn_affinity": 4.65132,
+   "cnn_score": 0.21238,
+   "vina_affinity": -9.24257
+  },
+  "CHEMBL64708": {
+   "cnn_affinity": 5.57334,
+   "cnn_score": 0.85865,
+   "vina_affinity": -7.81655
+  },
+  "CHEMBL64904": {
+   "cnn_affinity": 6.50785,
+   "cnn_score": 0.16386,
+   "vina_affinity": -9.6547
+  },
+  "CHEMBL64994": {
+   "cnn_affinity": 7.82756,
+   "cnn_score": 0.24184,
+   "vina_affinity": -10.14178
+  },
+  "CHEMBL65128": {
+   "cnn_affinity": 6.41084,
+   "cnn_score": 0.22821,
+   "vina_affinity": -9.57425
+  },
+  "CHEMBL65146": {
+   "cnn_affinity": 7.52326,
+   "cnn_score": 0.60076,
+   "vina_affinity": -8.22491
+  },
+  "CHEMBL65219": {
+   "cnn_affinity": 6.77693,
+   "cnn_score": 0.18122,
+   "vina_affinity": -9.06766
+  },
+  "CHEMBL65343": {
+   "cnn_affinity": 5.8553,
+   "cnn_score": 0.20349,
+   "vina_affinity": -9.01532
+  },
+  "CHEMBL65394": {
+   "cnn_affinity": 5.70485,
+   "cnn_score": 0.18276,
+   "vina_affinity": -9.37949
+  },
+  "CHEMBL65506": {
+   "cnn_affinity": 7.23867,
+   "cnn_score": 0.43894,
+   "vina_affinity": -8.75032
+  },
+  "CHEMBL65544": {
+   "cnn_affinity": 6.14231,
+   "cnn_score": 0.22504,
+   "vina_affinity": -9.05431
+  },
+  "CHEMBL65613": {
+   "cnn_affinity": 6.26464,
+   "cnn_score": 0.20732,
+   "vina_affinity": -10.36233
+  },
+  "CHEMBL65637": {
+   "cnn_affinity": 5.88044,
+   "cnn_score": 0.16862,
+   "vina_affinity": -9.94968
+  },
+  "CHEMBL65816": {
+   "cnn_affinity": 6.18187,
+   "cnn_score": 0.16999,
+   "vina_affinity": -7.70556
+  },
+  "CHEMBL65877": {
+   "cnn_affinity": 6.05548,
+   "cnn_score": 0.18128,
+   "vina_affinity": -7.75241
+  },
+  "CHEMBL65978": {
+   "cnn_affinity": 6.36245,
+   "cnn_score": 0.19725,
+   "vina_affinity": -9.59532
+  },
+  "CHEMBL66030": {
+   "cnn_affinity": 6.47868,
+   "cnn_score": 0.16581,
+   "vina_affinity": -8.75446
+  },
+  "CHEMBL66362": {
+   "cnn_affinity": 5.81319,
+   "cnn_score": 0.13023,
+   "vina_affinity": -9.36409
+  },
+  "CHEMBL66535": {
+   "cnn_affinity": 4.95998,
+   "cnn_score": 0.18323,
+   "vina_affinity": -8.07334
+  },
+  "CHEMBL66583": {
+   "cnn_affinity": 6.18235,
+   "cnn_score": 0.13372,
+   "vina_affinity": -9.67338
+  },
+  "CHEMBL73193": {
+   "cnn_affinity": 6.36249,
+   "cnn_score": 0.34415,
+   "vina_affinity": -8.96459
+  },
+  "CHEMBL73313": {
+   "cnn_affinity": 7.8582,
+   "cnn_score": 0.93823,
+   "vina_affinity": -10.29443
+  },
+  "CHEMBL74701": {
+   "cnn_affinity": 7.11264,
+   "cnn_score": 0.76739,
+   "vina_affinity": -9.12192
+  },
+  "CHEMBL75255": {
+   "cnn_affinity": 6.76526,
+   "cnn_score": 0.83437,
+   "vina_affinity": -9.04015
+  },
+  "CHEMBL76834": {
+   "cnn_affinity": 6.69226,
+   "cnn_score": 0.10618,
+   "vina_affinity": -9.34906
+  },
+  "CHEMBL77142": {
+   "cnn_affinity": 7.45048,
+   "cnn_score": 0.11476,
+   "vina_affinity": -9.31005
+  },
+  "CHEMBL77215": {
+   "cnn_affinity": 7.79814,
+   "cnn_score": 0.92039,
+   "vina_affinity": -10.57965
+  },
+  "CHEMBL77428": {
+   "cnn_affinity": 7.44743,
+   "cnn_score": 0.10005,
+   "vina_affinity": -10.11734
+  },
+  "CHEMBL77742": {
+   "cnn_affinity": 7.68577,
+   "cnn_score": 0.22866,
+   "vina_affinity": -9.27377
+  },
+  "CHEMBL78053": {
+   "cnn_affinity": 7.60451,
+   "cnn_score": 0.17832,
+   "vina_affinity": -9.64667
+  },
+  "CHEMBL78055": {
+   "cnn_affinity": 6.62809,
+   "cnn_score": 0.04679,
+   "vina_affinity": -9.86814
+  },
+  "CHEMBL78057": {
+   "cnn_affinity": 7.39793,
+   "cnn_score": 0.38847,
+   "vina_affinity": -9.30859
+  },
+  "CHEMBL8079": {
+   "cnn_affinity": 7.35485,
+   "cnn_score": 0.37521,
+   "vina_affinity": -9.01431
+  },
+  "CHEMBL80844": {
+   "cnn_affinity": 6.54101,
+   "cnn_score": 0.2938,
+   "vina_affinity": -8.08935
+  },
+  "CHEMBL92090": {
+   "cnn_affinity": 6.44899,
+   "cnn_score": 0.46176,
+   "vina_affinity": -9.06388
+  },
+  "CHEMBL93796": {
+   "cnn_affinity": 6.9542,
+   "cnn_score": 0.87871,
+   "vina_affinity": -11.10838
+  },
+  "CHEMBL94139": {
+   "cnn_affinity": 5.81909,
+   "cnn_score": 0.7507,
+   "vina_affinity": -8.45384
+  },
+  "CHEMBL96428": {
+   "cnn_affinity": 4.23542,
+   "cnn_score": 0.09806,
+   "vina_affinity": -8.50459
+  },
+  "CHEMBL96486": {
+   "cnn_affinity": 7.22338,
+   "cnn_score": 0.70981,
+   "vina_affinity": -10.34875
+  },
+  "CHEMBL97570": {
+   "cnn_affinity": 7.58958,
+   "cnn_score": 0.81823,
+   "vina_affinity": -10.08865
+  },
+  "CHEMBL98276": {
+   "cnn_affinity": 6.9005,
+   "cnn_score": 0.17478,
+   "vina_affinity": -9.13623
+  },
+  "CHEMBL99483": {
+   "cnn_affinity": 6.14037,
+   "cnn_score": 0.18957,
+   "vina_affinity": -10.74491
+  }
+ },
+ "failures": {
+  "CHEMBL145206": "z8.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     36  C   UNL     1      10.780   7.823  26.468  1.00  0.00     0.000 CG0",
+  "CHEMBL145630": "05.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     35  C   UNL     1       3.659   8.517  25.416  1.00  0.00     0.002 CG0",
+  "CHEMBL150434": "z7.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     19  C   UNL     1       2.893   5.327  21.498  1.00  0.00     0.000 CG0",
+  "CHEMBL150739": "hs.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       3.749   6.716  21.885  1.00  0.00     0.005 CG0",
+  "CHEMBL151481": "sg.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     19  C   UNL     1       2.742   4.190  19.385  1.00  0.00     0.005 CG0",
+  "CHEMBL151562": "q_.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     17  C   UNL     1       3.763   6.752  19.346  1.00  0.00     0.039 CG0",
+  "CHEMBL153659": "wf.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     19  C   UNL     1       7.881   7.872  19.706  1.00  0.00     0.005 CG0",
+  "CHEMBL153660": "xf.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     17  C   UNL     1       5.952   9.241  19.289  1.00  0.00     0.039 CG0",
+  "CHEMBL175436": "e0.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     15  C   UNL     1       3.004   4.641  17.030  1.00  0.00     0.171 CG0",
+  "CHEMBL176484": "l9.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     37  C   UNL     1       4.701  -0.583  14.882  1.00  0.00     0.037 CG0",
+  "CHEMBL177865": "4v.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     12  C   UNL     1       3.697  -0.453  13.647  1.00  0.00     0.086 CG0",
+  "CHEMBL198856": "9_.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     14  C   UNL     1       7.692   9.576  20.186  1.00  0.00     0.022 CG0",
+  "CHEMBL288862": "rd.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     35  C   UNL     1       5.859  10.108  15.649  1.00  0.00     0.002 CG0",
+  "CHEMBL325022": "jb.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     17  C   UNL     1       2.699   5.423  17.788  1.00  0.00     0.039 CG0",
+  "CHEMBL331437": "a9.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     17  C   UNL     1       3.824   5.683  19.712  1.00  0.00     0.039 CG0",
+  "CHEMBL355969": "yx.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     19  C   UNL     1       2.598   7.318  21.824  1.00  0.00     0.000 CG0",
+  "CHEMBL356466": "xx.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     19  C   UNL     1       4.217   7.671  21.802  1.00  0.00     0.005 CG0",
+  "CHEMBL356630": "s5.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     17  C   UNL     1       2.156   4.934  22.272  1.00  0.00     0.039 CG0",
+  "CHEMBL356862": "63.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     19  C   UNL     1       0.594   5.143  21.038  1.00  0.00     0.000 CG0",
+  "CHEMBL357795": "b0.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       1.499   5.230  21.246  1.00  0.00     0.005 CG0",
+  "CHEMBL358910": "86.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       3.330   8.393  20.311  1.00  0.00     0.005 CG0",
+  "CHEMBL358918": "gg.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       6.564   2.891  16.130  1.00  0.00     0.005 CG0",
+  "CHEMBL359275": "th.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       4.318   8.664  20.994  1.00  0.00     0.005 CG0",
+  "CHEMBL367451": "w3.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     12  C   UNL     1       3.603   4.351  16.072  1.00  0.00     0.086 CG0",
+  "CHEMBL368544": "ji.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     37  C   UNL     1       3.886   1.410  16.657  1.00  0.00     0.037 CG0",
+  "CHEMBL422321": "hn.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       2.426   6.288  19.569  1.00  0.00     0.005 CG0",
+  "CHEMBL459140": "d9.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     24  C   UNL     1       5.333   9.426  19.198  1.00  0.00     0.035 CG0",
+  "CHEMBL459160": "p9.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     32  C   UNL     1       3.689   2.289  19.502  1.00  0.00     0.022 CG0",
+  "CHEMBL48233": "ph.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       5.849   7.741  19.162  1.00  0.00     0.005 CG0",
+  "CHEMBL5088958": "oa.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     21  C   UNL     1       7.520   7.345  22.579  1.00  0.00     0.135 CG0",
+  "CHEMBL55035": "7q.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     18  C   UNL     1       2.793   7.298  20.208  1.00  0.00     0.005 CG0",
+  "CHEMBL550364": "0q.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     22  C   UNL     1       7.545   5.582  19.994  1.00  0.00     0.035 CG0",
+  "CHEMBL5560415": "8x.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     24  C   UNL     1       6.465  11.320  17.884  1.00  0.00     0.257 CG0",
+  "CHEMBL556276": "23.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     23  C   UNL     1       4.542   9.687  15.795  1.00  0.00     0.035 CG0",
+  "CHEMBL5568169": "ti.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     15  C   UNL     1       4.793   3.081  14.460  1.00  0.00     0.175 CG0",
+  "CHEMBL557300": "ph.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     24  C   UNL     1       6.417   7.186  20.268  1.00  0.00     0.035 CG0",
+  "CHEMBL561575": "29.pdbqt\": ATOM syntax incorrect: \"CG0\" is not a valid AutoDock type. Note that AutoDock atom types are case-sensitive.\nATOM     23  C   UNL     1       3.504   6.840  21.299  1.00  0.00     0.035 CG0"
+ },
+ "protocol": "gnina v1.3 --score_only --cnn_scoring rescore --seed 42, first MODEL, CNNaffinity"
+}

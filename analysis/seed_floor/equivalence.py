@@ -37,19 +37,31 @@ import numpy as np
 from scipy import stats
 
 HERE = Path(__file__).resolve().parent
-PANEL_REF = 755          # panel the manuscript's interventions are computed on
 
 
-def floor_at(n_compounds: int) -> tuple[float, float]:
-    """exh=32 floor, rescaled to a panel of n compounds.
+def _ladder():
+    return json.loads((HERE.parent / "method_bench/method_ladder.json").read_text())
 
-    Floors are panel-size specific: AUROC variance goes as 1/n, verified to within 9% in
-    floor_exh4_vs_exh32.py. Charging a floor measured on 343 compounds against a claim computed
-    on 755 without rescaling would overstate it by sqrt(755/343) = 1.48x.
+
+def floor_at(n_compounds: int, key: str = "vina_exh32") -> tuple[float, float]:
+    """The named floor, rescaled to a panel of n compounds.
+
+    Two substitutions are possible here and both are errors the manuscript is about:
+
+      * PANEL SIZE. AUROC variance goes as 1/n, verified to within 14% within Mpro and 7%
+        across targets (floor_exh4_vs_exh32.py, RESULT_FXA_SCALING.md). Charging a floor
+        measured on 343 compounds against a claim computed on 755 overstates it by 1.48x.
+      * METHOD AND PROTOCOL. A floor belongs to (method, protocol, panel size). `key` picks
+        the first two; the caller must pass the key matching how the effect was measured, not
+        whichever floor is nearest to hand. Every intervention records its own `floor_key`.
+
+    For Boltz-2 the MARGIN floor is returned, not the residual one: harness verdicts are
+    charged against a margin, whose sd is 2.2x the residual's.
     """
-    lad = json.loads((HERE.parent / "method_bench/method_ladder.json").read_text())
-    f = lad["noise_floors"]["vina_exh32"]
+    f = _ladder()["noise_floors"][key]
     k = math.sqrt(f["panel_n_compounds"] / n_compounds)
+    if "margin_floor_95upper" in f:
+        return f["margin_sd"] * k, f["margin_floor_95upper"] * k
     return f["auroc_sd"] * k, f["auroc_floor_95upper"] * k
 
 
@@ -62,9 +74,7 @@ def classify(lo95, hi95, lo90, hi90, d):
 
 
 def main() -> int:
-    sd_f, d = floor_at(PANEL_REF)
-    print(f"equivalence margin d = {d:.5f}  (exh=32 floor, 95% upper bound, rescaled to "
-          f"n={PANEL_REF}; point sd {sd_f:.5f})\n")
+    print("Each intervention is charged the floor for ITS method, protocol and panel.\n")
 
     # --- the exhaustiveness effect, from the six paired seeds we actually measured
     import sys
@@ -80,7 +90,7 @@ def main() -> int:
     dl = np.array([auroc(y, [e32[s][c] for c in common]) - auroc(y, [e4[s][c] for c in common])
                    for s in seeds])
     n = len(dl); se = dl.std(ddof=1) / math.sqrt(n)
-    d_local = floor_at(len(common))[1]
+    d_local = floor_at(len(common), "vina_exh32")[1]
     t95 = stats.t.ppf(0.975, n - 1); t90 = stats.t.ppf(0.95, n - 1)
     lo95, hi95 = dl.mean() - t95 * se, dl.mean() + t95 * se
     lo90, hi90 = dl.mean() - t90 * se, dl.mean() + t90 * se
@@ -94,17 +104,23 @@ def main() -> int:
           f"equivalent: {max(p_lo, p_hi) < 0.05}")
     print(f"  => {classify(lo95, hi95, lo90, hi90, d_local)}\n")
 
-    # --- the other four, from their stored intervals
-    lad = json.loads((HERE.parent / "method_bench/method_ladder.json").read_text())
-    print(f"the remaining interventions, against d={d:.5f} at n={PANEL_REF}")
+    # --- the other four, each against the floor its own row names
+    lad = _ladder()
+    print("the remaining interventions, each against its own floor")
+    print(f"  {'intervention':32} {'delta':>8} {'95% CI':>20}  {'n':>4} {'floor key':16} "
+          f"{'d':>8}  verdict")
     for k, v in lad["interventions"].items():
         if k.startswith("_") or k == "eightfold_search_effort":
             continue
         lo, hi = v["ci_with_seed"]
+        n_panel = v["panel_n_compounds"]
+        key = v["floor_key"]
+        d_row = floor_at(n_panel, key)[1]
         half90 = (hi - lo) / 2 * (stats.norm.ppf(0.95) / stats.norm.ppf(0.975))
         mid = (hi + lo) / 2
-        print(f"  {k:32} {v['delta']:+.4f}  95% [{lo:+.4f},{hi:+.4f}]  "
-              f"-> {classify(lo, hi, mid - half90, mid + half90, d)}")
+        verdict = classify(lo, hi, mid - half90, mid + half90, d_row)
+        print(f"  {k:32} {v['delta']:+8.4f}  [{lo:+.4f},{hi:+.4f}]  {n_panel:4d} "
+              f"{key:16} {d_row:8.5f}  {verdict}")
     print()
     print("Reading: NEGLIGIBLE is a positive finding -- the intervention is measured to do")
     print("nothing worth having. INCONCLUSIVE is an admission that the data do not decide.")

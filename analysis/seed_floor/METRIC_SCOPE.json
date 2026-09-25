@@ -1,0 +1,136 @@
+{
+ "metrics": [
+  {
+   "exh": 4,
+   "metric": "AUROC",
+   "mean": 0.41745,
+   "sd": 0.004967,
+   "bound95": 0.008172,
+   "cv": 0.0119,
+   "n": 755,
+   "seeds": 10
+  },
+  {
+   "exh": 4,
+   "metric": "EF@1%",
+   "mean": 2.27675,
+   "sd": 0.232249,
+   "bound95": 0.382095,
+   "cv": 0.10201,
+   "n": 755,
+   "seeds": 10
+  },
+  {
+   "exh": 4,
+   "metric": "EF@5%",
+   "mean": 1.31425,
+   "sd": 0.103079,
+   "bound95": 0.169585,
+   "cv": 0.07843,
+   "n": 755,
+   "seeds": 10
+  },
+  {
+   "exh": 4,
+   "metric": "BEDROC20",
+   "mean": 0.44894,
+   "sd": 0.01671,
+   "bound95": 0.027492,
+   "cv": 0.03722,
+   "n": 755,
+   "seeds": 10
+  },
+  {
+   "exh": 32,
+   "metric": "AUROC",
+   "mean": 0.45306,
+   "sd": 0.006195,
+   "bound95": 0.010192,
+   "cv": 0.01367,
+   "n": 343,
+   "seeds": 10
+  },
+  {
+   "exh": 32,
+   "metric": "EF@1%",
+   "mean": 2.57508,
+   "sd": 0.542873,
+   "bound95": 0.893134,
+   "cv": 0.21082,
+   "n": 343,
+   "seeds": 10
+  },
+  {
+   "exh": 32,
+   "metric": "EF@5%",
+   "mean": 1.49051,
+   "sd": 0.114961,
+   "bound95": 0.189134,
+   "cv": 0.07713,
+   "n": 343,
+   "seeds": 10
+  },
+  {
+   "exh": 32,
+   "metric": "BEDROC20",
+   "mean": 0.49089,
+   "sd": 0.015087,
+   "bound95": 0.024822,
+   "cv": 0.03073,
+   "n": 343,
+   "seeds": 10
+  }
+ ],
+ "ef_cv_ratio": 8.572,
+ "level_dependence": [
+  {
+   "target": 0.3,
+   "realised": 0.2785,
+   "sd": 0.004726,
+   "bound95": 0.005069
+  },
+  {
+   "target": 0.42,
+   "realised": 0.3821,
+   "sd": 0.004662,
+   "bound95": 0.005
+  },
+  {
+   "target": 0.5,
+   "realised": 0.5158,
+   "sd": 0.004738,
+   "bound95": 0.005081
+  },
+  {
+   "target": 0.6,
+   "realised": 0.5738,
+   "sd": 0.004475,
+   "bound95": 0.004799
+  },
+  {
+   "target": 0.7,
+   "realised": 0.687,
+   "sd": 0.004071,
+   "bound95": 0.004367
+  },
+  {
+   "target": 0.8,
+   "realised": 0.7939,
+   "sd": 0.004227,
+   "bound95": 0.004533
+  },
+  {
+   "target": 0.9,
+   "realised": 0.9021,
+   "sd": 0.004186,
+   "bound95": 0.004489
+  },
+  {
+   "control_simulated_sd": 0.004866,
+   "control_measured_sd": 0.004967,
+   "control_ratio": 0.98,
+   "real_auroc": 0.4175
+  }
+ ],
+ "preregistration": "analysis/seed_floor/PREREGISTRATION_METRIC_SCOPE.md"
+}
